@@ -1,41 +1,41 @@
-# CLAUDE.md — DDXPlus × Genie Worksheets evaluation (CS224V)
+# CLAUDE.md — Clinical diagnosis under partial information, MediQ (CS224V)
 
 ## What this project is
-We are evaluating a Genie Worksheets agent that interviews simulated patients and outputs a differential
-diagnosis, compared against a plain function-calling baseline. Patients come from a small, fixed subset of the
-DDXPlus dataset (synthetic, research use only). Total LLM budget for the whole project is $100 in Google Cloud
-credits, so cost control is a first-class requirement.
+A clinician copilot that beats a one-shot LLM *when information is missing*: it should notice gaps
+(what is missing, what to ask next) and fill them before diagnosing, while the one-shot baseline answers
+from whatever it was given. Cases come from a fixed 50-case diagnosis subset of MediQ (MedQA-derived,
+CC BY 4.0), shown as partial views that reveal a fraction p of each case's atomic facts. Total LLM budget
+for the whole project is $100 in Google Cloud credits, so cost control is a first-class requirement.
 
 Pipeline:
-DDXPlus subset -> decoded patient cards -> simulated patient (LLM) <-> Genie agent (worksheet) -> final dialogue
-state + differential -> scorer (vs. ground truth). The baseline swaps the Genie agent for a function-calling agent
-using the same model, simulator and turn cap.
+MediQ subset -> partial views -> diagnosis arm (one-shot, or an agent that can ask for missing facts) ->
+open-ended top-5 differential -> LLM judge vs. gold. Every arm uses the same model, views, diagnosis
+prompt and judge. (DDXPlus was dropped on 2026-11-12; it lives only in git history.)
 
-## Repo layout (create it this way)
+## Repo layout
 ```
 ddx-genie/
-  CLAUDE.md, TASKS.md, README.md, pyproject.toml
+  CLAUDE.md, README.md, baseline_scores.md, pyproject.toml
   .env                      # secrets, gitignored
-  data/raw/                 # DDXPlus downloads, gitignored, never committed
-  data/processed/           # subset.jsonl, field_list.json, patient_cards/
-  genie/                    # intake.csv (worksheet spec), prompts/, config.yaml, agent.py
-  src/ddx_genie/            # llm.py, subset.py, cards.py, worksheet_gen.py, simulator.py,
-                            # harness.py, baseline.py, score.py, report.py
-  runs/<run_id>/            # one JSON per patient + cost.jsonl + summary.json (gitignored except summary)
+  data/raw/                 # downloads (MediQ repo clone), gitignored, never committed
+  data/processed/mediq/     # subset.jsonl, views.jsonl
+  src/ddx_genie/            # llm.py, mediq.py, reveal.py, diagnosis.py, partial_eval.py, baselines.py
+  scripts/                  # baseline_report.py, smoke_llm.py
+  runs/<run_id>/            # one JSON per case + cost.jsonl + summary.json (gitignored except summary)
   tests/
 ```
 
 ## Hard rules
-- Never commit `data/raw/`, `.env`, or full `runs/` directories. Add them to `.gitignore` first.
+- Never commit `data/raw/`, `.env`, or full `runs/` directories.
 - Every LLM call (Genie's included, where possible) goes through `src/ddx_genie/llm.py`, which logs model, input
   tokens, output tokens and USD cost to `runs/<run_id>/cost.jsonl`.
-- Budget guard: read `MAX_RUN_USD` from env. Before a batch, estimate cost from the first patients; abort the run
-  if spend exceeds the cap. Print running total after every patient.
+- Budget guard: read `MAX_RUN_USD` from env. Before a batch, estimate cost from the first cases; abort the run
+  if spend exceeds the cap. Print running total after every case.
 - Cache every LLM response on disk keyed by (model, messages, params) so reruns are free.
-- Runs are resumable: skip patients whose result JSON already exists.
-- Random seed is 0 everywhere. Keep the DDXPlus row index with every patient.
+- Runs are resumable: skip cases whose result JSON already exists.
+- Random seed is 0 everywhere. Keep the MediQ record `id` with every case.
 - Default to the cheapest configured model. Never switch to a more expensive model unless I ask.
-- Develop and test on N=1–5 patients. Never launch a run over 5 patients without me confirming.
+- Develop and test on N=1–5 cases. Never launch a run over 5 cases without me confirming.
 - Do not edit the genie-worksheets package source. If a patch is unavoidable (e.g. its hardcoded timeout),
   monkeypatch from our code and note it in README.md.
 - Python >= 3.11, managed with uv. Type hints, small functions, pytest tests for parsing and scoring logic.
@@ -95,27 +95,6 @@ The Vertex route below is supported by `llm.py` but unverified against the edu-c
 - Prompt templates: copy `experiments/domain_agents/course_enroll/prompts/` and adapt; check which files the
   semantic parser and response generator actually load before trimming.
 
-## DDXPlus facts (English release)
-- Files: `release_evidences.json`, `release_conditions.json`, `release_{train,validate,test}_patients` (zipped CSV).
-- Patient columns: AGE, SEX, PATHOLOGY, EVIDENCES, INITIAL_EVIDENCE, DIFFERENTIAL_DIAGNOSIS. EVIDENCES and
-  DIFFERENTIAL_DIAGNOSIS are stringified Python lists: parse with `ast.literal_eval`.
-- Non-binary evidences are written `<evidence-name>_@_<value>`. English evidence names are codes like `E_91`;
-  decode them with `question_en` and `value_meaning` in `release_evidences.json`.
-  VERIFIED (223 evidences, 49 conditions, test split = 134,529 rows; zip member is `release_test_patients`
-  with no file extension):
-  - `data_type` has exactly three values: `B` binary (208), `C` (10), `M` multi-select (5).
-  - CORRECTED: `C` is NOT a single kind. 6 of the 10 are 0-10 numeric scales (`possible-values` is
-    `[0..10]`, `value_meaning` empty) and 4 are categorical with `V_` codes (rash colour, two Y/N pairs,
-    travel region). Decide int-vs-Enum by inspecting `possible-values`, never by `data_type` alone.
-  - `M` fields carry up to **165** options (`E_55`/`E_57`/`E_133` pain and region locations, `E_54` has 16).
-    One bool per possible value is not viable; expand only over values observed in the subset, or group them.
-- `code_question` groups related evidences: the parent evidence must be present for children to apply.
-  CORRECTED: only **3** groups have more than one member, out of 209 groups. They are `E_53` (pain, 7
-  members), `E_129` (skin lesions, 8) and `E_151` (swelling, 2); the parent is itself a member of its own
-  group. So predicate-gating applies to ~17 evidences, not pervasively as the worksheet plan assumed.
-- DIFFERENTIAL_DIAGNOSIS is a list of [pathology, probability] pairs.
-- Use the TEST split only. Pathology names must match `release_conditions.json` exactly; check them, don't assume.
-
 ## MediQ facts (verified 2026-11-05, github.com/stellalisy/mediQ, CC BY 4.0)
 - Cloned to `data/raw/mediq/repo/`. Two files in `data/`: `all_dev_good.jsonl` (1272 MedQA-derived
   items, all specialties) and `all_craft_md.jsonl` (140 dermatology items, all diagnosis questions).
@@ -155,27 +134,6 @@ The Vertex route below is supported by `llm.py` but unverified against the edu-c
 - Repo defaults temperature 0.6 / top_p 0.9; the paper (App. C) uses 0.5 / 1.0. No seeding.
 - Paper Table 2: Basic beats Initial in 3/8 rows (incl. GPT-4 on both datasets). The "11.3% drop"
   is not reproducible from Table 2 (row mean ~8.8%). Max questions and thresholds are not stated.
-
-## Measured ceilings (run 2026-10-30, all 60 subset patients)
-
-These bound what the eval can show and must appear in the paper beside any accuracy
-number.
-
-- **Diagnosis-step oracle**: given each patient's COMPLETE true evidence, the same
-  diagnosis prompt achieves **top-1 0.650, top-3 0.950**. So no interview, however
-  perfect, can exceed ~0.65 top-1 here.
-- **DDXPlus's own differential**, restricted to our 6 conditions, ranks the true
-  PATHOLOGY first only **0.617** of the time (top-3 0.967). The oracle therefore
-  slightly *beats* the dataset's own answer key: the ceiling is intrinsic to DDXPlus,
-  not a weakness of our prompt.
-- **Consequence**: top-1 accuracy against PATHOLOGY is not a valid discriminator for
-  these conditions. Lead with evidence recall/precision; report top-3 accuracy and
-  differential overlap as the diagnosis metrics. Say this explicitly in the paper.
-- **Our prompt does have a calibration bias worth fixing**: its errors are bimodal
-  (Bronchitis 0.00, URTI 0.10, everything else 0.90-1.00), collapsing
-  Bronchitis -> COPD exacerbation 9/10 and URTI -> Influenza 9/10, whereas DDXPlus's
-  own errors are diffuse across all six. Reproduce with
-  `uv run python scripts/oracle_ceiling.py`.
 
 ## How to work with me
 - Before writing a large component, show a short plan and wait for my OK.

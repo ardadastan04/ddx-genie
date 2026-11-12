@@ -1,14 +1,20 @@
-# DDXPlus × Genie Worksheets (CS224V)
+# Clinical diagnosis under partial information (CS224V)
 
-Does a declarative **Genie Worksheets** intake agent interview simulated patients and diagnose them better
-than a plain **function-calling** agent, given the same model, the same simulated patients and the same turn
-cap? Patients come from a fixed 60-patient subset of DDXPlus (synthetic; research use only).
+Can an agent that notices what is missing and asks for it diagnose better than a one-shot LLM
+that answers from whatever it was given? Cases come from a fixed 50-case diagnosis subset of
+**MediQ** (MedQA-derived, CC BY 4.0). Each case is shown as partial views revealing a fraction of
+its atomic facts.
 
 ```
-DDXPlus subset → patient cards → simulated patient (LLM) ⇄ agent → dialogue state + differential → scorer
+MediQ subset → partial views (reveal p of the facts) → diagnosis (one-shot or agent) → open top-5 → LLM judge vs gold
 ```
 
-See `CLAUDE.md` for the design contract and `TASKS.md` for the task sequence.
+- `src/ddx_genie/mediq.py` builds `data/processed/mediq/subset.jsonl`.
+- `src/ddx_genie/reveal.py` builds `data/processed/mediq/views.jsonl`.
+- `src/ddx_genie/partial_eval.py` runs the one-shot evaluation; `baselines.py` runs the other baselines.
+- `scripts/baseline_report.py` prints the frozen numbers in `baseline_scores.md`.
+
+See `CLAUDE.md` for the design contract.
 
 ## Setup
 
@@ -23,7 +29,7 @@ This repo expects the Genie Worksheets clone as a **sibling directory**:
 ```bash
 cd ddx-genie
 uv sync                       # installs genie-worksheets as an editable dependency
-cp .env.example .env          # then fill in GCP_PROJECT_ID and the price-per-token values
+cp .env.example .env          # then fill in GEMINI_API_KEY and the price-per-token values
 ```
 
 Authenticate to Google Cloud (Application Default Credentials — Vertex uses short-lived OAuth
@@ -83,4 +89,4 @@ time out under Vertex latency, monkeypatch from our code — never edit the pack
 
 ## Licence / data
 
-DDXPlus is released for research use only. `data/raw/` is gitignored and must never be committed.
+MediQ is CC BY 4.0. Raw downloads live in `data/raw/`, which is gitignored and never committed.

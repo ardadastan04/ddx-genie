@@ -1,22 +1,19 @@
-"""The diagnosis step, shared by both systems under comparison.
+"""The diagnosis step, shared by every arm of the MediQ evaluation.
 
-Deliberately lives here rather than inside ``genie/agent.py``: the Genie agent and
-the T8 function-calling baseline must use the *same* prompt and the *same* model to
-produce their differential, or the comparison measures prompt differences instead of
-architecture differences. The only thing that differs between systems is how the
-evidence was elicited.
+All arms must use the *same* prompt and the *same* model to produce their
+differential, or the comparison measures prompt differences instead of how the
+evidence was gathered. Changing a prompt here also invalidates the response cache
+behind the frozen baselines in ``baseline_scores.md``.
 """
 
 from __future__ import annotations
 
 import json
-import os
 import re
 from dataclasses import dataclass
 from typing import Any
 
 from ddx_genie.llm import LLMClient
-from ddx_genie.subset import CONDITIONS
 
 TOP_K = 5
 
@@ -58,22 +55,6 @@ class Differential:
         if not self.ranked:
             return "no differential could be produced"
         return ", ".join(f"{c} ({p:.0%})" for c, p in self.ranked)
-
-
-def format_findings(findings: dict[str, Any]) -> str:
-    """Render collected findings for the prompt, marking unasked fields explicitly.
-
-    The distinction matters: an agent that asked 12 of 58 questions should not have
-    its 46 unasked fields read as 46 negative findings.
-    """
-    if not findings:
-        return "No findings were collected."
-    lines = []
-    for name, value in findings.items():
-        if value is None:
-            continue
-        lines.append(f"- {name}: {value}")
-    return "\n".join(lines) if lines else "No findings were collected."
 
 
 _QUOTES = str.maketrans({"‘": "'", "’": "'", "“": '"', "”": '"'})
@@ -142,21 +123,8 @@ def _parse_differential(text: str, conditions: tuple[str, ...]) -> list[tuple[st
     return ranked[:TOP_K]
 
 
-def diagnose_findings(
-    findings: dict[str, Any],
-    *,
-    client: LLMClient,
-    conditions: tuple[str, ...] = CONDITIONS,
-    model: str = "cheap",
-    tag: str = "diagnose",
-) -> Differential:
-    """One LLM call turning collected findings into a ranked differential."""
-    return _diagnose(format_findings(findings), client=client, conditions=conditions,
-                     model=model, tag=tag)
-
-
 def format_facts(facts: list[str]) -> str:
-    """Render free-text facts (MediQ) the way ``format_findings`` renders fields."""
+    """Render free-text facts as a bulleted list for the prompt."""
     lines = [f"- {f}" for f in facts if f.strip()]
     return "\n".join(lines) if lines else "No findings were collected."
 
@@ -169,7 +137,7 @@ def diagnose_facts(
     model: str = "cheap",
     tag: str = "diagnose",
 ) -> Differential:
-    """Same prompt and model as :func:`diagnose_findings`, for free-text facts.
+    """One LLM call ranking a closed list of conditions given free-text facts.
 
     For MediQ, ``conditions`` is the question's answer options, so the closed list
     the prompt enforces is the multiple-choice set.
@@ -186,8 +154,7 @@ def _diagnose(
     model: str,
     tag: str,
 ) -> Differential:
-    # Capped so a 4-option MCQ isn't asked for 5 conditions. For DDXPlus (6
-    # conditions) this is still 5, so the prompt and its cache keys are unchanged.
+    # Capped so a 4-option MCQ isn't asked for 5 conditions.
     top_k = min(TOP_K, len(conditions))
     system = SYSTEM_PROMPT.format(
         conditions="\n".join(f"- {c}" for c in conditions), top_k=top_k
@@ -204,51 +171,6 @@ def _diagnose(
     return Differential(
         ranked=_parse_differential(completion.text, conditions), raw=completion.text
     )
-
-
-# --------------------------------------------------- Genie worksheet entry point
-
-
-_DEFAULT_CLIENT: LLMClient | None = None
-
-
-def set_client(client: LLMClient) -> None:
-    """Install the client the worksheet action should log against."""
-    global _DEFAULT_CLIENT
-    _DEFAULT_CLIENT = client
-
-
-def _client() -> LLMClient:
-    global _DEFAULT_CLIENT
-    if _DEFAULT_CLIENT is None:
-        _DEFAULT_CLIENT = LLMClient(os.getenv("DDX_RUN_ID", "manual"))
-    return _DEFAULT_CLIENT
-
-
-def worksheet_findings(worksheet: Any) -> dict[str, Any]:
-    """Read the filled fields off a Genie worksheet instance.
-
-    Unfilled fields are omitted rather than reported as negatives, so the diagnosis
-    sees what was actually elicited.
-    """
-    from worksheets.utils.field import get_genie_fields_from_ws
-
-    findings: dict[str, Any] = {}
-    for field in get_genie_fields_from_ws(worksheet):
-        if field.name == "differential" or getattr(field, "internal", False):
-            continue
-        value = getattr(field, "value", None)
-        if value is None:
-            continue
-        # Enum members carry the decoded text on `.name`.
-        findings[field.name] = getattr(value, "name", value)
-    return findings
-
-
-def diagnose(worksheet: Any) -> str:
-    """The ``diagnose`` API registered with Genie and called from the Form Action."""
-    differential = diagnose_findings(worksheet_findings(worksheet), client=_client())
-    return str(differential)
 
 
 # ------------------------------------------------- open-ended differential (MediQ)

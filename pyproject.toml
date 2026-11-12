@@ -1,7 +1,7 @@
 [project]
 name = "ddx-genie"
 version = "0.1.0"
-description = "Evaluating Genie Worksheets against a function-calling baseline on simulated DDXPlus patients"
+description = "Clinical diagnosis under partial information on MediQ"
 readme = "README.md"
 requires-python = ">=3.11"
 
@@ -10,7 +10,6 @@ dependencies = [
     "openai>=1.50.0",
     "google-auth>=2.35.0",
     "python-dotenv>=1.0.1",
-    "pandas>=2.2.3",
     "tenacity>=9.0.0",
     # Undeclared by genie-worksheets but imported at module scope by
     # src/worksheets/llm/llm.py and src/worksheets/utils/llm.py respectively.

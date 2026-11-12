@@ -2,7 +2,7 @@
 .env
 .env.local
 
-# DDXPlus source data: research-use-only licence, never commit
+# raw dataset downloads, never commit
 data/raw/
 data/raw/**
 

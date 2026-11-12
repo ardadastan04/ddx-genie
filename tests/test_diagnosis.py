@@ -1,7 +1,7 @@
 """Tests for differential parsing. No network: the LLM's text is the input here.
 
 The model returns free text, so the parser must survive fences, prose, bad names and
-unnormalised probabilities without ever inventing a condition outside the study set.
+unnormalised probabilities without ever inventing a condition outside the closed list it was given.
 """
 
 from __future__ import annotations
@@ -11,7 +11,6 @@ import pytest
 from ddx_genie.diagnosis import (
     Differential,
     _parse_differential,
-    format_findings,
 )
 
 CONDS = ("Pneumonia", "Influenza", "Bronchitis", "URTI",
@@ -99,19 +98,3 @@ class TestDifferential:
         assert d.top3 == []
         assert "no differential" in str(d)
 
-
-class TestFormatFindings:
-    def test_empty(self) -> None:
-        assert format_findings({}) == "No findings were collected."
-
-    def test_all_none_is_empty(self) -> None:
-        # Unasked fields must not read as negative findings.
-        assert format_findings({"cough": None}) == "No findings were collected."
-
-    def test_false_is_kept(self) -> None:
-        # A denial is a finding and must reach the diagnosis.
-        assert "cough: False" in format_findings({"cough": False})
-
-    def test_unasked_fields_are_omitted(self) -> None:
-        out = format_findings({"cough": True, "fever": None})
-        assert "cough" in out and "fever" not in out
