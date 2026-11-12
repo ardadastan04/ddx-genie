@@ -1,0 +1,144 @@
+{
+  "age": 30,
+  "chief_complaint": "a cough",
+  "differential": [
+    {
+      "pathology": "Acute COPD exacerbation / infection",
+      "probability": 0.13958734995764685
+    },
+    {
+      "pathology": "Bronchitis",
+      "probability": 0.13050258914035776
+    },
+    {
+      "pathology": "Bronchiectasis",
+      "probability": 0.12029606699018484
+    },
+    {
+      "pathology": "Pneumonia",
+      "probability": 0.11712694281600391
+    },
+    {
+      "pathology": "Guillain-Barré syndrome",
+      "probability": 0.0691767614808218
+    },
+    {
+      "pathology": "Atrial fibrillation",
+      "probability": 0.06607631659739391
+    },
+    {
+      "pathology": "Myocarditis",
+      "probability": 0.0652549575121935
+    },
+    {
+      "pathology": "Pulmonary embolism",
+      "probability": 0.05861425919766257
+    },
+    {
+      "pathology": "Acute dystonic reactions",
+      "probability": 0.04871499351496428
+    },
+    {
+      "pathology": "Myasthenia gravis",
+      "probability": 0.04871499351496428
+    },
+    {
+      "pathology": "Anemia",
+      "probability": 0.04871499351496428
+    },
+    {
+      "pathology": "Tuberculosis",
+      "probability": 0.04653593672864453
+    },
+    {
+      "pathology": "PSVT",
+      "probability": 0.02602183157174806
+    },
+    {
+      "pathology": "Chagas",
+      "probability": 0.014662007462449646
+    }
+  ],
+  "findings": [
+    {
+      "answer": "yes",
+      "code": "E_31",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you have severe Chronic Obstructive Pulmonary Disease (COPD)?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_66",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Are you experiencing shortness of breath or difficulty breathing in a significant way?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_77",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have a cough that produces colored or more abundant sputum than usual?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_79",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you smoke cigarettes?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_123",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you have a chronic obstructive pulmonary disease (COPD)?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_198",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you work in agriculture?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_199",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you work in construction?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_200",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you work in the mining sector?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_201",
+      "is_antecedent": false,
+      "is_chief_complaint": true,
+      "question": "Do you have a cough?"
+    },
+    {
+      "answer": "no",
+      "code": "E_204",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you traveled out of the country in the last 4 weeks?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_214",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Have you noticed a wheezing sound when you exhale?"
+    }
+  ],
+  "pathology": "Acute COPD exacerbation / infection",
+  "row_index": 40151,
+  "sex": "F"
+}

@@ -1,0 +1,41 @@
+PATIENT (DDXPlus test row 18921)
+======================================================================
+
+You are a 19-year-old male patient.
+
+Why you came in: a cough that produces colored or more abundant sputum than usual
+
+Everything that is true about you:
+  - Have you had significantly increased sweating? -> yes
+  - Do you have pain somewhere, related to your reason for consulting? -> yes
+  - Characterize your pain: -> tedious, sensitive
+  - Do you feel pain somewhere? -> top of the head, cheek(R), cheek(L), occiput
+  - How intense is the pain? -> 7 out of 10
+  - Does the pain radiate to another location? -> nowhere
+  - How precisely is the pain located? -> 5 out of 10
+  - How fast did the pain appear? -> 3 out of 10
+  - Do you have a cough that produces colored or more abundant sputum than usual? -> yes
+  - Do you have a fever (either felt or measured with a thermometer)? -> yes
+  - Do you have a sore throat? -> yes
+  - Do you have nasal congestion or a clear runny nose? -> yes
+  - Do you have a cough? -> yes
+
+Your medical history and background:
+  - Have you been in contact with a person with similar symptoms in the past 2 weeks? -> yes
+  - Do you live with 4 or more people? -> yes
+  - Do you smoke cigarettes? -> yes
+  - Have you traveled out of the country in the last 4 weeks? -> no
+
+----------------------------------------------------------------------
+ANSWER KEY (do not reveal while role-playing)
+  true pathology: URTI
+  ground-truth differential:
+    0.171  URTI
+    0.155  Bronchitis
+    0.139  Influenza
+    0.139  Pneumonia
+    0.104  Bronchiectasis
+    0.095  Tuberculosis
+    0.061  HIV (initial infection)
+    0.057  Chronic rhinosinusitis
+    ... and 2 more

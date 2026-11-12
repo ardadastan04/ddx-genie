@@ -1,0 +1,37 @@
+# Genie Worksheets model configuration.
+#
+# NOTE: `Config` (worksheets/agent/config.py) has NO `prompt_dir` field. It is a
+# pydantic model with extra="ignore", so a prompt_dir key here would be silently
+# discarded and the agent would fall back to Genie's own bundled prompts with no
+# error. genie/agent.py registers our prompt directory via init_llm() instead.
+#
+# Model names must NOT carry an `azure/` prefix, or get_llm_client routes to
+# AzureChatOpenAI instead of the OpenAI-compatible client we point at Gemini.
+
+semantic_parser:
+    model_name: "gemini-3.1-flash-lite"
+    temperature: 0.0
+    max_tokens: 2048
+
+response_generator:
+    model_name: "gemini-3.1-flash-lite"
+    temperature: 0.0
+    max_tokens: 1024
+
+# Unused in v1: we have no knowledge base. Still required -- Config declares all
+# four blocks as mandatory fields.
+knowledge_parser:
+    model_name: "gemini-3.1-flash-lite"
+    temperature: 0.0
+    max_tokens: 1024
+
+knowledge_base:
+    model_name: "gemini-3.1-flash-lite"
+    temperature: 0.0
+    max_tokens: 1024
+
+# Turns of (user, agent) history given to the response generator.
+rg_num_turns: 3
+
+# Skips the supervisor_response_generator pass: one fewer LLM call per turn.
+validate_response: false

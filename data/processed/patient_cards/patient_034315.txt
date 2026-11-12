@@ -1,0 +1,34 @@
+PATIENT (DDXPlus test row 34315)
+======================================================================
+
+You are a 63-year-old male patient.
+
+Why you came in: a cough
+
+Everything that is true about you:
+  - Are you experiencing shortness of breath or difficulty breathing in a significant way? -> yes
+  - Do you have a cough? -> yes
+  - Have you noticed a wheezing sound when you exhale? -> yes
+
+Your medical history and background:
+  - Do you have any family members who have asthma? -> yes
+  - Have you been hospitalized for an asthma attack in the past year? -> yes
+  - Have you had a cold in the last 2 weeks? -> yes
+  - Have you been diagnosed with chronic sinusitis? -> yes
+  - Do you have asthma or have you ever had to use a bronchodilator in the past? -> yes
+  - Have you traveled out of the country in the last 4 weeks? -> no
+  - Are you exposed to secondhand cigarette smoke on a daily basis? -> yes
+
+----------------------------------------------------------------------
+ANSWER KEY (do not reveal while role-playing)
+  true pathology: Bronchospasm / acute asthma exacerbation
+  ground-truth differential:
+    0.097  Bronchospasm / acute asthma exacerbation
+    0.084  Bronchitis
+    0.078  Pulmonary neoplasm
+    0.073  Acute COPD exacerbation / infection
+    0.062  Pneumonia
+    0.059  Pulmonary embolism
+    0.057  Tuberculosis
+    0.055  Acute pulmonary edema
+    ... and 13 more

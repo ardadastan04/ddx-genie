@@ -1,0 +1,339 @@
+{
+  "age": 20,
+  "chief_complaint": "noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today",
+  "differential": [
+    {
+      "pathology": "Pneumonia",
+      "probability": 0.06692197933542368
+    },
+    {
+      "pathology": "Bronchitis",
+      "probability": 0.0615600567026187
+    },
+    {
+      "pathology": "Pericarditis",
+      "probability": 0.05693349746742312
+    },
+    {
+      "pathology": "Bronchiectasis",
+      "probability": 0.053507472181002956
+    },
+    {
+      "pathology": "Possible NSTEMI / STEMI",
+      "probability": 0.05113593248630194
+    },
+    {
+      "pathology": "Unstable angina",
+      "probability": 0.05064405164284001
+    },
+    {
+      "pathology": "Influenza",
+      "probability": 0.050434014932310645
+    },
+    {
+      "pathology": "Panic attack",
+      "probability": 0.050123957051256225
+    },
+    {
+      "pathology": "GERD",
+      "probability": 0.04995003423754725
+    },
+    {
+      "pathology": "HIV (initial infection)",
+      "probability": 0.047291621039827654
+    },
+    {
+      "pathology": "Stable angina",
+      "probability": 0.044370942862960824
+    },
+    {
+      "pathology": "Tuberculosis",
+      "probability": 0.04356396541635022
+    },
+    {
+      "pathology": "Pulmonary embolism",
+      "probability": 0.04229001086597857
+    },
+    {
+      "pathology": "Boerhaave",
+      "probability": 0.041015270064007445
+    },
+    {
+      "pathology": "Myocarditis",
+      "probability": 0.038460297599409804
+    },
+    {
+      "pathology": "Bronchospasm / acute asthma exacerbation",
+      "probability": 0.03154742276633758
+    },
+    {
+      "pathology": "Atrial fibrillation",
+      "probability": 0.031051796585020025
+    },
+    {
+      "pathology": "Scombroid food poisoning",
+      "probability": 0.03054580037898567
+    },
+    {
+      "pathology": "Chagas",
+      "probability": 0.02965775204716553
+    },
+    {
+      "pathology": "Guillain-Barré syndrome",
+      "probability": 0.022893044696848334
+    },
+    {
+      "pathology": "Acute dystonic reactions",
+      "probability": 0.022893044696848334
+    },
+    {
+      "pathology": "Myasthenia gravis",
+      "probability": 0.022893044696848334
+    },
+    {
+      "pathology": "Sarcoidosis",
+      "probability": 0.019207495704572187
+    },
+    {
+      "pathology": "Spontaneous pneumothorax",
+      "probability": 0.01828045051164239
+    },
+    {
+      "pathology": "PSVT",
+      "probability": 0.01222865713987819
+    },
+    {
+      "pathology": "SLE",
+      "probability": 0.010598386890594336
+    }
+  ],
+  "findings": [
+    {
+      "answer": "yes",
+      "code": "E_53",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have pain somewhere, related to your reason for consulting?"
+    },
+    {
+      "answer": "a knife stroke",
+      "code": "E_54",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Characterize your pain:"
+    },
+    {
+      "answer": "side of the chest(L), upper chest, breast(L)",
+      "code": "E_55",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you feel pain somewhere?"
+    },
+    {
+      "answer": "7 out of 10",
+      "code": "E_56",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How intense is the pain?"
+    },
+    {
+      "answer": "nowhere",
+      "code": "E_57",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Does the pain radiate to another location?"
+    },
+    {
+      "answer": "6 out of 10",
+      "code": "E_58",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How precisely is the pain located?"
+    },
+    {
+      "answer": "6 out of 10",
+      "code": "E_59",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How fast did the pain appear?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_66",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Are you experiencing shortness of breath or difficulty breathing in a significant way?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_77",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have a cough that produces colored or more abundant sputum than usual?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_78",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you drink alcohol excessively or do you have an addiction to alcohol?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_91",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have a fever (either felt or measured with a thermometer)?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_94",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Have you had chills or shivers?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_95",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you have Parkinson’s disease?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_106",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you have heart failure?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_107",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you ever had a stroke?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_118",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you ever had pneumonia?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_123",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you have a chronic obstructive pulmonary disease (COPD)?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_129",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?"
+    },
+    {
+      "answer": "pink",
+      "code": "E_130",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "What color is the rash?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_131",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do your lesions peel off?"
+    },
+    {
+      "answer": "4 out of 10",
+      "code": "E_132",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Is the rash swollen?"
+    },
+    {
+      "answer": "lumbar spine, shoulder(L)",
+      "code": "E_133",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Where is the affected region located?"
+    },
+    {
+      "answer": "5 out of 10",
+      "code": "E_134",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How intense is the pain caused by the rash?"
+    },
+    {
+      "answer": "no",
+      "code": "E_135",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Is the lesion (or are the lesions) larger than 1cm?"
+    },
+    {
+      "answer": "4 out of 10",
+      "code": "E_136",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How severe is the itching?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_144",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have diffuse (widespread) muscle pain?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_161",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Have you recently had a loss of appetite or do you get full more quickly then usually?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_175",
+      "is_antecedent": false,
+      "is_chief_complaint": true,
+      "question": "Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?"
+    },
+    {
+      "answer": "no",
+      "code": "E_204",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you traveled out of the country in the last 4 weeks?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_208",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Is your BMI less than 18.5, or are you underweight?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_219",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Are your symptoms more prominent at night?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_220",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have pain that is increased when you breathe in deeply?"
+    }
+  ],
+  "pathology": "Pneumonia",
+  "row_index": 11742,
+  "sex": "F"
+}

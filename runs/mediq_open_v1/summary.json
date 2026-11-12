@@ -1,0 +1,140 @@
+{
+  "cells": [
+    {
+      "mode": "gaps",
+      "fraction": 0.0,
+      "n": 50,
+      "accuracy": 0.18,
+      "top3": 0.3,
+      "top5": 0.36,
+      "accuracy_lenient": 0.22,
+      "mean_p_gold": 0.1054,
+      "parse_failures": 0
+    },
+    {
+      "mode": "gaps",
+      "fraction": 0.2,
+      "n": 50,
+      "accuracy": 0.3,
+      "top3": 0.46,
+      "top5": 0.5,
+      "accuracy_lenient": 0.36,
+      "mean_p_gold": 0.204,
+      "parse_failures": 0
+    },
+    {
+      "mode": "gaps",
+      "fraction": 0.4,
+      "n": 50,
+      "accuracy": 0.48,
+      "top3": 0.64,
+      "top5": 0.68,
+      "accuracy_lenient": 0.48,
+      "mean_p_gold": 0.293,
+      "parse_failures": 0
+    },
+    {
+      "mode": "gaps",
+      "fraction": 0.6,
+      "n": 50,
+      "accuracy": 0.58,
+      "top3": 0.76,
+      "top5": 0.8,
+      "accuracy_lenient": 0.6,
+      "mean_p_gold": 0.354,
+      "parse_failures": 0
+    },
+    {
+      "mode": "gaps",
+      "fraction": 0.8,
+      "n": 50,
+      "accuracy": 0.68,
+      "top3": 0.84,
+      "top5": 0.86,
+      "accuracy_lenient": 0.72,
+      "mean_p_gold": 0.425,
+      "parse_failures": 0
+    },
+    {
+      "mode": "gaps",
+      "fraction": 1.0,
+      "n": 50,
+      "accuracy": 0.78,
+      "top3": 0.9,
+      "top5": 0.92,
+      "accuracy_lenient": 0.82,
+      "mean_p_gold": 0.504,
+      "parse_failures": 0
+    },
+    {
+      "mode": "prefix",
+      "fraction": 0.0,
+      "n": 50,
+      "accuracy": 0.18,
+      "top3": 0.3,
+      "top5": 0.36,
+      "accuracy_lenient": 0.22,
+      "mean_p_gold": 0.1054,
+      "parse_failures": 0
+    },
+    {
+      "mode": "prefix",
+      "fraction": 0.2,
+      "n": 50,
+      "accuracy": 0.38,
+      "top3": 0.44,
+      "top5": 0.46,
+      "accuracy_lenient": 0.4,
+      "mean_p_gold": 0.19399999999999998,
+      "parse_failures": 0
+    },
+    {
+      "mode": "prefix",
+      "fraction": 0.4,
+      "n": 50,
+      "accuracy": 0.4,
+      "top3": 0.66,
+      "top5": 0.76,
+      "accuracy_lenient": 0.46,
+      "mean_p_gold": 0.27399999999999997,
+      "parse_failures": 0
+    },
+    {
+      "mode": "prefix",
+      "fraction": 0.6,
+      "n": 50,
+      "accuracy": 0.64,
+      "top3": 0.84,
+      "top5": 0.86,
+      "accuracy_lenient": 0.64,
+      "mean_p_gold": 0.396,
+      "parse_failures": 0
+    },
+    {
+      "mode": "prefix",
+      "fraction": 0.8,
+      "n": 50,
+      "accuracy": 0.68,
+      "top3": 0.86,
+      "top5": 0.86,
+      "accuracy_lenient": 0.7,
+      "mean_p_gold": 0.431,
+      "parse_failures": 0
+    },
+    {
+      "mode": "prefix",
+      "fraction": 1.0,
+      "n": 50,
+      "accuracy": 0.78,
+      "top3": 0.9,
+      "top5": 0.92,
+      "accuracy_lenient": 0.82,
+      "mean_p_gold": 0.504,
+      "parse_failures": 0
+    }
+  ],
+  "n_cases": 50,
+  "arm": "oneshot",
+  "answer_space": "open",
+  "usd": 0.1868644999999999
+}

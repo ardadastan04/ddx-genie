@@ -1,0 +1,33 @@
+PATIENT (DDXPlus test row 97686)
+======================================================================
+
+You are a 2-year-old male patient.
+
+Why you came in: noticed a wheezing sound when you exhale
+
+Everything that is true about you:
+  - Are you experiencing shortness of breath or difficulty breathing in a significant way? -> yes
+  - Do you have a cough? -> yes
+  - Have you noticed a wheezing sound when you exhale? -> yes
+
+Your medical history and background:
+  - Do you have any family members who have asthma? -> yes
+  - Have you been hospitalized for an asthma attack in the past year? -> yes
+  - Have you had a cold in the last 2 weeks? -> yes
+  - Have you been diagnosed with chronic sinusitis? -> yes
+  - Do you have asthma or have you ever had to use a bronchodilator in the past? -> yes
+  - Have you traveled out of the country in the last 4 weeks? -> no
+
+----------------------------------------------------------------------
+ANSWER KEY (do not reveal while role-playing)
+  true pathology: Bronchospasm / acute asthma exacerbation
+  ground-truth differential:
+    0.126  Bronchospasm / acute asthma exacerbation
+    0.111  Pneumonia
+    0.109  Bronchitis
+    0.077  Pulmonary embolism
+    0.074  Tuberculosis
+    0.072  Anaphylaxis
+    0.066  Guillain-Barré syndrome
+    0.063  Atrial fibrillation
+    ... and 8 more

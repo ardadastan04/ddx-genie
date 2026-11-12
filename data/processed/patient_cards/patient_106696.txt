@@ -1,0 +1,40 @@
+PATIENT (DDXPlus test row 106696)
+======================================================================
+
+You are a 40-year-old female patient.
+
+Why you came in: a cough that produces colored or more abundant sputum than usual
+
+Everything that is true about you:
+  - Have you had significantly increased sweating? -> yes
+  - Do you have pain somewhere, related to your reason for consulting? -> yes
+  - Characterize your pain: -> tedious, sensitive
+  - Do you feel pain somewhere? -> top of the head, forehead, cheek(L), temple(L)
+  - How intense is the pain? -> 3 out of 10
+  - Does the pain radiate to another location? -> nowhere
+  - How precisely is the pain located? -> 4 out of 10
+  - How fast did the pain appear? -> 1 out of 10
+  - Do you have a cough that produces colored or more abundant sputum than usual? -> yes
+  - Do you have a sore throat? -> yes
+  - Do you have diffuse (widespread) muscle pain? -> yes
+  - Do you have nasal congestion or a clear runny nose? -> yes
+  - Do you have a cough? -> yes
+
+Your medical history and background:
+  - Do you smoke cigarettes? -> yes
+  - Have you traveled out of the country in the last 4 weeks? -> no
+  - Are you exposed to secondhand cigarette smoke on a daily basis? -> yes
+
+----------------------------------------------------------------------
+ANSWER KEY (do not reveal while role-playing)
+  true pathology: URTI
+  ground-truth differential:
+    0.153  URTI
+    0.141  Bronchitis
+    0.131  Pneumonia
+    0.122  Influenza
+    0.114  Cluster headache
+    0.096  Bronchiectasis
+    0.092  Chronic rhinosinusitis
+    0.066  Acute rhinosinusitis
+    ... and 2 more

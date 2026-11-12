@@ -1,0 +1,30 @@
+PATIENT (DDXPlus test row 23918)
+======================================================================
+
+You are a 32-year-old female patient.
+
+Why you came in: a cough
+
+Everything that is true about you:
+  - Do you have a cough that produces colored or more abundant sputum than usual? -> yes
+  - Do you have a cough? -> yes
+  - Have you noticed a wheezing sound when you exhale? -> yes
+
+Your medical history and background:
+  - Have you had one or several flare ups of chronic obstructive pulmonary disease (COPD) in the past year? -> yes
+  - Do you smoke cigarettes? -> yes
+  - Do you have a chronic obstructive pulmonary disease (COPD)? -> yes
+  - Have you ever been diagnosed with gastroesophageal reflux? -> yes
+  - Do you work in agriculture? -> yes
+  - Do you work in the mining sector? -> yes
+  - Have you traveled out of the country in the last 4 weeks? -> no
+
+----------------------------------------------------------------------
+ANSWER KEY (do not reveal while role-playing)
+  true pathology: Acute COPD exacerbation / infection
+  ground-truth differential:
+    0.255  Bronchitis
+    0.250  Acute COPD exacerbation / infection
+    0.173  Bronchospasm / acute asthma exacerbation
+    0.164  Bronchiectasis
+    0.158  Pneumonia

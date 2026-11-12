@@ -1,0 +1,34 @@
+PATIENT (DDXPlus test row 89202)
+======================================================================
+
+You are a 60-year-old female patient.
+
+Why you came in: a cough
+
+Everything that is true about you:
+  - Are you experiencing shortness of breath or difficulty breathing in a significant way? -> yes
+  - Do you have a cough that produces colored or more abundant sputum than usual? -> yes
+  - Do you have a cough? -> yes
+  - Have you noticed a wheezing sound when you exhale? -> yes
+
+Your medical history and background:
+  - Do you have severe Chronic Obstructive Pulmonary Disease (COPD)? -> yes
+  - Do you smoke cigarettes? -> yes
+  - Have you ever been diagnosed with gastroesophageal reflux? -> yes
+  - Do you work in construction? -> yes
+  - Do you work in the mining sector? -> yes
+  - Have you traveled out of the country in the last 4 weeks? -> no
+
+----------------------------------------------------------------------
+ANSWER KEY (do not reveal while role-playing)
+  true pathology: Acute COPD exacerbation / infection
+  ground-truth differential:
+    0.124  Acute COPD exacerbation / infection
+    0.116  Bronchitis
+    0.107  Bronchiectasis
+    0.104  Pneumonia
+    0.095  Pulmonary neoplasm
+    0.072  Pulmonary embolism
+    0.061  Guillain-Barré syndrome
+    0.059  Atrial fibrillation
+    ... and 7 more

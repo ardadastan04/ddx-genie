@@ -1,0 +1,148 @@
+{
+  "age": 73,
+  "chief_complaint": "pain somewhere, related to your reason for consulting",
+  "differential": [
+    {
+      "pathology": "URTI",
+      "probability": 0.24605109287467603
+    },
+    {
+      "pathology": "Bronchitis",
+      "probability": 0.17506116417453868
+    },
+    {
+      "pathology": "Cluster headache",
+      "probability": 0.15165707709134263
+    },
+    {
+      "pathology": "Chronic rhinosinusitis",
+      "probability": 0.14768150150279766
+    },
+    {
+      "pathology": "Acute rhinosinusitis",
+      "probability": 0.10610221813182374
+    },
+    {
+      "pathology": "Chagas",
+      "probability": 0.06973913267090277
+    },
+    {
+      "pathology": "Anemia",
+      "probability": 0.06973913267090277
+    },
+    {
+      "pathology": "Influenza",
+      "probability": 0.03396868088301571
+    }
+  ],
+  "findings": [
+    {
+      "answer": "yes",
+      "code": "E_41",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you been in contact with a person with similar symptoms in the past 2 weeks?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_48",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you live with 4 or more people?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_50",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Have you had significantly increased sweating?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_53",
+      "is_antecedent": false,
+      "is_chief_complaint": true,
+      "question": "Do you have pain somewhere, related to your reason for consulting?"
+    },
+    {
+      "answer": "tedious, heavy",
+      "code": "E_54",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Characterize your pain:"
+    },
+    {
+      "answer": "top of the head, forehead, cheek(L), occiput",
+      "code": "E_55",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you feel pain somewhere?"
+    },
+    {
+      "answer": "4 out of 10",
+      "code": "E_56",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How intense is the pain?"
+    },
+    {
+      "answer": "nowhere",
+      "code": "E_57",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Does the pain radiate to another location?"
+    },
+    {
+      "answer": "5 out of 10",
+      "code": "E_58",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How precisely is the pain located?"
+    },
+    {
+      "answer": "5 out of 10",
+      "code": "E_59",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How fast did the pain appear?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_79",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you smoke cigarettes?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_97",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have a sore throat?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_181",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have nasal congestion or a clear runny nose?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_201",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have a cough?"
+    },
+    {
+      "answer": "no",
+      "code": "E_204",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you traveled out of the country in the last 4 weeks?"
+    }
+  ],
+  "pathology": "URTI",
+  "row_index": 7426,
+  "sex": "M"
+}

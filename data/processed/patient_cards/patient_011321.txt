@@ -1,0 +1,34 @@
+PATIENT (DDXPlus test row 11321)
+======================================================================
+
+You are a 55-year-old female patient.
+
+Why you came in: noticed a wheezing sound when you exhale
+
+Everything that is true about you:
+  - Are you experiencing shortness of breath or difficulty breathing in a significant way? -> yes
+  - Do you have a cough that produces colored or more abundant sputum than usual? -> yes
+  - Do you have a cough? -> yes
+  - Have you noticed a wheezing sound when you exhale? -> yes
+
+Your medical history and background:
+  - Do you have a chronic obstructive pulmonary disease (COPD)? -> yes
+  - Have you ever been diagnosed with gastroesophageal reflux? -> yes
+  - Do you work in agriculture? -> yes
+  - Do you work in construction? -> yes
+  - Do you work in the mining sector? -> yes
+  - Have you traveled out of the country in the last 4 weeks? -> no
+
+----------------------------------------------------------------------
+ANSWER KEY (do not reveal while role-playing)
+  true pathology: Acute COPD exacerbation / infection
+  ground-truth differential:
+    0.126  Acute COPD exacerbation / infection
+    0.118  Bronchitis
+    0.109  Bronchiectasis
+    0.106  Pneumonia
+    0.097  Pulmonary neoplasm
+    0.062  Guillain-Barré syndrome
+    0.060  Atrial fibrillation
+    0.059  Myocarditis
+    ... and 7 more

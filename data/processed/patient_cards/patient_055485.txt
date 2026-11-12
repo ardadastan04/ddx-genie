@@ -1,0 +1,56 @@
+PATIENT (DDXPlus test row 55485)
+======================================================================
+
+You are a 31-year-old male patient.
+
+Why you came in: had chills or shivers
+
+Everything that is true about you:
+  - Have you been coughing up blood? -> yes
+  - Characterize your pain: -> not applicable
+  - Do you feel pain somewhere? -> nowhere
+  - How intense is the pain? -> 0 out of 10
+  - Does the pain radiate to another location? -> nowhere
+  - How precisely is the pain located? -> 0 out of 10
+  - How fast did the pain appear? -> 0 out of 10
+  - Are you experiencing shortness of breath or difficulty breathing in a significant way? -> yes
+  - Do you have a cough that produces colored or more abundant sputum than usual? -> yes
+  - Have you had chills or shivers? -> yes
+  - Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for? -> yes
+  - What color is the rash? -> pink
+  - Do your lesions peel off? -> yes
+  - Is the rash swollen? -> 0 out of 10
+  - Where is the affected region located? -> commissure(R), commissure(L), buttock(R), buttock(L), shoulder(L)
+  - How intense is the pain caused by the rash? -> 3 out of 10
+  - Is the lesion (or are the lesions) larger than 1cm? -> no
+  - How severe is the itching? -> 4 out of 10
+  - Do you have diffuse (widespread) muscle pain? -> yes
+  - Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today? -> yes
+  - Do you have a cough? -> yes
+
+Your medical history and background:
+  - Do you drink alcohol excessively or do you have an addiction to alcohol? -> yes
+  - Do you smoke cigarettes? -> yes
+  - Do you have Parkinson’s disease? -> yes
+  - Do you have heart failure? -> yes
+  - Have you ever had a stroke? -> yes
+  - Have you ever had pneumonia? -> yes
+  - Do you have asthma or have you ever had to use a bronchodilator in the past? -> yes
+  - Have you had surgery within the last month? -> yes
+  - Have you traveled out of the country in the last 4 weeks? -> no
+  - Is your BMI less than 18.5, or are you underweight? -> yes
+  - Are your vaccinations up to date? -> yes
+
+----------------------------------------------------------------------
+ANSWER KEY (do not reveal while role-playing)
+  true pathology: Pneumonia
+  ground-truth differential:
+    0.113  Pneumonia
+    0.111  Bronchitis
+    0.111  Bronchiectasis
+    0.087  Tuberculosis
+    0.085  Acute COPD exacerbation / infection
+    0.082  Pulmonary embolism
+    0.069  Myocarditis
+    0.061  Guillain-Barré syndrome
+    ... and 6 more

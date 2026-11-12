@@ -1,0 +1,172 @@
+{
+  "age": 32,
+  "chief_complaint": "a cough",
+  "differential": [
+    {
+      "pathology": "Bronchitis",
+      "probability": 0.123497960041258
+    },
+    {
+      "pathology": "Acute COPD exacerbation / infection",
+      "probability": 0.12080224569227739
+    },
+    {
+      "pathology": "Pneumonia",
+      "probability": 0.1058531166600203
+    },
+    {
+      "pathology": "Bronchospasm / acute asthma exacerbation",
+      "probability": 0.08369947827098172
+    },
+    {
+      "pathology": "Influenza",
+      "probability": 0.07252713411912654
+    },
+    {
+      "pathology": "Acute laryngitis",
+      "probability": 0.06976669569619692
+    },
+    {
+      "pathology": "Tuberculosis",
+      "probability": 0.06671902621262532
+    },
+    {
+      "pathology": "Possible NSTEMI / STEMI",
+      "probability": 0.06625912494799815
+    },
+    {
+      "pathology": "Viral pharyngitis",
+      "probability": 0.06266526025678397
+    },
+    {
+      "pathology": "Unstable angina",
+      "probability": 0.06216588971480775
+    },
+    {
+      "pathology": "Bronchiectasis",
+      "probability": 0.05688571357996131
+    },
+    {
+      "pathology": "Epiglottitis",
+      "probability": 0.05194446280274725
+    },
+    {
+      "pathology": "Stable angina",
+      "probability": 0.03205211991360056
+    },
+    {
+      "pathology": "Chagas",
+      "probability": 0.02516177209161492
+    }
+  ],
+  "findings": [
+    {
+      "answer": "yes",
+      "code": "E_53",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have pain somewhere, related to your reason for consulting?"
+    },
+    {
+      "answer": "burning",
+      "code": "E_54",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Characterize your pain:"
+    },
+    {
+      "answer": "side of the chest(R), pharynx, breast(L), posterior chest wall(L)",
+      "code": "E_55",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you feel pain somewhere?"
+    },
+    {
+      "answer": "5 out of 10",
+      "code": "E_56",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How intense is the pain?"
+    },
+    {
+      "answer": "nowhere",
+      "code": "E_57",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Does the pain radiate to another location?"
+    },
+    {
+      "answer": "4 out of 10",
+      "code": "E_58",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How precisely is the pain located?"
+    },
+    {
+      "answer": "2 out of 10",
+      "code": "E_59",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How fast did the pain appear?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_77",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have a cough that produces colored or more abundant sputum than usual?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_91",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have a fever (either felt or measured with a thermometer)?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_123",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you have a chronic obstructive pulmonary disease (COPD)?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_201",
+      "is_antecedent": false,
+      "is_chief_complaint": true,
+      "question": "Do you have a cough?"
+    },
+    {
+      "answer": "no",
+      "code": "E_204",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you traveled out of the country in the last 4 weeks?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_209",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Are your vaccinations up to date?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_214",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Have you noticed a wheezing sound when you exhale?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_219",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Are your symptoms more prominent at night?"
+    }
+  ],
+  "pathology": "Bronchitis",
+  "row_index": 81005,
+  "sex": "F"
+}

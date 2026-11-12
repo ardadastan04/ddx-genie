@@ -1,0 +1,202 @@
+{
+  "age": 12,
+  "chief_complaint": "had chills or shivers",
+  "differential": [
+    {
+      "pathology": "Viral pharyngitis",
+      "probability": 0.13585239379372213
+    },
+    {
+      "pathology": "URTI",
+      "probability": 0.12200920786334306
+    },
+    {
+      "pathology": "Bronchitis",
+      "probability": 0.10494131588058549
+    },
+    {
+      "pathology": "Influenza",
+      "probability": 0.10175396569732888
+    },
+    {
+      "pathology": "Acute laryngitis",
+      "probability": 0.09669031133127723
+    },
+    {
+      "pathology": "Epiglottitis",
+      "probability": 0.0858537142689483
+    },
+    {
+      "pathology": "Chronic rhinosinusitis",
+      "probability": 0.0857419179361665
+    },
+    {
+      "pathology": "Tuberculosis",
+      "probability": 0.07693167232036086
+    },
+    {
+      "pathology": "Acute rhinosinusitis",
+      "probability": 0.0738119775790648
+    },
+    {
+      "pathology": "Chagas",
+      "probability": 0.06305968419621544
+    },
+    {
+      "pathology": "Scombroid food poisoning",
+      "probability": 0.05335383913298727
+    }
+  ],
+  "findings": [
+    {
+      "answer": "yes",
+      "code": "E_53",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have pain somewhere, related to your reason for consulting?"
+    },
+    {
+      "answer": "sensitive, heavy, exhausting",
+      "code": "E_54",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Characterize your pain:"
+    },
+    {
+      "answer": "back of the neck, forehead, occiput, pharynx, temple(R)",
+      "code": "E_55",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you feel pain somewhere?"
+    },
+    {
+      "answer": "5 out of 10",
+      "code": "E_56",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How intense is the pain?"
+    },
+    {
+      "answer": "nowhere",
+      "code": "E_57",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Does the pain radiate to another location?"
+    },
+    {
+      "answer": "8 out of 10",
+      "code": "E_58",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How precisely is the pain located?"
+    },
+    {
+      "answer": "0 out of 10",
+      "code": "E_59",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How fast did the pain appear?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_91",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have a fever (either felt or measured with a thermometer)?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_94",
+      "is_antecedent": false,
+      "is_chief_complaint": true,
+      "question": "Have you had chills or shivers?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_129",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?"
+    },
+    {
+      "answer": "pink",
+      "code": "E_130",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "What color is the rash?"
+    },
+    {
+      "answer": "no",
+      "code": "E_131",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do your lesions peel off?"
+    },
+    {
+      "answer": "3 out of 10",
+      "code": "E_132",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Is the rash swollen?"
+    },
+    {
+      "answer": "side of the neck(R)",
+      "code": "E_133",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Where is the affected region located?"
+    },
+    {
+      "answer": "5 out of 10",
+      "code": "E_134",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How intense is the pain caused by the rash?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_135",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Is the lesion (or are the lesions) larger than 1cm?"
+    },
+    {
+      "answer": "3 out of 10",
+      "code": "E_136",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How severe is the itching?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_161",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Have you recently had a loss of appetite or do you get full more quickly then usually?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_181",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have nasal congestion or a clear runny nose?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_201",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have a cough?"
+    },
+    {
+      "answer": "no",
+      "code": "E_204",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you traveled out of the country in the last 4 weeks?"
+    }
+  ],
+  "pathology": "Influenza",
+  "row_index": 69582,
+  "sex": "M"
+}

@@ -1,0 +1,38 @@
+PATIENT (DDXPlus test row 105447)
+======================================================================
+
+You are a 14-year-old female patient.
+
+Why you came in: noticed a wheezing sound when you exhale
+
+Everything that is true about you:
+  - Do you have pain somewhere, related to your reason for consulting? -> yes
+  - Characterize your pain: -> sensitive
+  - Do you feel pain somewhere? -> lower chest, side of the chest(L), breast(R), breast(L)
+  - How intense is the pain? -> 1 out of 10
+  - Does the pain radiate to another location? -> nowhere
+  - How precisely is the pain located? -> 7 out of 10
+  - How fast did the pain appear? -> 0 out of 10
+  - Do you have a cough that produces colored or more abundant sputum than usual? -> yes
+  - Do you have a sore throat? -> yes
+  - Do you have nasal congestion or a clear runny nose? -> yes
+  - Do you have a cough? -> yes
+  - Have you noticed a wheezing sound when you exhale? -> yes
+
+Your medical history and background:
+  - Do you have a chronic obstructive pulmonary disease (COPD)? -> yes
+  - Have you traveled out of the country in the last 4 weeks? -> no
+
+----------------------------------------------------------------------
+ANSWER KEY (do not reveal while role-playing)
+  true pathology: Bronchitis
+  ground-truth differential:
+    0.159  Bronchitis
+    0.157  URTI
+    0.124  GERD
+    0.114  Bronchospasm / acute asthma exacerbation
+    0.107  Bronchiectasis
+    0.101  Spontaneous rib fracture
+    0.084  Boerhaave
+    0.069  Pneumonia
+    ... and 2 more

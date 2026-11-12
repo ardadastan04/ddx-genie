@@ -1,0 +1,165 @@
+{
+  "age": 63,
+  "chief_complaint": "a cough",
+  "differential": [
+    {
+      "pathology": "Bronchospasm / acute asthma exacerbation",
+      "probability": 0.09678286055214982
+    },
+    {
+      "pathology": "Bronchitis",
+      "probability": 0.08389779356044244
+    },
+    {
+      "pathology": "Pulmonary neoplasm",
+      "probability": 0.07815539688794135
+    },
+    {
+      "pathology": "Acute COPD exacerbation / infection",
+      "probability": 0.07332722880749283
+    },
+    {
+      "pathology": "Pneumonia",
+      "probability": 0.06174147916925271
+    },
+    {
+      "pathology": "Pulmonary embolism",
+      "probability": 0.058887797864885474
+    },
+    {
+      "pathology": "Tuberculosis",
+      "probability": 0.056594280421782404
+    },
+    {
+      "pathology": "Acute pulmonary edema",
+      "probability": 0.05516044345393916
+    },
+    {
+      "pathology": "Anaphylaxis",
+      "probability": 0.05516044345393916
+    },
+    {
+      "pathology": "Guillain-Barré syndrome",
+      "probability": 0.05041985838903869
+    },
+    {
+      "pathology": "Atrial fibrillation",
+      "probability": 0.04816008229343768
+    },
+    {
+      "pathology": "Myocarditis",
+      "probability": 0.0475614302623819
+    },
+    {
+      "pathology": "Bronchiectasis",
+      "probability": 0.038050847753805406
+    },
+    {
+      "pathology": "Acute dystonic reactions",
+      "probability": 0.0355061876541934
+    },
+    {
+      "pathology": "Myasthenia gravis",
+      "probability": 0.0355061876541934
+    },
+    {
+      "pathology": "Anemia",
+      "probability": 0.0355061876541934
+    },
+    {
+      "pathology": "Scombroid food poisoning",
+      "probability": 0.03280470330779679
+    },
+    {
+      "pathology": "PSVT",
+      "probability": 0.018966153297515814
+    },
+    {
+      "pathology": "SLE",
+      "probability": 0.016437669988954847
+    },
+    {
+      "pathology": "Possible NSTEMI / STEMI",
+      "probability": 0.01068648378633173
+    },
+    {
+      "pathology": "Chagas",
+      "probability": 0.01068648378633173
+    }
+  ],
+  "findings": [
+    {
+      "answer": "yes",
+      "code": "E_66",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Are you experiencing shortness of breath or difficulty breathing in a significant way?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_87",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you have any family members who have asthma?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_101",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you been hospitalized for an asthma attack in the past year?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_116",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you had a cold in the last 2 weeks?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_119",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you been diagnosed with chronic sinusitis?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_124",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you have asthma or have you ever had to use a bronchodilator in the past?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_201",
+      "is_antecedent": false,
+      "is_chief_complaint": true,
+      "question": "Do you have a cough?"
+    },
+    {
+      "answer": "no",
+      "code": "E_204",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you traveled out of the country in the last 4 weeks?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_214",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Have you noticed a wheezing sound when you exhale?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_222",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Are you exposed to secondhand cigarette smoke on a daily basis?"
+    }
+  ],
+  "pathology": "Bronchospasm / acute asthma exacerbation",
+  "row_index": 34315,
+  "sex": "M"
+}

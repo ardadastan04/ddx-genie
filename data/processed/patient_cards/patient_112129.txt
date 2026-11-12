@@ -1,0 +1,34 @@
+PATIENT (DDXPlus test row 112129)
+======================================================================
+
+You are a 42-year-old male patient.
+
+Why you came in: a sore throat
+
+Everything that is true about you:
+  - Have you had significantly increased sweating? -> yes
+  - Do you have pain somewhere, related to your reason for consulting? -> yes
+  - Characterize your pain: -> heavy
+  - Do you feel pain somewhere? -> cheek(R), occiput, temple(R), temple(L)
+  - How intense is the pain? -> 5 out of 10
+  - Does the pain radiate to another location? -> nowhere
+  - How precisely is the pain located? -> 3 out of 10
+  - How fast did the pain appear? -> 5 out of 10
+  - Do you have a fever (either felt or measured with a thermometer)? -> yes
+  - Do you have a sore throat? -> yes
+  - Do you have a cough? -> yes
+
+Your medical history and background:
+  - Do you live with 4 or more people? -> yes
+  - Do you attend or work in a daycare? -> yes
+  - Have you traveled out of the country in the last 4 weeks? -> North America
+
+----------------------------------------------------------------------
+ANSWER KEY (do not reveal while role-playing)
+  true pathology: URTI
+  ground-truth differential:
+    0.251  URTI
+    0.242  Influenza
+    0.235  Bronchitis
+    0.153  Tuberculosis
+    0.119  Chagas

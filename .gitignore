@@ -1,0 +1,33 @@
+# secrets
+.env
+.env.local
+
+# DDXPlus source data: research-use-only licence, never commit
+data/raw/
+data/raw/**
+
+# run outputs: keep only the aggregate summaries
+runs/**
+!runs/**/
+!runs/**/summary.json
+
+# genie writes this on import (loguru)
+prompts.log
+
+# llm response cache
+.cache/
+**/.llm_cache/
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# os
+.DS_Store
+dump.rdb
+logs/

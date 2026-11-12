@@ -1,0 +1,45 @@
+PATIENT (DDXPlus test row 69582)
+======================================================================
+
+You are a 12-year-old male patient.
+
+Why you came in: had chills or shivers
+
+Everything that is true about you:
+  - Do you have pain somewhere, related to your reason for consulting? -> yes
+  - Characterize your pain: -> sensitive, heavy, exhausting
+  - Do you feel pain somewhere? -> back of the neck, forehead, occiput, pharynx, temple(R)
+  - How intense is the pain? -> 5 out of 10
+  - Does the pain radiate to another location? -> nowhere
+  - How precisely is the pain located? -> 8 out of 10
+  - How fast did the pain appear? -> 0 out of 10
+  - Do you have a fever (either felt or measured with a thermometer)? -> yes
+  - Have you had chills or shivers? -> yes
+  - Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for? -> yes
+  - What color is the rash? -> pink
+  - Do your lesions peel off? -> no
+  - Is the rash swollen? -> 3 out of 10
+  - Where is the affected region located? -> side of the neck(R)
+  - How intense is the pain caused by the rash? -> 5 out of 10
+  - Is the lesion (or are the lesions) larger than 1cm? -> yes
+  - How severe is the itching? -> 3 out of 10
+  - Have you recently had a loss of appetite or do you get full more quickly then usually? -> yes
+  - Do you have nasal congestion or a clear runny nose? -> yes
+  - Do you have a cough? -> yes
+
+Your medical history and background:
+  - Have you traveled out of the country in the last 4 weeks? -> no
+
+----------------------------------------------------------------------
+ANSWER KEY (do not reveal while role-playing)
+  true pathology: Influenza
+  ground-truth differential:
+    0.136  Viral pharyngitis
+    0.122  URTI
+    0.105  Bronchitis
+    0.102  Influenza
+    0.097  Acute laryngitis
+    0.086  Epiglottitis
+    0.086  Chronic rhinosinusitis
+    0.077  Tuberculosis
+    ... and 3 more

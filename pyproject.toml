@@ -1,0 +1,53 @@
+[project]
+name = "ddx-genie"
+version = "0.1.0"
+description = "Evaluating Genie Worksheets against a function-calling baseline on simulated DDXPlus patients"
+readme = "README.md"
+requires-python = ">=3.11"
+
+dependencies = [
+    "genie-worksheets",
+    "openai>=1.50.0",
+    "google-auth>=2.35.0",
+    "python-dotenv>=1.0.1",
+    "pandas>=2.2.3",
+    "tenacity>=9.0.0",
+    # Undeclared by genie-worksheets but imported at module scope by
+    # src/worksheets/llm/llm.py and src/worksheets/utils/llm.py respectively.
+    "overrides>=7.7.0",
+    "tiktoken>=0.8.0",
+]
+
+[project.optional-dependencies]
+report = ["matplotlib>=3.9.0"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ddx_genie"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.0",
+    "ruff>=0.7.0",
+]
+
+[tool.uv]
+
+# genie-worksheets -> suql pulls plain psycopg2, whose macOS sdist cannot find
+# libpq.5.dylib at import time. psycopg2-binary ships its own libpq and provides
+# the same `psycopg2` module. The impossible marker keeps the broken one out.
+override-dependencies = ["psycopg2 ; python_version < '3.0'"]
+
+# genie-worksheets is consumed from the local clone next to this repo
+[tool.uv.sources]
+genie-worksheets = { path = "../genie-worksheets", editable = true }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

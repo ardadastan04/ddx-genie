@@ -1,0 +1,54 @@
+PATIENT (DDXPlus test row 113891)
+======================================================================
+
+You are a 50-year-old male patient.
+
+Why you came in: pain somewhere, related to your reason for consulting
+
+Everything that is true about you:
+  - Have you been coughing up blood? -> yes
+  - Do you have pain somewhere, related to your reason for consulting? -> yes
+  - Characterize your pain: -> a knife stroke
+  - Do you feel pain somewhere? -> side of the chest(L), breast(R), posterior chest wall(L)
+  - How intense is the pain? -> 4 out of 10
+  - Does the pain radiate to another location? -> nowhere
+  - How precisely is the pain located? -> 0 out of 10
+  - How fast did the pain appear? -> 3 out of 10
+  - Do you have a cough that produces colored or more abundant sputum than usual? -> yes
+  - Have you had chills or shivers? -> yes
+  - Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for? -> yes
+  - What color is the rash? -> pink
+  - Do your lesions peel off? -> yes
+  - Is the rash swollen? -> 6 out of 10
+  - Where is the affected region located? -> back of the neck, side of the neck(R), flank(L), shoulder(L)
+  - How intense is the pain caused by the rash? -> 2 out of 10
+  - Is the lesion (or are the lesions) larger than 1cm? -> no
+  - How severe is the itching? -> 1 out of 10
+  - Do you have diffuse (widespread) muscle pain? -> yes
+  - Have you recently had a loss of appetite or do you get full more quickly then usually? -> yes
+  - Do you have a cough? -> yes
+  - Are your symptoms more prominent at night? -> yes
+
+Your medical history and background:
+  - Do you smoke cigarettes? -> yes
+  - Do you have Parkinson’s disease? -> yes
+  - Do you have heart failure? -> yes
+  - Have you ever had pneumonia? -> yes
+  - Do you have a chronic obstructive pulmonary disease (COPD)? -> yes
+  - Do you have asthma or have you ever had to use a bronchodilator in the past? -> yes
+  - Have you traveled out of the country in the last 4 weeks? -> no
+  - Is your BMI less than 18.5, or are you underweight? -> yes
+  - Are your vaccinations up to date? -> yes
+
+----------------------------------------------------------------------
+ANSWER KEY (do not reveal while role-playing)
+  true pathology: Pneumonia
+  ground-truth differential:
+    0.184  Bronchitis
+    0.167  Pneumonia
+    0.145  Bronchiectasis
+    0.120  Pulmonary neoplasm
+    0.111  Unstable angina
+    0.110  Possible NSTEMI / STEMI
+    0.089  Tuberculosis
+    0.075  Stable angina

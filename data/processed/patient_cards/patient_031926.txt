@@ -1,0 +1,40 @@
+PATIENT (DDXPlus test row 31926)
+======================================================================
+
+You are a 83-year-old female patient.
+
+Why you came in: noticed a wheezing sound when you exhale
+
+Everything that is true about you:
+  - Do you have pain somewhere, related to your reason for consulting? -> yes
+  - Characterize your pain: -> burning
+  - Do you feel pain somewhere? -> lower chest, side of the chest(L), pharynx, posterior chest wall(R), posterior chest wall(L)
+  - How intense is the pain? -> 4 out of 10
+  - Does the pain radiate to another location? -> nowhere
+  - How precisely is the pain located? -> 5 out of 10
+  - How fast did the pain appear? -> 1 out of 10
+  - Are you experiencing shortness of breath or difficulty breathing in a significant way? -> yes
+  - Do you have a cough that produces colored or more abundant sputum than usual? -> yes
+  - Do you have a cough? -> yes
+  - Have you noticed a wheezing sound when you exhale? -> yes
+  - Are your symptoms more prominent at night? -> yes
+
+Your medical history and background:
+  - Do you smoke cigarettes? -> yes
+  - Do you have a chronic obstructive pulmonary disease (COPD)? -> yes
+  - Have you traveled out of the country in the last 4 weeks? -> no
+  - Are your vaccinations up to date? -> yes
+
+----------------------------------------------------------------------
+ANSWER KEY (do not reveal while role-playing)
+  true pathology: Bronchitis
+  ground-truth differential:
+    0.067  Acute COPD exacerbation / infection
+    0.062  Bronchitis
+    0.059  Pneumonia
+    0.058  Bronchiectasis
+    0.057  Pulmonary neoplasm
+    0.047  Panic attack
+    0.046  Possible NSTEMI / STEMI
+    0.045  GERD
+    ... and 19 more

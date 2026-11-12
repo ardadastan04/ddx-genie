@@ -1,0 +1,104 @@
+{
+  "age": 20,
+  "chief_complaint": "a cough",
+  "differential": [
+    {
+      "pathology": "Bronchitis",
+      "probability": 0.41250510103707977
+    },
+    {
+      "pathology": "Bronchospasm / acute asthma exacerbation",
+      "probability": 0.32592395811728986
+    },
+    {
+      "pathology": "Anaphylaxis",
+      "probability": 0.18342543041984744
+    },
+    {
+      "pathology": "Scombroid food poisoning",
+      "probability": 0.07814551042578294
+    }
+  ],
+  "findings": [
+    {
+      "answer": "yes",
+      "code": "E_46",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you had 2 or more asthma attacks in the past year?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_101",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you been hospitalized for an asthma attack in the past year?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_116",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you had a cold in the last 2 weeks?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_119",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you been diagnosed with chronic sinusitis?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_124",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you have asthma or have you ever had to use a bronchodilator in the past?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_201",
+      "is_antecedent": false,
+      "is_chief_complaint": true,
+      "question": "Do you have a cough?"
+    },
+    {
+      "answer": "no",
+      "code": "E_204",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you traveled out of the country in the last 4 weeks?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_207",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you live in in a big city?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_214",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Have you noticed a wheezing sound when you exhale?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_222",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Are you exposed to secondhand cigarette smoke on a daily basis?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_226",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Are you more likely to develop common allergies than the general population?"
+    }
+  ],
+  "pathology": "Bronchospasm / acute asthma exacerbation",
+  "row_index": 68784,
+  "sex": "M"
+}

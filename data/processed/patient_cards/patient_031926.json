@@ -1,0 +1,231 @@
+{
+  "age": 83,
+  "chief_complaint": "noticed a wheezing sound when you exhale",
+  "differential": [
+    {
+      "pathology": "Acute COPD exacerbation / infection",
+      "probability": 0.0669612495952681
+    },
+    {
+      "pathology": "Bronchitis",
+      "probability": 0.061981411907937635
+    },
+    {
+      "pathology": "Pneumonia",
+      "probability": 0.058998295914699184
+    },
+    {
+      "pathology": "Bronchiectasis",
+      "probability": 0.057707055614301256
+    },
+    {
+      "pathology": "Pulmonary neoplasm",
+      "probability": 0.0573862640632348
+    },
+    {
+      "pathology": "Panic attack",
+      "probability": 0.04716382196181715
+    },
+    {
+      "pathology": "Possible NSTEMI / STEMI",
+      "probability": 0.045791630269967146
+    },
+    {
+      "pathology": "GERD",
+      "probability": 0.04537220166786035
+    },
+    {
+      "pathology": "Unstable angina",
+      "probability": 0.04384790543498188
+    },
+    {
+      "pathology": "Pericarditis",
+      "probability": 0.04371068025308339
+    },
+    {
+      "pathology": "Boerhaave",
+      "probability": 0.03991783195137109
+    },
+    {
+      "pathology": "Myocarditis",
+      "probability": 0.036938371014089685
+    },
+    {
+      "pathology": "Stable angina",
+      "probability": 0.036304782670477126
+    },
+    {
+      "pathology": "Acute laryngitis",
+      "probability": 0.03461164804503576
+    },
+    {
+      "pathology": "Spontaneous pneumothorax",
+      "probability": 0.03329755716522676
+    },
+    {
+      "pathology": "Guillain-Barré syndrome",
+      "probability": 0.03318468609881277
+    },
+    {
+      "pathology": "Atrial fibrillation",
+      "probability": 0.03169737608283654
+    },
+    {
+      "pathology": "Viral pharyngitis",
+      "probability": 0.031088586194524422
+    },
+    {
+      "pathology": "Spontaneous rib fracture",
+      "probability": 0.028597591348606795
+    },
+    {
+      "pathology": "Pulmonary embolism",
+      "probability": 0.028117763115119657
+    },
+    {
+      "pathology": "Acute dystonic reactions",
+      "probability": 0.02336900042000325
+    },
+    {
+      "pathology": "Myasthenia gravis",
+      "probability": 0.02336900042000325
+    },
+    {
+      "pathology": "Anemia",
+      "probability": 0.02336900042000325
+    },
+    {
+      "pathology": "Tuberculosis",
+      "probability": 0.022323688180783206
+    },
+    {
+      "pathology": "Scombroid food poisoning",
+      "probability": 0.02159097261706286
+    },
+    {
+      "pathology": "PSVT",
+      "probability": 0.012482895902318795
+    },
+    {
+      "pathology": "SLE",
+      "probability": 0.010818731670573855
+    }
+  ],
+  "findings": [
+    {
+      "answer": "yes",
+      "code": "E_53",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have pain somewhere, related to your reason for consulting?"
+    },
+    {
+      "answer": "burning",
+      "code": "E_54",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Characterize your pain:"
+    },
+    {
+      "answer": "lower chest, side of the chest(L), pharynx, posterior chest wall(R), posterior chest wall(L)",
+      "code": "E_55",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you feel pain somewhere?"
+    },
+    {
+      "answer": "4 out of 10",
+      "code": "E_56",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How intense is the pain?"
+    },
+    {
+      "answer": "nowhere",
+      "code": "E_57",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Does the pain radiate to another location?"
+    },
+    {
+      "answer": "5 out of 10",
+      "code": "E_58",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How precisely is the pain located?"
+    },
+    {
+      "answer": "1 out of 10",
+      "code": "E_59",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How fast did the pain appear?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_66",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Are you experiencing shortness of breath or difficulty breathing in a significant way?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_77",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have a cough that produces colored or more abundant sputum than usual?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_79",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you smoke cigarettes?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_123",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you have a chronic obstructive pulmonary disease (COPD)?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_201",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have a cough?"
+    },
+    {
+      "answer": "no",
+      "code": "E_204",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you traveled out of the country in the last 4 weeks?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_209",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Are your vaccinations up to date?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_214",
+      "is_antecedent": false,
+      "is_chief_complaint": true,
+      "question": "Have you noticed a wheezing sound when you exhale?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_219",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Are your symptoms more prominent at night?"
+    }
+  ],
+  "pathology": "Bronchitis",
+  "row_index": 31926,
+  "sex": "F"
+}

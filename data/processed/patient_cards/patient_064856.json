@@ -1,0 +1,149 @@
+{
+  "age": 51,
+  "chief_complaint": "pain somewhere, related to your reason for consulting",
+  "differential": [
+    {
+      "pathology": "Bronchitis",
+      "probability": 0.17899786140325283
+    },
+    {
+      "pathology": "Pneumonia",
+      "probability": 0.16482459604311725
+    },
+    {
+      "pathology": "GERD",
+      "probability": 0.1345809947468176
+    },
+    {
+      "pathology": "Possible NSTEMI / STEMI",
+      "probability": 0.10218806465310189
+    },
+    {
+      "pathology": "Tuberculosis",
+      "probability": 0.09817879643681568
+    },
+    {
+      "pathology": "Unstable angina",
+      "probability": 0.09604233831702598
+    },
+    {
+      "pathology": "Bronchiectasis",
+      "probability": 0.08370881906956208
+    },
+    {
+      "pathology": "Stable angina",
+      "probability": 0.053478643439685454
+    },
+    {
+      "pathology": "Boerhaave",
+      "probability": 0.05097367851913612
+    },
+    {
+      "pathology": "Chagas",
+      "probability": 0.03702620737148504
+    }
+  ],
+  "findings": [
+    {
+      "answer": "yes",
+      "code": "E_53",
+      "is_antecedent": false,
+      "is_chief_complaint": true,
+      "question": "Do you have pain somewhere, related to your reason for consulting?"
+    },
+    {
+      "answer": "sensitive, burning",
+      "code": "E_54",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Characterize your pain:"
+    },
+    {
+      "answer": "lower chest, side of the chest(R), side of the chest(L), posterior chest wall(R)",
+      "code": "E_55",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you feel pain somewhere?"
+    },
+    {
+      "answer": "2 out of 10",
+      "code": "E_56",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How intense is the pain?"
+    },
+    {
+      "answer": "nowhere",
+      "code": "E_57",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Does the pain radiate to another location?"
+    },
+    {
+      "answer": "7 out of 10",
+      "code": "E_58",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How precisely is the pain located?"
+    },
+    {
+      "answer": "5 out of 10",
+      "code": "E_59",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How fast did the pain appear?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_77",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have a cough that produces colored or more abundant sputum than usual?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_91",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have a fever (either felt or measured with a thermometer)?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_123",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you have a chronic obstructive pulmonary disease (COPD)?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_201",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have a cough?"
+    },
+    {
+      "answer": "no",
+      "code": "E_204",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you traveled out of the country in the last 4 weeks?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_209",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Are your vaccinations up to date?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_219",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Are your symptoms more prominent at night?"
+    }
+  ],
+  "pathology": "Bronchitis",
+  "row_index": 64856,
+  "sex": "M"
+}

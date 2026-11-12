@@ -1,0 +1,331 @@
+{
+  "age": 47,
+  "chief_complaint": "pain somewhere, related to your reason for consulting",
+  "differential": [
+    {
+      "pathology": "Pulmonary neoplasm",
+      "probability": 0.06219239066498655
+    },
+    {
+      "pathology": "Possible NSTEMI / STEMI",
+      "probability": 0.057128368590530075
+    },
+    {
+      "pathology": "Pericarditis",
+      "probability": 0.05488255722942412
+    },
+    {
+      "pathology": "Spontaneous pneumothorax",
+      "probability": 0.05486876657496407
+    },
+    {
+      "pathology": "Tuberculosis",
+      "probability": 0.0546885010834554
+    },
+    {
+      "pathology": "Unstable angina",
+      "probability": 0.04982222583015591
+    },
+    {
+      "pathology": "URTI",
+      "probability": 0.04880571577469806
+    },
+    {
+      "pathology": "Myocarditis",
+      "probability": 0.04859623038446731
+    },
+    {
+      "pathology": "Stable angina",
+      "probability": 0.04791532481651905
+    },
+    {
+      "pathology": "Bronchitis",
+      "probability": 0.047895542180524296
+    },
+    {
+      "pathology": "Panic attack",
+      "probability": 0.04704759334225994
+    },
+    {
+      "pathology": "Influenza",
+      "probability": 0.04601425513488572
+    },
+    {
+      "pathology": "Bronchiectasis",
+      "probability": 0.04146436958151896
+    },
+    {
+      "pathology": "Pneumonia",
+      "probability": 0.03726843775405535
+    },
+    {
+      "pathology": "Guillain-Barré syndrome",
+      "probability": 0.03689374408169677
+    },
+    {
+      "pathology": "Bronchospasm / acute asthma exacerbation",
+      "probability": 0.03580267555715254
+    },
+    {
+      "pathology": "Pulmonary embolism",
+      "probability": 0.035704253828036304
+    },
+    {
+      "pathology": "GERD",
+      "probability": 0.03540683734606213
+    },
+    {
+      "pathology": "Atrial fibrillation",
+      "probability": 0.03524019717345783
+    },
+    {
+      "pathology": "Spontaneous rib fracture",
+      "probability": 0.033904726405286724
+    },
+    {
+      "pathology": "Acute dystonic reactions",
+      "probability": 0.02598095755293311
+    },
+    {
+      "pathology": "Myasthenia gravis",
+      "probability": 0.02598095755293311
+    },
+    {
+      "pathology": "Acute pulmonary edema",
+      "probability": 0.02261726026952752
+    },
+    {
+      "pathology": "PSVT",
+      "probability": 0.013878111290469232
+    }
+  ],
+  "findings": [
+    {
+      "answer": "yes",
+      "code": "E_45",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Have you been coughing up blood?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_53",
+      "is_antecedent": false,
+      "is_chief_complaint": true,
+      "question": "Do you have pain somewhere, related to your reason for consulting?"
+    },
+    {
+      "answer": "sharp",
+      "code": "E_54",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Characterize your pain:"
+    },
+    {
+      "answer": "lower chest, side of the chest(L), posterior chest wall(R), posterior chest wall(L)",
+      "code": "E_55",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you feel pain somewhere?"
+    },
+    {
+      "answer": "5 out of 10",
+      "code": "E_56",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How intense is the pain?"
+    },
+    {
+      "answer": "nowhere",
+      "code": "E_57",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Does the pain radiate to another location?"
+    },
+    {
+      "answer": "0 out of 10",
+      "code": "E_58",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How precisely is the pain located?"
+    },
+    {
+      "answer": "5 out of 10",
+      "code": "E_59",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How fast did the pain appear?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_66",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Are you experiencing shortness of breath or difficulty breathing in a significant way?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_78",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you drink alcohol excessively or do you have an addiction to alcohol?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_79",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you smoke cigarettes?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_94",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Have you had chills or shivers?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_95",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you have Parkinson’s disease?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_106",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you have heart failure?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_107",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you ever had a stroke?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_123",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you have a chronic obstructive pulmonary disease (COPD)?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_124",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you have asthma or have you ever had to use a bronchodilator in the past?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_129",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?"
+    },
+    {
+      "answer": "pink",
+      "code": "E_130",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "What color is the rash?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_131",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do your lesions peel off?"
+    },
+    {
+      "answer": "0 out of 10",
+      "code": "E_132",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Is the rash swollen?"
+    },
+    {
+      "answer": "back of the neck, lumbar spine, flank(R), belly",
+      "code": "E_133",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Where is the affected region located?"
+    },
+    {
+      "answer": "1 out of 10",
+      "code": "E_134",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How intense is the pain caused by the rash?"
+    },
+    {
+      "answer": "no",
+      "code": "E_135",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Is the lesion (or are the lesions) larger than 1cm?"
+    },
+    {
+      "answer": "2 out of 10",
+      "code": "E_136",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "How severe is the itching?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_144",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have diffuse (widespread) muscle pain?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_175",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_181",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have nasal congestion or a clear runny nose?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_196",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you had surgery within the last month?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_201",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Do you have a cough?"
+    },
+    {
+      "answer": "no",
+      "code": "E_204",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you traveled out of the country in the last 4 weeks?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_209",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Are your vaccinations up to date?"
+    }
+  ],
+  "pathology": "Pneumonia",
+  "row_index": 130344,
+  "sex": "M"
+}

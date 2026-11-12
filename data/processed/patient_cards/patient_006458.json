@@ -1,0 +1,131 @@
+{
+  "age": 55,
+  "chief_complaint": "noticed a wheezing sound when you exhale",
+  "differential": [
+    {
+      "pathology": "Bronchospasm / acute asthma exacerbation",
+      "probability": 0.12780592909403027
+    },
+    {
+      "pathology": "Pulmonary embolism",
+      "probability": 0.0923073860694335
+    },
+    {
+      "pathology": "Acute pulmonary edema",
+      "probability": 0.08646470974082876
+    },
+    {
+      "pathology": "Anaphylaxis",
+      "probability": 0.08646470974082876
+    },
+    {
+      "pathology": "Guillain-Barré syndrome",
+      "probability": 0.07903378123532098
+    },
+    {
+      "pathology": "Atrial fibrillation",
+      "probability": 0.07549155292911523
+    },
+    {
+      "pathology": "Myocarditis",
+      "probability": 0.07455315811464608
+    },
+    {
+      "pathology": "Acute COPD exacerbation / infection",
+      "probability": 0.07048939296644824
+    },
+    {
+      "pathology": "Acute dystonic reactions",
+      "probability": 0.055656409145564814
+    },
+    {
+      "pathology": "Myasthenia gravis",
+      "probability": 0.055656409145564814
+    },
+    {
+      "pathology": "Anemia",
+      "probability": 0.055656409145564814
+    },
+    {
+      "pathology": "Scombroid food poisoning",
+      "probability": 0.05142179743372052
+    },
+    {
+      "pathology": "PSVT",
+      "probability": 0.02972969100836076
+    },
+    {
+      "pathology": "SLE",
+      "probability": 0.025766260664625156
+    },
+    {
+      "pathology": "Possible NSTEMI / STEMI",
+      "probability": 0.016751201782973707
+    },
+    {
+      "pathology": "Chagas",
+      "probability": 0.016751201782973707
+    }
+  ],
+  "findings": [
+    {
+      "answer": "yes",
+      "code": "E_66",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Are you experiencing shortness of breath or difficulty breathing in a significant way?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_116",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you had a cold in the last 2 weeks?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_124",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you have asthma or have you ever had to use a bronchodilator in the past?"
+    },
+    {
+      "answer": "no",
+      "code": "E_204",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you traveled out of the country in the last 4 weeks?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_207",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you live in in a big city?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_214",
+      "is_antecedent": false,
+      "is_chief_complaint": true,
+      "question": "Have you noticed a wheezing sound when you exhale?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_222",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Are you exposed to secondhand cigarette smoke on a daily basis?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_226",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Are you more likely to develop common allergies than the general population?"
+    }
+  ],
+  "pathology": "Bronchospasm / acute asthma exacerbation",
+  "row_index": 6458,
+  "sex": "M"
+}

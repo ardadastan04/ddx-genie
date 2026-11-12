@@ -1,0 +1,145 @@
+{
+  "age": 42,
+  "chief_complaint": "a cough",
+  "differential": [
+    {
+      "pathology": "Bronchitis",
+      "probability": 0.12384021145226938
+    },
+    {
+      "pathology": "Pulmonary embolism",
+      "probability": 0.08952057385281495
+    },
+    {
+      "pathology": "Acute pulmonary edema",
+      "probability": 0.08385429122858892
+    },
+    {
+      "pathology": "Guillain-Barré syndrome",
+      "probability": 0.07664770665937667
+    },
+    {
+      "pathology": "Bronchospasm / acute asthma exacerbation",
+      "probability": 0.07438098360656421
+    },
+    {
+      "pathology": "Atrial fibrillation",
+      "probability": 0.07321242023006863
+    },
+    {
+      "pathology": "Myocarditis",
+      "probability": 0.07230235608602933
+    },
+    {
+      "pathology": "Bronchiectasis",
+      "probability": 0.05784447457726954
+    },
+    {
+      "pathology": "Acute dystonic reactions",
+      "probability": 0.053976110660855135
+    },
+    {
+      "pathology": "Myasthenia gravis",
+      "probability": 0.053976110660855135
+    },
+    {
+      "pathology": "Anemia",
+      "probability": 0.053976110660855135
+    },
+    {
+      "pathology": "Anaphylaxis",
+      "probability": 0.053976110660855135
+    },
+    {
+      "pathology": "Pneumonia",
+      "probability": 0.04452907232251666
+    },
+    {
+      "pathology": "Scombroid food poisoning",
+      "probability": 0.03414296985091472
+    },
+    {
+      "pathology": "PSVT",
+      "probability": 0.028832134814579323
+    },
+    {
+      "pathology": "SLE",
+      "probability": 0.024988362675587277
+    }
+  ],
+  "findings": [
+    {
+      "answer": "yes",
+      "code": "E_46",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you had 2 or more asthma attacks in the past year?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_66",
+      "is_antecedent": false,
+      "is_chief_complaint": false,
+      "question": "Are you experiencing shortness of breath or difficulty breathing in a significant way?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_87",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you have any family members who have asthma?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_101",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you been hospitalized for an asthma attack in the past year?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_119",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you been diagnosed with chronic sinusitis?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_201",
+      "is_antecedent": false,
+      "is_chief_complaint": true,
+      "question": "Do you have a cough?"
+    },
+    {
+      "answer": "no",
+      "code": "E_204",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Have you traveled out of the country in the last 4 weeks?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_207",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Do you live in in a big city?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_222",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Are you exposed to secondhand cigarette smoke on a daily basis?"
+    },
+    {
+      "answer": "yes",
+      "code": "E_226",
+      "is_antecedent": true,
+      "is_chief_complaint": false,
+      "question": "Are you more likely to develop common allergies than the general population?"
+    }
+  ],
+  "pathology": "Bronchospasm / acute asthma exacerbation",
+  "row_index": 128427,
+  "sex": "F"
+}
