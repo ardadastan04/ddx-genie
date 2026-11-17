@@ -25,10 +25,15 @@ TEST_KS = (5, 10, 20, 30)
 FINAL = "final"
 
 #: Per-patient additive counts, one column per k (plus "final" as the last column).
-COUNTS = ("pairs", "correct", "tp", "fp", "fn", "asked", "informative", "answered", "set_f1")
+COUNTS = ("pairs", "correct", "tp", "fp", "fn", "asked", "informative", "answered", "set_f1",
+          "useful_answered", "useful_unanswered", "not_useful")
+#: Question labels (waste breakdown), in stacking order.
+LABELS = ("useful_answered", "useful_unanswered", "not_useful")
 #: Reported metrics, each computed from the counts of a set of patients.
 METRICS = ("accuracy", "f1", "informative_rate", "answered_rate", "set_f1",
-           "questions_per_patient", "answered_per_patient")
+           "questions_per_patient", "answered_per_patient",
+           *(f"share_{lab}" for lab in LABELS))
+AUC = "auc"
 
 
 def load_gold() -> dict[tuple[str, str], bool]:
@@ -42,6 +47,13 @@ def load_split(split: str) -> list[str]:
 
 def load_log(path: Path) -> list[dict]:
     return [json.loads(line) for line in path.open() if line.strip()]
+
+
+def label(turn: dict) -> str:
+    """Waste label of one question: could it change a trial's status, and did it get an answer?"""
+    if not turn.get("informative"):
+        return "not_useful"
+    return "useful_unanswered" if turn["answer"] is None else "useful_answered"
 
 
 def verdicts_at(ep: dict, k: int | str) -> dict[str, str]:
@@ -91,6 +103,9 @@ def build_table(episodes: list[dict], gold: dict[tuple[str, str], bool], budget:
             c["asked"][i, j] = len(seen)
             c["informative"][i, j] = sum(bool(t.get("informative")) for t in seen)
             c["answered"][i, j] = sum(t["answer"] is not None for t in seen)
+            labels = [label(t) for t in seen]
+            for lab in LABELS:
+                c[lab][i, j] = labels.count(lab)
             c["set_f1"][i, j] = _set_f1({n for n, p in zip(ep["trials"], pred) if p},
                                         {n for n, g in zip(ep["trials"], truth) if g})
             row.append([p == g for p, g in zip(pred, truth)])
@@ -111,6 +126,8 @@ def _metrics(s: dict[str, np.ndarray], n_patients: int | np.ndarray) -> dict[str
             "set_f1": s["set_f1"] / n_patients,
             "questions_per_patient": s["asked"] / n_patients,
             "answered_per_patient": s["answered"] / n_patients,
+            **{f"share_{lab}": np.where(s["asked"] > 0, s[lab] / s["asked"], np.nan)
+               for lab in LABELS},
         }
 
 
@@ -138,6 +155,24 @@ def curves(table: Table, idx: np.ndarray) -> dict[str, list[tuple[float, float, 
             hi = np.nanpercentile(bt[m], 97.5, axis=0)
         out[m] = list(zip(pt[m].tolist(), np.atleast_1d(lo).tolist(), np.atleast_1d(hi).tolist()))
     return out
+
+
+def auc(accuracy: np.ndarray, budget: int) -> np.ndarray:
+    """Area under accuracy vs k over k = 0..budget (trapezoid), divided by budget: 0-1 scale.
+
+    ``accuracy`` has k on the last axis (columns 0..budget; a trailing "final" column is ignored).
+    """
+    acc = accuracy[..., : budget + 1]
+    if budget == 0:
+        return acc[..., 0]
+    return np.trapezoid(acc, dx=1.0, axis=-1) / budget
+
+
+def auc_ci(table: Table, idx: np.ndarray, budget: int) -> tuple[float, float, float]:
+    """Accuracy AUC with a 95% patient-bootstrap CI."""
+    b = auc(boot(table, idx)["accuracy"], budget)
+    return (float(auc(point(table)["accuracy"], budget)),
+            float(np.percentile(b, 2.5)), float(np.percentile(b, 97.5)))
 
 
 # ------------------------------------------------------------------ paired tests
@@ -182,4 +217,8 @@ def paired_tests(table: Table, ref: Table, idx: np.ndarray, budget: int) -> list
             r = _paired_boot(ba[m][:, j] - br[m][:, j], float(pa[m][j] - pr[m][j]))
             rows.append({"k": k, "test": f"bootstrap_{m}_diff", "stat": r["diff"], "p": r["p"],
                          "ci_low": r["ci_low"], "ci_high": r["ci_high"]})
+    d = auc(ba["accuracy"], budget) - auc(br["accuracy"], budget)
+    r = _paired_boot(d, float(auc(pa["accuracy"], budget) - auc(pr["accuracy"], budget)))
+    rows.append({"k": AUC, "test": "bootstrap_auc_diff", "stat": r["diff"], "p": r["p"],
+                 "ci_low": r["ci_low"], "ci_high": r["ci_high"]})
     return rows

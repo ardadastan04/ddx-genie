@@ -12,6 +12,10 @@ uv run python baselines/run_baselines.py greedy_smt --budget 30 --out logs/greed
 uv run python eval/evaluate.py logs/greedy_smt.jsonl --split dev
 ```
 
+If `uv run` fails with `No module named 'smt_trial_matching'` on macOS, the repo is under iCloud-synced
+`~/Documents` and macOS has hidden the venv's `.pth` file; run with `PYTHONPATH=src:. uv run --no-sync ...`
+(or `chflags nohidden .venv/lib/python3.*/site-packages/*.pth`).
+
 The CA's reference episode logs live in `logs/reference/` (the README below says `logs/`). For LLM work, copy
 `.env.example` to `.env` and fill in the key; every call goes through `src/smt_trial_matching/llm.py`.
 
@@ -30,13 +34,26 @@ uv run python -m smt_trial_matching.experiment \
 - **Policies:** CA names from `baselines/policies.py`, or `module.path:function`, or `path/to/file.py:function`
   (e.g. `src/smt_trial_matching/policies.py:answerable_greedy`), all with the signature `(states, asked, rng)`.
   New policies go in our own code; `baselines/` stays untouched.
-- **Output** in `runs/<run_id>/` (not committed): `config.json`, one CA-format episode log per policy (reused on
-  rerun unless `--force`), `curves.csv` (accuracy, F1, informative rate, answered rate, set F1, questions and
-  answered questions per patient, each with a CI), `tests.csv`, `accuracy_vs_budget.png`,
-  `answered_vs_budget.png`, `summary.md`.
-- **Tests vs the reference** at k = 5, 10, 20, 30 and final: paired bootstrap over patients on the accuracy and
-  set-F1 difference (primary, since pairs within a patient are not independent) and exact McNemar on pairs
-  (secondary).
+- **Answer keys:** `--keys gpt5_oracle,gpt5mini` runs every policy against both simulators (default
+  `gpt5_oracle`). `gpt5mini` is a noisier reading of the same notes. Tests compare within a key.
+- **Output** in `runs/<run_id>/` (not committed): `config.json`; per key `<key>/<policy>.jsonl` (CA log format,
+  reused on rerun unless `--force`), `<key>/accuracy_vs_budget.png`, `<key>/answered_vs_budget.png`; and
+  `curves.csv` (per key, policy and k: accuracy, F1, informative rate, answered rate, set F1, questions and
+  answered questions per patient, waste shares, each with a CI; plus `accuracy_auc`), `tests.csv`,
+  `questions.csv` (every question with the variable's meaning, the answer and its label),
+  `waste_breakdown.png`, `summary.md`.
+- **Waste breakdown:** each question is `useful_answered` (could change a trial's status and got an answer),
+  `useful_unanswered` (could, but the answer was unknown) or `not_useful` (could not change any status). An
+  unknown answer never changes a status, so only the first kind can move a verdict.
+- **AUC:** area under accuracy vs k over k = 0..budget divided by the budget, i.e. average accuracy across
+  budgets (0–1). One number per policy, with a CI and a paired test.
+- **Tests vs the reference** at k = 5, 10, 20, 30, final and on the AUC: paired bootstrap over patients on the
+  accuracy (and set-F1) difference (primary, since pairs within a patient are not independent) and exact McNemar
+  on pairs (secondary).
+- **Oracle upper bound:** `smt_trial_matching.policies:oracle_answerable_greedy` is `greedy_smt` restricted to
+  questions the answer key can answer. It reads the key, so it is a ceiling for any "prefer answerable
+  questions" policy, not a method. Ordinary policies never receive the key; a policy only gets it by declaring
+  a `for_patient(qid, sim)` hook (see `src/smt_trial_matching/policies.py`), which marks it as an oracle.
 - Accuracy at k = 0, 5, 10, 20, 30 matches `eval/evaluate.py` exactly (`tests/test_experiment.py`).
 - `--split test` is refused without `--confirmed`. Other flags: `--key`, `--budget`, `--limit N`, `--workers`.
 
