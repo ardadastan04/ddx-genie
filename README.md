@@ -15,6 +15,31 @@ uv run python eval/evaluate.py logs/greedy_smt.jsonl --split dev
 The CA's reference episode logs live in `logs/reference/` (the README below says `logs/`). For LLM work, copy
 `.env.example` to `.env` and fill in the key; every call goes through `src/smt_trial_matching/llm.py`.
 
+### Experiment harness (`src/smt_trial_matching/experiment.py`)
+
+One command runs any set of policies on a split with the CA's runner and answer-key simulator (solver only, no
+API cost) and reports accuracy at every budget k = 0..30 with patient-bootstrap CIs, plus paired tests against a
+reference policy:
+
+```bash
+uv run python -m smt_trial_matching.experiment \
+  --policies no_questions,random_stop,greedy_smt --reference greedy_smt \
+  --split dev --budget 30 --run-id harness_demo_dev
+```
+
+- **Policies:** CA names from `baselines/policies.py`, or `module.path:function`, or `path/to/file.py:function`
+  (e.g. `src/smt_trial_matching/policies.py:answerable_greedy`), all with the signature `(states, asked, rng)`.
+  New policies go in our own code; `baselines/` stays untouched.
+- **Output** in `runs/<run_id>/` (not committed): `config.json`, one CA-format episode log per policy (reused on
+  rerun unless `--force`), `curves.csv` (accuracy, F1, informative rate, answered rate, set F1, questions and
+  answered questions per patient, each with a CI), `tests.csv`, `accuracy_vs_budget.png`,
+  `answered_vs_budget.png`, `summary.md`.
+- **Tests vs the reference** at k = 5, 10, 20, 30 and final: paired bootstrap over patients on the accuracy and
+  set-F1 difference (primary, since pairs within a patient are not independent) and exact McNemar on pairs
+  (secondary).
+- Accuracy at k = 0, 5, 10, 20, 30 matches `eval/evaluate.py` exactly (`tests/test_experiment.py`).
+- `--split test` is refused without `--confirmed`. Other flags: `--key`, `--budget`, `--limit N`, `--workers`.
+
 ---
 
 A self-contained student project. An agent talks with a patient and asks questions, keeping everything it learns as

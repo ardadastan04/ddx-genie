@@ -23,6 +23,7 @@ smt-trial-matching/
   docs/                     # NL simulator + LLM-only baseline prompts; archive/ for retired results
   logs/reference/           # CA's reference baseline episode logs (our own logs/ output is gitignored)
   src/smt_trial_matching/llm.py      # the one LLM client (cache, cost log, budget guard)
+  src/smt_trial_matching/experiment.py  # harness: policies x split -> curves, paired tests, plots
   scripts/smoke_llm.py, tests/
 ```
 
