@@ -1,0 +1,134 @@
+[
+ {
+  "name": "patient_sex_is_female_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Indicates whether the patient's sex is female at the current time.",
+  "when_true": "Set to true if the patient's sex is documented as female at the current time.",
+  "when_false": "Set to false if the patient's sex is documented as not female at the current time.",
+  "when_unknown": "Set to null if the patient's sex at the current time is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when >= 18"
+ },
+ {
+  "name": "patient_is_currently_using_combined_oral_contraceptive_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently using a combined oral contraceptive at the present time.",
+  "when_true": "Set to true if the patient is currently using a combined oral contraceptive at the present time.",
+  "when_false": "Set to false if the patient is not currently using a combined oral contraceptive at the present time.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently using a combined oral contraceptive at the present time.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_prescription_for_combined_oral_contraceptive_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a prescription for a combined oral contraceptive.",
+  "when_true": "Set to true if the patient currently has a prescription for a combined oral contraceptive.",
+  "when_false": "Set to false if the patient does not currently have a prescription for a combined oral contraceptive.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a prescription for a combined oral contraceptive.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_intends_to_initiate_combined_oral_contraceptive_use_for_contraception_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently intends to initiate use of a combined oral contraceptive for the purpose of contraception.",
+  "when_true": "Set to true if the patient currently intends to initiate use of a combined oral contraceptive for contraception.",
+  "when_false": "Set to false if the patient does not currently intend to initiate use of a combined oral contraceptive for contraception.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently intends to initiate use of a combined oral contraceptive for contraception.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_contraindication_to_using_combined_oral_contraceptive_now_cdc_category_3_or_4",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a contraindication to using a combined oral contraceptive, as determined by Category 3 or Category 4 in the most updated CDC Medical Eligibility Criteria, at the time of screening.",
+  "when_true": "Set to true if the patient currently has a contraindication to using a combined oral contraceptive, as determined by Category 3 or Category 4 in the most updated CDC Medical Eligibility Criteria, at the time of screening.",
+  "when_false": "Set to false if the patient currently does not have a contraindication to using a combined oral contraceptive, as determined by Category 3 or Category 4 in the most updated CDC Medical Eligibility Criteria, at the time of screening.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a contraindication to using a combined oral contraceptive, as determined by Category 3 or Category 4 in the most updated CDC Medical Eligibility Criteria, at the time of screening.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_contraindication_to_using_contraceptive_implant_now_cdc_category_3_or_4",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a contraindication to using a contraceptive implant, as determined by Category 3 or Category 4 in the most updated CDC Medical Eligibility Criteria, at the time of screening.",
+  "when_true": "Set to true if the patient currently has a contraindication to using a contraceptive implant, as determined by Category 3 or Category 4 in the most updated CDC Medical Eligibility Criteria, at the time of screening.",
+  "when_false": "Set to false if the patient currently does not have a contraindication to using a contraceptive implant, as determined by Category 3 or Category 4 in the most updated CDC Medical Eligibility Criteria, at the time of screening.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a contraindication to using a contraceptive implant, as determined by Category 3 or Category 4 in the most updated CDC Medical Eligibility Criteria, at the time of screening.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_undergoing_clinical_trial_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently participating in a clinical trial.",
+  "when_true": "Set to true if the patient is currently participating in a clinical trial (the trial is ongoing at the present time).",
+  "when_false": "Set to false if the patient is not currently participating in any clinical trial.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently participating in a clinical trial.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_clinical_trial_inthepast30days",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has participated in a clinical trial that ended within the past 30 days.",
+  "when_true": "Set to true if the patient has participated in a clinical trial that ended within the past 30 days.",
+  "when_false": "Set to false if the patient has not participated in any clinical trial that ended within the past 30 days.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has participated in a clinical trial that ended within the past 30 days.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_postpartum_foradurationof2weeks",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is in the postpartum period for a duration of two weeks following the end of a pregnancy.",
+  "when_true": "Set to true if the patient is within two weeks after the end of a pregnancy (postpartum period).",
+  "when_false": "Set to false if the patient is not within two weeks after the end of a pregnancy.",
+  "when_unknown": "Set to null if it is unknown whether the patient is within two weeks after the end of a pregnancy.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is currently pregnant.",
+  "when_false": "Set to false if the patient is currently not pregnant.",
+  "when_unknown": "Set to null if the patient's current pregnancy status is unknown or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "pregnancy_time_from_end_in_days",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric variable indicating the number of days from the current date to the end of the patient's most recent pregnancy. Negative values indicate the pregnancy has ended; positive values indicate the pregnancy is ongoing and will end in that many days.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined how many days remain until or since the end of the patient's most recent pregnancy.",
+  "when_value": "Set to the number of days from the current date to the end of the patient's most recent pregnancy. Use positive values if the pregnancy is ongoing and will end in that many days; use zero if the pregnancy ends today; use negative values if the pregnancy ended that many days ago.",
+  "polarity": "criterion met when <= 14"
+ }
+]

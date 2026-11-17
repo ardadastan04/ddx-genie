@@ -1,0 +1,68 @@
+[
+ {
+  "name": "patient_is_semi_professional_soccer_player",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is a semi-professional soccer player.",
+  "when_true": "Set to true if the patient is a semi-professional soccer player.",
+  "when_false": "Set to false if the patient is not a semi-professional soccer player.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is a semi-professional soccer player.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_soccer_value_recorded_inthehistory_withunit_minutes",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the duration in minutes of the patient's participation in a soccer game at any time in their history.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient has not participated in a soccer game or if the duration is unknown or indeterminate.",
+  "when_value": "Set to the duration in minutes if the patient has participated in a soccer game and the duration is known.",
+  "polarity": "criterion met when >= 75"
+ },
+ {
+  "name": "patient_experience_of_practicing_soccer_duration_value_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the total years of the patient's experience practicing soccer.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the duration of the patient's experience practicing soccer is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the total number of years the patient has experience practicing soccer, as documented or reported.",
+  "polarity": "criterion met when >= 5"
+ },
+ {
+  "name": "patient_has_experience_of_practicing_soccer",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has any experience practicing soccer.",
+  "when_true": "Set to true if the patient has any experience practicing soccer, regardless of duration.",
+  "when_false": "Set to false if the patient has no experience practicing soccer at all.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has any experience practicing soccer.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_goalkeeper",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is a goalkeeper.",
+  "when_true": "Set to true if the patient is a goalkeeper.",
+  "when_false": "Set to false if the patient is not a goalkeeper.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is a goalkeeper.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_injured_player_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently an injured player.",
+  "when_true": "Set to true if the patient is currently an injured player.",
+  "when_false": "Set to false if the patient is currently not an injured player.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently an injured player.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

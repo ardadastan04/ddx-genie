@@ -1,0 +1,178 @@
+[
+ {
+  "name": "patient_sex_is_female_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current sex is female.",
+  "when_true": "Set to true if the patient's current sex is documented as female.",
+  "when_false": "Set to false if the patient's current sex is documented as male or other.",
+  "when_unknown": "Set to null if the patient's current sex is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_turner_syndrome_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of Turner syndrome.",
+  "when_true": "Set to true if the patient currently has a diagnosis of Turner syndrome.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of Turner syndrome.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of Turner syndrome.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_pre_pubertal_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently prepubertal.",
+  "when_true": "Set to true if the patient is currently prepubertal.",
+  "when_false": "Set to false if the patient is currently not prepubertal.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently prepubertal.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_tanner_stage_i_breast_development_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has Tanner stage I breast development.",
+  "when_true": "Set to true if the patient currently has Tanner stage I breast development.",
+  "when_false": "Set to false if the patient currently does not have Tanner stage I breast development.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has Tanner stage I breast development.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_body_height_measure_value_recorded_now_withunit_centimeter_per_year",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's current height velocity in centimeters per year.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured value if the patient's current height velocity (in centimeters per year) is available.",
+  "polarity": "criterion met when < 6"
+ },
+ {
+  "name": "patient_body_height_percentile_for_age_and_sex_value_recorded_now_withunit_percent",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's current height percentile for age and sex in the general population, expressed as a percentage.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such value is available or the value is indeterminate.",
+  "when_value": "Set to the measured or calculated value if the patient's current height percentile for age and sex in the general population (as a percentage) is available.",
+  "polarity": "criterion met when <= 10"
+ },
+ {
+  "name": "patient_body_height_measurement_duration_available_for_height_velocity_calculation_in_months",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the number of months of accurate height measurements available for pre-study height velocity calculation.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the duration of available accurate height measurements for pre-study height velocity calculation is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the number of months for which accurate height measurements are available for the calculation of pre-study height velocity for the patient.",
+  "polarity": "criterion met when >= 6"
+ },
+ {
+  "name": "patient_has_finding_of_decreased_thyroxine_level_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has decreased thyroxine level.",
+  "when_true": "Set to true if the patient currently has decreased thyroxine level (is thyroxine deficient).",
+  "when_false": "Set to false if the patient currently does not have decreased thyroxine level.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has decreased thyroxine level.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_taken_thyroxine_inthehistory@@as_replacement_therapy",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever taken thyroxine in the past as replacement therapy.",
+  "when_true": "Set to true if the patient has ever taken thyroxine in the past and it was received as replacement therapy.",
+  "when_false": "Set to false if the patient has taken thyroxine in the past but not as replacement therapy.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the thyroxine was received as replacement therapy.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_thyroid_function_tests_normal_inthepast6months@@continuous_for_6_months_prior_to_enrollment",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has had normal thyroid function tests continuously for at least 6 months prior to enrollment.",
+  "when_true": "Set to true if the patient has had normal thyroid function tests continuously for at least 6 months prior to enrollment.",
+  "when_false": "Set to false if the patient has not had normal thyroid function tests continuously for at least 6 months prior to enrollment.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has had normal thyroid function tests continuously for at least 6 months prior to enrollment.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_thyroid_function_tests_normal_inthepast6months",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_taken_thyroxine_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_exposed_to_somatropin_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever been exposed to somatropin (growth hormone) at any time in the past.",
+  "when_true": "Set to true if the patient has ever been exposed to somatropin (growth hormone) at any time in the past, including as prior treatment.",
+  "when_false": "Set to false if the patient has never been exposed to somatropin (growth hormone) at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been exposed to somatropin (growth hormone) at any time in the past.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_y_component_in_karyotype_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a Y component in their karyotype.",
+  "when_true": "Set to true if the patient currently has a Y component in their karyotype.",
+  "when_false": "Set to false if the patient currently does not have a Y component in their karyotype.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a Y component in their karyotype.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_gonads_in_situ_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has gonads in situ.",
+  "when_true": "Set to true if the patient currently has gonads in situ (i.e., the gonads are present and have not been removed or ablated).",
+  "when_false": "Set to false if the patient currently does not have gonads in situ (i.e., the gonads have been removed or ablated).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has gonads in situ.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_diabetes_mellitus_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of diabetes mellitus.",
+  "when_true": "Set to true if the patient currently has a diagnosis of diabetes mellitus.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of diabetes mellitus.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of diabetes mellitus.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

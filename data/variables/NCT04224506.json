@@ -1,0 +1,167 @@
+[
+ {
+  "name": "patient_has_signed_informed_consent",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has signed an informed consent document.",
+  "when_true": "Set to true if the patient has signed an informed consent document.",
+  "when_false": "Set to false if the patient has not signed an informed consent document.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has signed an informed consent document.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_signed_informed_consent@@demonstrates_understanding_of_study_procedures_and_purpose",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's signed informed consent document demonstrates understanding of the procedures required for the study and the purpose of the study.",
+  "when_true": "Set to true if the patient's signed informed consent document demonstrates that the patient understands the procedures required for the study and the purpose of the study.",
+  "when_false": "Set to false if the patient's signed informed consent document does not demonstrate that the patient understands the procedures required for the study and the purpose of the study.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's signed informed consent document demonstrates understanding of the procedures required for the study and the purpose of the study.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_sex_is_female_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean value indicating whether the patient's current sex is female.",
+  "when_true": "Set to true if the patient's current sex is documented as female.",
+  "when_false": "Set to false if the patient's current sex is documented as not female (e.g., male or other).",
+  "when_unknown": "Set to null if the patient's current sex is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_sex_is_male_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean value indicating whether the patient's current sex is male.",
+  "when_true": "Set to true if the patient's current sex is documented as male.",
+  "when_false": "Set to false if the patient's current sex is documented as not male (e.g., female or other).",
+  "when_unknown": "Set to null if the patient's current sex is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_myasthenia_gravis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of myasthenia gravis.",
+  "when_true": "Set to true if the patient currently has a diagnosis of myasthenia gravis.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of myasthenia gravis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of myasthenia gravis.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_myasthenia_gravis_now@@diagnosed_by_physician",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the diagnosis of myasthenia gravis was made by a physician.",
+  "when_true": "Set to true if the patient's diagnosis of myasthenia gravis was made by a physician.",
+  "when_false": "Set to false if the patient's diagnosis of myasthenia gravis was not made by a physician.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the diagnosis of myasthenia gravis was made by a physician.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_refused_to_sign_informed_consent_form",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient refused to sign the informed consent form.",
+  "when_true": "Set to true if the patient refused to sign the informed consent form.",
+  "when_false": "Set to false if the patient did not refuse to sign the informed consent form (i.e., signed or agreed to sign).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient refused to sign the informed consent form.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_bariatric_operative_procedure_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone a bariatric operative procedure at any time in their history.",
+  "when_true": "Set to true if the patient has ever undergone a bariatric operative procedure at any point in their medical history.",
+  "when_false": "Set to false if the patient has never undergone a bariatric operative procedure at any point in their medical history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone a bariatric operative procedure.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_total_abdominal_colectomy_with_ileoproctostomy_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone a total abdominal colectomy with ileoproctostomy at any time in their history.",
+  "when_true": "Set to true if the patient has ever undergone a total abdominal colectomy with ileoproctostomy at any point in their medical history.",
+  "when_false": "Set to false if the patient has never undergone a total abdominal colectomy with ileoproctostomy at any point in their medical history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone a total abdominal colectomy with ileoproctostomy.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_excision_of_colon_and_rectum_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone excision of colon and rectum at any time in their history.",
+  "when_true": "Set to true if the patient has ever undergone excision of colon and rectum at any point in their medical history.",
+  "when_false": "Set to false if the patient has never undergone excision of colon and rectum at any point in their medical history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone excision of colon and rectum.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_construction_of_stoma_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone construction of a stoma (postoperative ostomy).",
+  "when_true": "Set to true if the patient has ever undergone construction of a stoma (postoperative ostomy).",
+  "when_false": "Set to false if the patient has never undergone construction of a stoma (postoperative ostomy).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone construction of a stoma.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_postoperative_ostomy_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone a postoperative ostomy (at any time in the past).",
+  "when_true": "Set to true if the patient has ever undergone a postoperative ostomy.",
+  "when_false": "Set to false if the patient has never undergone a postoperative ostomy.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone a postoperative ostomy.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_creation_of_ileo_anal_pouch_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone creation of an ileoanal pouch (postoperative ileoanal pouch).",
+  "when_true": "Set to true if the patient has ever undergone creation of an ileoanal pouch (postoperative ileoanal pouch).",
+  "when_false": "Set to false if the patient has never undergone creation of an ileoanal pouch (postoperative ileoanal pouch).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone creation of an ileoanal pouch.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_clinical_drug_trial_inthepast12weeks",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has undergone a clinical drug trial within the past twelve weeks.",
+  "when_true": "Set to true if the patient has undergone any clinical drug trial within the past twelve weeks.",
+  "when_false": "Set to false if the patient has not undergone any clinical drug trial within the past twelve weeks.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has undergone any clinical drug trial within the past twelve weeks.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_receiving_total_parenteral_nutrition_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently receiving total parenteral nutrition as a treatment.",
+  "when_true": "Set to true if the patient is currently receiving total parenteral nutrition as a treatment.",
+  "when_false": "Set to false if the patient is currently not receiving total parenteral nutrition as a treatment.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently receiving total parenteral nutrition as a treatment.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

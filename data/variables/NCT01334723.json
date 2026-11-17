@@ -1,0 +1,189 @@
+[
+ {
+  "name": "patient_sex_is_male_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean value indicating whether the patient's current sex is male.",
+  "when_true": "Set to true if the patient's current sex is documented as male.",
+  "when_false": "Set to false if the patient's current sex is documented as not male (e.g., female, other).",
+  "when_unknown": "Set to null if the patient's current sex is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when >= 50"
+ },
+ {
+  "name": "patient_has_diagnosis_of_benign_prostatic_hyperplasia_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of benign prostatic hyperplasia.",
+  "when_true": "Set to true if the patient currently has a diagnosis of benign prostatic hyperplasia, as evidenced by a diagnostic claim.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of benign prostatic hyperplasia, or there is evidence of its absence.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of benign prostatic hyperplasia.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "duration_of_5_alpha_reductase_inhibitor_prescription_claim_during_observation_period_in_days",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric variable indicating the total number of days of prescription claims for 5-alpha-reductase inhibitor therapy during the observation period.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined how many days of prescription claims for 5-alpha-reductase inhibitor therapy the patient has during the observation period.",
+  "when_value": "Set to the total number of days for which the patient has prescription claims for 5-alpha-reductase inhibitor therapy during the observation period.",
+  "polarity": "criterion met when >= 60"
+ },
+ {
+  "name": "patient_has_undergone_administration_of_5_alpha_reductase_inhibitor_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone administration of a 5-alpha-reductase inhibitor in their history.",
+  "when_true": "Set to true if the patient has ever undergone administration of a 5-alpha-reductase inhibitor at any time in their history.",
+  "when_false": "Set to false if the patient has never undergone administration of a 5-alpha-reductase inhibitor at any time in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone administration of a 5-alpha-reductase inhibitor.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_undergone_administration_of_5_alpha_reductase_inhibitor_inthehistory@@identified_by_prescription_claim",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the administration of a 5-alpha-reductase inhibitor is evidenced by a prescription claim.",
+  "when_true": "Set to true if the administration of a 5-alpha-reductase inhibitor is evidenced by a prescription claim.",
+  "when_false": "Set to false if the administration is not evidenced by a prescription claim.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the administration is evidenced by a prescription claim.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_undergone_administration_of_5_alpha_reductase_inhibitor_inthehistory@@duration_at_least_60_days_during_observation_period",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the administration of a 5-alpha-reductase inhibitor lasted for at least 60 days during the observation period.",
+  "when_true": "Set to true if the administration of a 5-alpha-reductase inhibitor lasted for at least 60 days during the observation period.",
+  "when_false": "Set to false if the administration did not last for at least 60 days during the observation period.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the administration lasted for at least 60 days during the observation period.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_continuously_eligible_for_months_prior_to_index_date",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the number of months the patient is continuously eligible prior to the index date.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the continuous eligibility period prior to the index date is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the number of months the patient is continuously eligible prior to the index date.",
+  "polarity": "criterion met when >= 6"
+ },
+ {
+  "name": "patient_is_continuously_eligible_for_months_after_index_date",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the number of months the patient is continuously eligible after the index date.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the continuous eligibility period after the index date is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the number of months the patient is continuously eligible after the index date.",
+  "polarity": "criterion met when >= 6"
+ },
+ {
+  "name": "patient_has_prescription_claim_for_5_alpha_reductase_inhibitor_during_observation_period",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "prescription_claim_5_alpha_reductase_inhibitor_duration_in_observation_period_in_days",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when >= 60"
+ },
+ {
+  "name": "continuous_eligibility_duration_prior_to_index_date_in_months",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the duration in months of continuous eligibility prior to the index date.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the duration of continuous eligibility prior to the index date is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the number of months the patient is continuously eligible prior to the index date.",
+  "polarity": "criterion met when >= 6"
+ },
+ {
+  "name": "continuous_eligibility_duration_after_index_date_in_months",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the duration in months of continuous eligibility after the index date.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the duration of continuous eligibility after the index date is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the number of months the patient is continuously eligible after the index date.",
+  "polarity": "criterion met when >= 6"
+ },
+ {
+  "name": "patient_is_continuously_eligible_for_6_months_prior_to_index_date",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is continuously eligible for a duration of 6 months prior to the index date.",
+  "when_true": "Set to true if the patient is continuously eligible for the entire 6 months immediately prior to the index date.",
+  "when_false": "Set to false if the patient is not continuously eligible for the entire 6 months immediately prior to the index date.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is continuously eligible for the 6 months prior to the index date.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_continuously_eligible_for_6_months_after_index_date",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is continuously eligible for a duration of at least 6 months after the index date.",
+  "when_true": "Set to true if the patient is continuously eligible for at least 6 months after the index date.",
+  "when_false": "Set to false if the patient is not continuously eligible for at least 6 months after the index date.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is continuously eligible for at least 6 months after the index date.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_malignant_neoplasm_of_prostate_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of malignant neoplasm of the prostate (prostate cancer).",
+  "when_true": "Set to true if the patient currently has a diagnosis of malignant neoplasm of the prostate (prostate cancer).",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of malignant neoplasm of the prostate (prostate cancer).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of malignant neoplasm of the prostate (prostate cancer).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_operation_on_prostate_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone any surgical procedure on the prostate in their history.",
+  "when_true": "Set to true if the patient has ever undergone any surgical procedure on the prostate at any time in their history.",
+  "when_false": "Set to false if the patient has never undergone any surgical procedure on the prostate at any time in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone any surgical procedure on the prostate.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

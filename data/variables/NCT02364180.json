@@ -1,0 +1,57 @@
+[
+ {
+  "name": "patient_is_exposed_to_pyridostigmine_now@@for_treatment_of_any_condition_other_than_myasthenia_gravis",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating that the patient is currently exposed to pyridostigmine for the treatment of any condition other than myasthenia gravis.",
+  "when_true": "Set to true if the patient is currently taking pyridostigmine for the treatment of any condition except myasthenia gravis.",
+  "when_false": "Set to false if the patient is currently taking pyridostigmine for the treatment of myasthenia gravis, or for no treatment indication, or for an unknown indication.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the indication for pyridostigmine is for any condition other than myasthenia gravis.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_exposed_to_pyridostigmine_now@@for_treatment_of_myasthenia_gravis",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently taking pyridostigmine for the treatment of myasthenia gravis.",
+  "when_true": "Set to true if the patient is currently taking pyridostigmine for the treatment of myasthenia gravis.",
+  "when_false": "Set to false if the patient is currently not taking pyridostigmine for the treatment of myasthenia gravis, or is taking it for another indication, or for no treatment indication.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently taking pyridostigmine for the treatment of myasthenia gravis.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_exposed_to_pyridostigmine_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently exposed to (taking) pyridostigmine.",
+  "when_true": "Set to true if the patient is currently taking or otherwise exposed to pyridostigmine, regardless of the indication.",
+  "when_false": "Set to false if the patient is currently not taking or exposed to pyridostigmine.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently taking or exposed to pyridostigmine.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_taking_pyridostigmine_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently taking pyridostigmine.",
+  "when_true": "Set to true if the patient is currently taking pyridostigmine.",
+  "when_false": "Set to false if the patient is not currently taking pyridostigmine.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently taking pyridostigmine.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_taking_pyridostigmine_now@@for_treatment_of_myasthenia_gravis",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently taking pyridostigmine for the treatment of myasthenia gravis.",
+  "when_true": "Set to true if the patient is currently taking pyridostigmine for the treatment of myasthenia gravis.",
+  "when_false": "Set to false if the patient is currently taking pyridostigmine but not for the treatment of myasthenia gravis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently taking pyridostigmine for the treatment of myasthenia gravis.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

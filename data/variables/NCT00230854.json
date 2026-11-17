@@ -1,0 +1,178 @@
+[
+ {
+  "name": "patient_has_finding_of_viral_hepatitis_c_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has hepatitis C virus infection.",
+  "when_true": "Set to true if the patient currently has hepatitis C virus infection.",
+  "when_false": "Set to false if the patient currently does not have hepatitis C virus infection.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has hepatitis C virus infection.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_hepatitis_c_virus_genotype_value_now_withunit_numeric",
+  "type": "Int",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's current hepatitis C virus genotype.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current hepatitis C virus genotype is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the numeric value of the patient's current hepatitis C virus genotype if known (e.g., 1 for genotype 1).",
+  "polarity": "criterion met when = 1"
+ },
+ {
+  "name": "patient_is_exposed_to_interferon_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever been exposed to interferon at any time in the past.",
+  "when_true": "Set to true if the patient has ever been exposed to interferon at any time in the past.",
+  "when_false": "Set to false if the patient has never been exposed to interferon at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been exposed to interferon.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_exposed_to_interferon_inthehistory@@pegylated_form",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's past exposure to interferon was specifically to pegylated interferon.",
+  "when_true": "Set to true if the patient's past exposure to interferon was specifically to pegylated interferon.",
+  "when_false": "Set to false if the patient's past exposure to interferon was not to pegylated interferon.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the interferon exposure was to pegylated interferon.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_exposed_to_interferon_inthehistory@@as_therapy",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's past exposure to interferon was as a therapy.",
+  "when_true": "Set to true if the patient's past exposure to interferon was as a therapy.",
+  "when_false": "Set to false if the patient's past exposure to interferon was not as a therapy.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the interferon exposure was as a therapy.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_exposed_to_ribavirin_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever been exposed to ribavirin at any time in the past.",
+  "when_true": "Set to true if the patient has ever been exposed to ribavirin at any time in the past.",
+  "when_false": "Set to false if the patient has never been exposed to ribavirin at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been exposed to ribavirin.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_exposed_to_ribavirin_inthehistory@@as_therapy",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's past exposure to ribavirin was as a therapy.",
+  "when_true": "Set to true if the patient's past exposure to ribavirin was as a therapy.",
+  "when_false": "Set to false if the patient's past exposure to ribavirin was not as a therapy.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the ribavirin exposure was as a therapy.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_determination_of_outcome_unsuccessful_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever had a determination of outcome unsuccessful (treatment failure) at any time in the past.",
+  "when_true": "Set to true if the patient has ever had a determination of outcome unsuccessful (treatment failure) at any time in the past.",
+  "when_false": "Set to false if the patient has never had a determination of outcome unsuccessful (treatment failure) at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had a determination of outcome unsuccessful (treatment failure) at any time in the past.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_determination_of_outcome_unsuccessful_inthehistory@@documented",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's previous treatment failure is documented in the medical record.",
+  "when_true": "Set to true if the patient's previous treatment failure is documented in the medical record.",
+  "when_false": "Set to false if the patient's previous treatment failure is not documented in the medical record.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's previous treatment failure is documented in the medical record.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_abnormal_liver_function_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has abnormal liver function.",
+  "when_true": "Set to true if the patient currently has the clinical finding of abnormal liver function (hepatic dysfunction).",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of abnormal liver function (hepatic dysfunction).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has abnormal liver function (hepatic dysfunction).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_type_b_viral_hepatitis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of hepatitis B.",
+  "when_true": "Set to true if the patient currently has a diagnosis of hepatitis B.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of hepatitis B.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of hepatitis B.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_type_b_viral_hepatitis_now@@present_as_coinfection",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current hepatitis B diagnosis is present as a coinfection.",
+  "when_true": "Set to true if the patient currently has a diagnosis of hepatitis B and it is present as a coinfection.",
+  "when_false": "Set to false if the patient currently has a diagnosis of hepatitis B but it is not present as a coinfection.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether hepatitis B is present as a coinfection.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_human_immunodeficiency_virus_infection_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of human immunodeficiency virus infection.",
+  "when_true": "Set to true if the patient currently has a diagnosis of human immunodeficiency virus infection.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of human immunodeficiency virus infection.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of human immunodeficiency virus infection.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_human_immunodeficiency_virus_infection_now@@present_as_coinfection",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current human immunodeficiency virus infection diagnosis is present as a coinfection.",
+  "when_true": "Set to true if the patient currently has a diagnosis of human immunodeficiency virus infection and it is present as a coinfection.",
+  "when_false": "Set to false if the patient currently has a diagnosis of human immunodeficiency virus infection but it is not present as a coinfection.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether human immunodeficiency virus infection is present as a coinfection.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_other_unrelated_liver_disease_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of any other liver disease that is unrelated to the primary condition of interest.",
+  "when_true": "Set to true if the patient currently has a diagnosis of any other liver disease that is unrelated to the primary condition of interest.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of any other liver disease that is unrelated to the primary condition of interest.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of any other liver disease that is unrelated to the primary condition of interest.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_malignant_neoplasm_of_liver_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of malignant neoplasm of the liver (liver cancer).",
+  "when_true": "Set to true if the patient currently has a diagnosis of malignant neoplasm of the liver (liver cancer).",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of malignant neoplasm of the liver (liver cancer).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of malignant neoplasm of the liver (liver cancer).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

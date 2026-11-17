@@ -1,0 +1,15 @@
+{
+ "nct": "NCT04611672",
+ "title": "Linearity and Non-linearity of Cerebral Autoregulation",
+ "conditions": [
+  "Stroke",
+  "Acute"
+ ],
+ "phase": "",
+ "brief_summary": "Injured brain tissue supplied by a disturbed state of cerebral autoregulation (CA) is at risk of secondary ischemia, e.g. in patients with stroke, subarachnoid hemorrhage, intracerebral hemorrhage or bacterial Meningitis. Up to now, there is lack of a simple and easy to perform bed side test that would allow for to intervene when CA failure is indicated. For this purpose, we explore the dynamics of the interplay between blood pressure and cerebral blood flow velocity using transcranial Doppler ultrasound (or near infrared spectroscopy derived haemoglobin concentration changes) as a measure of CA. To describe these dynamics different mathematical models are used, but they all still need validation and proof of concept because these dynamics are poorly understood with respect to the factors which influence the composition of the mathematical models.~Objectives: To what amount is CA disturbed in the different stroke subgroups ? Is a disturbed CA a risk factor of poorer outcome ?",
+ "inclusion_criteria": "inclusion criteria: \n\n every typ of ischemic stroke of any severity \n\n presence of a temporal bone window \n\n ",
+ "exclusion_criteria": ": \n\n Age < 18 years, \n\n pregnancy \n\n no informed consent. \n\n absence of a temporal bone window",
+ "cohorts": [
+  ""
+ ]
+}

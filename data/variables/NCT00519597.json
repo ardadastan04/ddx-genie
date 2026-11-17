@@ -1,0 +1,233 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_coronary_arteriosclerosis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of coronary arteriosclerosis (coronary artery disease).",
+  "when_true": "Set to true if the patient currently has a diagnosis of coronary arteriosclerosis (coronary artery disease).",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of coronary arteriosclerosis (coronary artery disease).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of coronary arteriosclerosis (coronary artery disease).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_coronary_arteriosclerosis_now@@diagnosis_verified_by_angiography",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's diagnosis of coronary arteriosclerosis (coronary artery disease) is verified by angiography.",
+  "when_true": "Set to true if the patient's diagnosis of coronary arteriosclerosis (coronary artery disease) is verified by angiography.",
+  "when_false": "Set to false if the patient's diagnosis of coronary arteriosclerosis (coronary artery disease) is not verified by angiography.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the diagnosis is verified by angiography.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_undergone_percutaneous_coronary_intervention_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has undergone percutaneous coronary intervention (PCI) at or near the current time.",
+  "when_true": "Set to true if the patient has undergone percutaneous coronary intervention (PCI) at or near the current time.",
+  "when_false": "Set to false if the patient has not undergone percutaneous coronary intervention (PCI) at or near the current time.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has undergone percutaneous coronary intervention (PCI) at or near the current time.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_percutaneous_coronary_intervention_now@@newly_undergone",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has newly undergone percutaneous coronary intervention (PCI).",
+  "when_true": "Set to true if the patient has undergone percutaneous coronary intervention (PCI) recently (i.e., newly).",
+  "when_false": "Set to false if the patient has not undergone percutaneous coronary intervention (PCI) recently (i.e., newly).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has newly undergone percutaneous coronary intervention (PCI).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_coronary_artery_bypass_graft_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has undergone coronary artery bypass grafting (CABG) at or near the current time.",
+  "when_true": "Set to true if the patient has undergone coronary artery bypass grafting (CABG) at or near the current time.",
+  "when_false": "Set to false if the patient has not undergone coronary artery bypass grafting (CABG) at or near the current time.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has undergone coronary artery bypass grafting (CABG) at or near the current time.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_coronary_artery_bypass_graft_now@@newly_undergone",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has newly undergone coronary artery bypass grafting (CABG).",
+  "when_true": "Set to true if the patient has undergone coronary artery bypass grafting (CABG) recently (i.e., newly).",
+  "when_false": "Set to false if the patient has not undergone coronary artery bypass grafting (CABG) recently (i.e., newly).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has newly undergone coronary artery bypass grafting (CABG).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_obstructive_sleep_apnea_syndrome_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of obstructive sleep apnea syndrome.",
+  "when_true": "Set to true if the patient currently has a diagnosis of obstructive sleep apnea syndrome.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of obstructive sleep apnea syndrome.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of obstructive sleep apnea syndrome.",
+  "when_value": null,
+  "polarity": "appears with opposing polarity"
+ },
+ {
+  "name": "patient_apnea_hypopnea_index_value_recorded_now_withunit_per_hour",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's apnea-hypopnea index (AHI) per hour, recorded now.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured value if the patient's apnea-hypopnea index (AHI) per hour is recorded now.",
+  "polarity": "criterion met when >= 15"
+ },
+ {
+  "name": "patient_apnea_hypopnea_index_value_recorded_now_withunit_per_hour@@measured_on_unattended_sleep_recording_at_home",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's apnea-hypopnea index (AHI) value was measured on the unattended sleep recording at home.",
+  "when_true": "Set to true if the patient's apnea-hypopnea index (AHI) value was measured on the unattended sleep recording at home.",
+  "when_false": "Set to false if the patient's apnea-hypopnea index (AHI) value was not measured on the unattended sleep recording at home.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the AHI value was measured on the unattended sleep recording at home.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_coronary_arteriosclerosis_now@@angiographically_verified",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current diagnosis of coronary artery disease is angiographically verified.",
+  "when_true": "Set to true if the patient's current diagnosis of coronary artery disease is angiographically verified.",
+  "when_false": "Set to false if the patient's current diagnosis of coronary artery disease is not angiographically verified.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current diagnosis of coronary artery disease is angiographically verified.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_sleep_apnea_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of sleep apnea.",
+  "when_true": "Set to true if the patient currently has a diagnosis of sleep apnea.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of sleep apnea.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of sleep apnea.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_sleep_apnea_now@@non_obstructive",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current sleep apnea diagnosis is non-obstructive.",
+  "when_true": "Set to true if the patient's current sleep apnea diagnosis is specifically non-obstructive.",
+  "when_false": "Set to false if the patient's current sleep apnea diagnosis is not non-obstructive (i.e., is obstructive or another type).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current sleep apnea diagnosis is non-obstructive.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_received_treatment_for_obstructive_sleep_apnea_syndrome_in_the_history",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever received treatment for obstructive sleep apnea syndrome at any time in the past.",
+  "when_true": "Set to true if the patient has ever received any treatment for obstructive sleep apnea syndrome at any time in the past.",
+  "when_false": "Set to false if the patient has never received any treatment for obstructive sleep apnea syndrome at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever received treatment for obstructive sleep apnea syndrome.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_central_sleep_apnea_syndrome_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently presents with central sleep apnea syndrome.",
+  "when_true": "Set to true if the patient currently presents with central sleep apnea syndrome.",
+  "when_false": "Set to false if the patient currently does not present with central sleep apnea syndrome.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently presents with central sleep apnea syndrome.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_central_sleep_apnea_syndrome_now@@main_type_presented",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether central sleep apnea syndrome is the main type of apnea presented by the patient.",
+  "when_true": "Set to true if central sleep apnea syndrome is the main type of apnea presented by the patient (i.e., it predominates over other types).",
+  "when_false": "Set to false if central sleep apnea syndrome is present but is not the main type presented.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether central sleep apnea syndrome is the main type presented.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_cheyne_stokes_respiration_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently presents with Cheyne-Stokes respiration.",
+  "when_true": "Set to true if the patient currently presents with Cheyne-Stokes respiration.",
+  "when_false": "Set to false if the patient currently does not present with Cheyne-Stokes respiration.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently presents with Cheyne-Stokes respiration.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_apnea_hypopnea_index_value_recorded_now_withunit_per_hour@@recorded_during_unattended_sleep_study_at_home",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the AHI value was measured during an unattended sleep study at home.",
+  "when_true": "Set to true if the AHI value was measured during an unattended sleep study performed at home.",
+  "when_false": "Set to false if the AHI value was not measured during an unattended sleep study at home.",
+  "when_unknown": "Set to null if it is unknown or cannot be determined whether the AHI value was measured during an unattended sleep study at home.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_obstructive_sleep_apnea_syndrome_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever had a diagnosis of obstructive sleep apnea syndrome.",
+  "when_true": "Set to true if the patient has ever been diagnosed with obstructive sleep apnea syndrome at any time in the past.",
+  "when_false": "Set to false if the patient has never been diagnosed with obstructive sleep apnea syndrome at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been diagnosed with obstructive sleep apnea syndrome.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_obstructive_sleep_apnea_syndrome_inthehistory@@already_treated",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's diagnosis of obstructive sleep apnea syndrome has already been treated.",
+  "when_true": "Set to true if the patient's diagnosis of obstructive sleep apnea syndrome has already been treated.",
+  "when_false": "Set to false if the patient's diagnosis of obstructive sleep apnea syndrome has not been treated.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's diagnosis of obstructive sleep apnea syndrome has already been treated.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_central_sleep_apnea_syndrome_now@@mainly_presented",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether central apneas are mainly (predominantly) presented when the patient currently has central sleep apnea syndrome.",
+  "when_true": "Set to true if the patient currently presents mainly (i.e., predominantly) central apneas (central sleep apnea syndrome).",
+  "when_false": "Set to false if the patient currently presents central apneas but they are not mainly (predominantly) presented.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether central apneas are mainly presented.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_apnea_hypopnea_index_value_recorded_now_withunit_per_hour@@measured_during_unattended_sleep_recording_at_home",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the apnea-hypopnea index value was measured during an unattended sleep recording at home.",
+  "when_true": "Set to true if the apnea-hypopnea index value was measured during an unattended sleep recording at home.",
+  "when_false": "Set to false if the apnea-hypopnea index value was not measured during an unattended sleep recording at home.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the measurement was obtained during an unattended sleep recording at home.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ }
+]

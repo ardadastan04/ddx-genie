@@ -1,0 +1,222 @@
+[
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when > 40"
+ },
+ {
+  "name": "patient_sex_is_female_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean value indicating whether the patient's sex is female at the current time.",
+  "when_true": "Set to true if the patient's sex is documented as female at the current time.",
+  "when_false": "Set to false if the patient's sex is documented as not female at the current time.",
+  "when_unknown": "Set to null if the patient's sex is unknown, not documented, or cannot be determined at the current time.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_sex_is_male_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean value indicating whether the patient's sex is male at the current time.",
+  "when_true": "Set to true if the patient's sex is documented as male at the current time.",
+  "when_false": "Set to false if the patient's sex is documented as not male at the current time.",
+  "when_unknown": "Set to null if the patient's sex is unknown, not documented, or cannot be determined at the current time.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnostic_code_491_20_in_andalusian_clinical_records_diraya_icd9",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has diagnostic code 491.20 recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_true": "Set to true if the patient has diagnostic code 491.20 recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_false": "Set to false if the patient does not have diagnostic code 491.20 recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has diagnostic code 491.20 recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnostic_code_492_8_in_andalusian_clinical_records_diraya_icd9",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has diagnostic code 492.8 recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_true": "Set to true if the patient has diagnostic code 492.8 recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_false": "Set to false if the patient does not have diagnostic code 492.8 recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has diagnostic code 492.8 recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnostic_code_493_2_in_andalusian_clinical_records_diraya_icd9",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has diagnostic code 493.2 recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_true": "Set to true if the patient has diagnostic code 493.2 recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_false": "Set to false if the patient does not have diagnostic code 493.2 recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has diagnostic code 493.2 recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnostic_code_494_0_in_andalusian_clinical_records_diraya_icd9",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has diagnostic code 494.0 recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_true": "Set to true if the patient has diagnostic code 494.0 recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_false": "Set to false if the patient does not have diagnostic code 494.0 recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has diagnostic code 494.0 recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnostic_code_496_in_andalusian_clinical_records_diraya_icd9",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has diagnostic code 496 recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_true": "Set to true if the patient has diagnostic code 496 recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_false": "Set to false if the patient does not have diagnostic code 496 recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has diagnostic code 496 recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_any_inclusion_diagnostic_code_in_andalusian_clinical_records_diraya_icd9",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has any of the inclusion diagnostic codes (496, 492.8, 494.0, 491.20, 493.2) recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_true": "Set to true if the patient has any of the inclusion diagnostic codes (496, 492.8, 494.0, 491.20, 493.2) recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_false": "Set to false if the patient does not have any of the inclusion diagnostic codes (496, 492.8, 494.0, 491.20, 493.2) recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has any of the inclusion diagnostic codes (496, 492.8, 494.0, 491.20, 493.2) recorded in Andalusian clinical records (Diraya) in accordance with ICD-9.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_smoker_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently a smoker.",
+  "when_true": "Set to true if the patient is currently a smoker.",
+  "when_false": "Set to false if the patient is currently not a smoker.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently a smoker.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_ex_smoker_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has a history of being a former smoker.",
+  "when_true": "Set to true if the patient has a history of being a former smoker.",
+  "when_false": "Set to false if the patient does not have a history of being a former smoker.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has a history of being a former smoker.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_pack_years_value_recorded_in_lifetime_withunit_pack_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the total number of pack-years of smoking the patient has accumulated over their lifetime, measured in pack-years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined what the patient's total pack-years of smoking is.",
+  "when_value": "Set to the numeric value representing the total number of pack-years of smoking the patient has accumulated over their lifetime, measured in pack-years.",
+  "polarity": "criterion met when >= 10"
+ },
+ {
+  "name": "patient_follow_up_status_value_recorded_inthehistory_withunit_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the duration, in years, of the patient's follow-up period as recorded in the history.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the follow-up duration is not recorded or cannot be determined from the patient's history.",
+  "when_value": "Set to the number of years of follow-up if the patient's follow-up duration is recorded in the history.",
+  "polarity": "criterion met when >= 1"
+ },
+ {
+  "name": "patient_has_been_assisted_in_scheduled_primary_care_appointment_at_inclusion_date",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has been assisted in a scheduled primary care appointment at the inclusion date.",
+  "when_true": "Set to true if the patient has been assisted in a scheduled primary care appointment at the inclusion date.",
+  "when_false": "Set to false if the patient has not been assisted in a scheduled primary care appointment at the inclusion date.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has been assisted in a scheduled primary care appointment at the inclusion date.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_chronic_obstructive_pulmonary_disease_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever had a diagnosis of chronic obstructive pulmonary disease.",
+  "when_true": "Set to true if the patient has ever had a diagnosis of chronic obstructive pulmonary disease documented in their medical history.",
+  "when_false": "Set to false if the patient has never had a diagnosis of chronic obstructive pulmonary disease documented in their medical history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had a diagnosis of chronic obstructive pulmonary disease.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_attended_at_primary_care_office_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently attended at a primary care office.",
+  "when_true": "Set to true if the patient is currently attended at a primary care office.",
+  "when_false": "Set to false if the patient is not currently attended at a primary care office.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently attended at a primary care office.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_chronic_obstructive_pulmonary_disease_inthepast1years",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient had any clinical finding of chronic obstructive pulmonary disease in the past 1 year.",
+  "when_true": "Set to true if the patient had any clinical finding of chronic obstructive pulmonary disease documented in the past 1 year.",
+  "when_false": "Set to false if the patient did not have any clinical finding of chronic obstructive pulmonary disease documented in the past 1 year.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient had any clinical finding of chronic obstructive pulmonary disease in the past 1 year.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_minimum_follow_up_duration_value_recorded_in_years",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric value indicating the duration in years of the patient's follow-up period.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the duration of the patient's follow-up period is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the number of years of the patient's follow-up period.",
+  "polarity": "criterion met when >= 1"
+ },
+ {
+  "name": "patient_is_undergoing_clinical_trial_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently involved in any clinical trial.",
+  "when_true": "Set to true if the patient is currently involved in any clinical trial.",
+  "when_false": "Set to false if the patient is currently not involved in any clinical trial.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently involved in any clinical trial.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_currently_involved_in_research_study_related_to_chronic_obstructive_pulmonary_disease",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently involved in any research study related to chronic obstructive pulmonary disease.",
+  "when_true": "Set to true if the patient is currently involved in any research study related to chronic obstructive pulmonary disease.",
+  "when_false": "Set to false if the patient is currently not involved in any research study related to chronic obstructive pulmonary disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently involved in any research study related to chronic obstructive pulmonary disease.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

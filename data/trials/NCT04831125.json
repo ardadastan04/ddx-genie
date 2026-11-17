@@ -1,0 +1,16 @@
+{
+ "nct": "NCT04831125",
+ "title": "Conduction System Pacing International Registry (CONSPIRE Registry)",
+ "conditions": [
+  "Heart Failure",
+  "Bradyarrhythmia"
+ ],
+ "phase": "",
+ "brief_summary": "The purpose of this registry study is to collect information about routine clinical practices with device implantation to treat bradycardia and cardiac systolic dysfunction (heart rhythm disorders) across global centers of excellence in cardiac pacing. In particular, this study will examine the use of conduction system pacing (CSP) in clinical practice. Information collected in the registry will help researchers better characterize strengths and limitations of current technology and treatments.",
+ "inclusion_criteria": "inclusion criteria: \n\n Meets American College of Cardiology (ACC)/American Heart Association (AHA)/Heart Rhythm Society (HRS) guidelines for bradycardia, or \n\n Meets ACC/AHA/HRS guidelines for cardiac resynchronization therapy (CRT). \n\n ",
+ "exclusion_criteria": ": \n\n Age < 18 years \n\n Inability of patient capacity to provide consent for themselves either due to medical or psychiatric comorbidity \n\n Pregnancy \n\n Difficulty with follow-up",
+ "cohorts": [
+  "a",
+  "b"
+ ]
+}

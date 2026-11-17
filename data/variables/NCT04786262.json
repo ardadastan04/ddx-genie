@@ -1,0 +1,134 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_type_1_diabetes_mellitus_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever been diagnosed with type 1 diabetes mellitus in their medical history.",
+  "when_true": "Set to true if the patient has ever been diagnosed with type 1 diabetes mellitus at any point in their medical history.",
+  "when_false": "Set to false if the patient has never been diagnosed with type 1 diabetes mellitus at any point in their medical history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been diagnosed with type 1 diabetes mellitus.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_type_1_diabetes_mellitus_inthehistory@@duration_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the number of years since the patient was first diagnosed with type 1 diabetes mellitus.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the duration in years since diagnosis is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the number of years since the patient was first diagnosed with type 1 diabetes mellitus, if known.",
+  "polarity": "criterion met when > 5"
+ },
+ {
+  "name": "patient_has_finding_of_hypoglycemia_inthepast12months",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has had hypoglycemia in the 12 months prior to enrollment.",
+  "when_true": "Set to true if the patient has had at least one episode of hypoglycemia in the 12 months prior to enrollment.",
+  "when_false": "Set to false if the patient has not had any episodes of hypoglycemia in the 12 months prior to enrollment.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has had hypoglycemia in the 12 months prior to enrollment.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_hypoglycemia_inthepast12months@@documented",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's hypoglycemia episodes in the 12 months prior to enrollment are documented.",
+  "when_true": "Set to true if the patient's hypoglycemia episodes in the 12 months prior to enrollment are documented.",
+  "when_false": "Set to false if the patient's hypoglycemia episodes in the 12 months prior to enrollment are not documented.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the hypoglycemia episodes are documented.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_hypoglycemia_inthepast12months@@severe",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's hypoglycemia episodes in the 12 months prior to enrollment are severe.",
+  "when_true": "Set to true if the patient's hypoglycemia episodes in the 12 months prior to enrollment are severe.",
+  "when_false": "Set to false if the patient's hypoglycemia episodes in the 12 months prior to enrollment are not severe.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the hypoglycemia episodes are severe.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_hypoglycemia_inthepast12months@@episode_count",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric count of documented, severe hypoglycemia episodes in the 12 months prior to enrollment.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the episode count is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the number of documented, severe hypoglycemia episodes the patient has had in the 12 months prior to enrollment.",
+  "polarity": "criterion met when >= 1"
+ },
+ {
+  "name": "patient_has_stable_diabetic_treatment_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "duration_of_continuous_glucose_monitor_use_before_screening_in_months",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the number of months the patient has used a continuous glucose monitor prior to the screening visit.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined how many months the patient has used a continuous glucose monitor prior to the screening visit.",
+  "when_value": "Set to the number of months the patient has used a continuous glucose monitor prior to the screening visit.",
+  "polarity": "criterion met when >= 3"
+ },
+ {
+  "name": "patient_has_used_continuous_glucose_monitor_consistently_for_at_least_3_months_before_screening",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has used a continuous glucose monitor consistently for at least 3 months prior to the screening visit.",
+  "when_true": "Set to true if the patient has used a continuous glucose monitor consistently for at least 3 months before the screening visit.",
+  "when_false": "Set to false if the patient has not used a continuous glucose monitor consistently for at least 3 months before the screening visit.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has used a continuous glucose monitor consistently for at least 3 months before the screening visit.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_undergone_transplantation_of_pancreatic_islet_cells_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone transplantation of pancreatic islet cells at any time in the past.",
+  "when_true": "Set to true if the patient has ever undergone transplantation of pancreatic islet cells at any time in the past (prior to now).",
+  "when_false": "Set to false if the patient has never undergone transplantation of pancreatic islet cells at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone transplantation of pancreatic islet cells in the past.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_solid_organ_transplant_to_recipient_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone a solid organ transplant at any time in the past.",
+  "when_true": "Set to true if the patient has ever undergone a solid organ transplant at any time in the past (prior to now).",
+  "when_false": "Set to false if the patient has never undergone a solid organ transplant at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone a solid organ transplant in the past.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_cell_therapy_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone any cell therapy at any time in the past.",
+  "when_true": "Set to true if the patient has ever undergone any cell therapy at any time in the past (prior to now).",
+  "when_false": "Set to false if the patient has never undergone any cell therapy at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone any cell therapy in the past.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

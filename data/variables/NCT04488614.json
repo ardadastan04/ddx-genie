@@ -1,0 +1,123 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_malignant_neoplasm_of_breast_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of malignant neoplasm of breast (breast cancer).",
+  "when_true": "Set to true if the patient currently has a diagnosis of malignant neoplasm of breast (breast cancer).",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of malignant neoplasm of breast (breast cancer).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of malignant neoplasm of breast (breast cancer).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_malignant_neoplasm_of_breast_now@@early_stage",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current breast cancer diagnosis is at an early stage.",
+  "when_true": "Set to true if the patient currently has a diagnosis of malignant neoplasm of breast (breast cancer) and the cancer is at an early stage.",
+  "when_false": "Set to false if the patient currently has a diagnosis of malignant neoplasm of breast (breast cancer) but the cancer is not at an early stage.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the cancer is at an early stage.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_ductal_carcinoma_in_situ_of_breast_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has ductal carcinoma in situ of the breast.",
+  "when_true": "Set to true if the patient currently has the clinical finding of ductal carcinoma in situ of the breast.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of ductal carcinoma in situ of the breast.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of ductal carcinoma in situ of the breast.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_ductal_carcinoma_in_situ_of_breast_now@@grade_iii",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's ductal carcinoma in situ of the breast is grade III.",
+  "when_true": "Set to true if the patient's ductal carcinoma in situ of the breast is specifically grade III.",
+  "when_false": "Set to false if the patient's ductal carcinoma in situ of the breast is not grade III.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's ductal carcinoma in situ of the breast is grade III.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_able_to_read_norwegian_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently able to read Norwegian.",
+  "when_true": "Set to true if the patient is currently able to read Norwegian.",
+  "when_false": "Set to false if the patient is currently not able to read Norwegian.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently able to read Norwegian.",
+  "when_value": null,
+  "polarity": "appears with opposing polarity"
+ },
+ {
+  "name": "patient_is_able_to_communicate_in_norwegian_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently able to communicate in Norwegian.",
+  "when_true": "Set to true if the patient is currently able to communicate in Norwegian.",
+  "when_false": "Set to false if the patient is currently not able to communicate in Norwegian.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently able to communicate in Norwegian.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_malignant_neoplastic_disease_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever been diagnosed with any malignant neoplastic disease (cancer) at any time in the past.",
+  "when_true": "Set to true if the patient has ever been diagnosed with any malignant neoplastic disease (cancer) at any time in the past, regardless of current status.",
+  "when_false": "Set to false if the patient has never been diagnosed with any malignant neoplastic disease (cancer) at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been diagnosed with any malignant neoplastic disease (cancer).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_malignant_neoplastic_disease_inthehistory@@excluding_current_diagnosis_of_early_stage_breast_cancer",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating that the variable excludes the current diagnosis of early stage breast cancer.",
+  "when_true": "Set to true if the variable 'patient_has_diagnosis_of_malignant_neoplastic_disease_inthehistory' excludes the current diagnosis of early stage breast cancer (i.e., a current diagnosis of early stage breast cancer does not count as a prior cancer diagnosis).",
+  "when_false": "Set to false if the variable includes the current diagnosis of early stage breast cancer as a prior cancer diagnosis.",
+  "when_unknown": "Set to null if it is unknown or cannot be determined whether the current diagnosis of early stage breast cancer is excluded.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_dementia_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has dementia.",
+  "when_true": "Set to true if the patient currently has the clinical finding or diagnosis of dementia.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding or diagnosis of dementia.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has dementia.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_malignant_neoplastic_disease_inthehistory@@excludes_current_diagnosis_of_ductal_carcinoma_in_situ_grade_iii",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the diagnosis of malignant neoplastic disease (cancer) excludes the current diagnosis of ductal carcinoma in situ grade III.",
+  "when_true": "Set to true if the diagnosis of malignant neoplastic disease (cancer) excludes the current diagnosis of ductal carcinoma in situ grade III.",
+  "when_false": "Set to false if the diagnosis of malignant neoplastic disease (cancer) includes the current diagnosis of ductal carcinoma in situ grade III.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the current diagnosis of ductal carcinoma in situ grade III is excluded from the diagnosis of malignant neoplastic disease (cancer).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_dementia_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of dementia.",
+  "when_true": "Set to true if the patient currently has a diagnosis of dementia.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of dementia.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of dementia.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

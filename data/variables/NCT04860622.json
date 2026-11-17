@@ -1,0 +1,101 @@
+[
+ {
+  "name": "patient_has_singleton_pregnancy_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently pregnant with a singleton pregnancy (only one fetus).",
+  "when_true": "Set to true if the patient is currently pregnant and the pregnancy is singleton (only one fetus).",
+  "when_false": "Set to false if the patient is currently pregnant and the pregnancy is not singleton (e.g., multiple gestation), or if the patient is not currently pregnant.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently pregnant with a singleton pregnancy.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_disorder_of_thyroid_gland_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever had a diagnosis of disorder of the thyroid gland (thyroid disease) at any time in the past.",
+  "when_true": "Set to true if the patient has ever been diagnosed with a disorder of the thyroid gland (thyroid disease) at any time prior to the present.",
+  "when_false": "Set to false if the patient has never been diagnosed with a disorder of the thyroid gland (thyroid disease) prior to the present.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been diagnosed with a disorder of the thyroid gland (thyroid disease) prior to the present.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_disorder_of_thyroid_gland_inthehistory@@pre_existing",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the diagnosis of disorder of thyroid gland (thyroid disease) was pre-existing (present before study inclusion).",
+  "when_true": "Set to true if the patient's diagnosis of disorder of thyroid gland (thyroid disease) was present prior to study inclusion (pre-existing).",
+  "when_false": "Set to false if the patient's diagnosis of disorder of thyroid gland (thyroid disease) was not present prior to study inclusion.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the diagnosis was present prior to study inclusion.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_exposed_to_drug_or_medicament_now@@interferes_with_thyroid_function",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the drug or medicament to which the patient is currently exposed interferes with thyroid function.",
+  "when_true": "Set to true if the drug or medicament to which the patient is currently exposed interferes with thyroid function.",
+  "when_false": "Set to false if the drug or medicament to which the patient is currently exposed does not interfere with thyroid function.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the drug or medicament interferes with thyroid function.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_in_vitro_fertilization_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone in vitro fertilization treatment at any time in the past.",
+  "when_true": "Set to true if the patient has ever undergone in vitro fertilization treatment at any time in the past.",
+  "when_false": "Set to false if the patient has never undergone in vitro fertilization treatment at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone in vitro fertilization treatment.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_exposed_to_antithyroperoxidase_antibody_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has thyroid peroxidase antibody positivity (is exposed to antithyroperoxidase antibody).",
+  "when_true": "Set to true if the patient currently has thyroid peroxidase antibody positivity (i.e., is exposed to antithyroperoxidase antibody).",
+  "when_false": "Set to false if the patient currently does not have thyroid peroxidase antibody positivity (i.e., is not exposed to antithyroperoxidase antibody).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has thyroid peroxidase antibody positivity.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_exposed_to_drug_or_medicament_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently exposed to any drug or medicament.",
+  "when_true": "Set to true if the patient is currently exposed to any drug or medicament.",
+  "when_false": "Set to false if the patient is currently not exposed to any drug or medicament.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently exposed to any drug or medicament.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_history_of_adolescent_pregnancy",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever had an adolescent pregnancy in their medical history.",
+  "when_true": "Set to true if the patient has a documented history of adolescent pregnancy (i.e., pregnancy occurring while the patient was classified as an adolescent, according to clinical or study definitions).",
+  "when_false": "Set to false if the patient has no documented history of adolescent pregnancy.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had an adolescent pregnancy.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_using_thyroid_interfering_medication_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently using any medication that interferes with thyroid function.",
+  "when_true": "Set to true if the patient is currently using any medication that interferes with thyroid function.",
+  "when_false": "Set to false if the patient is currently not using any medication that interferes with thyroid function.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently using any medication that interferes with thyroid function.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

@@ -1,0 +1,134 @@
+[
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when >= 18"
+ },
+ {
+  "name": "patient_has_finding_of_autosomal_dominant_late_onset_parkinson_disease_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has an autosomal dominant late-onset form of Parkinson's disease.",
+  "when_true": "Set to true if the patient currently has an autosomal dominant late-onset form of Parkinson's disease.",
+  "when_false": "Set to false if the patient currently does not have an autosomal dominant late-onset form of Parkinson's disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has an autosomal dominant late-onset form of Parkinson's disease.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_autosomal_dominant_late_onset_parkinson_disease_now@@apparently_being_inherited_in_the_patients_family",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's autosomal dominant late-onset Parkinson's disease is apparently being inherited in the patient's family.",
+  "when_true": "Set to true if the patient's autosomal dominant late-onset Parkinson's disease is apparently being inherited in the patient's family.",
+  "when_false": "Set to false if the patient's autosomal dominant late-onset Parkinson's disease is not apparently being inherited in the patient's family.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's autosomal dominant late-onset Parkinson's disease is apparently being inherited in the patient's family.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_parkinson_s_disease_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of Parkinson's disease.",
+  "when_true": "Set to true if the patient currently has a diagnosis of Parkinson's disease.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of Parkinson's disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of Parkinson's disease.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_parkinson_s_disease_now@@supported_by_tremor_bradykinesia_and_responsiveness_to_levodopa",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current diagnosis of Parkinson's disease is supported by the presence of tremor, bradykinesia, and responsiveness to levodopa.",
+  "when_true": "Set to true if the patient's current diagnosis of Parkinson's disease is supported by the presence of all three clinical criteria: tremor, bradykinesia, and responsiveness to levodopa.",
+  "when_false": "Set to false if the patient's current diagnosis of Parkinson's disease is not supported by all three criteria.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the diagnosis is supported by all three criteria.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_tremor_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has the clinical finding of tremor.",
+  "when_true": "Set to true if the patient currently has the clinical finding of tremor.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of tremor.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of tremor.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_bradykinesia_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has the clinical finding of bradykinesia.",
+  "when_true": "Set to true if the patient currently has the clinical finding of bradykinesia.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of bradykinesia.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of bradykinesia.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_exposed_to_levodopa_now@@responsiveness",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently exposed to levodopa and demonstrates clinical responsiveness to levodopa.",
+  "when_true": "Set to true if the patient is currently exposed to levodopa and demonstrates clinical responsiveness to levodopa.",
+  "when_false": "Set to false if the patient is currently exposed to levodopa but does not demonstrate responsiveness, or if responsiveness is absent.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient demonstrates responsiveness to levodopa.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_dementia_associated_with_parkinson_s_disease_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has Parkinson's disease associated with dementia.",
+  "when_true": "Set to true if the patient currently has the clinical finding of Parkinson's disease associated with dementia.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of Parkinson's disease associated with dementia.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of Parkinson's disease associated with dementia.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_exposed_to_levodopa_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_autosomal_dominant_late_onset_parkinson_disease_now@@apparently_being_inherited_in_the_family",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's autosomal dominant form of Parkinson's disease is apparently being inherited in the family.",
+  "when_true": "Set to true if the patient's autosomal dominant form of Parkinson's disease is apparently being inherited in the family.",
+  "when_false": "Set to false if the patient's autosomal dominant form of Parkinson's disease is not apparently being inherited in the family.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's autosomal dominant form of Parkinson's disease is apparently being inherited in the family.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_unaffected_member_of_family",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is an unaffected member of a family.",
+  "when_true": "Set to true if the patient is a member of a family and is unaffected by the disease or condition of interest present in the family.",
+  "when_false": "Set to false if the patient is a member of a family and is affected by the disease or condition of interest present in the family, or if the patient is not a member of a family.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is an unaffected member of a family.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ }
+]

@@ -1,0 +1,90 @@
+[
+ {
+  "name": "patient_has_symptoms_of_asthma_finding_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has symptoms of asthma.",
+  "when_true": "Set to true if the patient currently has symptoms of asthma.",
+  "when_false": "Set to false if the patient currently does not have symptoms of asthma.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has symptoms of asthma.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_exposed_to_corticosteroid_series_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever (prior or current) been exposed to corticosteroids via inhaled route.",
+  "when_true": "Set to true if the patient has ever (prior or current) been exposed to corticosteroids, specifically via inhaled route.",
+  "when_false": "Set to false if the patient has never been exposed to corticosteroids via inhaled route.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been exposed to corticosteroids via inhaled route.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_exposed_to_corticosteroid_series_inthehistory@@route_inhaled",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's exposure to corticosteroids was via the inhaled route.",
+  "when_true": "Set to true if the patient's exposure to corticosteroids was via the inhaled route.",
+  "when_false": "Set to false if the patient's exposure to corticosteroids was not via the inhaled route.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the exposure to corticosteroids was via the inhaled route.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_exposed_to_corticosteroid_series_inthehistory@@route_oral",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's exposure to corticosteroids was via the oral route.",
+  "when_true": "Set to true if the patient's exposure to corticosteroids was via the oral route.",
+  "when_false": "Set to false if the patient's exposure to corticosteroids was not via the oral route.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the exposure to corticosteroids was via the oral route.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_febrile_respiratory_infection_recently",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has had a febrile respiratory infection recently.",
+  "when_true": "Set to true if the patient has had a febrile respiratory infection recently.",
+  "when_false": "Set to false if the patient has not had a febrile respiratory infection recently.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has had a febrile respiratory infection recently.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_asthma_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has asthma.",
+  "when_true": "Set to true if the patient currently has the clinical finding of asthma.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of asthma.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of asthma.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_asthma_now@@unstable",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current asthma is unstable.",
+  "when_true": "Set to true if the patient currently has asthma and the asthma is unstable.",
+  "when_false": "Set to false if the patient currently has asthma and the asthma is not unstable.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current asthma is unstable.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_severe_asthma_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has severe asthma.",
+  "when_true": "Set to true if the patient currently has the clinical finding of severe asthma.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of severe asthma.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of severe asthma.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

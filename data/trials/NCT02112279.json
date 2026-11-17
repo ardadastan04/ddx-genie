@@ -1,0 +1,14 @@
+{
+ "nct": "NCT02112279",
+ "title": "Reduction of C-Difficile Infection Using Stool Transplant",
+ "conditions": [
+  "C-difficile"
+ ],
+ "phase": "Phase 1",
+ "brief_summary": "Clostridium-difficile (C-difficile) is a gram positive anaerobic spore-forming bacterium that can lead to severe diarrhea and pseudomembranous colitis. According to Schroeder (2005), there are approximately 3 million cases annually with a mortality rate of 1-2.5 %. It is most often associated with overuse of antibiotics. According to Bartlett & Gerding (2008), 15-25% of anti-microbial-associated diarrhea is caused by C-difficile.~The purpose of this study is to determine if donor fecal microbiota transplant via colonoscopy reduces refractory C-difficile infection better than current routine methods such as continued antibiotic treatment. Specifically, we hypothesize that fecal microbiota transplant via colonoscopy will result in a higher C-difficile cure rate in affected patients versus care as usual in a retrospective cohort.",
+ "inclusion_criteria": "inclusion criteria: \n\n Patients must be 18 years of age or older \n\n Patient must have a positive C. difficile test within the 10 days prior to the procedure \n\n Continued symptoms of c-difficile infection \n\n Patients must have failed at least two courses of appropriate antibiotic therapy for C. diff to be a candidate for this procedure \n\n - \n\n ",
+ "exclusion_criteria": ": \n\n Under 18 years of age \n\n Negative C. difficile test within the 10 days prior to the procedure \n\n No symptoms of c-difficile infection \n\n Less than two courses of appropriate antibiotic therapy for C. difficile infection",
+ "cohorts": [
+  ""
+ ]
+}

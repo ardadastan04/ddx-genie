@@ -1,0 +1,112 @@
+[
+ {
+  "name": "patient_sex_is_female_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean value indicating whether the patient's sex is female at the current time.",
+  "when_true": "Set to true if the patient's sex is documented as female at the current time.",
+  "when_false": "Set to false if the patient's sex is documented as not female (i.e., male or other) at the current time.",
+  "when_unknown": "Set to null if the patient's sex is unknown, not documented, or cannot be determined at the current time.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when >= 18"
+ },
+ {
+  "name": "patient_has_diagnosis_of_invasive_carcinoma_of_breast_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of invasive carcinoma of breast.",
+  "when_true": "Set to true if the patient currently has a diagnosis of invasive carcinoma of breast.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of invasive carcinoma of breast.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of invasive carcinoma of breast.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_invasive_carcinoma_of_breast_now@@newly_diagnosed",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a newly diagnosed diagnosis of invasive carcinoma of breast.",
+  "when_true": "Set to true if the patient currently has a newly diagnosed invasive carcinoma of breast.",
+  "when_false": "Set to false if the patient does not have a newly diagnosed invasive carcinoma of breast.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has a newly diagnosed invasive carcinoma of breast.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_malignant_neoplastic_disease_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a malignant neoplastic disease (malignant tumor).",
+  "when_true": "Set to true if the patient currently has a malignant neoplastic disease (malignant tumor).",
+  "when_false": "Set to false if the patient currently does not have a malignant neoplastic disease (malignant tumor).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a malignant neoplastic disease (malignant tumor).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_malignant_neoplastic_disease_now@@is_another_malignant_tumor",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the malignant neoplastic disease is another malignant tumor (distinct from the index tumor).",
+  "when_true": "Set to true if the malignant neoplastic disease is another malignant tumor (not the index tumor).",
+  "when_false": "Set to false if the malignant neoplastic disease is not another malignant tumor (i.e., is the index tumor).",
+  "when_unknown": "Set to null if it is unknown or cannot be determined whether the malignant neoplastic disease is another malignant tumor.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_malignant_neoplastic_disease_now@@is_in_situ_cervical_carcinoma",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the malignant neoplastic disease is in situ cervical carcinoma.",
+  "when_true": "Set to true if the malignant neoplastic disease is in situ cervical carcinoma.",
+  "when_false": "Set to false if the malignant neoplastic disease is not in situ cervical carcinoma.",
+  "when_unknown": "Set to null if it is unknown or cannot be determined whether the malignant neoplastic disease is in situ cervical carcinoma.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_malignant_neoplastic_disease_now@@is_treated_basal_cell_carcinoma",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the malignant neoplastic disease is treated basal cell carcinoma.",
+  "when_true": "Set to true if the malignant neoplastic disease is treated basal cell carcinoma.",
+  "when_false": "Set to false if the malignant neoplastic disease is not treated basal cell carcinoma.",
+  "when_unknown": "Set to null if it is unknown or cannot be determined whether the malignant neoplastic disease is treated basal cell carcinoma.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_ductal_carcinoma_in_situ_of_breast_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of ductal carcinoma in situ of the breast.",
+  "when_true": "Set to true if the patient currently has a diagnosis of ductal carcinoma in situ of the breast.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of ductal carcinoma in situ of the breast.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of ductal carcinoma in situ of the breast.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_lobular_carcinoma_in_situ_of_breast_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of lobular carcinoma in situ of the breast.",
+  "when_true": "Set to true if the patient currently has a diagnosis of lobular carcinoma in situ of the breast.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of lobular carcinoma in situ of the breast.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of lobular carcinoma in situ of the breast.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

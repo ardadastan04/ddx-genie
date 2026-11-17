@@ -1,0 +1,13 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_asthma_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ }
+]

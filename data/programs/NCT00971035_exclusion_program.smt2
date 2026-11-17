@@ -1,0 +1,51 @@
+;; ===================== QUALIFIER LINKER =====================
+;; Rule: add (qualifier => stem) only when BOTH are Bool; remove (stem => qualifier); drop ill-typed implications.
+;; Added_aux=0 Removed_reverse=0 Removed_illtyped=0 Skipped_nonbool_pairs=0
+;; =============================================================
+
+;; Declarations/definitions (original + any auto-added Bool stems)
+(declare-const asthma_exacerbation_count_during_screening_period Real)
+(declare-const patient_has_finding_of_acute_asthma_inthehistory Bool)
+(declare-const patient_has_finding_of_acute_asthma_inthehistory@@occurred_during_screening Bool)
+(declare-const patient_has_diagnosis_of_malignant_neoplastic_disease_now Bool)
+(declare-const patient_has_finding_of_immunodeficiency_disorder_now Bool)
+(declare-const patient_has_finding_of_immunodeficiency_disorder_now@@known Bool)
+(declare-const patient_has_diagnosis_of_disorder_of_lung_inthehistory Bool)
+(declare-const patient_has_diagnosis_of_disorder_of_lung_inthehistory@@other_than_asthma Bool)
+(declare-const patient_has_finding_of_disease_now Bool)
+(declare-const patient_has_finding_of_disease_now@@clinically_significant Bool)
+(declare-const patient_has_finding_of_disease_now@@uncontrolled Bool)
+(declare-const patient_has_finding_of_disease_now@@clinically_significant@@uncontrolled Bool)
+(declare-const patient_has_finding_of_smoker_now Bool)
+(declare-const patient_has_finding_of_harmful_pattern_of_substance_use_inthehistory Bool)
+(declare-const patient_has_finding_of_harmful_pattern_of_substance_use_inthehistory@@may_impair_full_participation_in_study Bool)
+(declare-const patient_has_finding_of_harmful_pattern_of_substance_use_inthehistory@@may_risk_full_participation_in_study_investigator_judgment Bool)
+(declare-const patient_has_finding_of_allergic_reaction_to_monoclonal_antibody_inthehistory Bool)
+(declare-const patient_has_childbearing_potential_now Bool)
+(declare-const patient_is_willing_to_use_contraception_now Bool)
+(declare-const patient_is_pregnant_now Bool)
+
+;; Existing auxiliary assertions
+(assert (! (=> patient_has_finding_of_acute_asthma_inthehistory@@occurred_during_screening patient_has_finding_of_acute_asthma_inthehistory) :named REQ0_AUXILIARY0))
+(assert (! (=> (>= asthma_exacerbation_count_during_screening_period 1) patient_has_finding_of_acute_asthma_inthehistory@@occurred_during_screening) :named REQ0_AUXILIARY1))
+(assert (! (=> patient_has_finding_of_immunodeficiency_disorder_now@@known patient_has_finding_of_immunodeficiency_disorder_now) :named REQ2_AUXILIARY0))
+(assert (! (=> patient_has_diagnosis_of_disorder_of_lung_inthehistory@@other_than_asthma patient_has_diagnosis_of_disorder_of_lung_inthehistory) :named REQ3_AUXILIARY0))
+(assert (! (= patient_has_finding_of_disease_now@@clinically_significant@@uncontrolled (and patient_has_finding_of_disease_now@@clinically_significant patient_has_finding_of_disease_now@@uncontrolled)) :named REQ4_AUXILIARY0))
+(assert (! (=> patient_has_finding_of_disease_now@@clinically_significant patient_has_finding_of_disease_now) :named REQ4_AUXILIARY1))
+(assert (! (=> patient_has_finding_of_disease_now@@uncontrolled patient_has_finding_of_disease_now) :named REQ4_AUXILIARY2))
+(assert (! (=> patient_has_finding_of_disease_now@@clinically_significant@@uncontrolled patient_has_finding_of_disease_now) :named REQ4_AUXILIARY3))
+(assert (! (=> patient_has_finding_of_harmful_pattern_of_substance_use_inthehistory@@may_impair_full_participation_in_study patient_has_finding_of_harmful_pattern_of_substance_use_inthehistory) :named REQ6_AUXILIARY0))
+(assert (! (=> patient_has_finding_of_harmful_pattern_of_substance_use_inthehistory@@may_risk_full_participation_in_study_investigator_judgment patient_has_finding_of_harmful_pattern_of_substance_use_inthehistory) :named REQ6_AUXILIARY1))
+
+;; Other kept assertions
+(assert (! (not (>= asthma_exacerbation_count_during_screening_period 1)) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_diagnosis_of_malignant_neoplastic_disease_now) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_immunodeficiency_disorder_now@@known) :named REQ2_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_diagnosis_of_disorder_of_lung_inthehistory@@other_than_asthma) :named REQ3_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_disease_now@@clinically_significant@@uncontrolled) :named REQ4_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_smoker_now) :named REQ5_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_harmful_pattern_of_substance_use_inthehistory@@may_impair_full_participation_in_study) :named REQ6_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_harmful_pattern_of_substance_use_inthehistory@@may_risk_full_participation_in_study_investigator_judgment) :named REQ6_COMPONENT1_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_allergic_reaction_to_monoclonal_antibody_inthehistory) :named REQ7_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not (and patient_has_childbearing_potential_now (not patient_is_willing_to_use_contraception_now))) :named REQ8_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_is_pregnant_now) :named REQ9_COMPONENT0_OTHER_REQUIREMENTS))

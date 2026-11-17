@@ -1,0 +1,233 @@
+[
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's age is unknown or not recorded.",
+  "when_value": "Set to the patient's current age in years as recorded.",
+  "polarity": "criterion met when >= 18"
+ },
+ {
+  "name": "patient_has_finding_of_bicuspid_aortic_valve_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a bicuspid aortic valve.",
+  "when_true": "Set to true if the patient currently has a bicuspid aortic valve.",
+  "when_false": "Set to false if the patient currently does not have a bicuspid aortic valve.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a bicuspid aortic valve.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_bicuspid_aortic_valve_now@@documented",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's bicuspid aortic valve finding is documented.",
+  "when_true": "Set to true if the patient's bicuspid aortic valve finding is documented.",
+  "when_false": "Set to false if the patient's bicuspid aortic valve finding is not documented.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the finding is documented.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_bicuspid_aortic_valve_now@@identified_via_clinical_imaging",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's bicuspid aortic valve finding is identified via clinical imaging.",
+  "when_true": "Set to true if the patient's bicuspid aortic valve finding is identified via clinical imaging (e.g., CT, MRI, echocardiogram).",
+  "when_false": "Set to false if the patient's bicuspid aortic valve finding is not identified via clinical imaging.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the finding is identified via clinical imaging.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_bicuspid_aortic_valve_now@@identified_via_computed_tomography",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's bicuspid aortic valve finding is identified via computed tomography.",
+  "when_true": "Set to true if the patient's bicuspid aortic valve finding is identified via computed tomography.",
+  "when_false": "Set to false if the patient's bicuspid aortic valve finding is not identified via computed tomography.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the finding is identified via computed tomography.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_bicuspid_aortic_valve_now@@identified_via_magnetic_resonance_imaging",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's bicuspid aortic valve finding is identified via magnetic resonance imaging.",
+  "when_true": "Set to true if the patient's bicuspid aortic valve finding is identified via magnetic resonance imaging.",
+  "when_false": "Set to false if the patient's bicuspid aortic valve finding is not identified via magnetic resonance imaging.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the finding is identified via magnetic resonance imaging.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_bicuspid_aortic_valve_now@@identified_via_echocardiogram",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's bicuspid aortic valve finding is identified via echocardiogram.",
+  "when_true": "Set to true if the patient's bicuspid aortic valve finding is identified via echocardiogram.",
+  "when_false": "Set to false if the patient's bicuspid aortic valve finding is not identified via echocardiogram.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the finding is identified via echocardiogram.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_individual_calcification_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has calcification.",
+  "when_true": "Set to true if the patient currently has calcification.",
+  "when_false": "Set to false if the patient currently does not have calcification.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has calcification.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_individual_calcification_now@@minimal",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's calcification is minimal.",
+  "when_true": "Set to true if the patient's calcification is minimal.",
+  "when_false": "Set to false if the patient's calcification is not minimal.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the calcification is minimal.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_individual_calcification_now@@present_at_time_of_enrollment",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's calcification is present at the time of enrollment.",
+  "when_true": "Set to true if the patient's calcification is present at the time of enrollment.",
+  "when_false": "Set to false if the patient's calcification is not present at the time of enrollment.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the calcification is present at the time of enrollment.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is currently pregnant as determined by clinical assessment or testing.",
+  "when_false": "Set to false if the patient is currently not pregnant as determined by clinical assessment or testing.",
+  "when_unknown": "Set to null if the patient's current pregnancy status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_pregnant_now_by_point_of_care_urine_pregnancy_test",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient is currently pregnant as determined by a point of care urine pregnancy test.",
+  "when_true": "Set to true if the patient is currently pregnant as determined by a point of care urine pregnancy test.",
+  "when_false": "Set to false if the patient is currently not pregnant as determined by a point of care urine pregnancy test.",
+  "when_unknown": "Set to null if the patient's current pregnancy status as determined by a point of care urine pregnancy test is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_glomerular_filtration_rate_value_recorded_now_withunit_milliliters_per_minute_per_1_73_square_meters",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric value representing the patient's current estimated glomerular filtration rate (eGFR) in mL/min/1.73m^2.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured value if a current eGFR measurement (in mL/min/1.73m^2) is available.",
+  "polarity": "criterion met when < 30"
+ },
+ {
+  "name": "patient_has_finding_of_renal_failure_syndrome_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has renal failure syndrome.",
+  "when_true": "Set to true if the patient currently has the clinical finding of renal failure syndrome.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of renal failure syndrome.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has renal failure syndrome.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_contraindication_to_intravenous_contrast_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a contraindication to receiving intravenous contrast.",
+  "when_true": "Set to true if the patient currently has a contraindication to receiving intravenous contrast.",
+  "when_false": "Set to false if the patient currently does not have a contraindication to receiving intravenous contrast.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a contraindication to receiving intravenous contrast.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_allergy_to_contrast_media_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever had a finding of allergy to intravenous contrast media.",
+  "when_true": "Set to true if the patient has ever had a finding of allergy to intravenous contrast media.",
+  "when_false": "Set to false if the patient has never had a finding of allergy to intravenous contrast media.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had a finding of allergy to intravenous contrast media.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_allergy_to_contrast_media_inthehistory@@is_documented",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the finding of allergy to intravenous contrast media is documented.",
+  "when_true": "Set to true if the finding of allergy to intravenous contrast media is documented in the patient's record.",
+  "when_false": "Set to false if the finding of allergy to intravenous contrast media is not documented in the patient's record.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the finding is documented.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_undergoing_computed_tomography_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently undergoing a computed tomography scan.",
+  "when_true": "Set to true if the patient is currently undergoing a computed tomography scan.",
+  "when_false": "Set to false if the patient is not currently undergoing a computed tomography scan.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently undergoing a computed tomography scan.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_undergoing_computed_tomography_now@@with_steroid_preparation",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the computed tomography scan is performed with steroid preparation.",
+  "when_true": "Set to true if the computed tomography scan is performed with steroid preparation.",
+  "when_false": "Set to false if the computed tomography scan is not performed with steroid preparation.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the scan is performed with steroid preparation.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_undergoing_computed_tomography_now@@as_part_of_routine_clinical_care",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the computed tomography scan is performed as part of routine clinical care.",
+  "when_true": "Set to true if the computed tomography scan is performed as part of routine clinical care.",
+  "when_false": "Set to false if the computed tomography scan is not performed as part of routine clinical care.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the scan is performed as part of routine clinical care.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_replacement_of_aortic_valve_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone a replacement of the aortic valve at any time in the past.",
+  "when_true": "Set to true if the patient has ever undergone a replacement of the aortic valve at any time in the past.",
+  "when_false": "Set to false if the patient has never undergone a replacement of the aortic valve at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone a replacement of the aortic valve.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

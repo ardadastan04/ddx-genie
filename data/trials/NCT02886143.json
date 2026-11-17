@@ -1,0 +1,16 @@
+{
+ "nct": "NCT02886143",
+ "title": "Effect of Active vs. Passive Voiding Trials on Time to Discharge, Urinary Tract Infection, and Urinary Retention",
+ "conditions": [
+  "Urinary Retention",
+  "Urinary Tract Infections"
+ ],
+ "phase": "Phase 3",
+ "brief_summary": "Urinary retention is a common problem, particularly in hospitalized patients. When a Foley catheter is removed, a patient must be monitored for urinary retention. The usual method is a passive voiding trial where the catheter is removed, the bladder fills with urine and the patient is monitored for voiding over approximately 6 hours. Another option is an active voiding trial where the bladder is filled with saline before the catheter is removed and the patient is immediately assisted to void. This study seeks to determine the effect of active vs passive voiding trials on time to hospital discharge, rate of urinary tract infections, and rate or urinary retention in the general hospitalized population.",
+ "inclusion_criteria": "inclusion criteria: \n\n Admission to one of three hospital units at the University of Virginia (5 Central, 6 West, or the Short Stay Unit) \n\n Patient has a Foley urethral catheter in place \n\n The physician has ordered the Foley urethral catheter to be discontinued \n\n 18 years of age and older \n\n ",
+ "exclusion_criteria": ": \n\n Age less than 18 years \n\n Prisoners \n\n Women who are pregnant",
+ "cohorts": [
+  "a",
+  "b"
+ ]
+}

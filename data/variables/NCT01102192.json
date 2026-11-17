@@ -1,0 +1,189 @@
+[
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's age is unknown or not recorded.",
+  "when_value": "Set to the patient's current age in years as recorded in the medical record.",
+  "polarity": "criterion met when > 17"
+ },
+ {
+  "name": "patient_needs_to_undergo_excision_of_thymus_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently needs to undergo excision of the thymus (thymectomy).",
+  "when_true": "Set to true if the patient currently has a clinical need to undergo excision of the thymus (thymectomy).",
+  "when_false": "Set to false if the patient currently does not have a clinical need to undergo excision of the thymus (thymectomy).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently needs to undergo excision of the thymus (thymectomy).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_needs_to_undergo_excision_of_thymus_now@@indication_thymoma_with_or_without_myasthenia_gravis",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the indication for the patient's current need to undergo excision of the thymus (thymectomy) is thymoma, with or without myasthenia gravis.",
+  "when_true": "Set to true if the patient's current need to undergo excision of the thymus (thymectomy) is due to thymoma, regardless of the presence or absence of myasthenia gravis.",
+  "when_false": "Set to false if the patient's current need to undergo excision of the thymus (thymectomy) is not due to thymoma, or if the indication is unrelated to thymoma.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the indication for thymectomy is thymoma (with or without myasthenia gravis).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_needs_to_undergo_excision_of_thymus_now@@indication_is_elective",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the indication for excision of thymus (thymectomy) is elective.",
+  "when_true": "Set to true if the indication for excision of thymus (thymectomy) is elective.",
+  "when_false": "Set to false if the indication for excision of thymus (thymectomy) is not elective.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the indication is elective.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_needs_to_undergo_excision_of_thymus_now@@indication_due_to_thymoma",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the indication for excision of thymus (thymectomy) is due to thymoma.",
+  "when_true": "Set to true if the indication for excision of thymus (thymectomy) is due to thymoma.",
+  "when_false": "Set to false if the indication for excision of thymus (thymectomy) is not due to thymoma.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the indication is due to thymoma.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_myasthenia_gravis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of myasthenia gravis.",
+  "when_true": "Set to true if the patient currently has a diagnosis of myasthenia gravis.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of myasthenia gravis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of myasthenia gravis.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_needs_to_undergo_operation_on_heart_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has an indication for heart surgery.",
+  "when_true": "Set to true if the patient currently has an indication for heart surgery.",
+  "when_false": "Set to false if the patient currently does not have an indication for heart surgery.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has an indication for heart surgery.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_needs_to_undergo_operation_on_thyroid_gland_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has an indication for thyroid surgery.",
+  "when_true": "Set to true if the patient currently has an indication for thyroid surgery.",
+  "when_false": "Set to false if the patient currently does not have an indication for thyroid surgery.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has an indication for thyroid surgery.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_undergoing_excision_of_thymus_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently undergoing excision (resection) of the thymus.",
+  "when_true": "Set to true if the patient is currently undergoing excision (resection) of the thymus.",
+  "when_false": "Set to false if the patient is currently not undergoing excision (resection) of the thymus.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently undergoing excision (resection) of the thymus.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_undergoing_excision_of_thymus_now@@partial_resection",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the excision of the thymus is partial.",
+  "when_true": "Set to true if the excision of the thymus is partial.",
+  "when_false": "Set to false if the excision of the thymus is not partial.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the excision of the thymus is partial.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_undergoing_excision_of_thymus_now@@performed_for_operative_technical_reasons_during_thyroid_surgery",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the excision of the thymus is performed for operative technical reasons during thyroid surgery.",
+  "when_true": "Set to true if the excision of the thymus is performed for operative technical reasons during thyroid surgery.",
+  "when_false": "Set to false if the excision of the thymus is not performed for operative technical reasons during thyroid surgery.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the excision of the thymus is performed for operative technical reasons during thyroid surgery.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_disorder_of_immune_function_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of any disorder of immune function (immunological disease).",
+  "when_true": "Set to true if the patient currently has a diagnosis of any disorder of immune function (immunological disease).",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of any disorder of immune function (immunological disease).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of any disorder of immune function (immunological disease).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_thymoma_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of thymoma.",
+  "when_true": "Set to true if the patient currently has a diagnosis of thymoma.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of thymoma.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of thymoma.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_rheumatoid_arthritis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of rheumatoid arthritis.",
+  "when_true": "Set to true if the patient currently has a diagnosis of rheumatoid arthritis.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of rheumatoid arthritis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of rheumatoid arthritis.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_multiple_sclerosis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of multiple sclerosis.",
+  "when_true": "Set to true if the patient currently has a diagnosis of multiple sclerosis.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of multiple sclerosis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of multiple sclerosis.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_disorder_of_immune_function_now@@excluding_myasthenia_gravis",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating that the patient has a disorder of immune function, excluding cases where the disorder is myasthenia gravis.",
+  "when_true": "Set to true if the patient has a diagnosis of a disorder of immune function (immunological disease) and that disorder is not myasthenia gravis.",
+  "when_false": "Set to false if the patient has a diagnosis of a disorder of immune function and that disorder is myasthenia gravis, or if the only disorder present is myasthenia gravis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the disorder of immune function is myasthenia gravis or another disorder.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_disorder_of_immune_function_now@@excluding_myasthenia_gravis_and_thymoma",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating that the diagnosis of disorder of immune function excludes myasthenia gravis and thymoma.",
+  "when_true": "Set to true if the patient has a diagnosis of a disorder of immune function now, and this diagnosis is not myasthenia gravis or thymoma.",
+  "when_false": "Set to false if the patient has a diagnosis of a disorder of immune function now, but this diagnosis is myasthenia gravis or thymoma.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the diagnosis of disorder of immune function excludes myasthenia gravis and thymoma.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

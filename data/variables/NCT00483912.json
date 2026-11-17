@@ -1,0 +1,123 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_alcohol_induced_acute_pancreatitis_now@@severe",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_multiple_organ_failure_now@@early",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's multiple organ failure is early.",
+  "when_true": "Set to true if the patient's multiple organ failure is early.",
+  "when_false": "Set to false if the patient's multiple organ failure is not early.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's multiple organ failure is early.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_multiple_organ_failure_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has multiple organ failure.",
+  "when_true": "Set to true if the patient currently has the clinical finding of multiple organ failure.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of multiple organ failure.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has multiple organ failure.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "sequential_organ_failure_assessment_score_value_recorded_now_withunit_points",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's SOFA score at the current time, in points.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the SOFA score is unknown, not documented, or cannot be determined at the current time.",
+  "when_value": "Set to the value of the patient's SOFA score (in points) as recorded at the current time.",
+  "polarity": "criterion met when > 2"
+ },
+ {
+  "name": "patient_has_diagnosis_of_alcohol_induced_acute_pancreatitis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_alcohol_induced_acute_pancreatitis_now@@severe",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's alcohol-induced acute pancreatitis is severe.",
+  "when_true": "Set to true if the patient's alcohol-induced acute pancreatitis is severe.",
+  "when_false": "Set to false if the patient's alcohol-induced acute pancreatitis is not severe.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's alcohol-induced acute pancreatitis is severe.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_alcohol_induced_acute_pancreatitis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_refuses_participation",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient refuses participation in the study.",
+  "when_true": "Set to true if the patient refuses participation in the study.",
+  "when_false": "Set to false if the patient does not refuse participation in the study.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient refuses participation in the study.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "family_member_of_patient_refuses_participation",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether a family member of the patient refuses participation in the study.",
+  "when_true": "Set to true if a family member of the patient refuses participation in the study.",
+  "when_false": "Set to false if no family member of the patient refuses participation in the study.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether a family member of the patient refuses participation in the study.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is currently pregnant.",
+  "when_false": "Set to false if the patient is currently known not to be pregnant.",
+  "when_unknown": "Set to null if the patient's current pregnancy status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "family_member_refuses_participation",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether a family member of the patient refuses participation in the study.",
+  "when_true": "Set to true if a family member of the patient refuses participation in the study.",
+  "when_false": "Set to false if no family member of the patient refuses participation in the study.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether a family member of the patient refuses participation in the study.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

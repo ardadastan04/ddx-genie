@@ -1,0 +1,15 @@
+{
+ "nct": "NCT00871962",
+ "title": "Long-term Oxygen Treatment (LTOT) in Chronic Obstructive Pulmonary Disease: Factors Influencing Survival",
+ "conditions": [
+  "Chronic Obstructive Pulmonary Disease"
+ ],
+ "phase": "",
+ "brief_summary": "The purpose of this prospective cohort study is to determine factors involved in survival in new COPD patients treated by long-term oxygen therapy.~Background: long-term oxygen therapy is indicated in patients with severe COPD. No studies have been performed in the past 20-25 years to examine the results of early clinical trials. Further studies are necessary to understand the utility of oxygen therapy in severe COPD.",
+ "inclusion_criteria": "inclusion criteria: \n\n COPD patients on necessity of long-term oxygen therapy \n\n Patients treated by LTOT, with or without clinically fulfilled criteria for LTOT, with PaO2<55mmHg or less at rest or during sleeping or less during exercise, if supplemental oxygen is demonstrated to improve the exercise-associated hypoxia. Patients with PaO2 56-59mmHg if they also have dependent edema, pulmonary hypertension or hematocrit higher than 56% \n\n Patient clinically stable \n\n Patient with oxygen device of ANTADIR network \n\n Oral and written consent \n\n ",
+ "exclusion_criteria": ": \n\n Patient with obstructive sleep apnea or overlap syndrome \n\n Patient with non invasive ventilation \n\n Patient with evolutive cancer. \n\n Inability to complete questionnaires \n\n Inability to attend outpatient clinic",
+ "cohorts": [
+  "a",
+  "b"
+ ]
+}

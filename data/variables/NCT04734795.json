@@ -1,0 +1,68 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_asthma_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of asthma.",
+  "when_true": "Set to true if the patient currently has a diagnosis of asthma.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of asthma.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of asthma.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_asthma_now@@diagnosed_by_lung_function_tests",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current diagnosis of asthma was established by lung function tests.",
+  "when_true": "Set to true if the patient's current diagnosis of asthma was established by lung function tests.",
+  "when_false": "Set to false if the patient's current diagnosis of asthma was not established by lung function tests.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current diagnosis of asthma was established by lung function tests.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_asthma_now@@diagnosed_by_typical_symptoms",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current diagnosis of asthma was established by typical symptoms.",
+  "when_true": "Set to true if the patient's current diagnosis of asthma was established by typical symptoms.",
+  "when_false": "Set to false if the patient's current diagnosis of asthma was not established by typical symptoms.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current diagnosis of asthma was established by typical symptoms.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_inhaled_steroid_therapy_value_recorded_inthehistory_withunit_months",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the total duration in months of inhaled corticosteroid therapy the patient has received at any time in their history.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the total duration of inhaled corticosteroid therapy is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the total number of months the patient has been treated with inhaled corticosteroids at any time in their history.",
+  "polarity": "criterion met when >= 3"
+ },
+ {
+  "name": "patient_has_other_significant_musculoskeletal_condition_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has other significant musculoskeletal conditions.",
+  "when_true": "Set to true if the patient currently has other significant musculoskeletal conditions.",
+  "when_false": "Set to false if the patient currently does not have other significant musculoskeletal conditions.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has other significant musculoskeletal conditions.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_significant_cardiopulmonary_condition_other_than_asthma_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a significant cardiopulmonary condition other than asthma.",
+  "when_true": "Set to true if the patient currently has a significant cardiopulmonary condition and it is not asthma.",
+  "when_false": "Set to false if the patient currently does not have any significant cardiopulmonary condition other than asthma.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a significant cardiopulmonary condition other than asthma.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

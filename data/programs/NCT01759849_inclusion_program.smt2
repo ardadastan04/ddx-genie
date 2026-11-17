@@ -1,0 +1,63 @@
+;; ===================== QUALIFIER LINKER =====================
+;; Rule: add (qualifier => stem) only when BOTH are Bool; remove (stem => qualifier); drop ill-typed implications.
+;; Added_aux=2 Removed_reverse=0 Removed_illtyped=0 Skipped_nonbool_pairs=1
+;; =============================================================
+
+;; Declarations/definitions (original + any auto-added Bool stems)
+(declare-const patient_sex_is_male_now Bool)
+(declare-const patient_sex_is_female_now Bool)
+(declare-const patient_age_value_recorded_now_in_years Real)
+(declare-const patient_has_finding_of_general_health_good_now Bool)
+(declare-const patient_has_finding_of_mild_asthma_now Bool)
+(declare-const patient_has_finding_of_moderate_asthma_now Bool)
+(declare-const patient_has_finding_of_asthma_now@@is_stable Bool)
+(declare-const patient_has_finding_of_allergic_asthma_now Bool)
+(declare-const patient_has_finding_of_wheezing_inthehistory@@episodic Bool)
+(declare-const patient_has_finding_of_dyspnea_inthehistory Bool)
+(declare-const patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_percent_of_predicted Real)
+(declare-const patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_percent_of_predicted@@measured_at_baseline Bool)
+(declare-const patient_is_able_to_understand_and_give_written_informed_consent_now Bool)
+(declare-const patient_has_signed_written_informed_consent_form_now Bool)
+(declare-const patient_has_signed_written_informed_consent_form_now@@approved_by_investigators_research_ethics_board Bool)
+(declare-const patient_has_undergone_methacholine_challenge_inthehistory_outcome_is_positive Bool)
+(declare-const patient_has_finding_of_allergy_skin_test_positive_now Bool)
+(declare-const patient_has_finding_of_allergy_skin_test_positive_now@@to_common_aeroallergens Bool)
+(declare-const patient_has_finding_of_allergy_skin_test_positive_now@@to_cat_allergen Bool)
+(declare-const patient_has_finding_of_allergy_skin_test_positive_now@@to_dust_mite_allergen Bool)
+(declare-const patient_has_finding_of_allergy_skin_test_positive_now@@to_grass_allergen Bool)
+(declare-const patient_has_finding_of_allergy_skin_test_positive_now@@to_pollen_allergen Bool)
+(declare-const patient_has_finding_of_bronchospasm_now Bool)
+(declare-const patient_has_finding_of_bronchospasm_now@@induced_by_allergen Bool)
+(declare-const patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_percent Real)
+(declare-const patient_has_positive_allergen_induced_airway_bronchoconstriction_now Bool)
+(declare-const patient_has_finding_of_asthma_now Bool)
+(declare-const patient_has_finding_of_wheezing_inthehistory Bool)
+
+;; Existing auxiliary assertions
+(assert (! (=> patient_has_signed_written_informed_consent_form_now@@approved_by_investigators_research_ethics_board patient_has_signed_written_informed_consent_form_now) :named REQ4_AUXILIARY0))
+(assert (! (=> patient_has_finding_of_allergy_skin_test_positive_now@@to_common_aeroallergens patient_has_finding_of_allergy_skin_test_positive_now) :named REQ6_AUXILIARY0))
+(assert (! (=> (or patient_has_finding_of_allergy_skin_test_positive_now@@to_cat_allergen patient_has_finding_of_allergy_skin_test_positive_now@@to_dust_mite_allergen patient_has_finding_of_allergy_skin_test_positive_now@@to_grass_allergen patient_has_finding_of_allergy_skin_test_positive_now@@to_pollen_allergen) patient_has_finding_of_allergy_skin_test_positive_now@@to_common_aeroallergens) :named REQ6_AUXILIARY1))
+(assert (! (=> patient_has_finding_of_allergy_skin_test_positive_now@@to_cat_allergen patient_has_finding_of_allergy_skin_test_positive_now) :named REQ6_AUXILIARY2))
+(assert (! (=> patient_has_finding_of_allergy_skin_test_positive_now@@to_dust_mite_allergen patient_has_finding_of_allergy_skin_test_positive_now) :named REQ6_AUXILIARY3))
+(assert (! (=> patient_has_finding_of_allergy_skin_test_positive_now@@to_grass_allergen patient_has_finding_of_allergy_skin_test_positive_now) :named REQ6_AUXILIARY4))
+(assert (! (=> patient_has_finding_of_allergy_skin_test_positive_now@@to_pollen_allergen patient_has_finding_of_allergy_skin_test_positive_now) :named REQ6_AUXILIARY5))
+(assert (! (=> patient_has_finding_of_bronchospasm_now@@induced_by_allergen patient_has_finding_of_bronchospasm_now) :named REQ7_AUXILIARY0))
+(assert (! (= patient_has_positive_allergen_induced_airway_bronchoconstriction_now (and patient_has_finding_of_bronchospasm_now@@induced_by_allergen (<= patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_percent 80.0))) :named REQ7_AUXILIARY1))
+
+;; AUTO auxiliary (qualifier => stem) links [Bool→Bool]
+(assert (! (=> patient_has_finding_of_asthma_now@@is_stable patient_has_finding_of_asthma_now) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_0))
+(assert (! (=> patient_has_finding_of_wheezing_inthehistory@@episodic patient_has_finding_of_wheezing_inthehistory) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_1))
+
+;; Other kept assertions
+(assert (! (or patient_sex_is_male_now (and patient_sex_is_female_now (>= patient_age_value_recorded_now_in_years 18) (<= patient_age_value_recorded_now_in_years 65))) :named REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))
+(assert (! patient_has_finding_of_general_health_good_now :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (or patient_has_finding_of_mild_asthma_now patient_has_finding_of_moderate_asthma_now) :named REQ2_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))
+(assert (! patient_has_finding_of_asthma_now@@is_stable :named REQ2_COMPONENT1_OTHER_REQUIREMENTS))
+(assert (! patient_has_finding_of_allergic_asthma_now :named REQ2_COMPONENT2_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))
+(assert (! patient_has_finding_of_wheezing_inthehistory@@episodic :named REQ3_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))
+(assert (! patient_has_finding_of_dyspnea_inthehistory :named REQ3_COMPONENT1_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))
+(assert (! (and patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_percent_of_predicted@@measured_at_baseline (>= patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_percent_of_predicted 70.0)) :named REQ3_COMPONENT2_OTHER_REQUIREMENTS))
+(assert (! patient_is_able_to_understand_and_give_written_informed_consent_now :named REQ4_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! patient_has_undergone_methacholine_challenge_inthehistory_outcome_is_positive :named REQ5_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! patient_has_finding_of_allergy_skin_test_positive_now@@to_common_aeroallergens :named REQ6_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! patient_has_positive_allergen_induced_airway_bronchoconstriction_now :named REQ7_COMPONENT0_OTHER_REQUIREMENTS))

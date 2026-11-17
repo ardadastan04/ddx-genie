@@ -1,0 +1,200 @@
+[
+ {
+  "name": "patient_diarrhea_value_recorded_inthepast24hours_withunit_per_day",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the number of diarrheal stools per day the patient had in the 24 hours prior to randomization.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the number of diarrheal stools per day in the 24 hours prior to randomization is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the measured or reported number of diarrheal stools per day the patient had in the 24 hours prior to randomization.",
+  "polarity": "criterion met when >= 3"
+ },
+ {
+  "name": "investigator_judges_c_difficile_is_likely_causative_agent_of_patient_diarrhea_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether, in the judgment of the investigator, Clostridioides difficile infection is the likely causative agent for the patient's current diarrhea.",
+  "when_true": "Set to true if, in the judgment of the investigator, Clostridioides difficile infection is the likely causative agent for the patient's current diarrhea.",
+  "when_false": "Set to false if, in the judgment of the investigator, Clostridioides difficile infection is not the likely causative agent for the patient's current diarrhea.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether, in the judgment of the investigator, Clostridioides difficile infection is the likely causative agent for the patient's current diarrhea.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_exposed_to_feces_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_exposed_to_feces_now@@positive_for_clostridioides_difficile_glutamate_dehydrogenase_and_toxin_a_or_toxin_b",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_stool_is_positive_for_clostridioides_difficile_glutamate_dehydrogenase_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_stool_is_positive_for_clostridioides_difficile_toxin_a_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_stool_is_positive_for_clostridioides_difficile_toxin_b_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_clostridioides_difficile_infection_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has Clostridioides difficile infection.",
+  "when_true": "Set to true if the patient currently has Clostridioides difficile infection.",
+  "when_false": "Set to false if the patient currently does not have Clostridioides difficile infection.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has Clostridioides difficile infection.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_clostridioides_difficile_infection_now@@primary_episode",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current Clostridioides difficile infection is a primary episode.",
+  "when_true": "Set to true if the patient's current Clostridioides difficile infection is a primary episode.",
+  "when_false": "Set to false if the patient's current Clostridioides difficile infection is not a primary episode.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the episode is primary.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_clostridioides_difficile_infection_now@@first_recurrence",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current Clostridioides difficile infection is a first recurrence.",
+  "when_true": "Set to true if the patient's current Clostridioides difficile infection is a first recurrence.",
+  "when_false": "Set to false if the patient's current Clostridioides difficile infection is not a first recurrence.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the episode is a first recurrence.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "investigator_expects_patient_to_survive_for_anticipated_study_duration_with_effective_antibiotic_therapy_and_appropriate_supportive_care",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_receiving_supportive_care_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_receiving_supportive_care_now@@is_appropriate",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_undergoing_antibiotic_therapy_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_undergoing_antibiotic_therapy_now@@is_effective",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_hospital_patient_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently classified as a hospital patient (inpatient or outpatient).",
+  "when_true": "Set to true if the patient is currently classified as a hospital patient (either inpatient or outpatient).",
+  "when_false": "Set to false if the patient is currently not classified as a hospital patient (neither inpatient nor outpatient).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently classified as a hospital patient.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_inpatient_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean value indicating whether the patient is currently an inpatient.",
+  "when_true": "Set to true if the patient is currently admitted as an inpatient.",
+  "when_false": "Set to false if the patient is not currently admitted as an inpatient.",
+  "when_unknown": "Set to null if the patient's current inpatient status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_outpatient_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean value indicating whether the patient is currently an outpatient.",
+  "when_true": "Set to true if the patient is currently an outpatient.",
+  "when_false": "Set to false if the patient is not currently an outpatient.",
+  "when_unknown": "Set to null if the patient's current outpatient status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ }
+]

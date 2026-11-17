@@ -1,0 +1,156 @@
+[
+ {
+  "name": "patient_has_provided_consent",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_provided_consent@@consent_provided_by_patient",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_symptoms_of_chronic_hepatitis_c_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_undergoing_antiviral_therapy_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_chronic_hepatitis_c_virus_infection_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has chronic hepatitis C virus infection.",
+  "when_true": "Set to true if the patient currently has chronic hepatitis C virus infection.",
+  "when_false": "Set to false if the patient currently does not have chronic hepatitis C virus infection.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has chronic hepatitis C virus infection.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_can_undergo_antiviral_therapy_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient can currently undergo antiviral therapy.",
+  "when_true": "Set to true if the patient is currently a candidate for direct acting antiviral therapy (i.e., can undergo antiviral therapy now).",
+  "when_false": "Set to false if the patient is currently not a candidate for direct acting antiviral therapy (i.e., cannot undergo antiviral therapy now).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient can currently undergo antiviral therapy.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when >= 18"
+ },
+ {
+  "name": "patient_has_finding_of_hypersensitivity_condition_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a hypersensitivity condition.",
+  "when_true": "Set to true if the patient currently has a hypersensitivity condition.",
+  "when_false": "Set to false if the patient currently does not have a hypersensitivity condition.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a hypersensitivity condition.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_hypersensitivity_condition_now@@known",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's hypersensitivity condition is known.",
+  "when_true": "Set to true if the patient's hypersensitivity condition is known (previously identified or documented).",
+  "when_false": "Set to false if the patient's hypersensitivity condition is not known (not previously identified or documented).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the hypersensitivity condition is known.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_hypersensitivity_condition_now@@to_any_component_of_antiviral_drug",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's hypersensitivity condition is to any of the components of the antiviral drug.",
+  "when_true": "Set to true if the patient's hypersensitivity condition is to any of the components of the antiviral drug.",
+  "when_false": "Set to false if the patient's hypersensitivity condition is not to any of the components of the antiviral drug.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the hypersensitivity condition is to any of the components of the antiviral drug.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_transplantation_of_liver_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone a liver transplant at any time in the past.",
+  "when_true": "Set to true if the patient has ever undergone a liver transplant at any time in the past.",
+  "when_false": "Set to false if the patient has never undergone a liver transplant at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone a liver transplant.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_primary_haematological_abnormality_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a primary haematological abnormality.",
+  "when_true": "Set to true if the patient currently has a primary haematological abnormality.",
+  "when_false": "Set to false if the patient currently does not have a primary haematological abnormality.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a primary haematological abnormality.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_primary_haematological_abnormality_now@@not_related_to_chronic_hepatitis_c_virus_infection",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current primary haematological abnormality is not related to chronic hepatitis C virus infection.",
+  "when_true": "Set to true if the patient's current primary haematological abnormality is not related to chronic hepatitis C virus infection.",
+  "when_false": "Set to false if the patient's current primary haematological abnormality is related to chronic hepatitis C virus infection.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current primary haematological abnormality is related to chronic hepatitis C virus infection.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_antiviral_therapy_inthehistory_outcome_is_negative",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever in their history undergone antiviral therapy and the outcome was negative (treatment failure).",
+  "when_true": "Set to true if the patient has ever in their history undergone antiviral therapy and the outcome was negative (treatment failure).",
+  "when_false": "Set to false if the patient has never undergone antiviral therapy with a negative outcome, or all antiviral therapy outcomes were not negative.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has undergone antiviral therapy with a negative outcome in their history.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

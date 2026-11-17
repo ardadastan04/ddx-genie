@@ -1,0 +1,90 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_acute_pancreatitis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a clinical diagnosis of acute pancreatitis.",
+  "when_true": "Set to true if the patient currently has a clinical diagnosis of acute pancreatitis.",
+  "when_false": "Set to false if the patient currently does not have a clinical diagnosis of acute pancreatitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a clinical diagnosis of acute pancreatitis.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_acute_pancreatitis_now@@mild",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current clinical diagnosis of acute pancreatitis is of mild severity.",
+  "when_true": "Set to true if the patient currently has a clinical diagnosis of acute pancreatitis and the severity is mild.",
+  "when_false": "Set to false if the patient currently has a clinical diagnosis of acute pancreatitis and the severity is not mild.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the severity of the patient's acute pancreatitis is mild.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_acute_pancreatitis_now@@severe",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current clinical diagnosis of acute pancreatitis is of severe severity.",
+  "when_true": "Set to true if the patient currently has a clinical diagnosis of acute pancreatitis and the severity is severe.",
+  "when_false": "Set to false if the patient currently has a clinical diagnosis of acute pancreatitis and the severity is not severe.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the severity of the patient's acute pancreatitis is severe.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is currently pregnant.",
+  "when_false": "Set to false if the patient is currently not pregnant.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently pregnant.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_does_suckle_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently suckling (i.e., breastfeeding or lactating).",
+  "when_true": "Set to true if the patient is currently suckling (i.e., breastfeeding or lactating).",
+  "when_false": "Set to false if the patient is currently not suckling (i.e., not breastfeeding or lactating).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently suckling.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_breastfeeding_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient is currently breastfeeding.",
+  "when_true": "Set to true if the patient is currently breastfeeding.",
+  "when_false": "Set to false if the patient is currently not breastfeeding.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently breastfeeding.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_malignant_neoplastic_disease_late",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has cancer (malignant neoplastic disease) in the late timeframe.",
+  "when_true": "Set to true if the patient has a diagnosis of malignant neoplastic disease (cancer) in the late timeframe.",
+  "when_false": "Set to false if the patient does not have a diagnosis of malignant neoplastic disease (cancer) in the late timeframe.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has a diagnosis of malignant neoplastic disease (cancer) in the late timeframe.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_near_death_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently near death (death is imminent or expected soon).",
+  "when_true": "Set to true if the patient is currently near death, meaning death is imminent or expected soon.",
+  "when_false": "Set to false if the patient is currently not near death, meaning death is not imminent or expected soon.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently near death.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

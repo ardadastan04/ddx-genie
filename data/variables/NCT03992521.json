@@ -1,0 +1,90 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_malignant_neoplasm_of_breast_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of malignant neoplasm of the breast (breast cancer).",
+  "when_true": "Set to true if the patient currently has a diagnosis of malignant neoplasm of the breast (breast cancer).",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of malignant neoplasm of the breast (breast cancer).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of malignant neoplasm of the breast (breast cancer).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_malignant_neoplasm_of_breast_now@@diagnosed_histologically",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the diagnosis of malignant neoplasm of the breast (breast cancer) is established by histological examination.",
+  "when_true": "Set to true if the patient's diagnosis of malignant neoplasm of the breast (breast cancer) is established by histological examination.",
+  "when_false": "Set to false if the patient's diagnosis of malignant neoplasm of the breast (breast cancer) is not established by histological examination.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the diagnosis is established by histological examination.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_exposed_to_primary_tumor_tissue_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether primary tumor tissue is currently available from the patient.",
+  "when_true": "Set to true if primary tumor tissue is currently available from the patient.",
+  "when_false": "Set to false if primary tumor tissue is not currently available from the patient.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether primary tumor tissue is available from the patient.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_exposed_to_plasma_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether plasma is currently available from the patient.",
+  "when_true": "Set to true if plasma is currently available from the patient (e.g., as a biospecimen).",
+  "when_false": "Set to false if plasma is not currently available from the patient.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether plasma is available from the patient.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_exposed_to_deoxyribonucleic_acid_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether deoxyribonucleic acid is currently available from the patient.",
+  "when_true": "Set to true if deoxyribonucleic acid is currently available from the patient (e.g., as a biospecimen).",
+  "when_false": "Set to false if deoxyribonucleic acid is not currently available from the patient.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether deoxyribonucleic acid is available from the patient.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_plasma_dna_available_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether both plasma and deoxyribonucleic acid are currently available from the patient.",
+  "when_true": "Set to true if both plasma and deoxyribonucleic acid are currently available from the patient.",
+  "when_false": "Set to false if either plasma or deoxyribonucleic acid is not currently available from the patient.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether both plasma and deoxyribonucleic acid are available from the patient.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_high_circulating_tumor_dna_content_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the circulating tumor deoxyribonucleic acid content in plasma is considered high.",
+  "when_true": "Set to true if the circulating tumor deoxyribonucleic acid (cell-free DNA) content in plasma is considered high according to protocol or investigator definition.",
+  "when_false": "Set to false if the content is not considered high.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the content is high.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_rejects_participation",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has rejected participation in the study.",
+  "when_true": "Set to true if the patient has explicitly rejected participation in the study.",
+  "when_false": "Set to false if the patient has not rejected participation in the study.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has rejected participation in the study.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

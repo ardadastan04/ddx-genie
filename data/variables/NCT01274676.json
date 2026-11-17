@@ -1,0 +1,79 @@
+[
+ {
+  "name": "patient_has_finding_of_carotid_stenosis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has carotid stenosis.",
+  "when_true": "Set to true if the patient currently has carotid stenosis.",
+  "when_false": "Set to false if the patient currently does not have carotid stenosis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has carotid stenosis.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_carotid_stenosis_now@@monolateral",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current carotid stenosis is monolateral (affecting only one side).",
+  "when_true": "Set to true if the patient's current carotid stenosis is monolateral (affecting only one side).",
+  "when_false": "Set to false if the patient's current carotid stenosis is not monolateral (i.e., bilateral or unspecified).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current carotid stenosis is monolateral.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_carotid_stenosis_now@@significant",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current carotid stenosis is significant (meets the clinical threshold for significance).",
+  "when_true": "Set to true if the patient's current carotid stenosis is significant (meets the clinical threshold for significance).",
+  "when_false": "Set to false if the patient's current carotid stenosis is not significant.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current carotid stenosis is significant.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_carotid_stenosis_now@@soft",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current carotid stenosis is soft (referring to the plaque composition or imaging characteristics).",
+  "when_true": "Set to true if the patient's current carotid stenosis is soft (referring to the plaque composition or imaging characteristics).",
+  "when_false": "Set to false if the patient's current carotid stenosis is not soft.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current carotid stenosis is soft.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_carotid_artery_occlusion_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has occlusion of the carotid artery.",
+  "when_true": "Set to true if the patient currently has the clinical finding of occlusion of the carotid artery.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of occlusion of the carotid artery.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has occlusion of the carotid artery.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_carotid_artery_occlusion_now@@contralateral",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's carotid artery occlusion is contralateral.",
+  "when_true": "Set to true if the patient's carotid artery occlusion is contralateral.",
+  "when_false": "Set to false if the patient's carotid artery occlusion is not contralateral.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the carotid artery occlusion is contralateral.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_critical_stenosis_of_external_carotid_artery_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has critical stenosis of the external carotid artery.",
+  "when_true": "Set to true if the patient currently has critical stenosis of the external carotid artery.",
+  "when_false": "Set to false if the patient currently does not have critical stenosis of the external carotid artery.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has critical stenosis of the external carotid artery.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

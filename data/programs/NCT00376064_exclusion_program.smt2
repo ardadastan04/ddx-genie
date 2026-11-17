@@ -1,0 +1,50 @@
+;; ===================== QUALIFIER LINKER =====================
+;; Rule: add (qualifier => stem) only when BOTH are Bool; remove (stem => qualifier); drop ill-typed implications.
+;; Added_aux=0 Removed_reverse=0 Removed_illtyped=0 Skipped_nonbool_pairs=0
+;; =============================================================
+
+;; Declarations/definitions (original + any auto-added Bool stems)
+(declare-const patient_has_finding_of_visual_field_now Bool)
+(declare-const patient_has_finding_of_visual_field_now@@recent_significant_deterioration Bool)
+(declare-const patient_has_finding_of_visual_field_now@@related_to_pituitary_tumor_mass Bool)
+(declare-const patient_has_finding_of_neurological_finding_now Bool)
+(declare-const patient_has_finding_of_neurological_finding_now@@recent_significant_deterioration Bool)
+(declare-const patient_has_finding_of_neurological_finding_now@@related_to_pituitary_tumor_mass Bool)
+(declare-const patient_requires_surgery_now Bool)
+(declare-const patient_requires_surgery_now@@for_recent_significant_deterioration_in_visual_fields_related_to_pituitary_tumor_mass Bool)
+(declare-const patient_requires_surgery_now@@for_recent_significant_deterioration_in_other_neurological_signs_related_to_pituitary_tumor_mass Bool)
+(declare-const patient_has_radiotherapy_planned Bool)
+(declare-const patient_has_received_radiotherapy_for_acromegaly_within_last_2_years Bool)
+(declare-const patient_has_finding_of_biliary_calculus_now Bool)
+(declare-const patient_has_finding_of_biliary_calculus_now@@symptomatic Bool)
+(declare-const patient_has_finding_of_biliary_calculus_now@@clinically_relevant Bool)
+(declare-const patient_is_taking_dopamine_receptor_agonist_containing_product_inthepast6months Bool)
+(declare-const patient_has_prior_treatment_with_growth_hormone_receptor_antagonist Bool)
+(declare-const patient_has_finding_of_renal_insufficiency_now Bool)
+(declare-const patient_has_finding_of_raynaud_s_disease_now Bool)
+(declare-const patient_has_finding_of_gastrointestinal_ulcer_now Bool)
+(declare-const patient_has_finding_of_gastrointestinal_hemorrhage_now Bool)
+(declare-const patient_has_finding_of_psychotic_disorder_inthehistory Bool)
+
+;; Existing auxiliary assertions
+(assert (! (=> patient_has_finding_of_visual_field_now@@recent_significant_deterioration patient_has_finding_of_visual_field_now) :named REQ0_AUXILIARY0))
+(assert (! (=> patient_has_finding_of_visual_field_now@@related_to_pituitary_tumor_mass patient_has_finding_of_visual_field_now) :named REQ0_AUXILIARY1))
+(assert (! (=> patient_has_finding_of_neurological_finding_now@@recent_significant_deterioration patient_has_finding_of_neurological_finding_now) :named REQ0_AUXILIARY2))
+(assert (! (=> patient_has_finding_of_neurological_finding_now@@related_to_pituitary_tumor_mass patient_has_finding_of_neurological_finding_now) :named REQ0_AUXILIARY3))
+(assert (! (=> patient_requires_surgery_now@@for_recent_significant_deterioration_in_visual_fields_related_to_pituitary_tumor_mass patient_requires_surgery_now) :named REQ0_AUXILIARY4))
+(assert (! (=> patient_requires_surgery_now@@for_recent_significant_deterioration_in_other_neurological_signs_related_to_pituitary_tumor_mass patient_requires_surgery_now) :named REQ0_AUXILIARY5))
+(assert (! (=> patient_has_finding_of_biliary_calculus_now@@symptomatic patient_has_finding_of_biliary_calculus_now) :named REQ2_AUXILIARY0))
+(assert (! (=> patient_has_finding_of_biliary_calculus_now@@clinically_relevant patient_has_finding_of_biliary_calculus_now) :named REQ2_AUXILIARY1))
+
+;; Other kept assertions
+(assert (! (not patient_requires_surgery_now@@for_recent_significant_deterioration_in_visual_fields_related_to_pituitary_tumor_mass) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_requires_surgery_now@@for_recent_significant_deterioration_in_other_neurological_signs_related_to_pituitary_tumor_mass) :named REQ0_COMPONENT1_OTHER_REQUIREMENTS))
+(assert (! (not (or patient_has_radiotherapy_planned patient_has_received_radiotherapy_for_acromegaly_within_last_2_years)) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not (and patient_has_finding_of_biliary_calculus_now@@symptomatic patient_has_finding_of_biliary_calculus_now@@clinically_relevant)) :named REQ2_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_is_taking_dopamine_receptor_agonist_containing_product_inthepast6months) :named REQ3_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_prior_treatment_with_growth_hormone_receptor_antagonist) :named REQ3_COMPONENT1_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_renal_insufficiency_now) :named REQ4_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_raynaud_s_disease_now) :named REQ4_COMPONENT1_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_gastrointestinal_ulcer_now) :named REQ4_COMPONENT2_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_gastrointestinal_hemorrhage_now) :named REQ4_COMPONENT3_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_psychotic_disorder_inthehistory) :named REQ4_COMPONENT4_OTHER_REQUIREMENTS))

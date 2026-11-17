@@ -1,0 +1,57 @@
+[
+ {
+  "name": "patient_sex_is_female_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean value indicating whether the patient's current sex is female.",
+  "when_true": "Set to true if the patient's current sex is documented as female.",
+  "when_false": "Set to false if the patient's current sex is documented as not female (i.e., male or other).",
+  "when_unknown": "Set to null if the patient's current sex is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_sex_is_male_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean value indicating whether the patient's current sex is male.",
+  "when_true": "Set to true if the patient's current sex is documented as male.",
+  "when_false": "Set to false if the patient's current sex is documented as not male (i.e., female or other).",
+  "when_unknown": "Set to null if the patient's current sex is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_finding_of_body_mass_index_value_recorded_now_withunit_kg_per_m2",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's current body mass index (BMI) in kg/m\u00b2.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no BMI measurement is recorded now or the value is indeterminate.",
+  "when_value": "Set to the measured BMI value in kg/m\u00b2 if a BMI measurement is recorded now.",
+  "polarity": "criterion met when >= 30"
+ },
+ {
+  "name": "patient_has_finding_of_abnormal_thyroid_hormone_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has abnormal thyroid hormone levels.",
+  "when_true": "Set to true if the patient currently has abnormal thyroid hormone levels.",
+  "when_false": "Set to false if the patient currently does not have abnormal thyroid hormone levels.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has abnormal thyroid hormone levels.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_thyroid_stimulating_hormone_level_above_reference_range_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a high thyroid stimulating hormone (TSH) level.",
+  "when_true": "Set to true if the patient currently has a high thyroid stimulating hormone (TSH) level.",
+  "when_false": "Set to false if the patient currently does not have a high thyroid stimulating hormone (TSH) level.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a high thyroid stimulating hormone (TSH) level.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

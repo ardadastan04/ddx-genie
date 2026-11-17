@@ -1,0 +1,101 @@
+[
+ {
+  "name": "patient_has_finding_of_parkinsonism_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has parkinsonism.",
+  "when_true": "Set to true if the patient currently has the clinical finding of parkinsonism.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of parkinsonism.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of parkinsonism.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_family_member_of_participant_with_lrrk2_parkinsonism",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is a family member of a participant who has LRRK2 parkinsonism.",
+  "when_true": "Set to true if the patient is a family member of a participant with LRRK2 parkinsonism.",
+  "when_false": "Set to false if the patient is not a family member of a participant with LRRK2 parkinsonism.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is a family member of a participant with LRRK2 parkinsonism.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_member_of_high_risk_population_with_early_onset_parkinson_disease",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is a member of a high risk population with an early onset of Parkinson's disease.",
+  "when_true": "Set to true if the patient is a member of a high risk population with an early onset of Parkinson's disease.",
+  "when_false": "Set to false if the patient is not a member of a high risk population with an early onset of Parkinson's disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is a member of a high risk population with an early onset of Parkinson's disease.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when >= 18"
+ },
+ {
+  "name": "patient_is_able_to_provide_informed_consent_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently able to provide informed consent.",
+  "when_true": "Set to true if the patient is currently able to provide informed consent.",
+  "when_false": "Set to false if the patient is currently unable to provide informed consent.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently able to provide informed consent.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_parkinsonism_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a clinical diagnosis of parkinsonism.",
+  "when_true": "Set to true if the patient currently has a clinical diagnosis of parkinsonism.",
+  "when_false": "Set to false if the patient currently does not have a clinical diagnosis of parkinsonism.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a clinical diagnosis of parkinsonism.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_member_of_high_risk_population_with_early_onset_parkinsons_disease",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is a member of a high risk population defined as having an early onset of Parkinson's disease.",
+  "when_true": "Set to true if the patient is a member of a high risk population with early onset of Parkinson's disease.",
+  "when_false": "Set to false if the patient is not a member of a high risk population with early onset of Parkinson's disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is a member of a high risk population with early onset of Parkinson's disease.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_been_previously_enrolled_in_this_study",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient was previously enrolled in the current study.",
+  "when_true": "Set to true if the patient was previously enrolled in the current study.",
+  "when_false": "Set to false if the patient was not previously enrolled in the current study.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient was previously enrolled in the current study.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_in_custody_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently in custody.",
+  "when_true": "Set to true if the patient is currently in custody (e.g., incarcerated, detained, or otherwise under legal or institutional custody) at the time of eligibility assessment.",
+  "when_false": "Set to false if the patient is not currently in custody at the time of eligibility assessment.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently in custody at the time of eligibility assessment.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

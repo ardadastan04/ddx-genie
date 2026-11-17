@@ -1,0 +1,35 @@
+[
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when >= 16"
+ },
+ {
+  "name": "patient_has_finding_of_abdominal_pain_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has abdominal pain.",
+  "when_true": "Set to true if the patient currently has the clinical finding of abdominal pain.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of abdominal pain.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of abdominal pain.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_abdominal_pain_now@@is_main_complaint",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether abdominal pain is the main complaint.",
+  "when_true": "Set to true if abdominal pain is the main complaint for the patient at the current encounter.",
+  "when_false": "Set to false if abdominal pain is present but is not the main complaint.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether abdominal pain is the main complaint.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ }
+]

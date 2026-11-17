@@ -1,0 +1,123 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_viral_hepatitis_c_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_positive_for_hepatitis_c_virus_ribonucleic_acid_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently positive for hepatitis C virus ribonucleic acid (HCV RNA).",
+  "when_true": "Set to true if the patient is currently positive for hepatitis C virus ribonucleic acid (HCV RNA).",
+  "when_false": "Set to false if the patient is currently negative for hepatitis C virus ribonucleic acid (HCV RNA).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently positive for hepatitis C virus ribonucleic acid (HCV RNA).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_approved_for_hepatitis_c_virus_infection_treatment_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently approved for hepatitis C virus infection treatment.",
+  "when_true": "Set to true if the patient is currently approved for hepatitis C virus infection treatment.",
+  "when_false": "Set to false if the patient is currently not approved for hepatitis C virus infection treatment.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently approved for hepatitis C virus infection treatment.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_alcohol_intake_above_recommended_sensible_limits_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has alcohol intake above recommended sensible limits.",
+  "when_true": "Set to true if the patient currently has alcohol intake above recommended sensible limits (excessive alcohol use).",
+  "when_false": "Set to false if the patient currently does not have alcohol intake above recommended sensible limits.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has alcohol intake above recommended sensible limits.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is currently pregnant.",
+  "when_false": "Set to false if the patient is currently not pregnant.",
+  "when_unknown": "Set to null if the patient's current pregnancy status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_chronic_liver_disease_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has chronic liver disease.",
+  "when_true": "Set to true if the patient currently has the clinical finding of chronic liver disease.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of chronic liver disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has chronic liver disease.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_chronic_liver_disease_now@@caused_by_another_cause_other_than_hepatitis_c_virus_infection",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's chronic liver disease is caused by another cause other than hepatitis C virus infection.",
+  "when_true": "Set to true if the patient currently has chronic liver disease and the cause is another cause other than hepatitis C virus infection.",
+  "when_false": "Set to false if the patient currently has chronic liver disease but the cause is hepatitis C virus infection.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the cause of chronic liver disease is another cause other than hepatitis C virus infection.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_autoimmune_hepatitis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has autoimmune hepatitis.",
+  "when_true": "Set to true if the patient currently has the clinical finding of autoimmune hepatitis.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of autoimmune hepatitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has autoimmune hepatitis.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_primary_sclerosing_cholangitis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has primary sclerosing cholangitis.",
+  "when_true": "Set to true if the patient currently has the clinical finding of primary sclerosing cholangitis.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of primary sclerosing cholangitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has primary sclerosing cholangitis.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_primary_biliary_cholangitis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has primary biliary cholangitis.",
+  "when_true": "Set to true if the patient currently has the clinical finding of primary biliary cholangitis.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of primary biliary cholangitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has primary biliary cholangitis.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_alpha_1_antitrypsin_deficiency_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has Alpha-1-antitrypsin deficiency.",
+  "when_true": "Set to true if the patient currently has the clinical finding of Alpha-1-antitrypsin deficiency.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of Alpha-1-antitrypsin deficiency.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has Alpha-1-antitrypsin deficiency.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

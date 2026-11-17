@@ -1,0 +1,156 @@
+[
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when >= 18"
+ },
+ {
+  "name": "patient_has_ability_to_speak_english",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has the ability to speak English.",
+  "when_true": "Set to true if the patient has the ability to speak English.",
+  "when_false": "Set to false if the patient does not have the ability to speak English.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has the ability to speak English.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_ability_to_clearly_understand_english",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has the ability to clearly understand English.",
+  "when_true": "Set to true if the patient has the ability to clearly understand English.",
+  "when_false": "Set to false if the patient does not have the ability to clearly understand English.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has the ability to clearly understand English.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_sex_is_female_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean value indicating whether the patient's sex is female at the current time.",
+  "when_true": "Set to true if the patient's sex is female at the current time.",
+  "when_false": "Set to false if the patient's sex is not female at the current time.",
+  "when_unknown": "Set to null if the patient's sex is unknown or cannot be determined at the current time.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_undergone_loop_electrosurgical_excision_procedure_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone a loop electrosurgical excision procedure at any time in the past.",
+  "when_true": "Set to true if the patient has ever undergone a loop electrosurgical excision procedure at any time in the past.",
+  "when_false": "Set to false if the patient has never undergone a loop electrosurgical excision procedure at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone a loop electrosurgical excision procedure.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_laser_treatment_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_cone_biopsy_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone a cone biopsy at any time in the past.",
+  "when_true": "Set to true if the patient has ever undergone a cone biopsy at any time in the past.",
+  "when_false": "Set to false if the patient has never undergone a cone biopsy at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone a cone biopsy.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_loop_electrosurgical_excision_procedure_inthehistory@@cervix",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_laser_treatment_inthehistory@@cervix",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_cone_biopsy_inthehistory@@cervix",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_history_of_cervical_cancer_treatment_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_microscopic_examination_of_cervical_papanicolaou_smear_inthepast10months",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has undergone a microscopic examination of cervical Papanicolaou smear within the past 10 months.",
+  "when_true": "Set to true if the patient has undergone a microscopic examination of cervical Papanicolaou smear at any time within the past 10 months.",
+  "when_false": "Set to false if the patient has not undergone a microscopic examination of cervical Papanicolaou smear at any time within the past 10 months.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has undergone a microscopic examination of cervical Papanicolaou smear within the past 10 months.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is currently pregnant.",
+  "when_false": "Set to false if the patient is currently not pregnant.",
+  "when_unknown": "Set to null if the patient's current pregnancy status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_able_to_give_informed_consent_in_english",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ }
+]

@@ -1,0 +1,123 @@
+[
+ {
+  "name": "patient_has_finding_of_term_infant_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently a term neonate (term infant).",
+  "when_true": "Set to true if the patient is currently a term neonate (term infant).",
+  "when_false": "Set to false if the patient is currently not a term neonate (term infant).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently a term neonate (term infant).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_near_term_neonate_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently a near-term neonate.",
+  "when_true": "Set to true if the patient is currently a near-term neonate.",
+  "when_false": "Set to false if the patient is currently not a near-term neonate.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently a near-term neonate.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_gestational_age_value_recorded_now_withunit_weeks",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's gestational age in weeks, recorded now.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no gestational age in weeks is recorded now or the value is indeterminate.",
+  "when_value": "Set to the measured gestational age in weeks if a value is recorded now.",
+  "polarity": "criterion met when >= 35"
+ },
+ {
+  "name": "patient_birth_weight_value_recorded_now_withunit_grams",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's birth weight in grams, recorded now.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no birth weight in grams is recorded now or the value is indeterminate.",
+  "when_value": "Set to the measured birth weight in grams if a value is recorded now.",
+  "polarity": "criterion met when >= 2000"
+ },
+ {
+  "name": "patient_has_diagnosis_of_congenital_biliary_atresia_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of congenital biliary atresia.",
+  "when_true": "Set to true if the patient currently has a diagnosis of congenital biliary atresia.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of congenital biliary atresia.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of congenital biliary atresia.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_genetic_disease_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a genetic disease.",
+  "when_true": "Set to true if the patient currently has a genetic disease.",
+  "when_false": "Set to false if the patient currently does not have a genetic disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a genetic disease.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_genetic_disease_now@@serious",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current genetic disease is serious.",
+  "when_true": "Set to true if the patient currently has a genetic disease and the disease is serious.",
+  "when_false": "Set to false if the patient currently has a genetic disease and the disease is not serious.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the genetic disease is serious.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_metabolic_disease_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a metabolic disease.",
+  "when_true": "Set to true if the patient currently has a metabolic disease.",
+  "when_false": "Set to false if the patient currently does not have a metabolic disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a metabolic disease.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_metabolic_disease_now@@serious",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current metabolic disease is serious.",
+  "when_true": "Set to true if the patient currently has a metabolic disease and the disease is serious.",
+  "when_false": "Set to false if the patient currently has a metabolic disease and the disease is not serious.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the metabolic disease is serious.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_family_history_of_epilepsy",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has a family history of epilepsy.",
+  "when_true": "Set to true if the patient has a documented family history of epilepsy.",
+  "when_false": "Set to false if the patient does not have a documented family history of epilepsy.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has a family history of epilepsy.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_meets_other_exclusion_criteria_specified_in_protocol",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient meets any other exclusion criteria explicitly specified in the protocol.",
+  "when_true": "Set to true if the patient meets any other exclusion criteria that are explicitly specified in the protocol.",
+  "when_false": "Set to false if the patient does not meet any other exclusion criteria that are explicitly specified in the protocol.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient meets any other exclusion criteria that are explicitly specified in the protocol.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

@@ -13,12 +13,6 @@ Two backends, selected by ``LLM_BACKEND``:
     Vertex AI via Application Default Credentials. Tokens expire roughly hourly, so
     ``Credentials.api_key()`` re-mints them mid-run.
 
-Genie Worksheets runs its own LangChain client that we do not control. It reads
-``LLM_API_KEY`` and ``LLM_API_BASE_URL`` from the environment lazily, inside
-``get_llm_client()``, so :func:`configure_genie_env` can point it at the same backend
-and refresh the key before expiry. Genie's own calls therefore do *not* pass through
-``LLMClient`` and are not in ``cost.jsonl``; the harness accounts for them separately
-from Genie's token logging.
 """
 
 from __future__ import annotations
@@ -55,8 +49,7 @@ TOKEN_REFRESH_MARGIN_S = 300
 #: ("generate_content_free_tier_requests, limit: 15"), which is the binding
 #: constraint -- not tokens. Enabling billing on the Cloud project moves the key to
 #: the paid tier and lifts this to thousands per minute. Override with
-#: REQUESTS_PER_MINUTE. Shared process-wide, since Genie runs its own client against
-#: the same quota.
+#: REQUESTS_PER_MINUTE. Shared process-wide.
 DEFAULT_REQUESTS_PER_MINUTE = 13
 
 
@@ -97,13 +90,7 @@ _env_loaded = False
 
 
 def load_env(*, override: bool = False) -> None:
-    """Load ``ddx-genie/.env`` once.
-
-    Note that importing ``worksheets`` calls ``load_dotenv(override=True)`` on
-    ``genie-worksheets/src/.env``. That file does not exist today, but if one is ever
-    created it silently wins over our values, so call :func:`configure_genie_env`
-    *after* importing ``worksheets``.
-    """
+    """Load ``ddx-genie/.env`` once."""
     global _env_loaded
     if _env_loaded and not override:
         return
@@ -262,21 +249,6 @@ class Credentials:
         if not token:
             raise ConfigError("ADC returned an empty access token")
         return token
-
-
-def configure_genie_env(credentials: Credentials | None = None) -> Credentials:
-    """Point Genie's own LangChain client at our backend.
-
-    Genie reads these two vars inside ``get_llm_client()``, so this must run before an
-    agent is built, and again before expiry on a ``vertex`` run. Call it *after*
-    ``import worksheets``, whose import-time ``load_dotenv(override=True)`` would
-    otherwise win. Model ids must not carry an ``azure/`` prefix or Genie routes to
-    ``AzureChatOpenAI`` instead.
-    """
-    creds = credentials or Credentials()
-    os.environ["LLM_API_KEY"] = creds.api_key()
-    os.environ["LLM_API_BASE_URL"] = creds.base_url
-    return creds
 
 
 # ----------------------------------------------------------------------- disk cache
@@ -594,40 +566,6 @@ class LLMClient:
                 latency_s=round(completion.latency_s, 3),
             )
         )
-
-    def record_external(
-        self,
-        *,
-        model: str,
-        prompt_tokens: int,
-        completion_tokens: int,
-        tag: str,
-        latency_s: float = 0.0,
-        cached: bool = False,
-    ) -> float:
-        """Log a call made by someone else's client, and return its cost.
-
-        Genie runs its own LangChain client, so its calls never pass through
-        :meth:`complete`. Without this the ledger would show zero spend for the very
-        calls that dominate a run, and the budget guard would be blind. Returns the
-        USD cost so callers can surface it.
-        """
-        try:
-            usd = self.pricing(model).cost_usd(prompt_tokens, completion_tokens)
-        except ConfigError:
-            # An unpriced model must not silently log as free.
-            usd = float("nan")
-        completion = Completion(
-            text="",
-            model=model,
-            prompt_tokens=prompt_tokens,
-            completion_tokens=completion_tokens,
-            usd=0.0 if cached else usd,
-            cached=cached,
-            latency_s=latency_s,
-        )
-        self._log(completion, tag)
-        return completion.usd
 
     def summary(self) -> str:
         return (

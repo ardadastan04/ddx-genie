@@ -1,0 +1,19 @@
+{
+ "nct": "NCT01029561",
+ "title": "Impact of Obstructive Sleep Apnea Syndrome on Metabolic Syndrome in Severe Obesity",
+ "conditions": [
+  "Metabolic Syndrome",
+  "Insulin Resistance",
+  "Adipokines",
+  "Cytokines"
+ ],
+ "phase": "",
+ "brief_summary": "The aim of this project is to study the relationship between obstructive sleep apnea (OSA) and metabolic syndrome (MS) in a population of obese patients who are candidates for bariatric surgery. The investigators will study the influence of OSA through hypoxia and sleep fragmentation on different proinflammatory adipokines and cytokines, on metabolic syndrome and on insulin resistance, as well as how these respond to treatment with continuous positive airway pressure (CPAP).~In the first part of the study (part A) the investigators will perform an observational study of cases and controls. Based on the diagnostic polysomnography the patients will be divided into two groups depending on their apnea-hypopnea index (AHI): OSA (AHI >= 15/h) and non-OSA (AHI <15/h). The results will be analyzed depending on the presence or not of OSA.~In the second part of the study (part B), the patients with severe OSA (AHI \u2265 30/h) will be randomized into two groups: one group will receive CPAP + diet treatment and the other group will only receive diet treatment. After 3 months of treatment (CPAP + diet vs. diet), the investigators will analyze the overall effect on metabolic syndrome and the effect on its individual components, as well as the above-mentioned inflammatory pathways and insulin sensitivity, between the 2 groups. This will be carried out through a randomized controlled study in which the investigators will compare the effect of CPAP with the effect of conservative treatment.",
+ "inclusion_criteria": "inclusion criteria for part A: \n\n Patients who are included in the obesity surgery program will be recruited if they fulfill the following criteria: \n\n Age between 18 and 65 years. \n\n Body mass index (BMI) >40 kg/m2 or BMI > 35 kg/m2 with co-morbidity related to obesity. \n\n inclusion criteria for part B: \n\n In the treatment response study we will include patients diagnosed at the baseline polysomnography with severe OSA (AHI >= 30) who fulfill the inclusion criteria for part A and who do not present specific ",
+ "exclusion_criteria": " for part B. \n\n General ",
+ "cohorts": [
+  "a",
+  "b",
+  "c"
+ ]
+}

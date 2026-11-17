@@ -1,0 +1,63 @@
+;; ===================== QUALIFIER LINKER =====================
+;; Rule: add (qualifier => stem) only when BOTH are Bool; remove (stem => qualifier); drop ill-typed implications.
+;; Added_aux=3 Removed_reverse=0 Removed_illtyped=0 Skipped_nonbool_pairs=0
+;; =============================================================
+
+;; Declarations/definitions (original + any auto-added Bool stems)
+(declare-const patient_has_diagnosis_of_idiopathic_generalized_epilepsy_now Bool)
+(declare-const patient_has_finding_of_seizure_now@@myoclonic_seizure_type Bool)
+(declare-const patient_has_finding_of_seizure_now@@classified_by_international_classification_of_epileptic_seizures Bool)
+(declare-const patient_has_diagnosis_of_juvenile_myoclonic_epilepsy_now Bool)
+(declare-const patient_has_diagnosis_of_juvenile_absence_epilepsy_now Bool)
+(declare-const patient_has_diagnosis_of_epilepsy_with_grand_mal_seizures_on_awakening_now Bool)
+(declare-const patient_has_myoclonic_seizures_classifiable_according_to_the_international_classification_of_epileptic_seizures Bool)
+(declare-const num_days_with_at_least_one_myoclonic_seizure_recorded_in_baseline_period_in_days Real)
+(declare-const patient_has_finding_of_seizure_inthepast8weeks Bool)
+(declare-const patient_has_finding_of_seizure_inthepast8weeks@@at_least_one_myoclonic_seizure_per_day_on_at_least_eight_days Bool)
+(declare-const patient_has_absence_of_lesion_of_brain_documented_on_computed_tomography_scan_now Bool)
+(declare-const patient_has_absence_of_lesion_of_brain_documented_on_magnetic_resonance_imaging_scan_now Bool)
+(declare-const patient_has_undergone_computerized_axial_tomography_inthepast5years Bool)
+(declare-const patient_has_undergone_magnetic_resonance_imaging_inthepast5years Bool)
+(declare-const patient_needs_brain_scan_performed_during_baseline_period Bool)
+(declare-const patient_has_finding_of_eeg_finding_inthehistory Bool)
+(declare-const patient_has_finding_of_eeg_finding_inthehistory@@recorded_during_baseline_period Bool)
+(declare-const patient_has_finding_of_eeg_finding_inthepast1years Bool)
+(declare-const patient_has_finding_of_eeg_finding_inthepast1years@@temporalcontext_within1years_before_visit_1 Bool)
+(declare-const patient_has_eeg_features_consistent_with_ige_on_eeg_recorded_during_baseline_period Bool)
+(declare-const patient_has_eeg_features_consistent_with_ige_on_eeg_recorded_within_1_year_before_visit_1 Bool)
+(declare-const patient_sex_is_male_now Bool)
+(declare-const patient_sex_is_female_now Bool)
+(declare-const patient_age_value_recorded_now_in_years Real)
+(declare-const duration_of_stable_anticonvulsant_therapy_before_visit_1_in_weeks Real)
+(declare-const patient_is_undergoing_anticonvulsant_therapy_now Bool)
+(declare-const patient_is_undergoing_anticonvulsant_therapy_now@@stable_dose Bool)
+(declare-const patient_is_undergoing_anticonvulsant_therapy_now@@temporalcontext_at_least_4_weeks_before_visit_1 Bool)
+(declare-const patient_has_finding_of_seizure_now Bool)
+
+;; Existing auxiliary assertions
+(assert (! (=> (and patient_has_finding_of_seizure_now@@classified_by_international_classification_of_epileptic_seizures patient_has_finding_of_seizure_now@@myoclonic_seizure_type) patient_has_myoclonic_seizures_classifiable_according_to_the_international_classification_of_epileptic_seizures) :named REQ0_AUXILIARY0))
+(assert (! (=> patient_has_finding_of_seizure_inthepast8weeks@@at_least_one_myoclonic_seizure_per_day_on_at_least_eight_days patient_has_finding_of_seizure_inthepast8weeks) :named REQ1_AUXILIARY0))
+(assert (! (= patient_has_finding_of_seizure_inthepast8weeks@@at_least_one_myoclonic_seizure_per_day_on_at_least_eight_days (>= num_days_with_at_least_one_myoclonic_seizure_recorded_in_baseline_period_in_days 8)) :named REQ1_AUXILIARY1))
+(assert (! (= patient_needs_brain_scan_performed_during_baseline_period (not (or patient_has_undergone_computerized_axial_tomography_inthepast5years patient_has_undergone_magnetic_resonance_imaging_inthepast5years))) :named REQ2_AUXILIARY0))
+(assert (! (=> patient_has_eeg_features_consistent_with_ige_on_eeg_recorded_during_baseline_period patient_has_finding_of_eeg_finding_inthehistory@@recorded_during_baseline_period) :named REQ3_AUXILIARY0))
+(assert (! (=> patient_has_eeg_features_consistent_with_ige_on_eeg_recorded_within_1_year_before_visit_1 patient_has_finding_of_eeg_finding_inthepast1years@@temporalcontext_within1years_before_visit_1) :named REQ3_AUXILIARY1))
+(assert (! (=> patient_has_finding_of_eeg_finding_inthehistory@@recorded_during_baseline_period patient_has_finding_of_eeg_finding_inthehistory) :named REQ3_AUXILIARY2))
+(assert (! (=> patient_has_finding_of_eeg_finding_inthepast1years@@temporalcontext_within1years_before_visit_1 patient_has_finding_of_eeg_finding_inthepast1years) :named REQ3_AUXILIARY3))
+(assert (! (= patient_is_undergoing_anticonvulsant_therapy_now@@temporalcontext_at_least_4_weeks_before_visit_1 (and patient_is_undergoing_anticonvulsant_therapy_now@@stable_dose (>= duration_of_stable_anticonvulsant_therapy_before_visit_1_in_weeks 4.0))) :named REQ5_AUXILIARY0))
+(assert (! (=> patient_is_undergoing_anticonvulsant_therapy_now@@stable_dose patient_is_undergoing_anticonvulsant_therapy_now) :named REQ5_AUXILIARY1))
+
+;; AUTO auxiliary (qualifier => stem) links [Bool→Bool]
+(assert (! (=> patient_has_finding_of_seizure_now@@classified_by_international_classification_of_epileptic_seizures patient_has_finding_of_seizure_now) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_0))
+(assert (! (=> patient_has_finding_of_seizure_now@@myoclonic_seizure_type patient_has_finding_of_seizure_now) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_1))
+(assert (! (=> patient_is_undergoing_anticonvulsant_therapy_now@@temporalcontext_at_least_4_weeks_before_visit_1 patient_is_undergoing_anticonvulsant_therapy_now) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_2))
+
+;; Other kept assertions
+(assert (! patient_has_diagnosis_of_idiopathic_generalized_epilepsy_now :named REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))
+(assert (! (or patient_has_finding_of_seizure_now@@myoclonic_seizure_type patient_has_finding_of_seizure_inthepast8weeks@@at_least_one_myoclonic_seizure_per_day_on_at_least_eight_days) :named REQ0_COMPONENT1_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))
+(assert (! (or patient_has_diagnosis_of_juvenile_myoclonic_epilepsy_now patient_has_diagnosis_of_juvenile_absence_epilepsy_now patient_has_diagnosis_of_epilepsy_with_grand_mal_seizures_on_awakening_now) :named REQ0_COMPONENT2_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))
+(assert (! patient_has_myoclonic_seizures_classifiable_according_to_the_international_classification_of_epileptic_seizures :named REQ0_COMPONENT3_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))
+(assert (! patient_has_finding_of_seizure_inthepast8weeks@@at_least_one_myoclonic_seizure_per_day_on_at_least_eight_days :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (or patient_has_absence_of_lesion_of_brain_documented_on_computed_tomography_scan_now patient_has_absence_of_lesion_of_brain_documented_on_magnetic_resonance_imaging_scan_now) :named REQ2_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (or patient_has_eeg_features_consistent_with_ige_on_eeg_recorded_during_baseline_period patient_has_eeg_features_consistent_with_ige_on_eeg_recorded_within_1_year_before_visit_1) :named REQ3_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (and (or patient_sex_is_male_now patient_sex_is_female_now) (>= patient_age_value_recorded_now_in_years 12.0) (<= patient_age_value_recorded_now_in_years 65.0)) :named REQ4_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))
+(assert (! patient_is_undergoing_anticonvulsant_therapy_now@@temporalcontext_at_least_4_weeks_before_visit_1 :named REQ5_COMPONENT0_OTHER_REQUIREMENTS))

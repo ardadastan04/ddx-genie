@@ -1,0 +1,123 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_her2_positive_carcinoma_of_breast_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of HER2-positive carcinoma of the breast.",
+  "when_true": "Set to true if the patient currently has a diagnosis of HER2-positive carcinoma of the breast.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of HER2-positive carcinoma of the breast.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of HER2-positive carcinoma of the breast.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_her2_positive_carcinoma_of_breast_now@@pathologically_confirmed",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's diagnosis of HER2-positive carcinoma of the breast is pathologically confirmed.",
+  "when_true": "Set to true if the patient's diagnosis of HER2-positive carcinoma of the breast is pathologically confirmed.",
+  "when_false": "Set to false if the patient's diagnosis of HER2-positive carcinoma of the breast is not pathologically confirmed.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the diagnosis is pathologically confirmed.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_received_pyrotinib_in_metastatic_settings",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has been treated with pyrotinib in the metastatic settings.",
+  "when_true": "Set to true if the patient has received pyrotinib as a treatment in the metastatic settings.",
+  "when_false": "Set to false if the patient has not received pyrotinib as a treatment in the metastatic settings.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has received pyrotinib in the metastatic settings.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_undergone_pet_ct_of_whole_body_using_fluorodeoxyglucose_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "whole_body_fluorodeoxyglucose_pet_ct_date",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "numeric criterion"
+ },
+ {
+  "name": "initiation_of_pyrotinib_and_capecitabine_date",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "numeric criterion"
+ },
+ {
+  "name": "patient_has_undergone_pet_ct_of_whole_body_using_fluorodeoxyglucose_within_4_weeks_before_initiation_of_pyrotinib_and_capecitabine",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_incomplete_medical_history_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has an incomplete medical history.",
+  "when_true": "Set to true if the patient currently has an incomplete medical history.",
+  "when_false": "Set to false if the patient currently does not have an incomplete medical history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has an incomplete medical history.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_incomplete_medical_history_now@@precludes_confirmation_of_inclusion_criteria",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's incomplete medical history precludes confirmation of inclusion criteria.",
+  "when_true": "Set to true if the patient's incomplete medical history precludes confirmation of inclusion criteria.",
+  "when_false": "Set to false if the patient's incomplete medical history does not preclude confirmation of inclusion criteria.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's incomplete medical history precludes confirmation of inclusion criteria.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_lost_to_follow_up_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever been lost to follow up at any time in their history.",
+  "when_true": "Set to true if the patient has ever been lost to follow up at any time in their history.",
+  "when_false": "Set to false if the patient has never been lost to follow up at any time in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been lost to follow up.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_lost_to_follow_up_inthehistory@@prior_to_data_collection_for_study_endpoints",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's loss to follow up occurred prior to data collection for study endpoints.",
+  "when_true": "Set to true if the patient's loss to follow up occurred prior to data collection for study endpoints.",
+  "when_false": "Set to false if the patient's loss to follow up did not occur prior to data collection for study endpoints.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's loss to follow up occurred prior to data collection for study endpoints.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

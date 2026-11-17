@@ -1,0 +1,51 @@
+;; ===================== QUALIFIER LINKER =====================
+;; Rule: add (qualifier => stem) only when BOTH are Bool; remove (stem => qualifier); drop ill-typed implications.
+;; Added_aux=0 Removed_reverse=0 Removed_illtyped=0 Skipped_nonbool_pairs=0
+;; =============================================================
+
+;; Declarations/definitions (original + any auto-added Bool stems)
+(declare-const patient_age_value_recorded_now_in_years Real)
+(declare-const patient_has_signed_informed_consent_from_parent Bool)
+(declare-const patient_has_signed_informed_consent_from_legal_guardian Bool)
+(declare-const patient_has_signed_assent_as_appropriate_by_age_and_regulatory_guidance Bool)
+(declare-const patient_has_signed_informed_consent_criteria_satisfied Bool)
+(declare-const patient_has_finding_of_hemorrhagic_diarrhea_inthehistory Bool)
+(declare-const patient_has_finding_of_hemorrhagic_diarrhea_now Bool)
+(declare-const patient_has_finding_of_hemorrhagic_diarrhea_now@@based_on_visual_inspection Bool)
+(declare-const patient_is_exposed_to_shiga_toxin_2_inthehistory Bool)
+(declare-const patient_is_exposed_to_shiga_toxin_2_inthehistory@@detection_based_on_enzyme_immunoassay Bool)
+(declare-const patient_is_exposed_to_shiga_toxin_2_inthehistory@@detection_based_on_polymerase_chain_reaction Bool)
+(declare-const patient_weight_for_length_percentile_value_recorded_now_withunit_percentile Real)
+(declare-const patient_weight_for_height_percentile_value_recorded_now_withunit_percentile Real)
+(declare-const patient_weight_for_length_zscore_value_recorded_now Real)
+(declare-const patient_weight_for_height_zscore_value_recorded_now Real)
+(declare-const patient_weight_for_length_percentile_is_between_3_and_97_now Bool)
+(declare-const patient_weight_for_height_percentile_is_between_3_and_97_now Bool)
+(declare-const patient_weight_for_length_zscore_is_between_minus2_and_2_now Bool)
+(declare-const patient_weight_for_height_zscore_is_between_minus2_and_2_now Bool)
+(declare-const patient_weight_for_length_is_normal_now Bool)
+(declare-const patient_weight_for_height_is_normal_now Bool)
+(declare-const patient_meets_weight_for_length_or_height_criterion_now Bool)
+(declare-const patient_body_mass_index_z_score_value_recorded_now_unitless Real)
+(declare-const patient_has_finding_of_finding_of_body_mass_index_now Bool)
+
+;; Existing auxiliary assertions
+(assert (! (= patient_has_signed_informed_consent_criteria_satisfied (or patient_has_signed_informed_consent_from_parent (and patient_has_signed_informed_consent_from_legal_guardian patient_has_signed_assent_as_appropriate_by_age_and_regulatory_guidance))) :named REQ1_AUXILIARY0))
+(assert (! (=> patient_has_finding_of_hemorrhagic_diarrhea_now@@based_on_visual_inspection patient_has_finding_of_hemorrhagic_diarrhea_now) :named REQ2_AUXILIARY0))
+(assert (! (=> patient_is_exposed_to_shiga_toxin_2_inthehistory@@detection_based_on_enzyme_immunoassay patient_is_exposed_to_shiga_toxin_2_inthehistory) :named REQ3_AUXILIARY0))
+(assert (! (=> patient_is_exposed_to_shiga_toxin_2_inthehistory@@detection_based_on_polymerase_chain_reaction patient_is_exposed_to_shiga_toxin_2_inthehistory) :named REQ3_AUXILIARY1))
+(assert (! (= patient_weight_for_length_percentile_is_between_3_and_97_now (and (>= patient_weight_for_length_percentile_value_recorded_now_withunit_percentile 3.0) (<= patient_weight_for_length_percentile_value_recorded_now_withunit_percentile 97.0))) :named REQ4_AUXILIARY0))
+(assert (! (= patient_weight_for_height_percentile_is_between_3_and_97_now (and (>= patient_weight_for_height_percentile_value_recorded_now_withunit_percentile 3.0) (<= patient_weight_for_height_percentile_value_recorded_now_withunit_percentile 97.0))) :named REQ4_AUXILIARY1))
+(assert (! (= patient_weight_for_length_zscore_is_between_minus2_and_2_now (and (> patient_weight_for_length_zscore_value_recorded_now -2.0) (< patient_weight_for_length_zscore_value_recorded_now 2.0))) :named REQ4_AUXILIARY2))
+(assert (! (= patient_weight_for_height_zscore_is_between_minus2_and_2_now (and (> patient_weight_for_height_zscore_value_recorded_now -2.0) (< patient_weight_for_height_zscore_value_recorded_now 2.0))) :named REQ4_AUXILIARY3))
+(assert (! (= patient_weight_for_length_is_normal_now (and patient_weight_for_length_percentile_is_between_3_and_97_now patient_weight_for_length_zscore_is_between_minus2_and_2_now)) :named REQ4_AUXILIARY4))
+(assert (! (= patient_weight_for_height_is_normal_now (and patient_weight_for_height_percentile_is_between_3_and_97_now patient_weight_for_height_zscore_is_between_minus2_and_2_now)) :named REQ4_AUXILIARY5))
+(assert (! (= patient_meets_weight_for_length_or_height_criterion_now (or patient_weight_for_length_is_normal_now patient_weight_for_height_is_normal_now)) :named REQ4_AUXILIARY6))
+
+;; Other kept assertions
+(assert (! (>= patient_age_value_recorded_now_in_years 1.0) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (< patient_age_value_recorded_now_in_years 10.0) :named REQ0_COMPONENT1_OTHER_REQUIREMENTS))
+(assert (! (or patient_has_finding_of_hemorrhagic_diarrhea_inthehistory patient_has_finding_of_hemorrhagic_diarrhea_now@@based_on_visual_inspection) :named REQ2_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))
+(assert (! (or patient_is_exposed_to_shiga_toxin_2_inthehistory@@detection_based_on_enzyme_immunoassay patient_is_exposed_to_shiga_toxin_2_inthehistory@@detection_based_on_polymerase_chain_reaction) :named REQ3_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (or (< patient_age_value_recorded_now_in_years 1.0) (> patient_age_value_recorded_now_in_years 5.0) patient_meets_weight_for_length_or_height_criterion_now) :named REQ4_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (or (< patient_age_value_recorded_now_in_years 5) (and patient_has_finding_of_finding_of_body_mass_index_now (> patient_body_mass_index_z_score_value_recorded_now_unitless (- 2)) (< patient_body_mass_index_z_score_value_recorded_now_unitless 2))) :named REQ5_COMPONENT0_OTHER_REQUIREMENTS))

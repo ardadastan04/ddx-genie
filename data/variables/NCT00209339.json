@@ -1,0 +1,112 @@
+[
+ {
+  "name": "patient_has_finding_of_moderate_mitral_valve_regurgitation_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has moderate mitral valve regurgitation.",
+  "when_true": "Set to true if the patient currently has the clinical finding of moderate mitral valve regurgitation.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of moderate mitral valve regurgitation.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has moderate mitral valve regurgitation.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_severe_mitral_valve_regurgitation_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has severe mitral valve regurgitation.",
+  "when_true": "Set to true if the patient currently has the clinical finding of severe mitral valve regurgitation.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of severe mitral valve regurgitation.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has severe mitral valve regurgitation.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_left_ventricular_cardiac_dysfunction_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has left ventricular cardiac dysfunction.",
+  "when_true": "Set to true if the patient currently has the clinical finding of left ventricular cardiac dysfunction.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of left ventricular cardiac dysfunction.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has left ventricular cardiac dysfunction.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_experiences_regurgitation_originating_from_central_two_thirds_of_valve_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently experiences regurgitation that originates from the central two-thirds of the valve.",
+  "when_true": "Set to true if the patient currently experiences regurgitation that originates from the central two-thirds of the valve.",
+  "when_false": "Set to false if the patient currently does not experience regurgitation that originates from the central two-thirds of the valve.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently experiences regurgitation that originates from the central two-thirds of the valve.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_can_undergo_mitral_valve_operation_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently a candidate for mitral valve operation (mitral valve surgery).",
+  "when_true": "Set to true if the patient is currently a candidate for mitral valve operation (mitral valve surgery) and can undergo the procedure now.",
+  "when_false": "Set to false if the patient is currently not a candidate for mitral valve operation (mitral valve surgery) and cannot undergo the procedure now.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently a candidate for mitral valve operation (mitral valve surgery).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_can_undergo_mitral_valve_operation_now@@including_cardiopulmonary_bypass",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently a candidate for mitral valve operation (mitral valve surgery) including cardiopulmonary bypass.",
+  "when_true": "Set to true if the patient is currently a candidate for mitral valve operation (mitral valve surgery) including cardiopulmonary bypass and can undergo the procedure now.",
+  "when_false": "Set to false if the patient is currently not a candidate for mitral valve operation (mitral valve surgery) including cardiopulmonary bypass and cannot undergo the procedure now.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently a candidate for mitral valve operation (mitral valve surgery) including cardiopulmonary bypass.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_cardiac_ejection_fraction_value_recorded_now_withunit_percent",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric percentage representing the patient's current cardiac ejection fraction.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such percentage measurement recorded now is available or the value is indeterminate.",
+  "when_value": "Set to the measured percentage value if a numeric measurement of the patient's cardiac ejection fraction recorded now is available.",
+  "polarity": "criterion met when < 30"
+ },
+ {
+  "name": "patient_has_finding_of_endocarditis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has endocarditis.",
+  "when_true": "Set to true if the patient currently has the clinical finding of endocarditis.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of endocarditis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of endocarditis.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_rheumatic_heart_disease_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has rheumatic heart disease.",
+  "when_true": "Set to true if the patient currently has the clinical finding of rheumatic heart disease.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of rheumatic heart disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of rheumatic heart disease.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_renal_insufficiency_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has renal insufficiency.",
+  "when_true": "Set to true if the patient currently has the clinical finding of renal insufficiency.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of renal insufficiency.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of renal insufficiency.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

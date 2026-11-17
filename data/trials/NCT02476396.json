@@ -1,0 +1,20 @@
+{
+ "nct": "NCT02476396",
+ "title": "Structural Stability of Carotid Plaque and Symptomatology",
+ "conditions": [
+  "Carotid Stenosis",
+  "Stroke",
+  "Carotid Artery Plaque",
+  "Transient Ischemic Attack",
+  "Cerebrovascular Accident",
+  "Carotid Artery Stenosis"
+ ],
+ "phase": "",
+ "brief_summary": "The purpose of the research is to understand structural plaque abnormalities that make a carotid plaque unstable and brake off (embolize) which would help to predict and treat individuals who are likely to suffer not only classic episodic major strokes but also cognitive impairment.",
+ "inclusion_criteria": "inclusion criteria (Patients): \n\n Patients undergoing carotid endarterectomy or stenting (endovascular) for established clinical criteria \n\n Age > 18 years \n\n Male or Female \n\n English speaking \n\n Patients must sign written informed consent form \n\n inclusion criteria (Controls): \n\n A spouse or sibling of a Patient Subject \n\n Age > 18 years \n\n Male or Female \n\n English speaking \n\n Control-Subject must sign a written informed consent form \n\n ",
+ "exclusion_criteria": " (Patients): \n\n Previous history of carotid artery surgery (endovascular or open) on the same side \n\n Previous cervical radiation \n\n Patients not felt be suitable for carotid endarterectomy or stenting (endovascular) \n\n Patients with impaired consent capacity \n\n Contraindication to MRI scans (impaired renal function, need for sedative medication during scans, inability to lie in scanner for 60 minutes) \n\n Prisoner status \n\n ",
+ "cohorts": [
+  "a",
+  "b"
+ ]
+}

@@ -1,0 +1,178 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_disorder_of_cardiovascular_system_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of cardiovascular disease.",
+  "when_true": "Set to true if the patient currently has a diagnosis of cardiovascular disease.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of cardiovascular disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of cardiovascular disease.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_physical_inactivity_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has physical inactivity.",
+  "when_true": "Set to true if the patient currently has physical inactivity.",
+  "when_false": "Set to false if the patient currently does not have physical inactivity.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has physical inactivity.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_tobacco_smoking_behavior_finding_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has tobacco smoking behavior.",
+  "when_true": "Set to true if the patient currently has tobacco smoking behavior.",
+  "when_false": "Set to false if the patient currently does not have tobacco smoking behavior.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has tobacco smoking behavior.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_alcohol_intake_above_recommended_sensible_limits_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has alcohol intake above recommended sensible limits.",
+  "when_true": "Set to true if the patient currently has alcohol intake above recommended sensible limits.",
+  "when_false": "Set to false if the patient currently does not have alcohol intake above recommended sensible limits.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has alcohol intake above recommended sensible limits.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_inappropriate_diet_and_eating_habits_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has inappropriate diet and eating habits.",
+  "when_true": "Set to true if the patient currently has inappropriate diet and eating habits.",
+  "when_false": "Set to false if the patient currently does not have inappropriate diet and eating habits.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has inappropriate diet and eating habits.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_stress_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has psychological stress.",
+  "when_true": "Set to true if the patient currently has psychological stress.",
+  "when_false": "Set to false if the patient currently does not have psychological stress.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has psychological stress.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_overweight_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently overweight.",
+  "when_true": "Set to true if the patient is currently overweight.",
+  "when_false": "Set to false if the patient is currently not overweight.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently overweight.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_android_obesity_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has abdominal (android) obesity.",
+  "when_true": "Set to true if the patient currently has abdominal (android) obesity.",
+  "when_false": "Set to false if the patient currently does not have abdominal (android) obesity.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has abdominal (android) obesity.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_serum_lipids_high_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has high serum lipids.",
+  "when_true": "Set to true if the patient currently has high serum lipids.",
+  "when_false": "Set to false if the patient currently does not have high serum lipids.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has high serum lipids.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_hypercholesterolemia_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has hypercholesterolemia (high blood cholesterol).",
+  "when_true": "Set to true if the patient currently has hypercholesterolemia (high blood cholesterol).",
+  "when_false": "Set to false if the patient currently does not have hypercholesterolemia (high blood cholesterol).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has hypercholesterolemia (high blood cholesterol).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_raised_low_density_lipoprotein_cholesterol_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has raised low-density lipoprotein cholesterol.",
+  "when_true": "Set to true if the patient currently has raised low-density lipoprotein cholesterol.",
+  "when_false": "Set to false if the patient currently does not have raised low-density lipoprotein cholesterol.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has raised low-density lipoprotein cholesterol.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_hypertensive_disorder_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a hypertensive disorder (high blood pressure).",
+  "when_true": "Set to true if the patient currently has a hypertensive disorder (high blood pressure).",
+  "when_false": "Set to false if the patient currently does not have a hypertensive disorder (high blood pressure).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a hypertensive disorder (high blood pressure).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_diabetes_mellitus_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has diabetes mellitus.",
+  "when_true": "Set to true if the patient currently has diabetes mellitus.",
+  "when_false": "Set to false if the patient currently does not have diabetes mellitus.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has diabetes mellitus.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_insulin_resistance_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has insulin resistance.",
+  "when_true": "Set to true if the patient currently has insulin resistance.",
+  "when_false": "Set to false if the patient currently does not have insulin resistance.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has insulin resistance.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_risk_factor_value_recorded_now_withunit_count",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the count of risk factors present in the patient now.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the number of risk factors present now is unknown or cannot be determined.",
+  "when_value": "Set to the number of risk factors present in the patient now.",
+  "polarity": "criterion met when >= 3"
+ },
+ {
+  "name": "patient_understands_swedish_language",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient understands the Swedish language.",
+  "when_true": "Set to true if the patient understands the Swedish language.",
+  "when_false": "Set to false if the patient does not understand the Swedish language.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient understands the Swedish language.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

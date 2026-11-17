@@ -1,0 +1,46 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_osteitis_deformans_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of osteitis deformans (osseous Paget's disease).",
+  "when_true": "Set to true if the patient currently has a diagnosis of osteitis deformans (osseous Paget's disease).",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of osteitis deformans (osseous Paget's disease).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of osteitis deformans (osseous Paget's disease).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_exposed_to_risedronate_sodium_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently exposed to risedronate sodium.",
+  "when_true": "Set to true if the patient is currently exposed to risedronate sodium.",
+  "when_false": "Set to false if the patient is currently not exposed to risedronate sodium.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently exposed to risedronate sodium.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_exposed_to_risedronate_sodium_now@@administered_as_tablets",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently exposed to risedronate sodium and it is administered as tablets.",
+  "when_true": "Set to true if the patient is currently exposed to risedronate sodium and it is administered as tablets.",
+  "when_false": "Set to false if the patient is currently exposed to risedronate sodium but it is not administered as tablets.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether risedronate sodium is administered as tablets.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_exposed_to_risedronate_sodium_now@@dose_is_17_5_mg",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently exposed to risedronate sodium and the dose is 17.5 mg.",
+  "when_true": "Set to true if the patient is currently exposed to risedronate sodium and the dose is 17.5 mg.",
+  "when_false": "Set to false if the patient is currently exposed to risedronate sodium but the dose is not 17.5 mg.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the dose of risedronate sodium is 17.5 mg.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ }
+]

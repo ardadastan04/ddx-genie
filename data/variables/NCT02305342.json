@@ -1,0 +1,68 @@
+[
+ {
+  "name": "patient_has_finding_of_seen_in_primary_health_care_clinic_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently being seen in a primary health care clinic.",
+  "when_true": "Set to true if the patient is currently being seen in a primary health care clinic.",
+  "when_false": "Set to false if the patient is currently not being seen in a primary health care clinic.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently being seen in a primary health care clinic.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_symptoms_of_urinary_tract_infectious_disease_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has symptoms of urinary tract infection.",
+  "when_true": "Set to true if the patient currently reports symptoms of urinary tract infection.",
+  "when_false": "Set to false if the patient currently does not report symptoms of urinary tract infection.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently reports symptoms of urinary tract infection.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_uropathogen_isolated_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has uropathogens isolated.",
+  "when_true": "Set to true if the patient currently has uropathogens isolated.",
+  "when_false": "Set to false if the patient currently does not have uropathogens isolated.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has uropathogens isolated.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_specialized_patient_not_attending_primary_care_clinic_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently a specialized patient not attending a primary care clinic.",
+  "when_true": "Set to true if the patient is currently a specialized patient and is not attending a primary care clinic.",
+  "when_false": "Set to false if the patient is not currently a specialized patient or is attending a primary care clinic.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently a specialized patient not attending a primary care clinic.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_hospital_patient_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently a hospitalized patient.",
+  "when_true": "Set to true if the patient is currently a hospitalized patient.",
+  "when_false": "Set to false if the patient is currently not a hospitalized patient.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently a hospitalized patient.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_catheterized_patient_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently a catheterized patient.",
+  "when_true": "Set to true if the patient is currently a catheterized patient.",
+  "when_false": "Set to false if the patient is currently not a catheterized patient.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently a catheterized patient.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

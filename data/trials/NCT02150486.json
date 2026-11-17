@@ -1,0 +1,15 @@
+{
+ "nct": "NCT02150486",
+ "title": "Myocardial Injury and Postoperative Complications",
+ "conditions": [
+  "Myocardial Injury"
+ ],
+ "phase": "",
+ "brief_summary": "To determine whether perioperative myocardial injury is associated with adverse outcome in patients scheduled for major abdominal surgery.",
+ "inclusion_criteria": "inclusion criteria: \n\n Patients > 45 years of age with 1 or more major cardiovascular risk factors: Congestive heart failure, peripheral artery disease (intermittent claudication, history of vascular surgery etc), diabetes mellitus type I or II, coronary artery disease (history of myocardial infarction, stable angina pectoris, history of ischemia or coronary artery disease on cardiac tests (electrocardiogram, scintigraphy, echocardiogram, coronary angiogram etc), cerebrovascular accident, renal insufficiency (creatinine > 150umol/l), aortic valve stenosis (valve area < 1 cm2) OR 2 or more minor cardiovascular risk factors: Age > 70, hypertension, high cholesterol, low functional capacity (4 metabolic equivalents or less), transient ischemic attack, chronic obstructive pulmonary disease AND undergoing abdominal surgery with an expected 30-day mortality rate > 2-3%: colorectal, gastric, pancreatic and liver surgery. \n\n ",
+ "exclusion_criteria": ": \n\n Age < 45 years of age, not scheduled for higher risk abdominal surgery, low cardiovascular risk profile.",
+ "cohorts": [
+  "a",
+  "b"
+ ]
+}

@@ -1,0 +1,16 @@
+{
+ "nct": "NCT04814420",
+ "title": "Atrial Fibrosis Progression in Sleep Apnea Patients: A Pilot Study",
+ "conditions": [
+  "Atrial Fibrillation",
+  "Obstructive Sleep Apnea"
+ ],
+ "phase": "",
+ "brief_summary": "The investigators hypothesize that Obstructive Sleep Apnea (OSA) is an independent risk factor for atrial fibrosis development. The investigators aim to prove the presence and progression of atrial fibrosis on Delayed Enhancement Magnetic Resonance Imaging (DE-MRI) in OSA patients without atrial fibrillation (AF).~The investigators will also investigate the correlation between OSA metrics (nocturnal oxygen saturation and Apnea Hypopnea Index (AHI)) and degree of fibrosis at baseline and its progression.",
+ "inclusion_criteria": "inclusion criteria: \n\n Experimental group: (15 patients) \n\n 18-75-year-old, AND \n\n With mild to severe OSA (mild: Apnea Hypopnea Index: AHI between 5-15, Moderate AHI= 15-30, severe AHI>30), diagnosed by polysomnography. \n\n Patient with a creatinine measurement within the last 6 months. \n\n Control group (5 patients): patients with no lung or heart disease, matched by age and BMI. \n\n ",
+ "exclusion_criteria": ": \n\n History of chronic heart failure (Left Ventricle Ejection fraction (LVEF) < 50%), AF, myocardial infarction, valvular disease. \n\n Prior cardiac or chest surgery. \n\n Other advanced pulmonary disease (severe Chronic Obstructive Pulmonary Disease (COPD) or asthma, pulmonary hypertension) or central sleep apnea. \n\n Contraindications to DE-MRI (e.g. allergy to gadolinium, pacemakers, defibrillators (ICD's), other devices/implants contraindicated for MRI, glomerular filtration rate <30 ml/min, etc.). \n\n BMI > 35 kg/m2 (affects DE-MRI quality). \n\n Pregnancy. \n\n Contraindications to WATCHPAT device (peripheral neuropathy). \n\n Use of one of the following medications: alpha blockers, short acting nitrates (less than 3 hours before the use of WATCHPAT). \n\n Inability to give informed consent. \n\n No access to proper smartphone technology and/or internet. \n\n Inability to return to follow up visit.",
+ "cohorts": [
+  "a",
+  "b"
+ ]
+}

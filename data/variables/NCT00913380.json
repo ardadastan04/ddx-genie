@@ -1,0 +1,57 @@
+[
+ {
+  "name": "patient_has_suspicion_of_acute_appendicitis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_undergone_ct_of_abdomen_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone a computed tomography (CT) of the abdomen.",
+  "when_true": "Set to true if the patient has ever undergone a computed tomography (CT) of the abdomen.",
+  "when_false": "Set to false if the patient has never undergone a computed tomography (CT) of the abdomen.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone a computed tomography (CT) of the abdomen.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_undergone_ct_of_abdomen_inthehistory@@referral_from_emergency_department",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's abdomen CT was referred from the Emergency Department.",
+  "when_true": "Set to true if the patient's abdomen CT was referred from the Emergency Department.",
+  "when_false": "Set to false if the patient's abdomen CT was not referred from the Emergency Department.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the referral for the patient's abdomen CT was from the Emergency Department.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_finding_of_body_mass_index_value_recorded_now_withunit_kg_per_m2",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric value representing the patient's current body mass index (BMI) in kilograms per square meter.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such BMI measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured value if the patient's current body mass index (BMI) in kilograms per square meter is available.",
+  "polarity": "criterion met when < 18.5"
+ },
+ {
+  "name": "intravenous_contrast_enhancement_is_contraindicated_for_patient",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether intravenous contrast enhancement is contraindicated for the patient.",
+  "when_true": "Set to true if intravenous contrast enhancement is contraindicated for the patient.",
+  "when_false": "Set to false if intravenous contrast enhancement is not contraindicated for the patient.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether intravenous contrast enhancement is contraindicated for the patient.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

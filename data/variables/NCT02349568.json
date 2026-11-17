@@ -1,0 +1,134 @@
+[
+ {
+  "name": "patient_has_finding_of_biliary_colic_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever had a history of biliary colic (biliary pain).",
+  "when_true": "Set to true if the patient has ever had a history of biliary colic (biliary pain) at any point in the past.",
+  "when_false": "Set to false if the patient has never had a history of biliary colic (biliary pain).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had a history of biliary colic (biliary pain).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_cholangitis_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever had a history of cholangitis.",
+  "when_true": "Set to true if the patient has ever had a history of cholangitis at any point in the past.",
+  "when_false": "Set to false if the patient has never had a history of cholangitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had a history of cholangitis.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_acute_pancreatitis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_liver_function_tests_outside_reference_range_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a liver function test result outside the reference range.",
+  "when_true": "Set to true if the patient currently has a liver function test result outside the reference range (abnormal liver function test result).",
+  "when_false": "Set to false if the patient currently does not have a liver function test result outside the reference range.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a liver function test result outside the reference range.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_dilatation_of_common_bile_duct_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has dilatation of the common bile duct.",
+  "when_true": "Set to true if the patient currently has dilatation of the common bile duct.",
+  "when_false": "Set to false if the patient currently does not have dilatation of the common bile duct.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has dilatation of the common bile duct.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_common_bile_duct_calculus_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a common bile duct stone (common bile duct calculus).",
+  "when_true": "Set to true if the patient currently has the clinical finding of a common bile duct stone (common bile duct calculus).",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of a common bile duct stone.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a common bile duct stone.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_common_bile_duct_calculus_now@@detected_by_trans_abdominal_ultrasound",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's common bile duct stone was detected by trans-abdominal ultrasound.",
+  "when_true": "Set to true if the patient's common bile duct stone was detected by trans-abdominal ultrasound.",
+  "when_false": "Set to false if the patient's common bile duct stone was not detected by trans-abdominal ultrasound.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the common bile duct stone was detected by trans-abdominal ultrasound.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_common_bile_duct_calculus_now@@detected_by_computed_tomography",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's common bile duct stone was detected by computed tomography.",
+  "when_true": "Set to true if the patient's common bile duct stone was detected by computed tomography.",
+  "when_false": "Set to false if the patient's common bile duct stone was not detected by computed tomography.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the common bile duct stone was detected by computed tomography.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_hemodynamic_instability_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has hemodynamic instability.",
+  "when_true": "Set to true if the patient currently has the clinical finding of hemodynamic instability.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of hemodynamic instability.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of hemodynamic instability.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_blood_coagulation_disorder_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a blood coagulation disorder (coagulopathy).",
+  "when_true": "Set to true if the patient currently has a blood coagulation disorder (coagulopathy).",
+  "when_false": "Set to false if the patient currently does not have a blood coagulation disorder (coagulopathy).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a blood coagulation disorder (coagulopathy).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_blood_coagulation_disorder_now@@severe",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current blood coagulation disorder (coagulopathy) is severe.",
+  "when_true": "Set to true if the patient currently has a blood coagulation disorder (coagulopathy) and the disorder is severe.",
+  "when_false": "Set to false if the patient currently has a blood coagulation disorder (coagulopathy) but it is not severe.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's blood coagulation disorder (coagulopathy) is severe.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_refuses_to_participate",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient refuses to participate.",
+  "when_true": "Set to true if the patient has explicitly refused to participate.",
+  "when_false": "Set to false if the patient has not refused to participate.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has refused to participate.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

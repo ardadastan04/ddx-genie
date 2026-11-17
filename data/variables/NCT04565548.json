@@ -1,0 +1,178 @@
+[
+ {
+  "name": "patient_owns_mobile_phone",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient owns a mobile phone.",
+  "when_true": "Set to true if the patient owns a mobile phone.",
+  "when_false": "Set to false if the patient does not own a mobile phone.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient owns a mobile phone.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_able_to_use_mobile_phone",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is able to use a mobile phone.",
+  "when_true": "Set to true if the patient is able to use a mobile phone.",
+  "when_false": "Set to false if the patient is not able to use a mobile phone.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is able to use a mobile phone.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_able_to_communicate_in_cantonese",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is able to communicate using Cantonese.",
+  "when_true": "Set to true if the patient is able to communicate using Cantonese.",
+  "when_false": "Set to false if the patient is not able to communicate using Cantonese.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is able to communicate using Cantonese.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_able_to_read_chinese",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is able to read Chinese.",
+  "when_true": "Set to true if the patient is able to read Chinese.",
+  "when_false": "Set to false if the patient is not able to read Chinese.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is able to read Chinese.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_hypertensive_disorder_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently diagnosed with hypertensive disorder (hypertension).",
+  "when_true": "Set to true if the patient is currently diagnosed with hypertensive disorder (hypertension).",
+  "when_false": "Set to false if the patient is currently not diagnosed with hypertensive disorder (hypertension).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently diagnosed with hypertensive disorder (hypertension).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_taking_hypotensive_agent_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently taking a hypotensive agent (anti-hypertensive medication).",
+  "when_true": "Set to true if the patient is currently taking at least one hypotensive agent (anti-hypertensive medication).",
+  "when_false": "Set to false if the patient is currently not taking any hypotensive agent (anti-hypertensive medication).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently taking a hypotensive agent (anti-hypertensive medication).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_systolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's systolic blood pressure measured in millimeters of mercury, recorded now.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no systolic blood pressure measurement recorded now is available or the value is indeterminate.",
+  "when_value": "Set to the measured systolic blood pressure value in millimeters of mercury if a measurement recorded now is available.",
+  "polarity": "criterion met when >= 131"
+ },
+ {
+  "name": "patient_diastolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's diastolic blood pressure measured in millimeters of mercury, recorded now.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no diastolic blood pressure measurement recorded now is available or the value is indeterminate.",
+  "when_value": "Set to the measured diastolic blood pressure value in millimeters of mercury if a measurement recorded now is available.",
+  "polarity": "criterion met when >= 81"
+ },
+ {
+  "name": "patient_owns_mobile_phone_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently owns a mobile phone.",
+  "when_true": "Set to true if the patient currently owns a mobile phone.",
+  "when_false": "Set to false if the patient currently does not own a mobile phone.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently owns a mobile phone.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_able_to_use_mobile_phone_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently able to use a mobile phone.",
+  "when_true": "Set to true if the patient is currently able to use a mobile phone.",
+  "when_false": "Set to false if the patient is currently not able to use a mobile phone.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently able to use a mobile phone.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_main_spoken_language_cantonese_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently able to communicate in the Cantonese language.",
+  "when_true": "Set to true if the patient is currently able to communicate in the Cantonese language.",
+  "when_false": "Set to false if the patient is currently not able to communicate in the Cantonese language.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently able to communicate in the Cantonese language.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_reads_chinese_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently able to read the Chinese language.",
+  "when_true": "Set to true if the patient is currently able to read the Chinese language.",
+  "when_false": "Set to false if the patient is currently not able to read the Chinese language.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently able to read the Chinese language.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_exposed_to_hypotensive_agent_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently exposed to (taking) a hypotensive agent (anti-hypertensive medication).",
+  "when_true": "Set to true if the patient is currently exposed to (taking) at least one hypotensive agent (anti-hypertensive medication).",
+  "when_false": "Set to false if the patient is currently not exposed to (not taking) any hypotensive agent (anti-hypertensive medication).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently exposed to (taking) a hypotensive agent (anti-hypertensive medication).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_renal_hypertension_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has renal hypertension.",
+  "when_true": "Set to true if the patient currently has the clinical finding of renal hypertension.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of renal hypertension.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of renal hypertension.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_mini_cog_test_score_value_recorded_now_withunit_score",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric value representing the patient's Mini-Cog test score as recorded now.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such Mini-Cog test score measurement recorded now is available or the value is indeterminate.",
+  "when_value": "Set to the measured Mini-Cog test score if a numeric measurement recorded now is available.",
+  "polarity": "criterion met when < 3"
+ },
+ {
+  "name": "patient_mini_cog_test_score_value_recorded_now_withunit_none",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric value representing the patient's Mini-Cog test score measured now.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no Mini-Cog test score is recorded now or the value is indeterminate.",
+  "when_value": "Set to the measured Mini-Cog test score if a numeric value is recorded for the patient now.",
+  "polarity": "criterion met when < 3"
+ }
+]

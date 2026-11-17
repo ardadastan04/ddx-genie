@@ -1,0 +1,189 @@
+[
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when >= 18"
+ },
+ {
+  "name": "patient_finding_of_body_mass_index_value_recorded_now_withunit_kilograms_per_square_meter",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's current body mass index (BMI) in kilograms per square meter.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such BMI measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured value if the patient's current body mass index (BMI) in kilograms per square meter is available.",
+  "polarity": "criterion met when > 40"
+ },
+ {
+  "name": "patient_has_finding_of_obesity_associated_disorder_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has any co-morbidity associated with obesity.",
+  "when_true": "Set to true if the patient currently has any co-morbidity associated with obesity.",
+  "when_false": "Set to false if the patient currently does not have any co-morbidity associated with obesity.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has any co-morbidity associated with obesity.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_included_in_obesity_surgery_program_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently included in the obesity surgery program.",
+  "when_true": "Set to true if the patient is currently included in the obesity surgery program.",
+  "when_false": "Set to false if the patient is currently not included in the obesity surgery program.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently included in the obesity surgery program.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_obstructive_sleep_apnea_syndrome_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of obstructive sleep apnea syndrome.",
+  "when_true": "Set to true if the patient currently has a diagnosis of obstructive sleep apnea syndrome.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of obstructive sleep apnea syndrome.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of obstructive sleep apnea syndrome.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_obstructive_sleep_apnea_syndrome_now@@diagnosed_by_polysomnography",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's diagnosis of obstructive sleep apnea syndrome was established by polysomnography.",
+  "when_true": "Set to true if the patient's diagnosis of obstructive sleep apnea syndrome was established by polysomnography.",
+  "when_false": "Set to false if the patient's diagnosis of obstructive sleep apnea syndrome was not established by polysomnography.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the diagnosis was established by polysomnography.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_apnea_hypopnea_index_value_recorded_now_withunit_per_hour",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's current apnea-hypopnea index (AHI) per hour.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured value if the patient's current apnea-hypopnea index (AHI) per hour is available.",
+  "polarity": "criterion met when >= 15"
+ },
+ {
+  "name": "patient_is_included_in_obesity_surgery_program",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_sleep_apnea_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of sleep apnea syndrome.",
+  "when_true": "Set to true if the patient currently has a diagnosis of sleep apnea syndrome.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of sleep apnea syndrome.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of sleep apnea syndrome.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_sleep_apnea_now@@diagnosed_by_polysomnography",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's diagnosis of sleep apnea syndrome was made by polysomnography.",
+  "when_true": "Set to true if the patient currently has a diagnosis of sleep apnea syndrome and the diagnosis was made by polysomnography.",
+  "when_false": "Set to false if the patient currently has a diagnosis of sleep apnea syndrome but the diagnosis was not made by polysomnography.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the diagnosis of sleep apnea syndrome was made by polysomnography.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_non_obstructive_sleep_apnea_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of non-obstructive sleep apnea syndrome.",
+  "when_true": "Set to true if the patient currently has a diagnosis of non-obstructive sleep apnea syndrome.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of non-obstructive sleep apnea syndrome.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of non-obstructive sleep apnea syndrome.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_non_obstructive_sleep_apnea_now@@diagnosed_by_polysomnography",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's diagnosis of non-obstructive sleep apnea syndrome was made by polysomnography.",
+  "when_true": "Set to true if the patient currently has a diagnosis of non-obstructive sleep apnea syndrome and the diagnosis was made by polysomnography.",
+  "when_false": "Set to false if the patient currently has a diagnosis of non-obstructive sleep apnea syndrome but the diagnosis was not made by polysomnography.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the diagnosis of non-obstructive sleep apnea syndrome was made by polysomnography.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_obstructive_sleep_apnea_syndrome_now@@severe",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the diagnosis of obstructive sleep apnea syndrome is severe.",
+  "when_true": "Set to true if the patient's diagnosis of obstructive sleep apnea syndrome is severe.",
+  "when_false": "Set to false if the patient's diagnosis of obstructive sleep apnea syndrome is not severe.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the diagnosis is severe.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_obstructive_sleep_apnea_syndrome_now@@diagnosed_at_baseline_polysomnography",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the diagnosis of obstructive sleep apnea syndrome was made at baseline polysomnography.",
+  "when_true": "Set to true if the patient's diagnosis of obstructive sleep apnea syndrome was made at baseline polysomnography.",
+  "when_false": "Set to false if the patient's diagnosis of obstructive sleep apnea syndrome was not made at baseline polysomnography.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the diagnosis was made at baseline polysomnography.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_apnea_hypopnea_index_value_recorded_now_withunit_events_per_hour@@measured_at_baseline_polysomnography",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the apnea-hypopnea index value was measured at baseline polysomnography.",
+  "when_true": "Set to true if the apnea-hypopnea index value was measured at baseline polysomnography.",
+  "when_false": "Set to false if the apnea-hypopnea index value was not measured at baseline polysomnography.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the value was measured at baseline polysomnography.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_apnea_hypopnea_index_value_recorded_now_withunit_events_per_hour",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's apnea-hypopnea index (AHI) measured now, in events per hour.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured value if the patient's apnea-hypopnea index (AHI) in events per hour is recorded now.",
+  "polarity": "criterion met when >= 0"
+ },
+ {
+  "name": "patient_meets_general_exclusion_criterion_specified_for_part_b",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient meets at least one general exclusion criterion specified for part B of the study.",
+  "when_true": "Set to true if the patient meets at least one general exclusion criterion specified for part B of the study.",
+  "when_false": "Set to false if the patient does not meet any general exclusion criterion specified for part B of the study.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient meets any general exclusion criterion specified for part B of the study.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

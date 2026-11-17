@@ -1,0 +1,156 @@
+[
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's age is unknown or not recorded.",
+  "when_value": "Set to the patient's current age in years as recorded at the time of assessment.",
+  "polarity": "criterion met when >= 18"
+ },
+ {
+  "name": "patient_has_undergone_clostridium_difficile_assay_inthehistory_outcome_is_positive",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone a Clostridioides difficile assay (test) with a positive result at any time in the past.",
+  "when_true": "Set to true if the patient has ever undergone a Clostridioides difficile assay (test) with a positive result at any time in the past.",
+  "when_false": "Set to false if the patient has never undergone a Clostridioides difficile assay (test) with a positive result in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone a Clostridioides difficile assay (test) with a positive result in the past.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_undergone_clostridium_difficile_assay_inthehistory_outcome_is_positive@@temporalcontext_within10days_before_procedure",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the positive Clostridioides difficile assay (test) occurred within the 10 days prior to the procedure.",
+  "when_true": "Set to true if the positive Clostridioides difficile assay (test) occurred within the 10 days prior to the procedure.",
+  "when_false": "Set to false if the positive Clostridioides difficile assay (test) did not occur within the 10 days prior to the procedure.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the positive Clostridioides difficile assay (test) occurred within the 10 days prior to the procedure.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_symptoms_of_clostridioides_difficile_infection_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has symptoms of Clostridioides difficile infection.",
+  "when_true": "Set to true if the patient currently has symptoms of Clostridioides difficile infection.",
+  "when_false": "Set to false if the patient currently does not have symptoms of Clostridioides difficile infection.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has symptoms of Clostridioides difficile infection.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "number_of_courses_of_appropriate_antibiotic_therapy_for_clostridioides_difficile_infection_failed_in_the_history",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric variable indicating the number of courses of appropriate antibiotic therapy for Clostridioides difficile infection that the patient has failed at any time in the past.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined how many courses of appropriate antibiotic therapy for Clostridioides difficile infection the patient has failed in the past.",
+  "when_value": "Set to the number of courses of appropriate antibiotic therapy for Clostridioides difficile infection that the patient has failed at any time in the past.",
+  "polarity": "criterion met when >= 2"
+ },
+ {
+  "name": "patient_has_undergone_antibiotic_therapy_inthehistory@@failed_at_least_two_courses",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has failed at least two courses of antibiotic therapy in the past.",
+  "when_true": "Set to true if the patient has failed at least two courses of antibiotic therapy in the past.",
+  "when_false": "Set to false if the patient has failed fewer than two courses of antibiotic therapy in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has failed at least two courses of antibiotic therapy in the past.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_undergone_antibiotic_therapy_inthehistory@@appropriate_for_clostridioides_difficile_infection",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the antibiotic therapy undergone by the patient in the past was appropriate for Clostridioides difficile infection.",
+  "when_true": "Set to true if the antibiotic therapy undergone by the patient in the past was appropriate for Clostridioides difficile infection.",
+  "when_false": "Set to false if the antibiotic therapy undergone by the patient in the past was not appropriate for Clostridioides difficile infection.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the antibiotic therapy was appropriate for Clostridioides difficile infection.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_undergone_antibiotic_therapy_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone antibiotic therapy in their history.",
+  "when_true": "Set to true if the patient has ever undergone antibiotic therapy at any time in their history.",
+  "when_false": "Set to false if the patient has never undergone antibiotic therapy at any time in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone antibiotic therapy in their history.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_undergone_clostridium_difficile_assay_inthepast10days_outcome_is_negative@@temporalcontext_within10days_before_procedure",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating that the Clostridium difficile assay with a negative result occurred within the 10 days before the procedure.",
+  "when_true": "Set to true if the Clostridium difficile assay with a negative result occurred within the 10 days before the procedure.",
+  "when_false": "Set to false if the Clostridium difficile assay with a negative result did not occur within the 10 days before the procedure.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the Clostridium difficile assay with a negative result occurred within the 10 days before the procedure.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_laboratory_test_inthepast10days_outcome_is_positive@@temporalcontext_within10days_before_procedure",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating that the laboratory test with a positive result occurred within the 10 days before the procedure.",
+  "when_true": "Set to true if the laboratory test with a positive result occurred within the 10 days before the procedure.",
+  "when_false": "Set to false if the laboratory test with a positive result did not occur within the 10 days before the procedure.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the laboratory test with a positive result occurred within the 10 days before the procedure.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "number_of_courses_of_appropriate_antibiotic_therapy_for_clostridioides_difficile_infection_value_recorded_inthehistory_withunit_count",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric value indicating the number of courses of appropriate antibiotic therapy the patient has undergone for Clostridioides difficile infection at any time in their history, recorded as a count.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the number of courses is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the number of courses of appropriate antibiotic therapy the patient has undergone for Clostridioides difficile infection at any time in their history.",
+  "polarity": "criterion met when < 2"
+ },
+ {
+  "name": "patient_has_diagnosis_of_clostridioides_difficile_infection_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever had a diagnosis of Clostridioides difficile infection in their history.",
+  "when_true": "Set to true if the patient has ever had a diagnosis of Clostridioides difficile infection at any time in their history.",
+  "when_false": "Set to false if the patient has never had a diagnosis of Clostridioides difficile infection at any time in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had a diagnosis of Clostridioides difficile infection.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_clostridium_difficile_assay_inthepast10days_outcome_is_negative",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has undergone a Clostridium difficile assay with a negative result within the past 10 days.",
+  "when_true": "Set to true if the patient has undergone a Clostridium difficile assay with a negative result within the past 10 days.",
+  "when_false": "Set to false if the patient has not undergone a Clostridium difficile assay with a negative result within the past 10 days.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has undergone a Clostridium difficile assay with a negative result within the past 10 days.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_laboratory_test_inthepast10days_outcome_is_positive",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has undergone a laboratory test with a positive result within the past 10 days.",
+  "when_true": "Set to true if the patient has undergone a laboratory test with a positive result within the past 10 days.",
+  "when_false": "Set to false if the patient has not undergone a laboratory test with a positive result within the past 10 days.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has undergone a laboratory test with a positive result within the past 10 days.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ }
+]

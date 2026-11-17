@@ -1,0 +1,101 @@
+[
+ {
+  "name": "patient_has_finding_of_dyspnea_on_exertion_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has exertional dyspnea (dyspnea on exertion).",
+  "when_true": "Set to true if the patient currently has the clinical finding of exertional dyspnea (dyspnea on exertion).",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of exertional dyspnea (dyspnea on exertion).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has exertional dyspnea (dyspnea on exertion).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_disability_affecting_daily_living_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a disability affecting daily living (activity limitation).",
+  "when_true": "Set to true if the patient currently has a disability affecting daily living (activity limitation).",
+  "when_false": "Set to false if the patient currently does not have a disability affecting daily living (activity limitation).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a disability affecting daily living (activity limitation).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_chronic_obstructive_pulmonary_disease_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_pulmonary_disease_inthepast4weeks",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has had an acute exacerbation of chronic obstructive pulmonary disease in the past 4 weeks.",
+  "when_true": "Set to true if the patient has had an acute exacerbation of chronic obstructive pulmonary disease in the past 4 weeks.",
+  "when_false": "Set to false if the patient has not had an acute exacerbation of chronic obstructive pulmonary disease in the past 4 weeks.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has had an acute exacerbation of chronic obstructive pulmonary disease in the past 4 weeks.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_undergoing_oxygen_therapy_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently undergoing oxygen therapy.",
+  "when_true": "Set to true if the patient is currently undergoing oxygen therapy.",
+  "when_false": "Set to false if the patient is currently not undergoing oxygen therapy.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently undergoing oxygen therapy.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_cardiovascular_system_alteration_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has cardiovascular system abnormalities.",
+  "when_true": "Set to true if the patient currently has cardiovascular system abnormalities.",
+  "when_false": "Set to false if the patient currently does not have cardiovascular system abnormalities.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has cardiovascular system abnormalities.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_cardiovascular_system_alteration_now@@significant",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current cardiovascular system abnormalities are significant.",
+  "when_true": "Set to true if the patient currently has cardiovascular system abnormalities and those abnormalities are significant.",
+  "when_false": "Set to false if the patient currently has cardiovascular system abnormalities but they are not significant.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the cardiovascular system abnormalities are significant.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_musculoskeletal_alteration_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has musculoskeletal system abnormalities.",
+  "when_true": "Set to true if the patient currently has musculoskeletal system abnormalities.",
+  "when_false": "Set to false if the patient currently does not have musculoskeletal system abnormalities.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has musculoskeletal system abnormalities.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_musculoskeletal_alteration_now@@significant",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current musculoskeletal system abnormalities are significant.",
+  "when_true": "Set to true if the patient currently has musculoskeletal system abnormalities and those abnormalities are significant.",
+  "when_false": "Set to false if the patient currently has musculoskeletal system abnormalities but they are not significant.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the musculoskeletal system abnormalities are significant.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

@@ -1,0 +1,16 @@
+{
+ "nct": "NCT04763629",
+ "title": "Effects of Different Exercise Training on Atrial Function in Hypertension",
+ "conditions": [
+  "Hypertension",
+  "Coronary Artery Disease"
+ ],
+ "phase": "",
+ "brief_summary": "The study aim is to compare the effects produced by two different exercise training modalities on atrial function evaluated by speckle-tracking echocardiography on hypertensive patients with coronary artery disease. 50 males patients will be randomized to interval training or combined training the latter including both aerobic and resistance exercises. The training period will last 12 weeks. The protocol will provide two different assessment of atrial function: -acute: after a single session of exercise; - 12 weeks: at the end of exercise training protocols.",
+ "inclusion_criteria": "inclusion criteria: \n\n Hypertension; \n\n Coronary artery disease; \n\n Age over 45 years; \n\n Male gender \n\n ",
+ "exclusion_criteria": ": \n\n Secondary hypertension; \n\n Significant heart valve diseases; \n\n Hypertrophic cardiomyopathy; \n\n Signs and/or symptoms of myocardial ischemia during an ergometric test; \n\n Uncontrolled arrhythmia; \n\n Neurological and or orthopedic conditions contraindicating or limiting exercises; \n\n Significant chronic obstructive pulmonary disease (FEV1 <50%), \n\n Symptomatic peripheral arterial disease",
+ "cohorts": [
+  "a",
+  "b"
+ ]
+}

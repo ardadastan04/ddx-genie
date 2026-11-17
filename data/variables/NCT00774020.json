@@ -1,0 +1,200 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_osteitis_deformans_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of Paget's Disease of Bone (osteitis deformans).",
+  "when_true": "Set to true if the patient currently has a diagnosis of Paget's Disease of Bone (osteitis deformans).",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of Paget's Disease of Bone (osteitis deformans).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of Paget's Disease of Bone (osteitis deformans).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_osteitis_deformans_now@@confirmed_by_radiological_report",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current diagnosis of Paget's Disease of Bone (osteitis deformans) is confirmed by radiological report.",
+  "when_true": "Set to true if the patient's current diagnosis of Paget's Disease of Bone (osteitis deformans) is confirmed by radiological report.",
+  "when_false": "Set to false if the patient's current diagnosis of Paget's Disease of Bone (osteitis deformans) is not confirmed by radiological report.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the diagnosis is confirmed by radiological report.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_serum_alkaline_phosphatase_level_finding_value_recorded_now_withunit_u_per_l",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's current serum alkaline phosphatase level in units per liter (U/L).",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured value if the patient's current serum alkaline phosphatase level (in U/L) is available.",
+  "polarity": "numeric criterion"
+ },
+ {
+  "name": "patient_serum_alkaline_phosphatase_upper_limit_of_normal_now_withunit_u_per_l",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the current upper limit of normal for serum alkaline phosphatase in units per liter (U/L).",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the reference value is not available or indeterminate.",
+  "when_value": "Set to the reference value for the upper limit of normal for serum alkaline phosphatase (in U/L) at the time of measurement.",
+  "polarity": "numeric criterion"
+ },
+ {
+  "name": "patient_has_finding_of_hypersensitivity_to_active_substance_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever had a hypersensitivity (adverse reaction) to the active substance in their medical history.",
+  "when_true": "Set to true if the patient has ever had a hypersensitivity (adverse reaction) to the active substance at any time in their medical history.",
+  "when_false": "Set to false if the patient has never had a hypersensitivity (adverse reaction) to the active substance in their medical history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had a hypersensitivity (adverse reaction) to the active substance.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_adverse_reaction_to_pharmaceutical_excipient_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever had an adverse reaction (hypersensitivity) to any pharmaceutical excipient in their medical history.",
+  "when_true": "Set to true if the patient has ever had an adverse reaction (hypersensitivity) to any pharmaceutical excipient at any time in their medical history.",
+  "when_false": "Set to false if the patient has never had an adverse reaction (hypersensitivity) to any pharmaceutical excipient in their medical history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had an adverse reaction (hypersensitivity) to any pharmaceutical excipient.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_allergy_to_bisphosphonate_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever had an allergy (hypersensitivity) to any bisphosphonate in their medical history.",
+  "when_true": "Set to true if the patient has ever had an allergy (hypersensitivity) to any bisphosphonate at any time in their medical history.",
+  "when_false": "Set to false if the patient has never had an allergy (hypersensitivity) to any bisphosphonate in their medical history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had an allergy (hypersensitivity) to any bisphosphonate.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_malignant_neoplastic_disease_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever had a diagnosis of malignant neoplastic disease (malignancy) of any organ system in their medical history.",
+  "when_true": "Set to true if the patient has ever had a diagnosis of malignant neoplastic disease (malignancy) of any organ system at any point in their medical history.",
+  "when_false": "Set to false if the patient has never had a diagnosis of malignant neoplastic disease (malignancy) of any organ system in their medical history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had a diagnosis of malignant neoplastic disease (malignancy) of any organ system.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_disease_of_liver_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of liver disease.",
+  "when_true": "Set to true if the patient currently has a diagnosis of liver disease.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of liver disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of liver disease.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_disease_of_liver_now@@severe",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current liver disease diagnosis is severe.",
+  "when_true": "Set to true if the patient currently has a diagnosis of liver disease and the disease is severe.",
+  "when_false": "Set to false if the patient currently has a diagnosis of liver disease but it is not severe, or if the severity is known to be not severe.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the liver disease is severe.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_disorder_of_urinary_bladder_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of bladder disease.",
+  "when_true": "Set to true if the patient currently has a diagnosis of bladder disease.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of bladder disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of bladder disease.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_disorder_of_urinary_bladder_now@@severe",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current bladder disease diagnosis is severe.",
+  "when_true": "Set to true if the patient currently has a diagnosis of bladder disease and the disease is severe.",
+  "when_false": "Set to false if the patient currently has a diagnosis of bladder disease but it is not severe, or if the severity is known to be not severe.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the bladder disease is severe.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_measurement_of_renal_clearance_of_creatinine_value_recorded_now_withunit_ml_per_min",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric value representing the patient's calculated creatinine clearance (renal clearance of creatinine) measured now, in units of mL/min.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured value if the patient's calculated creatinine clearance (renal clearance of creatinine) in mL/min is recorded now.",
+  "polarity": "criterion met when < 35"
+ },
+ {
+  "name": "patient_measurement_of_renal_clearance_of_creatinine_value_recorded_now_withunit_ml_per_min@@measured_at_baseline",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the measurement of calculated creatinine clearance was taken at baseline.",
+  "when_true": "Set to true if the measurement of calculated creatinine clearance was taken at baseline.",
+  "when_false": "Set to false if the measurement was not taken at baseline.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the measurement was taken at baseline.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_hypocalcemia_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has hypocalcemia.",
+  "when_true": "Set to true if the patient currently has the clinical finding of hypocalcemia.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of hypocalcemia.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of hypocalcemia.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_disorder_of_teeth_and_or_supporting_structures_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever had a diagnosis of disorder of teeth and/or supporting structures (dental diseases) in their history.",
+  "when_true": "Set to true if the patient has a documented diagnosis of disorder of teeth and/or supporting structures (dental diseases) at any time prior to the present.",
+  "when_false": "Set to false if the patient has no documented diagnosis of disorder of teeth and/or supporting structures (dental diseases) at any time prior to the present.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had a diagnosis of disorder of teeth and/or supporting structures (dental diseases).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_will_undergo_dental_surgical_procedure_inthefuture",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is predicted or scheduled to undergo a dental surgical procedure in the future.",
+  "when_true": "Set to true if the patient is predicted, scheduled, or expected to undergo a dental surgical procedure at any time in the future (relative to now or study start).",
+  "when_false": "Set to false if the patient is not predicted, scheduled, or expected to undergo a dental surgical procedure at any time in the future.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient will undergo a dental surgical procedure in the future.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_vitamin_d_deficiency_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has evidence of vitamin D deficiency.",
+  "when_true": "Set to true if the patient currently has evidence of vitamin D deficiency.",
+  "when_false": "Set to false if the patient currently does not have evidence of vitamin D deficiency.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has evidence of vitamin D deficiency.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

@@ -1,0 +1,145 @@
+[
+ {
+  "name": "patient_has_finding_of_gastric_neurostimulator_device_in_situ_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a gastric neurostimulator device in situ.",
+  "when_true": "Set to true if the patient currently has a gastric neurostimulator device (e.g., Enterra) in situ.",
+  "when_false": "Set to false if the patient currently does not have a gastric neurostimulator device in situ.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a gastric neurostimulator device in situ.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "duration_of_gastric_neurostimulator_device_in_situ_now_in_months",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the duration in months that the patient has had a gastric neurostimulator device in situ as of now.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the duration is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the number of months the patient has continuously had a gastric neurostimulator device in situ up to now.",
+  "polarity": "criterion met when >= 2"
+ },
+ {
+  "name": "patient_has_finding_of_abdominal_pain_inthepast2months",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_abdominal_pain_inthepast2months@@moderate_severity",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_abdominal_pain_inthepast2months@@severe_severity",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_abdominal_pain_inthepast2months@@reported_on_at_least_one_pain_questionnaire",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_pain_value_recorded_inthepast2months_withunit_score_0_10",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when > 5"
+ },
+ {
+  "name": "patient_pain_value_recorded_inthepast2months_withunit_score_0_10@@measured_on_visual_analogue_scale_questionnaire",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_meets_abdominal_pain_criterion_inthepast2months",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_meets_abdominal_pain_criterion_inthepast2months@@refractory_to_original_enterra_gastric_electrical_stimulation_settings",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's persistent or chronic abdominal pain for at least 2 months is refractory to original Enterra gastric electrical stimulation settings.",
+  "when_true": "Set to true if the patient's persistent or chronic abdominal pain for at least 2 months is refractory to original Enterra gastric electrical stimulation settings.",
+  "when_false": "Set to false if the patient's persistent or chronic abdominal pain for at least 2 months is not refractory to original Enterra gastric electrical stimulation settings.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's persistent or chronic abdominal pain for at least 2 months is refractory to original Enterra gastric electrical stimulation settings.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_able_to_provide_informed_consent_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently able to provide informed consent.",
+  "when_true": "Set to true if the patient is currently able to provide informed consent.",
+  "when_false": "Set to false if the patient is currently unable to provide informed consent.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently able to provide informed consent.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is currently pregnant.",
+  "when_false": "Set to false if the patient is currently not pregnant.",
+  "when_unknown": "Set to null if the patient's current pregnancy status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_active_health_problem_now_that_renders_unable_to_complete_study",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has any other active health problem that would render the patient unable to complete the study.",
+  "when_true": "Set to true if the patient currently has any other active health problem that would render the patient unable to complete the study.",
+  "when_false": "Set to false if the patient currently does not have any other active health problem that would render the patient unable to complete the study.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has any other active health problem that would render the patient unable to complete the study.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

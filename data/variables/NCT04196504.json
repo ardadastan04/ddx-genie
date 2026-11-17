@@ -1,0 +1,112 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_acute_pancreatitis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of acute pancreatitis.",
+  "when_true": "Set to true if the patient currently has a diagnosis of acute pancreatitis.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of acute pancreatitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of acute pancreatitis.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when > 18"
+ },
+ {
+  "name": "patient_is_admitted_to_al_raghy_intensive_care_unit_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently admitted to Al-raghy intensive care unit.",
+  "when_true": "Set to true if the patient is currently admitted to Al-raghy intensive care unit.",
+  "when_false": "Set to false if the patient is currently not admitted to Al-raghy intensive care unit.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently admitted to Al-raghy intensive care unit.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_heart_disease_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of heart disease.",
+  "when_true": "Set to true if the patient currently has a diagnosis of heart disease.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of heart disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of heart disease.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_heart_disease_now@@known",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's diagnosis of heart disease is known (previously established or documented).",
+  "when_true": "Set to true if the patient has a diagnosis of heart disease and this diagnosis is known (previously established or documented).",
+  "when_false": "Set to false if the patient has a diagnosis of heart disease but it is not known (not previously established or documented).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the diagnosis of heart disease is known.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_pre_existing_diabetes",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has pre-existing diabetes.",
+  "when_true": "Set to true if the patient has a documented history of diabetes that was present prior to the current episode of care.",
+  "when_false": "Set to false if the patient does not have a documented history of diabetes prior to the current episode of care.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has pre-existing diabetes.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_pre_existing_chronic_renal_failure",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has pre-existing chronic renal failure.",
+  "when_true": "Set to true if the patient has a documented history of chronic renal failure that was present prior to the current episode of care.",
+  "when_false": "Set to false if the patient does not have a documented history of chronic renal failure prior to the current episode of care.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has pre-existing chronic renal failure.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_pre_existing_malignancy",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has pre-existing malignancy.",
+  "when_true": "Set to true if the patient has a documented history of malignancy that was present prior to the current episode of care.",
+  "when_false": "Set to false if the patient does not have a documented history of malignancy prior to the current episode of care.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has pre-existing malignancy.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_chronic_pancreatitis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has chronic pancreatitis.",
+  "when_true": "Set to true if the patient currently has the clinical finding of chronic pancreatitis.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of chronic pancreatitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of chronic pancreatitis.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_chronic_pancreatitis_now@@underlying",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's chronic pancreatitis is an underlying condition.",
+  "when_true": "Set to true if the patient's chronic pancreatitis is an underlying condition.",
+  "when_false": "Set to false if the patient's chronic pancreatitis is not an underlying condition.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's chronic pancreatitis is an underlying condition.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

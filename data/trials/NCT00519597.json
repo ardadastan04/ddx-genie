@@ -1,0 +1,16 @@
+{
+ "nct": "NCT00519597",
+ "title": "Continuous Positive Airway Pressure (CPAP) Treatment in Coronary Artery Disease and Sleep Apnea",
+ "conditions": [
+  "Coronary Artery Disease",
+  "Obstructive Sleep Apnea"
+ ],
+ "phase": "Phase 4",
+ "brief_summary": "Obstructive sleep apnea (OSA) worsens the prognosis in patients with coronary artery disease (CAD). Many of these subjects do not report daytime sleepiness, and therefore, are not considered for OSA treatment with continuous positive airway pressure (CPAP). There is lack of evidence regarding the impact of CPAP on the long-term prognosis of CAD patients with OSA. The Randomized Intervention with CPAP in CAD and OSA (RICCADSA) trial is designed to address if CPAP treatment reduces the combined rate of new revascularization, myocardial infarction, stroke and cardiovascular mortality over mean follow-up period of 3-years in CAD patients with OSA without daytime sleepiness.Secondary outcomes include cardiovascular biomarkers, cardiac function, maximal exercise capacity and quality of life at baseline, 3-month- and 1-year follow-up as well as polysomnographic findings and adherence to CPAP therapy.",
+ "inclusion_criteria": "inclusion criteria: \n\n Patients with angiographically-verified CAD who have newly undergone PCI or CABG treatment \n\n Written, informed study consent \n\n OSA (AHI>=15 per hour) or non-OSA (AHI<5 per hour) diagnosis on the unattended sleep recording at home \n\n ",
+ "exclusion_criteria": ": \n\n Patients with already treated OSAS \n\n Patients presenting mainly central apneas (Cheynes-Stokes breathing) \n\n Patients with borderline OSA (AHI <15 and >=5 per hour) upon the unattended sleep recording at home",
+ "cohorts": [
+  "a",
+  "b"
+ ]
+}

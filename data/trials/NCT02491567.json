@@ -1,0 +1,17 @@
+{
+ "nct": "NCT02491567",
+ "title": "DNA Methylation and Autoimmune Thyroid Diseases",
+ "conditions": [
+  "Hashimoto Thyroiditis",
+  "Graves Disease"
+ ],
+ "phase": "",
+ "brief_summary": "Hashimoto Thyroiditis (HT) and Graves Disease (GD) are known to be caused by abnormal immune response against self cells and tissues. Epigenetics is a novel field of biology studying the mechanisms by which the environment interacts with the genotype to produce a variety of phenotypes through modifications to chromatin that do not directly alter the DNA sequence. A very limited number of epigenetic studies have been published in patients with HT and GD so far. Therefore, the purpose of this study is to analyze DNA methylation status in White Blood Cells (WBCs) within the promoter regions of genomic sites that have been previously identified as susceptibility loci or sites for autoimmune thyroid disease, such as the CD40L, FOXP3, CTLA4, PTPN22, IL2RA, FCRL3 and HLADRB1 genes.",
+ "inclusion_criteria": "inclusion criteria: \n\n For HT: \n\n A positive titers of antithyroid peroxidase (anti-TPO) or antithyroglobulin (anti-Tg) antibodies and at least one of: \n\n Abnormal thyroid function that requires substitution treatment with L-thyroxine (TSH > 5 \u03bcIU/ml and decreased or normal levels of fT4 or fT3) \n\n Increased volume of thyroid gland (goiter) \n\n Morphological changes on ultrasound of the thyroid gland \n\n For GD: \n\n A positive titers of thyroid stimulating antibodies (anti-TSI) and \n\n Decreased TSH levels and increased levels of fT4 or fT3 \n\n For Controls: \n\n Otherwise healthy children and adolescents, age- and gender-matched with patients \n\n Absence of previously known chronic disease of autoimmune aetiology or atopy (including those with a history of chronic treatment with antihistamines, anti-inflammatory, corticosteroids or anti-epileptic drugs) \n\n Absence of a family history of autoimmune disease in first-degree relatives \n\n ",
+ "exclusion_criteria": ": \n\n Not Caucasian origin or affinity among participants \n\n Age of diagnosis above 18 years \n\n Disease duration below 3 months",
+ "cohorts": [
+  "a",
+  "b",
+  "c"
+ ]
+}

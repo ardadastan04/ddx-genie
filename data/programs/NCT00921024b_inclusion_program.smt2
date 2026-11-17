@@ -1,0 +1,57 @@
+;; ===================== QUALIFIER LINKER =====================
+;; Rule: add (qualifier => stem) only when BOTH are Bool; remove (stem => qualifier); drop ill-typed implications.
+;; Added_aux=10 Removed_reverse=0 Removed_illtyped=0 Skipped_nonbool_pairs=0
+;; =============================================================
+
+;; Declarations/definitions (original + any auto-added Bool stems)
+(declare-const patient_sex_is_male_now Bool)
+(declare-const patient_sex_is_female_now Bool)
+(declare-const patient_age_value_recorded_now_in_years Real)
+(declare-const patient_has_finding_of_pyuria_now Bool)
+(declare-const white_blood_cell_count_in_unspun_urine_value_recorded_now_withunit_per_microliter Real)
+(declare-const white_blood_cell_count_in_spun_urine_value_recorded_now_withunit_per_high_power_field Real)
+(declare-const patient_has_diagnosis_of_lower_urinary_tract_infectious_disease_now Bool)
+(declare-const patient_has_complicated_lower_urinary_tract_infection_now Bool)
+(declare-const patient_has_symptoms_of_dysuria_now@@new_or_worsening Bool)
+(declare-const patient_has_symptoms_of_frequency_now@@new_or_worsening Bool)
+(declare-const patient_has_symptoms_of_suprapubic_pain_now@@new_or_worsening Bool)
+(declare-const patient_has_symptoms_of_urgency_now@@new_or_worsening Bool)
+(declare-const patient_is_undergoing_manipulation_of_urinary_bladder_now Bool)
+(declare-const patient_has_indwelling_urinary_catheter_now@@expected_to_be_removed_during_course_of_intravenous_study_drug_administration Bool)
+(declare-const patient_has_finding_of_urinary_tract_obstruction_now@@expected_to_be_medically_treated_during_course_of_intravenous_study_drug_administration Bool)
+(declare-const patient_has_finding_of_urinary_tract_obstruction_now@@expected_to_be_surgically_treated_during_course_of_intravenous_study_drug_administration Bool)
+(declare-const patient_has_undergone_surgical_procedure_inthepast7days@@urogenital Bool)
+(declare-const patient_has_undergone_surgical_procedure_inthepast7days@@temporalcontext_within7days_before_administration_of_first_dose_of_study_drug Bool)
+(declare-const patient_has_finding_of_functional_abnormality_of_urogenital_tract_now Bool)
+(declare-const patient_has_finding_of_anatomical_abnormality_of_urogenital_tract_now Bool)
+(declare-const patient_has_finding_of_neurogenic_urinary_bladder_now@@voiding_disturbance_of_at_least_100_milliliters_residual_urine Bool)
+(declare-const patient_has_undergone_surgical_procedure_inthepast7days Bool)
+(declare-const patient_has_finding_of_urinary_tract_obstruction_now Bool)
+(declare-const patient_has_indwelling_urinary_catheter_now Bool)
+(declare-const patient_has_symptoms_of_frequency_now Bool)
+(declare-const patient_has_symptoms_of_dysuria_now Bool)
+(declare-const patient_has_finding_of_neurogenic_urinary_bladder_now Bool)
+(declare-const patient_has_symptoms_of_urgency_now Bool)
+(declare-const patient_has_symptoms_of_suprapubic_pain_now Bool)
+
+;; Existing auxiliary assertions
+(assert (! (= patient_has_finding_of_pyuria_now (or (> white_blood_cell_count_in_unspun_urine_value_recorded_now_withunit_per_microliter 10.0) (>= white_blood_cell_count_in_spun_urine_value_recorded_now_withunit_per_high_power_field 10.0))) :named REQ1_AUXILIARY0))
+(assert (! (= patient_has_complicated_lower_urinary_tract_infection_now (and patient_has_diagnosis_of_lower_urinary_tract_infectious_disease_now (or patient_has_symptoms_of_dysuria_now@@new_or_worsening patient_has_symptoms_of_frequency_now@@new_or_worsening patient_has_symptoms_of_suprapubic_pain_now@@new_or_worsening patient_has_symptoms_of_urgency_now@@new_or_worsening) (or patient_sex_is_male_now patient_is_undergoing_manipulation_of_urinary_bladder_now patient_has_indwelling_urinary_catheter_now@@expected_to_be_removed_during_course_of_intravenous_study_drug_administration patient_has_finding_of_urinary_tract_obstruction_now@@expected_to_be_medically_treated_during_course_of_intravenous_study_drug_administration patient_has_finding_of_urinary_tract_obstruction_now@@expected_to_be_surgically_treated_during_course_of_intravenous_study_drug_administration (and patient_has_undergone_surgical_procedure_inthepast7days@@urogenital patient_has_undergone_surgical_procedure_inthepast7days@@temporalcontext_within7days_before_administration_of_first_dose_of_study_drug) patient_has_finding_of_functional_abnormality_of_urogenital_tract_now patient_has_finding_of_anatomical_abnormality_of_urogenital_tract_now patient_has_finding_of_neurogenic_urinary_bladder_now@@voiding_disturbance_of_at_least_100_milliliters_residual_urine))) :named REQ2_AUXILIARY0))
+
+;; AUTO auxiliary (qualifier => stem) links [Bool→Bool]
+(assert (! (=> patient_has_finding_of_neurogenic_urinary_bladder_now@@voiding_disturbance_of_at_least_100_milliliters_residual_urine patient_has_finding_of_neurogenic_urinary_bladder_now) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_0))
+(assert (! (=> patient_has_finding_of_urinary_tract_obstruction_now@@expected_to_be_medically_treated_during_course_of_intravenous_study_drug_administration patient_has_finding_of_urinary_tract_obstruction_now) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_1))
+(assert (! (=> patient_has_finding_of_urinary_tract_obstruction_now@@expected_to_be_surgically_treated_during_course_of_intravenous_study_drug_administration patient_has_finding_of_urinary_tract_obstruction_now) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_2))
+(assert (! (=> patient_has_indwelling_urinary_catheter_now@@expected_to_be_removed_during_course_of_intravenous_study_drug_administration patient_has_indwelling_urinary_catheter_now) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_3))
+(assert (! (=> patient_has_symptoms_of_dysuria_now@@new_or_worsening patient_has_symptoms_of_dysuria_now) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_4))
+(assert (! (=> patient_has_symptoms_of_frequency_now@@new_or_worsening patient_has_symptoms_of_frequency_now) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_5))
+(assert (! (=> patient_has_symptoms_of_suprapubic_pain_now@@new_or_worsening patient_has_symptoms_of_suprapubic_pain_now) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_6))
+(assert (! (=> patient_has_symptoms_of_urgency_now@@new_or_worsening patient_has_symptoms_of_urgency_now) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_7))
+(assert (! (=> patient_has_undergone_surgical_procedure_inthepast7days@@temporalcontext_within7days_before_administration_of_first_dose_of_study_drug patient_has_undergone_surgical_procedure_inthepast7days) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_8))
+(assert (! (=> patient_has_undergone_surgical_procedure_inthepast7days@@urogenital patient_has_undergone_surgical_procedure_inthepast7days) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_9))
+
+;; Other kept assertions
+(assert (! (or patient_sex_is_male_now (and patient_sex_is_female_now (>= patient_age_value_recorded_now_in_years 18.0) (<= patient_age_value_recorded_now_in_years 90.0))) :named REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))
+(assert (! patient_has_finding_of_pyuria_now :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (or patient_has_symptoms_of_dysuria_now@@new_or_worsening patient_has_symptoms_of_frequency_now@@new_or_worsening patient_has_symptoms_of_suprapubic_pain_now@@new_or_worsening patient_has_symptoms_of_urgency_now@@new_or_worsening) :named REQ2_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))
+(assert (! (or patient_sex_is_male_now patient_is_undergoing_manipulation_of_urinary_bladder_now patient_has_indwelling_urinary_catheter_now@@expected_to_be_removed_during_course_of_intravenous_study_drug_administration patient_has_finding_of_urinary_tract_obstruction_now@@expected_to_be_medically_treated_during_course_of_intravenous_study_drug_administration patient_has_finding_of_urinary_tract_obstruction_now@@expected_to_be_surgically_treated_during_course_of_intravenous_study_drug_administration (and patient_has_undergone_surgical_procedure_inthepast7days@@urogenital patient_has_undergone_surgical_procedure_inthepast7days@@temporalcontext_within7days_before_administration_of_first_dose_of_study_drug) patient_has_finding_of_functional_abnormality_of_urogenital_tract_now patient_has_finding_of_anatomical_abnormality_of_urogenital_tract_now patient_has_finding_of_neurogenic_urinary_bladder_now@@voiding_disturbance_of_at_least_100_milliliters_residual_urine) :named REQ2_COMPONENT1_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))

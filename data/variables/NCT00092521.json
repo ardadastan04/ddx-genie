@@ -1,0 +1,145 @@
+[
+ {
+  "name": "patient_sex_is_female_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean value indicating whether the patient's sex is currently female.",
+  "when_true": "Set to true if the patient's sex is documented as female at the current time.",
+  "when_false": "Set to false if the patient's sex is documented as not female (male or other) at the current time.",
+  "when_unknown": "Set to null if the patient's sex is unknown, not documented, or cannot be determined at the current time.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_intact_uterus_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean value indicating whether the patient currently has an intact uterus.",
+  "when_true": "Set to true if the patient currently has an intact uterus (i.e., uterus present and not surgically removed or congenitally absent).",
+  "when_false": "Set to false if the patient does not have an intact uterus (e.g., uterus removed or absent).",
+  "when_unknown": "Set to null if the status of the uterus is unknown or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "sexual_partners_count_lifetime_value_recorded_in_persons",
+  "type": "Int",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when >= 0"
+ },
+ {
+  "name": "sexual_partners_count_lifetime_value_recorded_in_persons_is_known",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_sex_is_female_now_is_known",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_intact_uterus_now_is_known",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_undergone_administration_of_human_papilloma_virus_vaccine_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone administration of human papillomavirus vaccine at any time in their medical history.",
+  "when_true": "Set to true if the patient has ever undergone administration of human papillomavirus vaccine at any time in their medical history.",
+  "when_false": "Set to false if the patient has never undergone administration of human papillomavirus vaccine at any time in their medical history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone administration of human papillomavirus vaccine.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_abnormal_cervical_papanicolaou_smear_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever had an abnormal cervical Papanicolaou smear (abnormal Pap test result) in their medical history.",
+  "when_true": "Set to true if the patient has ever had an abnormal cervical Papanicolaou smear (abnormal Pap test result) at any time in their medical history.",
+  "when_false": "Set to false if the patient has never had an abnormal cervical Papanicolaou smear (abnormal Pap test result) in their medical history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had an abnormal cervical Papanicolaou smear (abnormal Pap test result).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_history_of_abnormal_pap_test",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_history_of_abnormal_pap_test@@strong_clinical_support",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_genital_warts_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever had a diagnosis of genital warts at any time in the past.",
+  "when_true": "Set to true if the patient has ever had a diagnosis of genital warts at any time in the past (i.e., there is a documented history of genital warts).",
+  "when_false": "Set to false if the patient has never had a diagnosis of genital warts at any time in the past (i.e., there is no documented history of genital warts).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had a diagnosis of genital warts.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_history_of_genital_warts",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_history_of_genital_warts@@strong_clinical_support",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

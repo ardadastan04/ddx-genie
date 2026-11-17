@@ -1,0 +1,156 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_benign_prostatic_hyperplasia_now@@symptomatic",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the diagnosis of benign prostatic hyperplasia is symptomatic.",
+  "when_true": "Set to true if the diagnosis of benign prostatic hyperplasia is symptomatic (the patient is experiencing symptoms attributable to BPH).",
+  "when_false": "Set to false if the diagnosis of benign prostatic hyperplasia is not symptomatic.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the diagnosis of benign prostatic hyperplasia is symptomatic.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_symptoms_of_benign_prostatic_hyperplasia_now@@determined_according_to_physician",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the presence of symptoms of benign prostatic hyperplasia is determined according to the physician.",
+  "when_true": "Set to true if the presence of symptoms of benign prostatic hyperplasia is determined according to the physician.",
+  "when_false": "Set to false if the presence of symptoms is not determined according to the physician.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the presence of symptoms is determined according to the physician.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_symptoms_of_benign_prostatic_hyperplasia_now@@require_medical_treatment_to_improve_quality_of_life",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the symptoms of benign prostatic hyperplasia require medical treatment to improve quality of life.",
+  "when_true": "Set to true if the symptoms of benign prostatic hyperplasia require medical treatment to improve quality of life.",
+  "when_false": "Set to false if the symptoms of benign prostatic hyperplasia do not require medical treatment to improve quality of life.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the symptoms require medical treatment to improve quality of life.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_symptoms_of_benign_prostatic_hyperplasia_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has symptoms of benign prostatic hyperplasia.",
+  "when_true": "Set to true if the patient currently has symptoms of benign prostatic hyperplasia.",
+  "when_false": "Set to false if the patient currently does not have symptoms of benign prostatic hyperplasia.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has symptoms of benign prostatic hyperplasia.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_medical_therapy_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone medical therapy at any time in their history.",
+  "when_true": "Set to true if the patient has ever undergone medical therapy at any time in their history.",
+  "when_false": "Set to false if the patient has never undergone medical therapy at any time in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone medical therapy at any time in their history.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_medical_therapy_inthehistory@@outcome_is_inadequate_response",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone medical therapy at any time in their history and did not respond adequately to it.",
+  "when_true": "Set to true if the patient has ever undergone medical therapy at any time in their history and did not respond adequately to it.",
+  "when_false": "Set to false if the patient has ever undergone medical therapy at any time in their history and did respond adequately to it.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient responded adequately to medical therapy.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_undergoing_medical_therapy_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently undergoing medical therapy.",
+  "when_true": "Set to true if the patient is currently undergoing medical therapy.",
+  "when_false": "Set to false if the patient is not currently undergoing medical therapy.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently undergoing medical therapy.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_undergoing_medical_therapy_now@@with_other_drugs",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current medical therapy is being administered with other drugs.",
+  "when_true": "Set to true if the patient is currently undergoing medical therapy and it is being administered with other drugs.",
+  "when_false": "Set to false if the patient is currently undergoing medical therapy but not with other drugs.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the current medical therapy is with other drugs.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_benign_prostatic_hyperplasia_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_hypersensitivity_condition_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a hypersensitivity condition.",
+  "when_true": "Set to true if the patient currently has a hypersensitivity condition.",
+  "when_false": "Set to false if the patient currently does not have a hypersensitivity condition.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a hypersensitivity condition.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_hypersensitivity_condition_now@@to_tamsulosin",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current hypersensitivity condition is to Tamsulosin.",
+  "when_true": "Set to true if the patient's current hypersensitivity condition is specifically to Tamsulosin.",
+  "when_false": "Set to false if the patient's current hypersensitivity condition is not to Tamsulosin.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current hypersensitivity condition is to Tamsulosin.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_hypersensitivity_condition_now@@to_any_other_component_of_the_product",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current hypersensitivity condition is to any other component of the product.",
+  "when_true": "Set to true if the patient's current hypersensitivity condition is specifically to any other component of the product.",
+  "when_false": "Set to false if the patient's current hypersensitivity condition is not to any other component of the product.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current hypersensitivity condition is to any other component of the product.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_orthostatic_hypotension_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has a history of orthostatic hypotension.",
+  "when_true": "Set to true if the patient has a documented history of orthostatic hypotension.",
+  "when_false": "Set to false if the patient does not have a documented history of orthostatic hypotension.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has a history of orthostatic hypotension.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_hepatic_failure_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has a history of hepatic failure.",
+  "when_true": "Set to true if the patient has a documented history of hepatic failure.",
+  "when_false": "Set to false if the patient does not have a documented history of hepatic failure.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has a history of hepatic failure.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

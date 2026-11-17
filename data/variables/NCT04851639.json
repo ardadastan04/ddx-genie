@@ -1,0 +1,101 @@
+[
+ {
+  "name": "patient_sex_is_male_at_birth",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's sex assigned at birth is male.",
+  "when_true": "Set to true if the patient's sex assigned at birth is male.",
+  "when_false": "Set to false if the patient's sex assigned at birth is not male (e.g., female, other, unknown).",
+  "when_unknown": "Set to null if the patient's sex assigned at birth is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "appears with opposing polarity"
+ },
+ {
+  "name": "patient_has_diagnosis_of_advanced_prostate_cancer_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever been diagnosed with advanced prostate cancer in their medical history.",
+  "when_true": "Set to true if the patient has ever been diagnosed with advanced prostate cancer at any point in their medical history.",
+  "when_false": "Set to false if the patient has never been diagnosed with advanced prostate cancer at any point in their medical history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been diagnosed with advanced prostate cancer in their medical history.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_metastatic_carcinoma_to_prostate_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever been diagnosed with metastatic carcinoma to prostate (metastatic prostate cancer) in their medical history.",
+  "when_true": "Set to true if the patient has ever been diagnosed with metastatic carcinoma to prostate (metastatic prostate cancer) at any point in their medical history.",
+  "when_false": "Set to false if the patient has never been diagnosed with metastatic carcinoma to prostate (metastatic prostate cancer) at any point in their medical history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been diagnosed with metastatic carcinoma to prostate (metastatic prostate cancer).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_able_to_read_english",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is able to read English.",
+  "when_true": "Set to true if the patient is able to read English.",
+  "when_false": "Set to false if the patient is not able to read English.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is able to read English.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_able_to_speak_english",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is able to speak English.",
+  "when_true": "Set to true if the patient is able to speak English.",
+  "when_false": "Set to false if the patient is not able to speak English.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is able to speak English.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_malignant_neoplasm_of_prostate_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever been diagnosed with malignant neoplasm of prostate (prostate cancer) in their medical history.",
+  "when_true": "Set to true if the patient has ever been diagnosed with malignant neoplasm of prostate (prostate cancer) at any point in their medical history.",
+  "when_false": "Set to false if the patient has never been diagnosed with malignant neoplasm of prostate (prostate cancer) at any point in their medical history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been diagnosed with malignant neoplasm of prostate (prostate cancer).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_malignant_neoplasm_of_prostate_inthehistory@@advanced",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the diagnosis of malignant neoplasm of prostate (prostate cancer) is advanced.",
+  "when_true": "Set to true if the diagnosis of malignant neoplasm of prostate (prostate cancer) is specifically advanced prostate cancer.",
+  "when_false": "Set to false if the diagnosis is not advanced prostate cancer.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the diagnosis is advanced prostate cancer.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_able_to_read_english_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently able to read English.",
+  "when_true": "Set to true if the patient is currently able to read English.",
+  "when_false": "Set to false if the patient is currently not able to read English.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently able to read English.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_able_to_speak_english_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently able to speak English.",
+  "when_true": "Set to true if the patient is currently able to speak English.",
+  "when_false": "Set to false if the patient is currently not able to speak English.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently able to speak English.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ }
+]

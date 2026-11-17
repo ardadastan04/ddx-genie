@@ -1,0 +1,134 @@
+[
+ {
+  "name": "patient_has_participated_in_study_nct02786667",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has participated in the study of non-motor aspects in de novo Parkinson's disease (Honeymoon) (ClinicalTrials.gov Identifier: NCT02786667).",
+  "when_true": "Set to true if the patient has participated in the study of non-motor aspects in de novo Parkinson's disease (Honeymoon) (ClinicalTrials.gov Identifier: NCT02786667).",
+  "when_false": "Set to false if the patient has not participated in the study of non-motor aspects in de novo Parkinson's disease (Honeymoon) (ClinicalTrials.gov Identifier: NCT02786667).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has participated in the study of non-motor aspects in de novo Parkinson's disease (Honeymoon) (ClinicalTrials.gov Identifier: NCT02786667).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_receiving_dopaminergic_treatment_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently receiving dopaminergic treatment.",
+  "when_true": "Set to true if the patient is currently receiving dopaminergic treatment.",
+  "when_false": "Set to false if the patient is not currently receiving dopaminergic treatment.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently receiving dopaminergic treatment.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "duration_of_stable_dopaminergic_treatment_in_months",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the duration, in months, for which the patient has been on stable dopaminergic treatment.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the duration of stable dopaminergic treatment is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the number of months the patient has been on stable dopaminergic treatment.",
+  "polarity": "criterion met when >= 2"
+ },
+ {
+  "name": "patient_has_medical_insurance_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_other_than_parkinson_s_disease_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has any diagnosis other than Parkinson's Disease.",
+  "when_true": "Set to true if the patient currently has any diagnosis other than Parkinson's Disease.",
+  "when_false": "Set to false if the patient currently does not have any diagnosis other than Parkinson's Disease (i.e., has only Parkinson's Disease or no diagnosis at all).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has any diagnosis other than Parkinson's Disease.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "mattis_dementia_rating_scale_total_score_value_recorded_most_recent_withunit_points",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric value representing the most recent Mattis Dementia Rating Scale total score for the patient, in points.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the Mattis Dementia Rating Scale total score is not available, not documented, or cannot be determined for the patient.",
+  "when_value": "Set to the most recent recorded total score value on the Mattis Dementia Rating Scale for the patient, in points.",
+  "polarity": "criterion met when < 130"
+ },
+ {
+  "name": "patient_has_diagnosis_of_dementia_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of dementia.",
+  "when_true": "Set to true if the patient currently has a diagnosis of dementia.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of dementia.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of dementia.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is currently pregnant.",
+  "when_false": "Set to false if the patient is currently known not to be pregnant.",
+  "when_unknown": "Set to null if the patient's current pregnancy status is unknown or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_parturient_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently a parturient woman (in labor or actively delivering a baby).",
+  "when_true": "Set to true if the patient is currently a parturient woman (in labor or actively delivering a baby).",
+  "when_false": "Set to false if the patient is not currently a parturient woman.",
+  "when_unknown": "Set to null if the patient's parturient status is unknown or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "mattis_score_value_recorded_most_recently_withunit_points",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric value representing the most recently recorded Mattis score for the patient, in points.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the Mattis score is not available, not documented, or cannot be determined for the patient.",
+  "when_value": "Set to the most recently recorded Mattis score value in points for the patient.",
+  "polarity": "criterion met when < 130"
+ },
+ {
+  "name": "patient_is_postpartum_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently in the postpartum period (recently delivered a baby).",
+  "when_true": "Set to true if the patient is currently in the postpartum period (recently delivered a baby).",
+  "when_false": "Set to false if the patient is not currently in the postpartum period.",
+  "when_unknown": "Set to null if the patient's postpartum status is unknown or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_protected_by_law_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient is currently protected by law.",
+  "when_true": "Set to true if the patient is currently protected by law (e.g., due to pregnancy, postpartum status, or other legal protections).",
+  "when_false": "Set to false if the patient is not currently protected by law.",
+  "when_unknown": "Set to null if the patient's legal protection status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

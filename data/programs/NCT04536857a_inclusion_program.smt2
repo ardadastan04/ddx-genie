@@ -1,0 +1,52 @@
+;; ===================== QUALIFIER LINKER =====================
+;; Rule: add (qualifier => stem) only when BOTH are Bool; remove (stem => qualifier); drop ill-typed implications.
+;; Added_aux=0 Removed_reverse=0 Removed_illtyped=0 Skipped_nonbool_pairs=0
+;; =============================================================
+
+;; Declarations/definitions (original + any auto-added Bool stems)
+(declare-const patient_has_diagnosis_of_parkinson_s_disease_now Bool)
+(declare-const patient_has_diagnosis_of_parkinson_s_disease_now@@diagnosed_by_two_movement_disorder_neurologists Bool)
+(declare-const patient_has_diagnosis_of_parkinson_s_disease_now@@diagnosed_according_to_ipmds_clinical_diagnostic_criteria_2015 Bool)
+(declare-const patient_has_diagnosis_of_parkinson_s_disease_now@@diagnosis_is_probable Bool)
+(declare-const patient_age_value_recorded_now_in_years Real)
+(declare-const disease_duration_value_recorded_now_in_years Real)
+(declare-const hoehn_and_yahr_stage_value_recorded_now Real)
+(declare-const dopamine_reuptake_transporter_level_in_striatum_on_positron_emission_tomography_value_recorded_in_standardized_uptake_value_ratio Real)
+(declare-const patient_has_undergone_positron_emission_tomography_inthehistory Bool)
+(declare-const patient_has_undergone_positron_emission_tomography_inthehistory@@used_to_detect_significantly_reduced_dopamine_reuptake_transporter_in_striatum Bool)
+(declare-const patient_has_significantly_reduced_dopamine_reuptake_transporter_in_striatum_on_pet_now Bool)
+(declare-const patient_has_undergone_pet_ct_using_fluorodeoxyglucose_now Bool)
+(declare-const patient_has_undergone_pet_ct_using_fluorodeoxyglucose_now@@detects_metabolic_brain_network_consistent_with_parkinsons_disease_pattern Bool)
+(declare-const patient_is_exposed_to_fluorodeoxyglucose_now Bool)
+(declare-const patient_is_exposed_to_fluorodeoxyglucose_now@@hypermetabolism_present_in_basal_ganglia Bool)
+(declare-const patient_is_exposed_to_fluorodeoxyglucose_now@@hypermetabolism_present_in_cerebellum Bool)
+(declare-const patient_has_good_response_to_anti_parkinsons_disease_medications_now Bool)
+(declare-const patient_has_ability_to_complete_questionnaires_now Bool)
+(declare-const patient_has_ability_to_provide_informed_consent_now Bool)
+(declare-const patient_has_discontinued_anti_parkinsons_disease_medications_for_at_least_12_hours_prior_to_assessment Bool)
+(declare-const anti_parkinsons_disease_medications_discontinuation_duration_value_recorded_prior_to_assessment_withunit_hours Real)
+(define-fun THRESHOLD_SIGNIFICANTLY_REDUCED_DOPAMINE_REUPTAKE_TRANSPORTER_SUVR () Real 1.0)
+
+;; Existing auxiliary assertions
+(assert (! (=> patient_has_diagnosis_of_parkinson_s_disease_now@@diagnosed_by_two_movement_disorder_neurologists patient_has_diagnosis_of_parkinson_s_disease_now) :named REQ0_AUXILIARY0))
+(assert (! (=> patient_has_diagnosis_of_parkinson_s_disease_now@@diagnosed_according_to_ipmds_clinical_diagnostic_criteria_2015 patient_has_diagnosis_of_parkinson_s_disease_now) :named REQ0_AUXILIARY1))
+(assert (! (=> patient_has_diagnosis_of_parkinson_s_disease_now@@diagnosis_is_probable patient_has_diagnosis_of_parkinson_s_disease_now) :named REQ0_AUXILIARY2))
+(assert (! (=> patient_has_undergone_positron_emission_tomography_inthehistory@@used_to_detect_significantly_reduced_dopamine_reuptake_transporter_in_striatum patient_has_undergone_positron_emission_tomography_inthehistory) :named REQ2_AUXILIARY0))
+(assert (! (= patient_has_significantly_reduced_dopamine_reuptake_transporter_in_striatum_on_pet_now (and patient_has_undergone_positron_emission_tomography_inthehistory@@used_to_detect_significantly_reduced_dopamine_reuptake_transporter_in_striatum (< dopamine_reuptake_transporter_level_in_striatum_on_positron_emission_tomography_value_recorded_in_standardized_uptake_value_ratio THRESHOLD_SIGNIFICANTLY_REDUCED_DOPAMINE_REUPTAKE_TRANSPORTER_SUVR))) :named REQ2_AUXILIARY1))
+(assert (! (=> patient_has_undergone_pet_ct_using_fluorodeoxyglucose_now@@detects_metabolic_brain_network_consistent_with_parkinsons_disease_pattern patient_has_undergone_pet_ct_using_fluorodeoxyglucose_now) :named REQ3_AUXILIARY0))
+(assert (! (=> patient_is_exposed_to_fluorodeoxyglucose_now@@hypermetabolism_present_in_basal_ganglia patient_is_exposed_to_fluorodeoxyglucose_now) :named REQ3_AUXILIARY1))
+(assert (! (=> patient_is_exposed_to_fluorodeoxyglucose_now@@hypermetabolism_present_in_cerebellum patient_is_exposed_to_fluorodeoxyglucose_now) :named REQ3_AUXILIARY2))
+(assert (! (= patient_has_discontinued_anti_parkinsons_disease_medications_for_at_least_12_hours_prior_to_assessment (>= anti_parkinsons_disease_medications_discontinuation_duration_value_recorded_prior_to_assessment_withunit_hours 12.0)) :named REQ7_AUXILIARY0))
+
+;; Other kept assertions
+(assert (! (and patient_has_diagnosis_of_parkinson_s_disease_now@@diagnosed_by_two_movement_disorder_neurologists patient_has_diagnosis_of_parkinson_s_disease_now@@diagnosed_according_to_ipmds_clinical_diagnostic_criteria_2015 patient_has_diagnosis_of_parkinson_s_disease_now@@diagnosis_is_probable) :named REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))
+(assert (! (>= patient_age_value_recorded_now_in_years 50.0) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (<= patient_age_value_recorded_now_in_years 75.0) :named REQ1_COMPONENT1_OTHER_REQUIREMENTS))
+(assert (! (< disease_duration_value_recorded_now_in_years 1.0) :named REQ1_COMPONENT2_OTHER_REQUIREMENTS))
+(assert (! (= hoehn_and_yahr_stage_value_recorded_now 1.0) :named REQ1_COMPONENT3_OTHER_REQUIREMENTS))
+(assert (! patient_has_significantly_reduced_dopamine_reuptake_transporter_in_striatum_on_pet_now :named REQ2_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (and patient_has_undergone_pet_ct_using_fluorodeoxyglucose_now@@detects_metabolic_brain_network_consistent_with_parkinsons_disease_pattern patient_is_exposed_to_fluorodeoxyglucose_now@@hypermetabolism_present_in_basal_ganglia) :named REQ3_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (and patient_has_undergone_pet_ct_using_fluorodeoxyglucose_now@@detects_metabolic_brain_network_consistent_with_parkinsons_disease_pattern patient_is_exposed_to_fluorodeoxyglucose_now@@hypermetabolism_present_in_cerebellum) :named REQ3_COMPONENT1_OTHER_REQUIREMENTS))
+(assert (! patient_has_good_response_to_anti_parkinsons_disease_medications_now :named REQ4_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! patient_has_ability_to_complete_questionnaires_now :named REQ5_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! patient_has_ability_to_provide_informed_consent_now :named REQ6_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))

@@ -1,0 +1,222 @@
+[
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when >= 18"
+ },
+ {
+  "name": "patient_has_finding_of_acute_diarrhea_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_infectious_enteritis_of_intestine_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_fever_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_nausea_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_loss_of_appetite_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_vomiting_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_abdominal_pain_now@@severe",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_abdominal_discomfort_now@@severe",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_at_least_one_other_sign_of_enteric_infection_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_undergone_clostridium_difficile_toxin_assay_now_outcome_is_positive",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has undergone a Clostridium difficile stool toxin assay at screening with a positive result.",
+  "when_true": "Set to true if the patient has undergone a Clostridium difficile stool toxin assay at screening and the result was positive.",
+  "when_false": "Set to false if the patient has undergone the assay at screening and the result was not positive, or if the assay was not performed at screening.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has undergone a Clostridium difficile stool toxin assay at screening with a positive result.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_undergone_clostridium_difficile_toxin_assay_now_outcome_is_positive@@temporalcontext_screening",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the Clostridium difficile stool toxin assay was performed at the screening visit.",
+  "when_true": "Set to true if the Clostridium difficile stool toxin assay was performed at the screening visit.",
+  "when_false": "Set to false if the assay was not performed at the screening visit.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the assay was performed at the screening visit.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_abdominal_pain_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_abdominal_discomfort_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "number_of_previous_episodes_of_clostridioides_difficile_infection_in_the_past_6_months",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric variable indicating the number of previous episodes of clinically diagnosed Clostridioides difficile infection the patient has had within the past 6 months.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined how many previous episodes of clinically diagnosed Clostridioides difficile infection the patient has had within the past 6 months.",
+  "when_value": "Set to the number of previous episodes of clinically diagnosed Clostridioides difficile infection the patient has had within the past 6 months.",
+  "polarity": "criterion met when >= 1"
+ },
+ {
+  "name": "patient_has_diagnosis_of_chronic_disease_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of any chronic disease.",
+  "when_true": "Set to true if the patient currently has a diagnosis of any chronic disease.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of any chronic disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of any chronic disease.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_chronic_disease_now@@associated_with_chronic_diarrhea",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the chronic disease diagnosis present in the patient is associated with chronic diarrhea.",
+  "when_true": "Set to true if the chronic disease diagnosis present in the patient is associated with chronic diarrhea.",
+  "when_false": "Set to false if the chronic disease diagnosis present in the patient is not associated with chronic diarrhea.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the chronic disease diagnosis present in the patient is associated with chronic diarrhea.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_inflammatory_bowel_disease_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of inflammatory bowel disease.",
+  "when_true": "Set to true if the patient currently has a diagnosis of inflammatory bowel disease.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of inflammatory bowel disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of inflammatory bowel disease.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_irritable_bowel_syndrome_with_diarrhea_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of diarrhea-predominant irritable bowel syndrome.",
+  "when_true": "Set to true if the patient currently has a diagnosis of diarrhea-predominant irritable bowel syndrome.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of diarrhea-predominant irritable bowel syndrome.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of diarrhea-predominant irritable bowel syndrome.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_received_therapy_for_clostridium_difficile_infection_prior_to_randomization",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has received any therapy with any agent administered for the treatment of Clostridium difficile infection at any time prior to randomization.",
+  "when_true": "Set to true if the patient has received any therapy with any agent administered for the treatment of Clostridium difficile infection at any time prior to randomization.",
+  "when_false": "Set to false if the patient has not received any therapy with any agent administered for the treatment of Clostridium difficile infection at any time prior to randomization.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has received any therapy with any agent administered for the treatment of Clostridium difficile infection at any time prior to randomization.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

@@ -1,0 +1,211 @@
+[
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when >= 18"
+ },
+ {
+  "name": "patient_is_capable_of_providing_informed_consent_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently capable of providing informed consent.",
+  "when_true": "Set to true if the patient is currently capable of providing informed consent.",
+  "when_false": "Set to false if the patient is currently not capable of providing informed consent.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently capable of providing informed consent.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_capable_of_giving_competent_informed_consent_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently capable of giving competent informed consent, as defined by clinical or cognitive assessment.",
+  "when_true": "Set to true if the patient is currently capable of giving competent informed consent, as determined by clinical or cognitive assessment.",
+  "when_false": "Set to false if the patient is currently not capable of giving competent informed consent, as determined by clinical or cognitive assessment.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently capable of giving competent informed consent.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_capable_of_providing_assent_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently capable of providing assent.",
+  "when_true": "Set to true if the patient is currently capable of providing assent.",
+  "when_false": "Set to false if the patient is currently not capable of providing assent.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently capable of providing assent.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "legal_representative_is_able_to_provide_informed_consent_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's legal representative is currently able to provide informed consent on behalf of the patient.",
+  "when_true": "Set to true if the patient's legal representative is currently able to provide informed consent on behalf of the patient.",
+  "when_false": "Set to false if the patient's legal representative is currently not able to provide informed consent on behalf of the patient.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's legal representative is currently able to provide informed consent on behalf of the patient.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_mini_mental_state_examination_score_value_recorded_now_withunit_score",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's current Mini Mental State Examination (MMSE) score.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such MMSE score measurement recorded now is available or the value is indeterminate.",
+  "when_value": "Set to the measured MMSE score value if a numeric measurement of the Mini Mental State Examination score recorded now is available.",
+  "polarity": "criterion met when < 24"
+ },
+ {
+  "name": "patient_is_not_capable_of_giving_competent_informed_consent_due_to_mmse_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently not capable of giving competent informed consent due to MMSE score < 24.",
+  "when_true": "Set to true if the patient's Mini Mental State Examination score recorded now is less than 24.",
+  "when_false": "Set to false if the patient's Mini Mental State Examination score recorded now is 24 or greater.",
+  "when_unknown": "Set to null if the patient's Mini Mental State Examination score is not available or indeterminate.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_voiced_concern_about_own_memory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has voiced concern about their own memory.",
+  "when_true": "Set to true if the patient has voiced concern about their own memory.",
+  "when_false": "Set to false if the patient has not voiced concern about their own memory.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has voiced concern about their own memory.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_family_has_voiced_concern_about_patient_memory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's family has voiced concern about the patient's memory.",
+  "when_true": "Set to true if the patient's family has voiced concern about the patient's memory.",
+  "when_false": "Set to false if the patient's family has not voiced concern about the patient's memory.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's family has voiced concern about the patient's memory.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_family_has_knowledge_of_patient_memory_disorder_diagnosis",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's family possesses knowledge that the patient has been diagnosed with a memory disorder.",
+  "when_true": "Set to true if the patient's family possesses knowledge that the patient has been diagnosed with a memory disorder.",
+  "when_false": "Set to false if the patient's family does not possess knowledge that the patient has been diagnosed with a memory disorder.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's family possesses knowledge that the patient has been diagnosed with a memory disorder.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_memory_impairment_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever been diagnosed with memory impairment (memory disorder) at any time in their history.",
+  "when_true": "Set to true if the patient has ever been diagnosed with memory impairment (memory disorder) at any time in their history.",
+  "when_false": "Set to false if the patient has never been diagnosed with memory impairment (memory disorder) at any time in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been diagnosed with memory impairment (memory disorder).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_age_associated_memory_impairment_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever been diagnosed with age associated memory impairment at any time in their history.",
+  "when_true": "Set to true if the patient has ever been diagnosed with age associated memory impairment at any time in their history.",
+  "when_false": "Set to false if the patient has never been diagnosed with age associated memory impairment at any time in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been diagnosed with age associated memory impairment.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_alzheimer_s_disease_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever been diagnosed with Alzheimer's disease at any time in their history.",
+  "when_true": "Set to true if the patient has ever been diagnosed with Alzheimer's disease at any time in their history.",
+  "when_false": "Set to false if the patient has never been diagnosed with Alzheimer's disease at any time in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been diagnosed with Alzheimer's disease.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_parkinson_s_disease_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever been diagnosed with Parkinson's disease at any time in their history.",
+  "when_true": "Set to true if the patient has ever been diagnosed with Parkinson's disease at any time in their history.",
+  "when_false": "Set to false if the patient has never been diagnosed with Parkinson's disease at any time in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been diagnosed with Parkinson's disease.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_huntington_s_chorea_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever been diagnosed with Huntington's disease at any time in their history.",
+  "when_true": "Set to true if the patient has ever been diagnosed with Huntington's disease at any time in their history.",
+  "when_false": "Set to false if the patient has never been diagnosed with Huntington's disease at any time in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been diagnosed with Huntington's disease.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_vascular_dementia_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever been diagnosed with vascular dementia at any time in their history.",
+  "when_true": "Set to true if the patient has ever been diagnosed with vascular dementia at any time in their history.",
+  "when_false": "Set to false if the patient has never been diagnosed with vascular dementia at any time in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been diagnosed with vascular dementia.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_mixed_dementia_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever been diagnosed with mixed dementia at any time in their history.",
+  "when_true": "Set to true if the patient has ever been diagnosed with mixed dementia at any time in their history.",
+  "when_false": "Set to false if the patient has never been diagnosed with mixed dementia at any time in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been diagnosed with mixed dementia.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_dementia_due_to_lewy_body_disease_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever been diagnosed with dementia due to Lewy body disease at any time in their history.",
+  "when_true": "Set to true if the patient has ever been diagnosed with dementia due to Lewy body disease at any time in their history.",
+  "when_false": "Set to false if the patient has never been diagnosed with dementia due to Lewy body disease at any time in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been diagnosed with dementia due to Lewy body disease.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_frontotemporal_dementia_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever been diagnosed with frontotemporal dementia at any time in their history.",
+  "when_true": "Set to true if the patient has ever been diagnosed with frontotemporal dementia at any time in their history.",
+  "when_false": "Set to false if the patient has never been diagnosed with frontotemporal dementia at any time in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been diagnosed with frontotemporal dementia.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ }
+]

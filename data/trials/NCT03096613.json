@@ -1,0 +1,15 @@
+{
+ "nct": "NCT03096613",
+ "title": "Thyroid Hormone Replacement for Subclinical Hypothyroidism and Chronic Heart Failure (ThyroHeart-CHF)",
+ "conditions": [
+  "Heart Failure",
+  "Subclinical Hypothyroidism"
+ ],
+ "phase": "Phase 4",
+ "brief_summary": "Based on accumulating evidence showing that hypothyroid status is associated with poor prognosis among heart failure (HF) patients, the study is designed to evaluate whether replacement treatment with levothyroxine could have beneficial effects on patients with HF and subclinical hypothyroidism. The study is a prospective, randomized, parallel-group trial to assess the efficacy and safety of levothyroxine replacement on evidence-based HF standard therapy in stable chronic heart failure patients with subclinical hypothyroidism.",
+ "inclusion_criteria": "inclusion criteria: \n\n Aged 18 years or older, male or female. \n\n Systolic heart failure with New York Heart Association (NYHA) class II-III. \n\n Left ventricular ejection fraction (LVEF) less than 40% by echocardiography during screening and randomization. \n\n SCH (TSH: upper limits of normal (ULN) -10mIU/L, and FT4 level within reference range). \n\n Having received standard HF therapy for at least 2 weeks, having reached target dose or max tolerable dose. \n\n Provided informed consent. \n\n ",
+ "exclusion_criteria": ": \n\n Acute heart failure or acute exacerbation of chronic heart failure within the past 2 weeks. \n\n Scheduled cardiac resynchronization therapy or heart transplantation. \n\n History of malignant tumor or life expectancy under 12 months. \n\n Already on medications that may affect thyroid function (L-T4, carbimazole, propylthiouracil, amiodarone, lithium). \n\n Pregnancy and lactation period. \n\n Participation in another clinical trial within the past 30 days. \n\n Contraindication or intolerance to evidence-based therapy for CHF, such as beta-blocker, angiotensin-converting enzyme inhibitor or angiotensin receptor blocker. \n\n Known hypersensitivity to the trial treatment(s) or diluents (when applicable), including placebo or other comparator drug(s). \n\n Untreated adrenal insufficiency. \n\n Untreated pituitary insufficiency. \n\n Untreated thyrotoxicosis. \n\n Treatment with levothyroxine must not be initiated in patients with acute myocardial infarction, acute myocarditis, or acute pancarditis. \n\n Severe renal dysfunction (eGFR\u226430 ml/min/1.73m2). \n\n Significant hepatic impairment (Serum GPT > 120 U/L). \n\n Any disorder which, in the opinion of the investigator, might jeopardise subject's safety or compliance with the protocol.",
+ "cohorts": [
+  ""
+ ]
+}

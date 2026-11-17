@@ -1,0 +1,123 @@
+[
+ {
+  "name": "patient_has_capacity_to_give_informed_consent_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has the capacity to give informed consent.",
+  "when_true": "Set to true if the patient currently has the capacity to give informed consent.",
+  "when_false": "Set to false if the patient currently does not have the capacity to give informed consent.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the capacity to give informed consent.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_partial_anterior_cerebral_circulation_infarction_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has the clinical finding of partial anterior cerebral circulation infarction.",
+  "when_true": "Set to true if the patient currently has the clinical finding of partial anterior cerebral circulation infarction.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of partial anterior cerebral circulation infarction.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of partial anterior cerebral circulation infarction.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_transient_cerebral_ischemia_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has the clinical finding of transient cerebral ischemia.",
+  "when_true": "Set to true if the patient currently has the clinical finding of transient cerebral ischemia.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of transient cerebral ischemia.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of transient cerebral ischemia.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_stenosis_of_carotid_artery_value_recorded_now_withunit_percent",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric percentage representing the patient's current degree of carotid artery stenosis.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no current measurement of carotid artery stenosis is available or the value is indeterminate.",
+  "when_value": "Set to the measured percentage value if a current measurement of carotid artery stenosis is available.",
+  "polarity": "criterion met when > 50"
+ },
+ {
+  "name": "patient_is_lacking_capacity_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently lacks capacity.",
+  "when_true": "Set to true if the patient is currently lacking capacity.",
+  "when_false": "Set to false if the patient is currently not lacking capacity.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently lacking capacity.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_carotid_artery_occlusion_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has carotid artery occlusion.",
+  "when_true": "Set to true if the patient currently has the clinical finding of carotid artery occlusion.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of carotid artery occlusion.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of carotid artery occlusion.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_allergy_to_contrast_media_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has an allergy to contrast media (contrast agent).",
+  "when_true": "Set to true if the patient currently has an allergy to contrast media (contrast agent).",
+  "when_false": "Set to false if the patient currently does not have an allergy to contrast media (contrast agent).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has an allergy to contrast media (contrast agent).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_disability_severe_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a significant (severe) disability.",
+  "when_true": "Set to true if the patient currently has a significant (severe) disability.",
+  "when_false": "Set to false if the patient currently does not have a significant (severe) disability.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a significant (severe) disability.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_disability_severe_now@@participation_would_cause_stress",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a significant (severe) disability and participation would cause stress.",
+  "when_true": "Set to true if the patient currently has a significant (severe) disability and participation would cause stress due to this disability.",
+  "when_false": "Set to false if the patient currently has a significant (severe) disability but participation would not cause stress, or if the patient does not have a significant (severe) disability.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether participation would cause stress due to the patient's significant (severe) disability.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_immobility_severe_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has significant (severe) immobility.",
+  "when_true": "Set to true if the patient currently has significant (severe) immobility.",
+  "when_false": "Set to false if the patient currently does not have significant (severe) immobility.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has significant (severe) immobility.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_immobility_severe_now@@participation_would_cause_stress",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has significant (severe) immobility and participation would cause stress.",
+  "when_true": "Set to true if the patient currently has significant (severe) immobility and participation would cause stress due to this immobility.",
+  "when_false": "Set to false if the patient currently has significant (severe) immobility but participation would not cause stress, or if the patient does not have significant (severe) immobility.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether participation would cause stress due to the patient's significant (severe) immobility.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

@@ -1,0 +1,233 @@
+[
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when > 18"
+ },
+ {
+  "name": "patient_has_symptoms_of_palpitations_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has symptoms of palpitations.",
+  "when_true": "Set to true if the patient currently has symptoms of palpitations.",
+  "when_false": "Set to false if the patient currently does not have symptoms of palpitations.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has symptoms of palpitations.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_symptoms_of_palpitations_now@@suggestive_of_arrhythmias",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current palpitations are suggestive of arrhythmias.",
+  "when_true": "Set to true if the patient currently has symptoms of palpitations and these symptoms are suggestive of arrhythmias.",
+  "when_false": "Set to false if the patient currently has symptoms of palpitations but these symptoms are not suggestive of arrhythmias.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's palpitations are suggestive of arrhythmias.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_symptoms_of_palpitations_now@@usually_occurs_less_frequently_than_once_a_day",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current palpitations usually occur less frequently than once a day.",
+  "when_true": "Set to true if the patient currently has symptoms of palpitations and these symptoms usually occur less frequently than once a day.",
+  "when_false": "Set to false if the patient currently has symptoms of palpitations but these symptoms usually occur once a day or more frequently.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined how frequently the patient's palpitations occur.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_symptoms_of_near_syncope_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has symptoms of pre-syncope (near-syncope).",
+  "when_true": "Set to true if the patient currently has symptoms of pre-syncope (near-syncope).",
+  "when_false": "Set to false if the patient currently does not have symptoms of pre-syncope (near-syncope).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has symptoms of pre-syncope (near-syncope).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_symptoms_of_near_syncope_now@@suggestive_of_arrhythmias",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current pre-syncope is suggestive of arrhythmias.",
+  "when_true": "Set to true if the patient currently has symptoms of pre-syncope (near-syncope) and these symptoms are suggestive of arrhythmias.",
+  "when_false": "Set to false if the patient currently has symptoms of pre-syncope (near-syncope) but these symptoms are not suggestive of arrhythmias.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's pre-syncope is suggestive of arrhythmias.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_symptoms_of_near_syncope_now@@usually_occurs_less_frequently_than_once_a_day",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current pre-syncope usually occurs less frequently than once a day.",
+  "when_true": "Set to true if the patient currently has symptoms of pre-syncope (near-syncope) and these symptoms usually occur less frequently than once a day.",
+  "when_false": "Set to false if the patient currently has symptoms of pre-syncope (near-syncope) but these symptoms usually occur once a day or more frequently.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined how frequently the patient's pre-syncope occurs.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_electrocardiographic_procedure_inthehistory@@outcome_is_non_diagnostic",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's past electrocardiographic procedure was non-diagnostic.",
+  "when_true": "Set to true if the patient has undergone an electrocardiographic procedure (electrocardiogram) in the past and the outcome was non-diagnostic.",
+  "when_false": "Set to false if the patient has undergone an electrocardiographic procedure (electrocardiogram) in the past and the outcome was diagnostic.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the outcome of the past electrocardiographic procedure was non-diagnostic.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_holter_extended_electrocardiographic_recording_inthehistory@@outcome_is_non_diagnostic",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's past Holter monitoring was non-diagnostic.",
+  "when_true": "Set to true if the patient has undergone Holter extended electrocardiographic recording (Holter monitoring) in the past and the outcome was non-diagnostic.",
+  "when_false": "Set to false if the patient has undergone Holter extended electrocardiographic recording (Holter monitoring) in the past and the outcome was diagnostic.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the outcome of the past Holter monitoring was non-diagnostic.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_electrocardiographic_procedure_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_holter_extended_electrocardiographic_recording_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_myocardial_infarction_inthepast3months",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has had a myocardial infarction within the past 3 months.",
+  "when_true": "Set to true if the patient has had a myocardial infarction at any time within the past 3 months.",
+  "when_false": "Set to false if the patient has not had a myocardial infarction within the past 3 months.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has had a myocardial infarction within the past 3 months.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_sustained_ventricular_tachycardia_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever had sustained ventricular tachycardia in their history.",
+  "when_true": "Set to true if the patient has ever had sustained ventricular tachycardia at any time in the past.",
+  "when_false": "Set to false if the patient has never had sustained ventricular tachycardia.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had sustained ventricular tachycardia.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_sustained_ventricular_fibrillation_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever had sustained ventricular fibrillation in their history.",
+  "when_true": "Set to true if the patient has ever had sustained ventricular fibrillation at any time in the past.",
+  "when_false": "Set to false if the patient has never had sustained ventricular fibrillation.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had sustained ventricular fibrillation.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_heart_failure_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has heart failure.",
+  "when_true": "Set to true if the patient currently has the clinical finding of heart failure.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of heart failure.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of heart failure.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_heart_failure_now@@new_york_heart_association_class_iv",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current heart failure is New York Heart Association class IV.",
+  "when_true": "Set to true if the patient currently has heart failure and the heart failure is New York Heart Association class IV.",
+  "when_false": "Set to false if the patient currently has heart failure but it is not New York Heart Association class IV.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current heart failure is New York Heart Association class IV.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_preinfarction_syndrome_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has unstable angina (preinfarction syndrome).",
+  "when_true": "Set to true if the patient currently has the clinical finding of unstable angina (preinfarction syndrome).",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of unstable angina (preinfarction syndrome).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has unstable angina (preinfarction syndrome).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_syncope_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has the clinical finding of syncope.",
+  "when_true": "Set to true if the patient currently has the clinical finding of syncope.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of syncope.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of syncope.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_syncope_now@@is_presenting_symptom",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether syncope is the presenting symptom for the patient.",
+  "when_true": "Set to true if syncope is the presenting symptom for the patient at the time of presentation.",
+  "when_false": "Set to false if syncope is not the presenting symptom for the patient at the time of presentation.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether syncope is the presenting symptom.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_unable_to_use_device_at_office_visit",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is unable to use the device at the office visit.",
+  "when_true": "Set to true if the patient is unable to use the device at the office visit.",
+  "when_false": "Set to false if the patient is able to use the device at the office visit.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is unable to use the device at the office visit.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_unwilling_to_use_device",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is unwilling to use the device.",
+  "when_true": "Set to true if the patient is unwilling to use the device.",
+  "when_false": "Set to false if the patient is willing to use the device.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is unwilling to use the device.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

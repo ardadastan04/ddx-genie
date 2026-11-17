@@ -1,0 +1,57 @@
+[
+ {
+  "name": "patient_sex_is_female_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean value indicating whether the patient's sex is female at the current time.",
+  "when_true": "Set to true if the patient's sex is documented as female at the current time.",
+  "when_false": "Set to false if the patient's sex is documented as not female (i.e., male or other) at the current time.",
+  "when_unknown": "Set to null if the patient's sex is unknown, not documented, or cannot be determined at the current time.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when >= 21"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean value indicating whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is currently pregnant.",
+  "when_false": "Set to false if the patient is currently not pregnant.",
+  "when_unknown": "Set to null if the patient's current pregnancy status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_hysterectomy_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone a hysterectomy procedure in their medical history.",
+  "when_true": "Set to true if the patient has ever undergone a hysterectomy procedure at any point in their medical history.",
+  "when_false": "Set to false if the patient has never undergone a hysterectomy procedure at any point in their medical history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone a hysterectomy procedure.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_able_to_be_pregnant_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean value indicating whether the patient is currently able to become pregnant.",
+  "when_true": "Set to true if the patient is currently able to become pregnant (e.g., has a uterus and is physiologically capable of pregnancy).",
+  "when_false": "Set to false if the patient is currently unable to become pregnant (e.g., due to hysterectomy or other permanent infertility causes).",
+  "when_unknown": "Set to null if the patient's ability to become pregnant is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ }
+]

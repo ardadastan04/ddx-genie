@@ -1,0 +1,211 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_cerebrovascular_accident_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a clinical diagnosis of cerebrovascular accident (stroke).",
+  "when_true": "Set to true if the patient currently has a clinical diagnosis of cerebrovascular accident (stroke).",
+  "when_false": "Set to false if the patient currently does not have a clinical diagnosis of cerebrovascular accident (stroke).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a clinical diagnosis of cerebrovascular accident (stroke).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_cerebrovascular_accident_now@@diagnosis_by_radiological_imaging",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's diagnosis of cerebrovascular accident (stroke) is established by radiological imaging (functional MRI and/or CT).",
+  "when_true": "Set to true if the patient's diagnosis of cerebrovascular accident (stroke) is established by radiological imaging (functional MRI and/or CT).",
+  "when_false": "Set to false if the patient's diagnosis of cerebrovascular accident (stroke) is not established by radiological imaging (functional MRI and/or CT).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the diagnosis of cerebrovascular accident (stroke) is established by radiological imaging.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_cerebrovascular_accident_time_elapsed_inthehistory_withunit_months",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the number of months since the patient's most recent cerebrovascular accident (stroke).",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the time elapsed since the most recent cerebrovascular accident (stroke) is unknown or cannot be determined.",
+  "when_value": "Set to the number of months since the patient's most recent cerebrovascular accident (stroke), if known.",
+  "polarity": "criterion met when > 1"
+ },
+ {
+  "name": "patient_has_finding_of_patient_s_condition_stable_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently clinically stable.",
+  "when_true": "Set to true if the patient is currently clinically stable.",
+  "when_false": "Set to false if the patient is currently not clinically stable.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently clinically stable.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_signed_informed_consent_form",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has signed the informed consent form.",
+  "when_true": "Set to true if the patient has signed the informed consent form.",
+  "when_false": "Set to false if the patient has not signed the informed consent form.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has signed the informed consent form.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_dated_informed_consent_form",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has dated the informed consent form.",
+  "when_true": "Set to true if the patient has dated the informed consent form.",
+  "when_false": "Set to false if the patient has not dated the informed consent form.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has dated the informed consent form.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_signed_and_dated_informed_consent_form",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has both signed and dated the informed consent form.",
+  "when_true": "Set to true if the patient has both signed and dated the informed consent form.",
+  "when_false": "Set to false if the patient has not both signed and dated the informed consent form (i.e., if either signature or date is missing).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has both signed and dated the informed consent form.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_difficulty_complying_with_treatment_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has difficulty complying with treatment.",
+  "when_true": "Set to true if the patient currently has a clinical finding of difficulty complying with treatment (i.e., disturbances that forbid adherence to treatment).",
+  "when_false": "Set to false if the patient currently does not have a clinical finding of difficulty complying with treatment.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has difficulty complying with treatment.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_currently_participating_in_other_research_studies",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently undergoing participation in other research studies.",
+  "when_true": "Set to true if the patient is currently undergoing participation in any other research studies.",
+  "when_false": "Set to false if the patient is not currently undergoing participation in any other research studies.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently undergoing participation in other research studies.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is currently pregnant.",
+  "when_false": "Set to false if the patient is currently known not to be pregnant.",
+  "when_unknown": "Set to null if the patient's current pregnancy status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_finding_of_lesion_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has lesions.",
+  "when_true": "Set to true if the patient currently has lesions.",
+  "when_false": "Set to false if the patient currently does not have lesions.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has lesions.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_finding_of_lesion_now@@not_due_to_stroke",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current lesions are not due to stroke.",
+  "when_true": "Set to true if the patient's current lesions are not due to stroke.",
+  "when_false": "Set to false if the patient's current lesions are due to stroke.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current lesions are due to stroke.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_finding_of_lesion_now@@could_affect_the_proposed_therapy",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current lesions could affect the proposed therapy.",
+  "when_true": "Set to true if the patient's current lesions could affect the proposed therapy.",
+  "when_false": "Set to false if the patient's current lesions could not affect the proposed therapy.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current lesions could affect the proposed therapy.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_joint_pain_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has joint pain.",
+  "when_true": "Set to true if the patient currently has joint pain.",
+  "when_false": "Set to false if the patient currently does not have joint pain.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has joint pain.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_joint_pain_now@@could_forbid_the_therapy",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current joint pain could forbid the therapy.",
+  "when_true": "Set to true if the patient currently has joint pain and the joint pain could forbid the therapy.",
+  "when_false": "Set to false if the patient currently has joint pain but it could not forbid the therapy.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the joint pain could forbid the therapy.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_muscle_pain_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has muscle pain.",
+  "when_true": "Set to true if the patient currently has muscle pain.",
+  "when_false": "Set to false if the patient currently does not have muscle pain.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has muscle pain.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_muscle_pain_now@@could_forbid_the_therapy",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current muscle pain could forbid the therapy.",
+  "when_true": "Set to true if the patient currently has muscle pain and the muscle pain could forbid the therapy.",
+  "when_false": "Set to false if the patient currently has muscle pain but it could not forbid the therapy.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the muscle pain could forbid the therapy.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_co_morbid_conditions_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has clinical comorbidities.",
+  "when_true": "Set to true if the patient currently has clinical comorbidities.",
+  "when_false": "Set to false if the patient currently does not have clinical comorbidities.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has clinical comorbidities.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_co_morbid_conditions_now@@destabilized",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current clinical comorbidities are destabilized.",
+  "when_true": "Set to true if the patient's current clinical comorbidities are destabilized.",
+  "when_false": "Set to false if the patient's current clinical comorbidities are not destabilized.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current clinical comorbidities are destabilized.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

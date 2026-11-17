@@ -1,0 +1,134 @@
+[
+ {
+  "name": "patient_has_been_admitted_to_hospital_unit_5_central_at_university_of_virginia",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has been admitted to hospital unit 5 Central at the University of Virginia.",
+  "when_true": "Set to true if the patient has been admitted to hospital unit 5 Central at the University of Virginia.",
+  "when_false": "Set to false if the patient has not been admitted to hospital unit 5 Central at the University of Virginia.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has been admitted to hospital unit 5 Central at the University of Virginia.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_been_admitted_to_hospital_unit_6_west_at_university_of_virginia",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has been admitted to hospital unit 6 West at the University of Virginia.",
+  "when_true": "Set to true if the patient has been admitted to hospital unit 6 West at the University of Virginia.",
+  "when_false": "Set to false if the patient has not been admitted to hospital unit 6 West at the University of Virginia.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has been admitted to hospital unit 6 West at the University of Virginia.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_been_admitted_to_hospital_unit_short_stay_unit_at_university_of_virginia",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has been admitted to hospital unit Short Stay Unit at the University of Virginia.",
+  "when_true": "Set to true if the patient has been admitted to hospital unit Short Stay Unit at the University of Virginia.",
+  "when_false": "Set to false if the patient has not been admitted to hospital unit Short Stay Unit at the University of Virginia.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has been admitted to hospital unit Short Stay Unit at the University of Virginia.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_removal_of_urethral_catheter_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has undergone removal of urethral catheter (Foley) now.",
+  "when_true": "Set to true if the patient has undergone removal of urethral catheter (Foley) now.",
+  "when_false": "Set to false if the patient has not undergone removal of urethral catheter (Foley) now.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has undergone removal of urethral catheter (Foley) now.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_removal_of_urethral_catheter_now@@ordered_by_physician_for_patient",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the removal of urethral catheter (Foley) for the patient was ordered by the physician.",
+  "when_true": "Set to true if the removal of urethral catheter (Foley) for the patient was ordered by the physician.",
+  "when_false": "Set to false if the removal of urethral catheter (Foley) for the patient was not ordered by the physician.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the removal of urethral catheter (Foley) for the patient was ordered by the physician.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when >= 18"
+ },
+ {
+  "name": "patient_has_foley_urethral_catheter_in_place_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a Foley urethral catheter in place.",
+  "when_true": "Set to true if the patient currently has a Foley urethral catheter in place.",
+  "when_false": "Set to false if the patient currently does not have a Foley urethral catheter in place.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a Foley urethral catheter in place.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_undergone_removal_of_urethral_catheter_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone removal (discontinuation) of a urethral catheter (Foley) at any time in the past.",
+  "when_true": "Set to true if the patient has at any time in the past undergone removal (discontinuation) of a urethral catheter (Foley), regardless of who ordered the procedure.",
+  "when_false": "Set to false if the patient has never undergone removal (discontinuation) of a urethral catheter (Foley) at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone removal (discontinuation) of a urethral catheter (Foley).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_removal_of_urethral_catheter_inthehistory@@ordered_by_physician",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the removal of the urethral catheter (Foley) was ordered by a physician.",
+  "when_true": "Set to true if the removal (discontinuation) of the urethral catheter (Foley) was specifically ordered by a physician.",
+  "when_false": "Set to false if the removal was not ordered by a physician (e.g., self-removal, nurse-initiated, or unknown provider).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the removal was ordered by a physician.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_prisoner_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently a prisoner.",
+  "when_true": "Set to true if the patient is currently a prisoner.",
+  "when_false": "Set to false if the patient is currently not a prisoner.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently a prisoner.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is currently pregnant.",
+  "when_false": "Set to false if the patient is currently not pregnant.",
+  "when_unknown": "Set to null if the patient's pregnancy status is unknown or cannot be determined.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_sex_is_female_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient's sex is female at the current time.",
+  "when_true": "Set to true if the patient's sex is female at the current time.",
+  "when_false": "Set to false if the patient's sex is not female at the current time.",
+  "when_unknown": "Set to null if the patient's sex is unknown or cannot be determined at the current time.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ }
+]

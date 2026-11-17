@@ -1,0 +1,68 @@
+[
+ {
+  "name": "patient_has_finding_of_morbid_obesity_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has morbid obesity.",
+  "when_true": "Set to true if the patient currently has the clinical finding of morbid obesity.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of morbid obesity.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of morbid obesity.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_finding_of_walking_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently able to walk.",
+  "when_true": "Set to true if the patient is currently able to walk.",
+  "when_false": "Set to false if the patient is currently not able to walk.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently able to walk.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_finding_of_walking_now@@performed_slowly",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's ability to walk is performed slowly.",
+  "when_true": "Set to true if the patient is currently able to walk and the walking is performed slowly.",
+  "when_false": "Set to false if the patient is currently able to walk but not performed slowly.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the walking is performed slowly.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_finding_of_walking_now@@sustained_for_twenty_minutes",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's ability to walk is sustained for twenty minutes.",
+  "when_true": "Set to true if the patient is currently able to walk and the walking is sustained for twenty minutes.",
+  "when_false": "Set to false if the patient is currently able to walk but not sustained for twenty minutes.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the walking is sustained for twenty minutes.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_walking_now@@performed_slowly@@sustained_for_twenty_minutes",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently able to walk, with the walking performed slowly and sustained for twenty minutes.",
+  "when_true": "Set to true if the patient is currently able to walk, the walking is performed slowly, and the walking is sustained for twenty minutes.",
+  "when_false": "Set to false if the patient is currently able to walk, but either the walking is not performed slowly or is not sustained for twenty minutes.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently able to walk slowly for twenty minutes.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_walking_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ }
+]

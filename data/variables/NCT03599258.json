@@ -1,0 +1,156 @@
+[
+ {
+  "name": "gestational_age_at_birth_value_recorded_in_weeks",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the gestational age of the patient at birth in completed weeks.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the gestational age at birth in weeks is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the number of completed weeks of gestational age at which the patient was born, as recorded in the medical record.",
+  "polarity": "criterion met when >= 35"
+ },
+ {
+  "name": "gestational_age_at_birth_value_recorded_in_days",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the additional days of gestational age of the patient at birth, beyond completed weeks.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the gestational age at birth in days is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the number of additional days of gestational age at which the patient was born, beyond completed weeks, as recorded in the medical record.",
+  "polarity": "criterion met when > 0"
+ },
+ {
+  "name": "patient_has_finding_of_hyperbilirubinemia_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_hyperbilirubinemia_now@@significant",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_hyperbilirubinemia_now@@requires_phototherapy",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_hyperbilirubinemia_now@@determined_by_attending_neonatologist_utilizing_aap_management_bhutani_nomogram",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_neonate_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_was_born_at_term_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_undergoing_light_therapy_now@@applied_in_hospitalized_infant",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently undergoing phototherapy (light therapy) now and is a hospitalized infant.",
+  "when_true": "Set to true if the patient is currently undergoing phototherapy (light therapy) and is a hospitalized infant.",
+  "when_false": "Set to false if the patient is currently undergoing phototherapy (light therapy) but is not a hospitalized infant.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is a hospitalized infant while undergoing phototherapy (light therapy).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_meets_guidelines_for_phototherapy_in_hospitalized_infants_35_or_more_weeks",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient meets the guidelines for phototherapy in hospitalized infants of 35 or more weeks of gestation.",
+  "when_true": "Set to true if the patient meets the guidelines for phototherapy in hospitalized infants of 35 or more weeks of gestation.",
+  "when_false": "Set to false if the patient does not meet the guidelines for phototherapy in hospitalized infants of 35 or more weeks of gestation.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient meets the guidelines for phototherapy in hospitalized infants of 35 or more weeks of gestation.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_meets_guidelines_for_phototherapy_in_hospitalized_infants_35_or_more_weeks@@gestational_age_criterion",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient meets the gestational age criterion (35 or more weeks) for the guidelines for phototherapy in hospitalized infants.",
+  "when_true": "Set to true if the patient meets the gestational age criterion (35 or more weeks) for the guidelines for phototherapy in hospitalized infants.",
+  "when_false": "Set to false if the patient does not meet the gestational age criterion (35 or more weeks) for the guidelines for phototherapy in hospitalized infants.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient meets the gestational age criterion for the guidelines.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_meets_guidelines_for_phototherapy_in_hospitalized_infants_35_or_more_weeks@@phototherapy_applied_in_hospitalized_infant",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient meets the criterion of phototherapy being applied in a hospitalized infant for the guidelines.",
+  "when_true": "Set to true if the patient meets the criterion of phototherapy being applied in a hospitalized infant for the guidelines.",
+  "when_false": "Set to false if the patient does not meet the criterion of phototherapy being applied in a hospitalized infant for the guidelines.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient meets the criterion of phototherapy being applied in a hospitalized infant for the guidelines.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_undergoing_light_therapy_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_meets_all_inclusion_criteria",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient meets all of the inclusion criteria listed above.",
+  "when_true": "Set to true if the patient meets every one of the inclusion criteria specified above.",
+  "when_false": "Set to false if the patient fails to meet at least one of the inclusion criteria specified above.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient meets all of the inclusion criteria specified above.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ }
+]

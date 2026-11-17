@@ -1,0 +1,15 @@
+{
+ "nct": "NCT02682251",
+ "title": "Engaging Patients in Heart Failure Management",
+ "conditions": [
+  "Congestive Heart Failure"
+ ],
+ "phase": "",
+ "brief_summary": "An interventional study to empower congestive heart failure patients who have a cardiac resynchronization therapy-cardiac implantable electronic device (CRT-CIED) by using a personal health record (PHR) to directly message them their device data and send alerts based on percent left ventricular pacing.",
+ "inclusion_criteria": "FOCUS GROUPS \n\n inclusion criteria: \n\n Remotely monitored with CRT-CIED \n\n focus groups 1 & 2: implant \u2264 12 months \n\n focus groups 3 & 4: implant \u2265 12 months \n\n Current patient of PPG-Cardiology \n\n History of HFrEF (heart failure in the setting of reduced ejection fraction) \n\n Access to computer and internet \n\n *Ability to provide informed consent \n\n *Age \u2265 18 years \n\n 5 and 6 must apply to caregivers, partners, and/or support persons \n\n ",
+ "exclusion_criteria": ": \n\n Not remotely monitored with CRT-CIED \n\n Not current patient of PPG-Cardiology \n\n No history of HFrEF \n\n Pacemaker dependent \n\n Does not have access to computer and internet \n\n *Inability to provide informed consent \n\n *Age < 18 years \n\n *Does not meet inclusion criteria \n\n Only 6, 7, and 8 apply to caregivers, partners, and/or support persons \n\n TECHNOLOGY TRIAL \n\n inclusion criteria: \n\n Remotely monitored with Biotronik CRT-CIED for more than 60 days \n\n Ability to provide informed consent \n\n Age \u2265 18 years \n\n Willing to have MyChart or proxy to MyChart \n\n Current patient of PPG-Cardiology \n\n History of HFrEF \n\n ",
+ "cohorts": [
+  "a",
+  "b"
+ ]
+}

@@ -1,0 +1,101 @@
+[
+ {
+  "name": "patient_sex_is_female_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean variable indicating whether the patient's current sex is female.",
+  "when_true": "Set to true if the patient's current sex is documented as female.",
+  "when_false": "Set to false if the patient's current sex is documented as male or other.",
+  "when_unknown": "Set to null if the patient's current sex is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_clinical_diagnosis_of_chronic_pelvic_pain_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a clinical diagnosis of chronic pelvic pain.",
+  "when_true": "Set to true if the patient currently has a clinical diagnosis of chronic pelvic pain.",
+  "when_false": "Set to false if the patient currently does not have a clinical diagnosis of chronic pelvic pain.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a clinical diagnosis of chronic pelvic pain.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when > 18"
+ },
+ {
+  "name": "patient_has_finding_of_non_menstrual_pelvic_pain_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has non-menstrual pelvic pain.",
+  "when_true": "Set to true if the patient currently has non-menstrual pelvic pain.",
+  "when_false": "Set to false if the patient currently does not have non-menstrual pelvic pain.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has non-menstrual pelvic pain.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_noncyclic_pelvic_pain_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has noncyclic pelvic pain.",
+  "when_true": "Set to true if the patient currently has noncyclic pelvic pain.",
+  "when_false": "Set to false if the patient currently does not have noncyclic pelvic pain.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has noncyclic pelvic pain.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "pain_duration_value_recorded_in_months",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the duration of pain experienced by the patient, measured in months.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the duration of pain in months is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the number of months the patient has experienced pain, as documented in the patient's record or reported by the patient.",
+  "polarity": "criterion met when >= 6"
+ },
+ {
+  "name": "patient_has_finding_of_pain_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has had pain in their history.",
+  "when_true": "Set to true if the patient has had pain at any point in their history.",
+  "when_false": "Set to false if the patient has never had pain in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has had pain in their history.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_pain_value_recorded_now_withunit_months",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric value representing the duration in months of the patient's current or most recent episode of pain as of now.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the duration of pain is unknown, not documented, or cannot be determined as of now.",
+  "when_value": "Set to the number of months if the duration of the patient's current or most recent episode of pain is known and recorded now.",
+  "polarity": "criterion met when < 6"
+ },
+ {
+  "name": "patient_is_pregnant_inthepast12months",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient was pregnant at any time within the past 12 months.",
+  "when_true": "Set to true if there is evidence that the patient was pregnant at any time within the past 12 months.",
+  "when_false": "Set to false if there is evidence that the patient was not pregnant at any time within the past 12 months.",
+  "when_unknown": "Set to null if it is unknown or cannot be determined whether the patient was pregnant within the past 12 months.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

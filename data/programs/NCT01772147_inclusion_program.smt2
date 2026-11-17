@@ -1,0 +1,50 @@
+;; ===================== QUALIFIER LINKER =====================
+;; Rule: add (qualifier => stem) only when BOTH are Bool; remove (stem => qualifier); drop ill-typed implications.
+;; Added_aux=0 Removed_reverse=0 Removed_illtyped=0 Skipped_nonbool_pairs=6
+;; =============================================================
+
+;; Declarations/definitions (original + any auto-added Bool stems)
+(declare-const patient_is_outpatient_now Bool)
+(declare-const patient_age_value_recorded_now_in_years Real)
+(declare-const patient_sex_is_male_now Bool)
+(declare-const patient_sex_is_female_now Bool)
+(declare-const patient_has_non_childbearing_potential_now Bool)
+(declare-const patient_has_childbearing_potential_now Bool)
+(declare-const serum_pregnancy_test_result_at_screening String)
+(declare-const patient_agrees_to_use_at_least_one_acceptable_contraceptive_method_listed_in_protocol_consistently_and_correctly Bool)
+(declare-const serum_pregnancy_test_is_negative_at_screening Bool)
+(declare-const patient_has_finding_of_chronic_obstructive_pulmonary_disease_inthehistory Bool)
+(declare-const patient_has_finding_of_chronic_obstructive_pulmonary_disease_inthehistory@@american_thoracic_society_definition Bool)
+(declare-const patient_has_finding_of_chronic_obstructive_pulmonary_disease_inthehistory@@european_respiratory_society_definition Bool)
+(declare-const patient_has_finding_of_cigarette_smoker_now Bool)
+(declare-const patient_has_finding_of_cigarette_smoker_inthehistory Bool)
+(declare-const patient_pack_years_of_cigarette_smoking_value_recorded_in_lifetime_withunit_pack_years Real)
+(declare-const patient_has_finding_of_cigarette_smoker_inthehistory@@stopped_smoking_for_at_least_6_months_prior_to_visit_1 Bool)
+(declare-const patient_forced_expired_volume_in_one_second_forced_vital_capacity_ratio_value_recorded_now_withunit_ratio Real)
+(declare-const patient_forced_expired_volume_in_one_second_forced_vital_capacity_ratio_value_recorded_now_withunit_ratio@@pre_albuterol Bool)
+(declare-const patient_forced_expired_volume_in_one_second_forced_vital_capacity_ratio_value_recorded_now_withunit_ratio@@post_albuterol Bool)
+(declare-const patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_liters Real)
+(declare-const patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_liters@@pre_albuterol Bool)
+(declare-const patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_liters@@post_albuterol Bool)
+(declare-const patient_forced_expired_volume_in_1_second_predicted_normal_value_now_withunit_liters Real)
+(declare-const patient_forced_expired_volume_in_1_second_predicted_normal_value_now_withunit_liters@@post_albuterol Real)
+(declare-const patient_assessment_using_modified_medical_research_council_dyspnea_scale_value_recorded_now_withunit_none Real)
+(declare-const patient_assessment_using_modified_medical_research_council_dyspnea_scale_value_recorded_now_withunit_none@@assessment_performed_at_visit_1 Bool)
+
+;; Existing auxiliary assertions
+(assert (! (= serum_pregnancy_test_is_negative_at_screening (= serum_pregnancy_test_result_at_screening "negative")) :named REQ3_AUXILIARY0))
+(assert (! (=> patient_has_finding_of_chronic_obstructive_pulmonary_disease_inthehistory@@american_thoracic_society_definition patient_has_finding_of_chronic_obstructive_pulmonary_disease_inthehistory) :named REQ4_AUXILIARY0))
+(assert (! (=> patient_has_finding_of_chronic_obstructive_pulmonary_disease_inthehistory@@european_respiratory_society_definition patient_has_finding_of_chronic_obstructive_pulmonary_disease_inthehistory) :named REQ4_AUXILIARY1))
+(assert (! (=> patient_has_finding_of_cigarette_smoker_inthehistory@@stopped_smoking_for_at_least_6_months_prior_to_visit_1 patient_has_finding_of_cigarette_smoker_inthehistory) :named REQ5_AUXILIARY0))
+
+;; Other kept assertions
+(assert (! patient_is_outpatient_now :named REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))
+(assert (! (>= patient_age_value_recorded_now_in_years 40.0) :named REQ2_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (or patient_sex_is_male_now (and patient_sex_is_female_now (or patient_has_non_childbearing_potential_now (and patient_has_childbearing_potential_now serum_pregnancy_test_is_negative_at_screening patient_agrees_to_use_at_least_one_acceptable_contraceptive_method_listed_in_protocol_consistently_and_correctly)))) :named REQ3_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))
+(assert (! (and patient_has_finding_of_chronic_obstructive_pulmonary_disease_inthehistory (or patient_has_finding_of_chronic_obstructive_pulmonary_disease_inthehistory@@american_thoracic_society_definition patient_has_finding_of_chronic_obstructive_pulmonary_disease_inthehistory@@european_respiratory_society_definition)) :named REQ4_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))
+(assert (! (or patient_has_finding_of_cigarette_smoker_now (and patient_has_finding_of_cigarette_smoker_inthehistory (>= patient_pack_years_of_cigarette_smoking_value_recorded_in_lifetime_withunit_pack_years 10) patient_has_finding_of_cigarette_smoker_inthehistory@@stopped_smoking_for_at_least_6_months_prior_to_visit_1)) :named REQ5_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))
+(assert (! (and patient_forced_expired_volume_in_one_second_forced_vital_capacity_ratio_value_recorded_now_withunit_ratio@@pre_albuterol (< patient_forced_expired_volume_in_one_second_forced_vital_capacity_ratio_value_recorded_now_withunit_ratio 0.70)) :named REQ6_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (and patient_forced_expired_volume_in_one_second_forced_vital_capacity_ratio_value_recorded_now_withunit_ratio@@post_albuterol (< patient_forced_expired_volume_in_one_second_forced_vital_capacity_ratio_value_recorded_now_withunit_ratio 0.70)) :named REQ6_COMPONENT1_OTHER_REQUIREMENTS))
+(assert (! (and patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_liters@@pre_albuterol (<= patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_liters (* 0.70 patient_forced_expired_volume_in_1_second_predicted_normal_value_now_withunit_liters))) :named REQ6_COMPONENT2_OTHER_REQUIREMENTS))
+(assert (! (and patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_liters@@post_albuterol (<= patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_liters (* 0.70 patient_forced_expired_volume_in_1_second_predicted_normal_value_now_withunit_liters@@post_albuterol))) :named REQ6_COMPONENT3_OTHER_REQUIREMENTS))
+(assert (! (and patient_assessment_using_modified_medical_research_council_dyspnea_scale_value_recorded_now_withunit_none@@assessment_performed_at_visit_1 (>= patient_assessment_using_modified_medical_research_council_dyspnea_scale_value_recorded_now_withunit_none 2.0)) :named REQ7_COMPONENT0_OTHER_REQUIREMENTS))

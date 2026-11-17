@@ -1,0 +1,200 @@
+[
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when > 19"
+ },
+ {
+  "name": "patient_has_diagnosis_of_sickling_disorder_due_to_hemoglobin_s_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of sickle cell disease (sickling disorder due to hemoglobin S).",
+  "when_true": "Set to true if the patient currently has a diagnosis of sickle cell disease (sickling disorder due to hemoglobin S).",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of sickle cell disease (sickling disorder due to hemoglobin S).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of sickle cell disease (sickling disorder due to hemoglobin S).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_in_uncomplicated_sickle_cell_crisis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently in an uncomplicated sickle cell crisis.",
+  "when_true": "Set to true if the patient is currently in an uncomplicated sickle cell crisis.",
+  "when_false": "Set to false if the patient is currently not in an uncomplicated sickle cell crisis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently in an uncomplicated sickle cell crisis.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_in_uncomplicated_sickle_cell_crisis_now@@at_time_of_admission_from_emergency_department_at_university_of_nebraska_medical_center",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently in an uncomplicated sickle cell crisis at the time of admission from the emergency department at University of Nebraska Medical Center.",
+  "when_true": "Set to true if the patient is currently in an uncomplicated sickle cell crisis at the time of admission from the emergency department at University of Nebraska Medical Center.",
+  "when_false": "Set to false if the patient is currently in an uncomplicated sickle cell crisis but not at the time of admission from the emergency department at University of Nebraska Medical Center.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently in an uncomplicated sickle cell crisis at the time of admission from the emergency department at University of Nebraska Medical Center.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_undergoing_admission_procedure_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently undergoing an admission procedure.",
+  "when_true": "Set to true if the patient is currently undergoing an admission procedure.",
+  "when_false": "Set to false if the patient is currently not undergoing an admission procedure.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently undergoing an admission procedure.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_undergoing_admission_procedure_now@@from_emergency_department_at_university_of_nebraska_medical_center",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating that the patient is currently undergoing an admission procedure and that the admission is specifically from the emergency department at University of Nebraska Medical Center.",
+  "when_true": "Set to true if the patient is currently undergoing an admission procedure and the admission is from the emergency department at University of Nebraska Medical Center.",
+  "when_false": "Set to false if the patient is currently undergoing an admission procedure but not from the emergency department at University of Nebraska Medical Center.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the admission is from the emergency department at University of Nebraska Medical Center.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is currently documented as pregnant.",
+  "when_false": "Set to false if the patient is currently documented as not pregnant.",
+  "when_unknown": "Set to null if the patient's current pregnancy status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_sex_is_female_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient's current sex is female.",
+  "when_true": "Set to true if the patient's current sex is documented as female.",
+  "when_false": "Set to false if the patient's current sex is documented as not female (e.g., male or other).",
+  "when_unknown": "Set to null if the patient's current sex is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_hemoglobin_ss_disease_with_crisis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has hemoglobin SS disease with crisis (sickle cell crisis).",
+  "when_true": "Set to true if the patient currently has hemoglobin SS disease with crisis (sickle cell crisis).",
+  "when_false": "Set to false if the patient currently does not have hemoglobin SS disease with crisis (sickle cell crisis).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has hemoglobin SS disease with crisis (sickle cell crisis).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_hemoglobin_ss_disease_with_crisis_now@@present_at_time_of_admission_from_emergency_department",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has hemoglobin SS disease with crisis (sickle cell crisis) and the crisis is present at the time of admission from the emergency department.",
+  "when_true": "Set to true if the patient currently has hemoglobin SS disease with crisis (sickle cell crisis) and the crisis is present at the time of admission from the emergency department.",
+  "when_false": "Set to false if the patient currently has hemoglobin SS disease with crisis (sickle cell crisis) but it is not present at the time of admission from the emergency department.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the crisis is present at the time of admission from the emergency department.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_myocardial_infarction_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has myocardial infarction.",
+  "when_true": "Set to true if the patient currently has myocardial infarction.",
+  "when_false": "Set to false if the patient currently does not have myocardial infarction.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has myocardial infarction.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_myocardial_infarction_now@@concomitant_at_time_of_presentation",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has myocardial infarction and the infarction is concomitant at the time of presentation.",
+  "when_true": "Set to true if the patient currently has myocardial infarction and the infarction is concomitant at the time of presentation.",
+  "when_false": "Set to false if the patient currently has myocardial infarction but it is not concomitant at the time of presentation.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the infarction is concomitant at the time of presentation.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_cerebrovascular_accident_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has cerebrovascular accident (stroke).",
+  "when_true": "Set to true if the patient currently has cerebrovascular accident (stroke).",
+  "when_false": "Set to false if the patient currently does not have cerebrovascular accident (stroke).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has cerebrovascular accident (stroke).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_cerebrovascular_accident_now@@concomitant_at_time_of_presentation",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has cerebrovascular accident (stroke) and the stroke is concomitant at the time of presentation.",
+  "when_true": "Set to true if the patient currently has cerebrovascular accident (stroke) and the stroke is concomitant at the time of presentation.",
+  "when_false": "Set to false if the patient currently has cerebrovascular accident (stroke) but it is not concomitant at the time of presentation.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the stroke is concomitant at the time of presentation.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_acute_chest_syndrome_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has acute chest syndrome.",
+  "when_true": "Set to true if the patient currently has acute chest syndrome.",
+  "when_false": "Set to false if the patient currently does not have acute chest syndrome.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has acute chest syndrome.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_acute_chest_syndrome_now@@concomitant_at_time_of_presentation",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has acute chest syndrome and the syndrome is concomitant at the time of presentation.",
+  "when_true": "Set to true if the patient currently has acute chest syndrome and the syndrome is concomitant at the time of presentation.",
+  "when_false": "Set to false if the patient currently has acute chest syndrome but it is not concomitant at the time of presentation.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the syndrome is concomitant at the time of presentation.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_complicated_sickle_cell_crisis_now@@present_at_time_of_admission_from_emergency_department",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has complicated sickle cell crisis present at the time of admission from the emergency department.",
+  "when_true": "Set to true if the patient currently has complicated sickle cell crisis present at the time of admission from the emergency department.",
+  "when_false": "Set to false if the patient currently does not have complicated sickle cell crisis present at the time of admission from the emergency department.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has complicated sickle cell crisis present at the time of admission from the emergency department.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_complicated_sickle_cell_crisis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ }
+]

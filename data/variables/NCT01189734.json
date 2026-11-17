@@ -1,0 +1,90 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_common_bile_duct_calculus_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever had a diagnosis of common bile duct stones (common bile duct calculus) at any time in their history.",
+  "when_true": "Set to true if the patient has ever been diagnosed with common bile duct stones (common bile duct calculus) at any time in their history.",
+  "when_false": "Set to false if the patient has never been diagnosed with common bile duct stones (common bile duct calculus) at any time in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been diagnosed with common bile duct stones (common bile duct calculus).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_common_bile_duct_calculus_inthehistory@@diagnosed_preoperatively",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the diagnosis of common bile duct stones (common bile duct calculus) was made preoperatively (before surgery).",
+  "when_true": "Set to true if the diagnosis of common bile duct stones (common bile duct calculus) was made before surgery (preoperatively).",
+  "when_false": "Set to false if the diagnosis of common bile duct stones (common bile duct calculus) was not made before surgery (i.e., was made intraoperatively or postoperatively).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the diagnosis of common bile duct stones (common bile duct calculus) was made preoperatively.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_cirrhosis_of_liver_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has liver cirrhosis.",
+  "when_true": "Set to true if the patient currently has the clinical finding of liver cirrhosis.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of liver cirrhosis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of liver cirrhosis.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is currently pregnant.",
+  "when_false": "Set to false if the patient is currently not pregnant.",
+  "when_unknown": "Set to null if the patient's current pregnancy status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_classified_as_asa_physical_status_class_iii_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently classified as ASA physical status class III.",
+  "when_true": "Set to true if the patient is currently classified as ASA physical status class III.",
+  "when_false": "Set to false if the patient is currently not classified as ASA physical status class III.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently classified as ASA physical status class III.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_classified_as_asa_physical_status_class_iv_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently classified as ASA physical status class IV.",
+  "when_true": "Set to true if the patient is currently classified as ASA physical status class IV.",
+  "when_false": "Set to false if the patient is currently not classified as ASA physical status class IV.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently classified as ASA physical status class IV.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_operation_on_abdominal_region_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone an operation on the abdominal region (abdominal surgery) at any time in the past.",
+  "when_true": "Set to true if the patient has ever undergone an operation on the abdominal region (abdominal surgery) at any time in the past.",
+  "when_false": "Set to false if the patient has never undergone an operation on the abdominal region (abdominal surgery) at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone an operation on the abdominal region (abdominal surgery).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_cholecystectomy_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has undergone cholecystectomy at any time in their history.",
+  "when_true": "Set to true if the patient has undergone cholecystectomy at any time in their history.",
+  "when_false": "Set to false if the patient has not undergone cholecystectomy at any time in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has undergone cholecystectomy in their history.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

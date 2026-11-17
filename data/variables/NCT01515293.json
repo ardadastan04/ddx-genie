@@ -1,0 +1,35 @@
+[
+ {
+  "name": "patient_has_suspicion_of_acute_appendicitis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently suspected to have acute appendicitis.",
+  "when_true": "Set to true if the patient is currently suspected to have acute appendicitis.",
+  "when_false": "Set to false if the patient is currently not suspected to have acute appendicitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently suspected to have acute appendicitis.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_appendicitis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has appendicitis.",
+  "when_true": "Set to true if the patient currently has the clinical finding of appendicitis.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of appendicitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has appendicitis.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_appendicitis_now@@suspected_or_confirmed_perforated",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's appendicitis is suspected or confirmed to be perforated.",
+  "when_true": "Set to true if the patient currently has appendicitis and the appendicitis is suspected or confirmed to be perforated.",
+  "when_false": "Set to false if the patient currently has appendicitis but it is not suspected or confirmed to be perforated.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's appendicitis is suspected or confirmed to be perforated.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

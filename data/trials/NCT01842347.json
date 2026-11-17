@@ -1,0 +1,17 @@
+{
+ "nct": "NCT01842347",
+ "title": "Treatment of C. Difficile Infection With Fecal Microbiota Transplantation (FMT)",
+ "conditions": [
+  "Clostridium Difficile Infection"
+ ],
+ "phase": "",
+ "brief_summary": "The purpose of this study is to treat children with severe, moderate, resistant or relapsing C. difficile infection and to determine the changes in the intestinal microbiome (all of the bacteria living in the intestines) in children receiving FMT for C. difficile infection. Data will be collected throughout the FMT procedure to determine effectiveness and to help standardize this procedure. Stool samples will be collected to look at the different bacteria that are in the intestines before and after FMT.",
+ "inclusion_criteria": "Recipient inclusion criteria \n\n Older than 18 months of age \n\n FMT procedure has been decided by the treating gastroenterologist and was based on: \n\n Recurrent or relapsing CDI and: \n\n Failure of standard medical therapy with metronidazole, vancomycin and fidaxomicin (over age 18 years. Fidaxomicin is not approved for <18years and insurance authorization may not be possible). \n\n At least 2 episodes of CDI requiring hospitalization \n\n Moderate CDI not responding to vancomycin for at least a week. \n\n Severe CDI with no response to vancomycin after 4 hours. \n\n English speaking \n\n Recipient ",
+ "exclusion_criteria": " \n\n Lack of informed consent/assent. \n\n Not eligible for FMT procedure",
+ "cohorts": [
+  "a",
+  "b",
+  "c",
+  "d"
+ ]
+}

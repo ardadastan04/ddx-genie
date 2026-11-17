@@ -1,0 +1,63 @@
+;; ===================== QUALIFIER LINKER =====================
+;; Rule: add (qualifier => stem) only when BOTH are Bool; remove (stem => qualifier); drop ill-typed implications.
+;; Added_aux=2 Removed_reverse=0 Removed_illtyped=0 Skipped_nonbool_pairs=0
+;; =============================================================
+
+;; Declarations/definitions (original + any auto-added Bool stems)
+(declare-const patient_has_infection_with_hepatitis_c_virus_genotype_3_now Bool)
+(declare-const patient_has_infection_with_hepatitis_c_virus_genotype_4_now Bool)
+(declare-const patient_has_infection_with_hepatitis_c_virus_genotype_5_now Bool)
+(declare-const patient_has_infection_with_hepatitis_c_virus_genotype_6_now Bool)
+(declare-const patient_has_finding_of_human_immunodeficiency_virus_i_infection_now Bool)
+(declare-const patient_has_finding_of_human_immunodeficiency_virus_i_infection_now@@antibody_positive Bool)
+(declare-const patient_has_finding_of_human_immunodeficiency_virus_ii_infection_now Bool)
+(declare-const patient_has_finding_of_human_immunodeficiency_virus_ii_infection_now@@antibody_positive Bool)
+(declare-const patient_has_finding_of_hepatitis_b_surface_antigen_detected_now Bool)
+(declare-const patient_is_exposed_to_antiviral_inthehistory Bool)
+(declare-const patient_is_exposed_to_antiviral_inthehistory@@is_investigational_hepatitis_c_virus_direct_acting_antiviral_agent Bool)
+(declare-const patient_is_exposed_to_antiviral_inthehistory@@is_approved_hepatitis_c_virus_direct_acting_antiviral_agent Bool)
+(declare-const patient_has_finding_of_acute_type_a_viral_hepatitis_now Bool)
+(declare-const patient_has_finding_of_alcoholic_liver_damage_now Bool)
+(declare-const patient_has_finding_of_alpha_1_antitrypsin_deficiency_now Bool)
+(declare-const patient_has_finding_of_autoimmune_hepatitis_now Bool)
+(declare-const patient_has_finding_of_disease_of_liver_now Bool)
+(declare-const patient_has_finding_of_disease_of_liver_now@@non_hepatitis_c_virus_etiology Bool)
+(declare-const patient_has_finding_of_disease_of_liver_now@@considered_clinically_significant_by_investigator Bool)
+(declare-const patient_has_finding_of_drug_induced_disorder_of_liver_now Bool)
+(declare-const patient_has_finding_of_hemochromatosis_now Bool)
+(declare-const patient_has_finding_of_primary_biliary_cholangitis_now Bool)
+(declare-const patient_has_finding_of_wilson_s_disease_now Bool)
+(declare-const patient_has_finding_of_hepatic_failure_now@@assessed_with_child_pugh_class_b_or_c Bool)
+(declare-const patient_has_finding_of_ascites_inthehistory Bool)
+(declare-const patient_has_finding_of_ascites_now Bool)
+(declare-const patient_has_finding_of_venous_varices_inthehistory Bool)
+(declare-const patient_has_finding_of_venous_varices_now Bool)
+(declare-const patient_has_finding_of_hepatic_encephalopathy_inthehistory Bool)
+(declare-const patient_has_finding_of_hepatic_encephalopathy_now Bool)
+(declare-const patient_has_finding_of_hepatic_failure_now Bool)
+
+;; Existing auxiliary assertions
+(assert (! (=> patient_has_finding_of_human_immunodeficiency_virus_i_infection_now@@antibody_positive patient_has_finding_of_human_immunodeficiency_virus_i_infection_now) :named REQ1_AUXILIARY0))
+(assert (! (=> patient_has_finding_of_human_immunodeficiency_virus_ii_infection_now@@antibody_positive patient_has_finding_of_human_immunodeficiency_virus_ii_infection_now) :named REQ1_AUXILIARY1))
+(assert (! (=> patient_is_exposed_to_antiviral_inthehistory@@is_investigational_hepatitis_c_virus_direct_acting_antiviral_agent patient_is_exposed_to_antiviral_inthehistory) :named REQ2_AUXILIARY0))
+(assert (! (=> patient_is_exposed_to_antiviral_inthehistory@@is_approved_hepatitis_c_virus_direct_acting_antiviral_agent patient_is_exposed_to_antiviral_inthehistory) :named REQ2_AUXILIARY1))
+(assert (! (=> (or patient_has_finding_of_acute_type_a_viral_hepatitis_now patient_has_finding_of_drug_induced_disorder_of_liver_now patient_has_finding_of_alcoholic_liver_damage_now patient_has_finding_of_autoimmune_hepatitis_now patient_has_finding_of_hemochromatosis_now patient_has_finding_of_wilson_s_disease_now patient_has_finding_of_alpha_1_antitrypsin_deficiency_now patient_has_finding_of_primary_biliary_cholangitis_now patient_has_finding_of_disease_of_liver_now@@considered_clinically_significant_by_investigator) patient_has_finding_of_disease_of_liver_now@@non_hepatitis_c_virus_etiology) :named REQ3_AUXILIARY0))
+(assert (! (=> patient_has_finding_of_disease_of_liver_now@@non_hepatitis_c_virus_etiology patient_has_finding_of_disease_of_liver_now) :named REQ3_AUXILIARY1))
+
+;; AUTO auxiliary (qualifier => stem) links [Bool→Bool]
+(assert (! (=> patient_has_finding_of_disease_of_liver_now@@considered_clinically_significant_by_investigator patient_has_finding_of_disease_of_liver_now) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_0))
+(assert (! (=> patient_has_finding_of_hepatic_failure_now@@assessed_with_child_pugh_class_b_or_c patient_has_finding_of_hepatic_failure_now) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_1))
+
+;; Other kept assertions
+(assert (! (not patient_has_infection_with_hepatitis_c_virus_genotype_3_now) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_infection_with_hepatitis_c_virus_genotype_4_now) :named REQ0_COMPONENT1_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_infection_with_hepatitis_c_virus_genotype_5_now) :named REQ0_COMPONENT2_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_infection_with_hepatitis_c_virus_genotype_6_now) :named REQ0_COMPONENT3_OTHER_REQUIREMENTS))
+(assert (! (not (or patient_has_finding_of_human_immunodeficiency_virus_i_infection_now@@antibody_positive patient_has_finding_of_human_immunodeficiency_virus_ii_infection_now@@antibody_positive)) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_hepatitis_b_surface_antigen_detected_now) :named REQ1_COMPONENT1_OTHER_REQUIREMENTS))
+(assert (! (not patient_is_exposed_to_antiviral_inthehistory@@is_investigational_hepatitis_c_virus_direct_acting_antiviral_agent) :named REQ2_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_is_exposed_to_antiviral_inthehistory@@is_approved_hepatitis_c_virus_direct_acting_antiviral_agent) :named REQ2_COMPONENT1_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_disease_of_liver_now@@non_hepatitis_c_virus_etiology) :named REQ3_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_hepatic_failure_now@@assessed_with_child_pugh_class_b_or_c) :named REQ4_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not (or patient_has_finding_of_ascites_inthehistory patient_has_finding_of_venous_varices_inthehistory patient_has_finding_of_hepatic_encephalopathy_inthehistory)) :named REQ4_COMPONENT1_OTHER_REQUIREMENTS))
+(assert (! (not (or patient_has_finding_of_ascites_now patient_has_finding_of_venous_varices_now patient_has_finding_of_hepatic_encephalopathy_now)) :named REQ4_COMPONENT2_OTHER_REQUIREMENTS))

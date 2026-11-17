@@ -1,0 +1,68 @@
+[
+ {
+  "name": "patient_sex_is_male_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean value indicating whether the patient's current sex is male.",
+  "when_true": "Set to true if the patient's current sex is documented as male.",
+  "when_false": "Set to false if the patient's current sex is documented as not male (e.g., female or other).",
+  "when_unknown": "Set to null if the patient's current sex is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_will_undergo_endoscopic_excision_of_prostate_using_holmium_laser_inthefuture",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is scheduled to undergo endoscopic excision of the prostate using holmium laser in the future.",
+  "when_true": "Set to true if the patient is scheduled to undergo endoscopic excision of the prostate using holmium laser in the future.",
+  "when_false": "Set to false if the patient is not scheduled to undergo endoscopic excision of the prostate using holmium laser in the future.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is scheduled to undergo endoscopic excision of the prostate using holmium laser in the future.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_urethral_stricture_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a clinical finding or diagnosis of urethral stricture.",
+  "when_true": "Set to true if the patient currently has a clinical finding or diagnosis of urethral stricture.",
+  "when_false": "Set to false if the patient currently does not have a clinical finding or diagnosis of urethral stricture.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a clinical finding or diagnosis of urethral stricture.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_diverticulum_of_bladder_large_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a large bladder diverticulum.",
+  "when_true": "Set to true if the patient currently has a large bladder diverticulum.",
+  "when_false": "Set to false if the patient currently does not have a large bladder diverticulum.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a large bladder diverticulum.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_diverticulum_of_bladder_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a bladder diverticulum.",
+  "when_true": "Set to true if the patient currently has a bladder diverticulum.",
+  "when_false": "Set to false if the patient currently does not have a bladder diverticulum.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a bladder diverticulum.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_contracture_of_bladder_neck_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a contracture of the bladder neck.",
+  "when_true": "Set to true if the patient currently has a clinical finding of contracture of the bladder neck.",
+  "when_false": "Set to false if the patient currently does not have a clinical finding of contracture of the bladder neck.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a contracture of the bladder neck.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]
