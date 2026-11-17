@@ -1,0 +1,50 @@
+;; ===================== QUALIFIER LINKER =====================
+;; Rule: add (qualifier => stem) only when BOTH are Bool; remove (stem => qualifier); drop ill-typed implications.
+;; Added_aux=0 Removed_reverse=0 Removed_illtyped=0 Skipped_nonbool_pairs=2
+;; =============================================================
+
+;; Declarations/definitions (original + any auto-added Bool stems)
+(declare-const patient_has_hypersensitivity_to_beta_lactam_inthehistory Bool)
+(declare-const patient_has_finding_of_beta_lactam_adverse_reaction_inthehistory Bool)
+(declare-const patient_is_pregnant_now Bool)
+(declare-const patient_is_breastfeeding_now Bool)
+(declare-const patient_is_exposed_to_antibacterial_inthepast1months Bool)
+(declare-const patient_is_exposed_to_antibacterial_inthepast1months@@temporalcontext_within1month_before_randomisation_and_sampling_for_urine_cultures Bool)
+(declare-const patient_is_exposed_to_antibacterial_inthepast1months@@temporalcontext_within1month_before_randomisation_and_sampling_for_faecal_cultures Bool)
+(declare-const prior_treatment_was_with_pivmecillinam_within_1_month_before_randomisation_and_sampling_for_urine_cultures Bool)
+(declare-const prior_treatment_was_with_pivmecillinam_within_1_month_before_randomisation_and_sampling_for_faecal_cultures Bool)
+(declare-const prior_treatment_was_with_nitrofurantoin_within_1_month_before_randomisation_and_sampling_for_urine_cultures Bool)
+(declare-const prior_treatment_was_with_nitrofurantoin_within_1_month_before_randomisation_and_sampling_for_faecal_cultures Bool)
+(declare-const patient_creatinine_renal_clearance_value_recorded_now_withunit_ml_per_min Real)
+(declare-const patient_creatinine_renal_clearance_value_recorded_now_withunit_ml_per_min@@estimated_by_cockcroft_gault Bool)
+(declare-const patient_creatinine_renal_clearance_value_recorded_now_withunit_ml_per_min@@measured_at_screening Bool)
+(declare-const patient_has_diagnosis_of_chronic_renal_insufficiency_now Bool)
+(declare-const patient_is_undergoing_hemodialysis_now Bool)
+(declare-const patient_is_undergoing_hemodialysis_now@@intermittent Bool)
+(declare-const patient_is_undergoing_peritoneal_dialysis_now Bool)
+(declare-const patient_has_finding_of_carrier_of_extended_spectrum_beta_lactamase_producing_bacteria_now Bool)
+(declare-const patient_has_finding_of_carrier_of_extended_spectrum_beta_lactamase_producing_bacteria_now@@known Bool)
+(declare-const patient_has_finding_of_disease_condition_finding_now Bool)
+(declare-const patient_has_finding_of_disease_condition_finding_now@@compromises_safety_or_study_data_investigator_opinion Bool)
+(declare-const patient_has_circumstance_now Bool)
+(declare-const patient_has_circumstance_now@@compromises_safety_or_study_data_investigator_opinion Bool)
+
+;; Existing auxiliary assertions
+(assert (! (=> patient_is_exposed_to_antibacterial_inthepast1months@@temporalcontext_within1month_before_randomisation_and_sampling_for_urine_cultures patient_is_exposed_to_antibacterial_inthepast1months) :named REQ2_AUXILIARY0))
+(assert (! (=> patient_is_exposed_to_antibacterial_inthepast1months@@temporalcontext_within1month_before_randomisation_and_sampling_for_faecal_cultures patient_is_exposed_to_antibacterial_inthepast1months) :named REQ2_AUXILIARY1))
+(assert (! (=> patient_creatinine_renal_clearance_value_recorded_now_withunit_ml_per_min@@estimated_by_cockcroft_gault (not (= patient_creatinine_renal_clearance_value_recorded_now_withunit_ml_per_min@@estimated_by_cockcroft_gault false))) :named REQ3_AUXILIARY0))
+(assert (! (=> patient_creatinine_renal_clearance_value_recorded_now_withunit_ml_per_min@@measured_at_screening (not (= patient_creatinine_renal_clearance_value_recorded_now_withunit_ml_per_min@@measured_at_screening false))) :named REQ3_AUXILIARY1))
+(assert (! (=> patient_is_undergoing_hemodialysis_now@@intermittent patient_is_undergoing_hemodialysis_now) :named REQ3_AUXILIARY2))
+(assert (! (=> patient_has_finding_of_carrier_of_extended_spectrum_beta_lactamase_producing_bacteria_now@@known patient_has_finding_of_carrier_of_extended_spectrum_beta_lactamase_producing_bacteria_now) :named REQ4_AUXILIARY0))
+(assert (! (=> patient_has_finding_of_disease_condition_finding_now@@compromises_safety_or_study_data_investigator_opinion patient_has_finding_of_disease_condition_finding_now) :named REQ5_AUXILIARY0))
+(assert (! (=> patient_has_circumstance_now@@compromises_safety_or_study_data_investigator_opinion patient_has_circumstance_now) :named REQ5_AUXILIARY1))
+
+;; Other kept assertions
+(assert (! (not patient_has_hypersensitivity_to_beta_lactam_inthehistory) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_beta_lactam_adverse_reaction_inthehistory) :named REQ0_COMPONENT1_OTHER_REQUIREMENTS))
+(assert (! (not patient_is_pregnant_now) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_is_breastfeeding_now) :named REQ1_COMPONENT1_OTHER_REQUIREMENTS))
+(assert (! (not (or (and patient_is_exposed_to_antibacterial_inthepast1months@@temporalcontext_within1month_before_randomisation_and_sampling_for_urine_cultures (not prior_treatment_was_with_pivmecillinam_within_1_month_before_randomisation_and_sampling_for_urine_cultures) (not prior_treatment_was_with_nitrofurantoin_within_1_month_before_randomisation_and_sampling_for_urine_cultures)) (and patient_is_exposed_to_antibacterial_inthepast1months@@temporalcontext_within1month_before_randomisation_and_sampling_for_faecal_cultures (not prior_treatment_was_with_pivmecillinam_within_1_month_before_randomisation_and_sampling_for_faecal_cultures) (not prior_treatment_was_with_nitrofurantoin_within_1_month_before_randomisation_and_sampling_for_faecal_cultures)))) :named REQ2_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not (or (and patient_has_diagnosis_of_chronic_renal_insufficiency_now (< patient_creatinine_renal_clearance_value_recorded_now_withunit_ml_per_min 10) patient_creatinine_renal_clearance_value_recorded_now_withunit_ml_per_min@@estimated_by_cockcroft_gault patient_creatinine_renal_clearance_value_recorded_now_withunit_ml_per_min@@measured_at_screening) patient_is_undergoing_hemodialysis_now@@intermittent patient_is_undergoing_peritoneal_dialysis_now)) :named REQ3_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_carrier_of_extended_spectrum_beta_lactamase_producing_bacteria_now@@known) :named REQ4_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not (or patient_has_finding_of_disease_condition_finding_now@@compromises_safety_or_study_data_investigator_opinion patient_has_circumstance_now@@compromises_safety_or_study_data_investigator_opinion)) :named REQ5_COMPONENT0_OTHER_REQUIREMENTS))

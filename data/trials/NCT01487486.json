@@ -1,0 +1,17 @@
+{
+ "nct": "NCT01487486",
+ "title": "Proteomics & Glyco-Proteomic Analysis of Follicular Fluid",
+ "conditions": [
+  "Polycystic Ovary Syndrome",
+  "Normal Volunteers"
+ ],
+ "phase": "",
+ "brief_summary": "To the best of the investigators knowledge, exhaustive characterization of the low and high abundant proteins and glyco-proteins of the Follicular Fluid (FF) has not yet been achieved. Such an analysis may provide critical molecular data on the role of the FF in oocyte maturation and may identify specific changes in the FF proteome of patients with gynecologic problems, such as Polycystic Ovary Syndrome (PCOS).~Specific Aims~To perform a comprehensive analysis of normal human FF using sensitive mass spectrometry in combination with conventional approaches for proteomic evaluation and using HPLC and Western blot for glyco-proteomic analysis.~Characterize differential proteomic and glyco-proteomic patterns of the FF in normal women compared to lean and obese women with PCOS.~To supplement the differential proteomic and glyco-proteomic analysis with steroid hormone analysis in all FF samples.",
+ "inclusion_criteria": "inclusion criteria: inclusion criteria All \n\n Female patients undergoing controlled ovarian hyperstimulation (COH), transvaginal oocyte aspiration (TVA), and Saline Infused Sonography (SIS) with UL collection \n\n Age <35 y/o at time of in vitro fertilization (IVF) cycle \n\n Normal ovarian function defined Day 3 Follicular Stimulating Hormone (FSH) <8 pg/ml or Anti-Mullerian Hormone (\u2265 1.0 ng/ml) \n\n inclusion criteria Controls: \n\n Female patients undergoing COH and TVA donating her oocytes \n\n Female patients undergoing COH and TVA for male factor infertility only (i.e. no female causes of infertility) \n\n Normal menstrual cycles \n\n inclusion criteria Lean PCOS: \n\n Diagnosis of PCOS by Rotterdam Criteria \n\n BMI \u2264 25 kg/m2 inclusion criteria Classic PCOS \n\n 1. Diagnosis of PCOS by Rotterdam Criteria 2. BMI > 30 kg/m2 \n\n ",
+ "exclusion_criteria": ": \n\n Age \u2265 35 y/o \n\n Female partners with infertility associated diagnosis (i.e. tubal factor, cervical factor, endometriosis) \n\n Unexplained infertility",
+ "cohorts": [
+  "a",
+  "b",
+  "c"
+ ]
+}

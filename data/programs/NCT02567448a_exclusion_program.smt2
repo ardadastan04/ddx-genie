@@ -1,0 +1,61 @@
+;; ===================== QUALIFIER LINKER =====================
+;; Rule: add (qualifier => stem) only when BOTH are Bool; remove (stem => qualifier); drop ill-typed implications.
+;; Added_aux=1 Removed_reverse=0 Removed_illtyped=0 Skipped_nonbool_pairs=0
+;; =============================================================
+
+;; Declarations/definitions (original + any auto-added Bool stems)
+(declare-const patient_has_metal_object_that_may_interfere_with_chest_computed_tomography_quantification_now Bool)
+(declare-const patient_has_cardiac_pacemaker_now Bool)
+(declare-const patient_has_defibrillator_now Bool)
+(declare-const patient_has_metal_prosthetic_heart_valve_now Bool)
+(declare-const patient_has_metal_projectile_now Bool)
+(declare-const patient_has_metal_weapon_fragment_now Bool)
+(declare-const patient_has_bullet_fragment_now Bool)
+(declare-const patient_has_shrapnel_fragment_now Bool)
+(declare-const patient_has_shotgun_shot_fragment_now Bool)
+(declare-const patient_has_metal_shoulder_prosthesis_now Bool)
+(declare-const patient_can_undergo_spirometry_now Bool)
+(declare-const patient_has_undergone_surgical_procedure_on_chest_wall_inthepast3months Bool)
+(declare-const patient_has_undergone_operation_on_abdominal_region_inthepast3months Bool)
+(declare-const patient_has_diagnosis_of_myocardial_infarction_inthepast3months Bool)
+(declare-const patient_has_diagnosis_of_retinal_detachment_inthepast3months Bool)
+(declare-const patient_has_undergone_surgical_procedure_on_eye_proper_inthepast3months Bool)
+(declare-const patient_has_diagnosis_of_heart_disease_inthepast1months@@resulted_in_hospitalization Bool)
+(declare-const patient_has_finding_of_allergy_to_afrin_inthehistory Bool)
+(declare-const patient_has_finding_of_allergy_to_lidocaine_inthehistory Bool)
+(declare-const patient_has_finding_of_allergy_to_albuterol_inthehistory Bool)
+(declare-const patient_has_finding_of_mental_disorder_now Bool)
+(declare-const patient_has_finding_of_mental_disorder_now@@other_than_mild_depression Bool)
+(declare-const patient_has_finding_of_schizophrenia_now Bool)
+(declare-const patient_has_finding_of_bipolar_disorder_now Bool)
+(declare-const patient_has_finding_of_major_depression_now Bool)
+(declare-const patient_has_finding_of_panic_disorder_now Bool)
+(declare-const patient_has_finding_of_anxiety_disorder_now Bool)
+(declare-const patient_beverage_containing_caffeine_value_recorded_now_withunit_cups_per_day Real)
+(declare-const patient_is_pregnant_now Bool)
+(declare-const patient_is_suspected_to_be_pregnant_now Bool)
+(declare-const patient_has_diagnosis_of_heart_disease_inthepast1months Bool)
+
+;; Existing auxiliary assertions
+(assert (! (=> (or patient_has_cardiac_pacemaker_now patient_has_defibrillator_now patient_has_metal_prosthetic_heart_valve_now patient_has_metal_projectile_now patient_has_metal_weapon_fragment_now patient_has_metal_shoulder_prosthesis_now) patient_has_metal_object_that_may_interfere_with_chest_computed_tomography_quantification_now) :named REQ0_AUXILIARY0))
+(assert (! (=> (or patient_has_bullet_fragment_now patient_has_shrapnel_fragment_now patient_has_shotgun_shot_fragment_now) patient_has_metal_weapon_fragment_now) :named REQ0_AUXILIARY1))
+(assert (! (=> (or patient_has_finding_of_schizophrenia_now patient_has_finding_of_bipolar_disorder_now patient_has_finding_of_major_depression_now patient_has_finding_of_panic_disorder_now patient_has_finding_of_anxiety_disorder_now) patient_has_finding_of_mental_disorder_now@@other_than_mild_depression) :named REQ3_AUXILIARY0))
+(assert (! (=> patient_has_finding_of_mental_disorder_now@@other_than_mild_depression patient_has_finding_of_mental_disorder_now) :named REQ3_AUXILIARY1))
+
+;; AUTO auxiliary (qualifier => stem) links [Bool→Bool]
+(assert (! (=> patient_has_diagnosis_of_heart_disease_inthepast1months@@resulted_in_hospitalization patient_has_diagnosis_of_heart_disease_inthepast1months) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_0))
+
+;; Other kept assertions
+(assert (! (not patient_has_metal_object_that_may_interfere_with_chest_computed_tomography_quantification_now) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not (and (not patient_can_undergo_spirometry_now) patient_has_undergone_surgical_procedure_on_chest_wall_inthepast3months)) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not (and (not patient_can_undergo_spirometry_now) patient_has_undergone_operation_on_abdominal_region_inthepast3months)) :named REQ1_COMPONENT1_OTHER_REQUIREMENTS))
+(assert (! (not (and (not patient_can_undergo_spirometry_now) patient_has_diagnosis_of_myocardial_infarction_inthepast3months)) :named REQ1_COMPONENT2_OTHER_REQUIREMENTS))
+(assert (! (not (and (not patient_can_undergo_spirometry_now) patient_has_diagnosis_of_retinal_detachment_inthepast3months)) :named REQ1_COMPONENT3_OTHER_REQUIREMENTS))
+(assert (! (not (and (not patient_can_undergo_spirometry_now) patient_has_undergone_surgical_procedure_on_eye_proper_inthepast3months)) :named REQ1_COMPONENT4_OTHER_REQUIREMENTS))
+(assert (! (not (and (not patient_can_undergo_spirometry_now) patient_has_diagnosis_of_heart_disease_inthepast1months@@resulted_in_hospitalization)) :named REQ1_COMPONENT5_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_allergy_to_afrin_inthehistory) :named REQ2_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_allergy_to_lidocaine_inthehistory) :named REQ2_COMPONENT1_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_allergy_to_albuterol_inthehistory) :named REQ2_COMPONENT2_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_mental_disorder_now@@other_than_mild_depression) :named REQ3_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not (> patient_beverage_containing_caffeine_value_recorded_now_withunit_cups_per_day 10)) :named REQ4_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not (or patient_is_pregnant_now patient_is_suspected_to_be_pregnant_now)) :named REQ5_COMPONENT0_OTHER_REQUIREMENTS))

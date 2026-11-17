@@ -1,0 +1,46 @@
+[
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when > 18"
+ },
+ {
+  "name": "patient_has_diagnosis_of_cirrhosis_of_liver_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of cirrhosis of the liver.",
+  "when_true": "Set to true if the patient currently has a diagnosis of cirrhosis of the liver.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of cirrhosis of the liver.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of cirrhosis of the liver.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_hepatobiliary_malignancy_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has hepatobiliary malignancy.",
+  "when_true": "Set to true if the patient currently has hepatobiliary malignancy.",
+  "when_false": "Set to false if the patient currently does not have hepatobiliary malignancy.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has hepatobiliary malignancy.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_malignant_neoplasm_of_pancreas_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a malignant neoplasm of the pancreas.",
+  "when_true": "Set to true if the patient currently has a malignant neoplasm of the pancreas (pancreatic malignancy).",
+  "when_false": "Set to false if the patient currently does not have a malignant neoplasm of the pancreas.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a malignant neoplasm of the pancreas.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

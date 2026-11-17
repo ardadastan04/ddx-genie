@@ -1,0 +1,15 @@
+{
+ "nct": "NCT00921024",
+ "title": "Safety and Efficacy of IV CXA-101 and IV Ceftazidime in Patients With Complicated Urinary Tract Infections",
+ "conditions": [
+  "Complicated Urinary Tract Infection"
+ ],
+ "phase": "Phase 2",
+ "brief_summary": "The purpose of this study is to evaluate the safety and efficacy of intravenous CXA 101 and comparator in complicated urinary tract infection",
+ "inclusion_criteria": "inclusion criteria: \n\n Males and females 18 to 90 years of age, inclusive. \n\n Pyuria (white blood cell [WBC] count > 10/\u00b5L in unspun urine or \u2265 10 per high power field in spun urine) \n\n Clinical signs and/or symptoms of cUTI, either of: \n\n a. Pyelonephritis, as indicated by both of the following: i. Fever (oral temperature \u2265 37.8\u00b0C); ii. Flank pain or costovertebral angle tenderness; \n\n OR \n\n b. Complicated lower UTI, as indicated by both of the following: i. At least one of the following new or worsening symptoms: \n\n Dysuria; \n\n Frequency; \n\n Suprapubic pain; \n\n Urgency \n\n ii. At least one of the following complicating factors: \n\n Male gender; \n\n Current bladder instrumentation or indwelling urinary catheter that is expected to be removed during the course of IV study drug administration; \n\n Obstructive uropathy that is expected to be medically or surgically treated during the course of IV study drug administration; \n\n Urogenital surgery within 7 days preceding administration of the first dose of study drug; \n\n Functional or anatomical abnormality of the urogenital tract including anatomic malformations or neurogenic bladder with voiding disturbance of at least 100 mL residual urine. \n\n ",
+ "exclusion_criteria": " \n\n Documented history of any hypersensitivity or allergic reaction to any \u03b2-lactam antibacterial \n\n Concomitant infection requiring systemic antibacterial therapy in addition to IV study drug therapy at the time of randomization. Drugs with only gram-positive activity (e.g. vancomycin, linezolid) are allowed \n\n Complete, permanent obstruction of the urinary tract \n\n Confirmed (at time of randomization) fungal urinary tract infection (with \u2265 103 fungal CFU/mL) \n\n Suspected or confirmed perinephric or intrarenal abscess \n\n Suspected or confirmed prostatitis \n\n Known ileal loop or vesico-ureteral reflux \n\n Women who are pregnant or nursing",
+ "cohorts": [
+  "a",
+  "b"
+ ]
+}

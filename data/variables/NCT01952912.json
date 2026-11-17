@@ -1,0 +1,211 @@
+[
+ {
+  "name": "patient_maximal_urinary_flow_rate_value_recorded_now_withunit_ml_per_s",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's maximum urinary flow rate (Qmax) measured now, in mL/s.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured value if the patient's maximum urinary flow rate (Qmax) in mL/s is recorded now.",
+  "polarity": "criterion met when < 12"
+ },
+ {
+  "name": "patient_total_international_prostate_symptom_score_value_recorded_now_withunit_score",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's total International Prostate Symptom Score (IPSS) measured now.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured value if the patient's total International Prostate Symptom Score (IPSS) is recorded now.",
+  "polarity": "criterion met when > 19"
+ },
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when >= 50"
+ },
+ {
+  "name": "patient_volume_of_prostate_value_recorded_now_withunit_ml",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's prostate volume (in mL) measured at the current time.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no prostate volume measurement is available for the current time or the value is indeterminate.",
+  "when_value": "Set to the measured value (in mL) if the patient's prostate volume is recorded now.",
+  "polarity": "criterion met when > 100"
+ },
+ {
+  "name": "patient_volume_of_prostate_value_recorded_now_withunit_ml@@determined_by_transrectal_ultrasound",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the prostate volume measurement was determined by transrectal ultrasound.",
+  "when_true": "Set to true if the prostate volume measurement was determined by transrectal ultrasound.",
+  "when_false": "Set to false if the prostate volume measurement was not determined by transrectal ultrasound.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the prostate volume measurement was determined by transrectal ultrasound.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_residual_urine_volume_value_recorded_now_withunit_ml",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's post-void residual urine volume (in mL) measured at the current time.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no post-void residual urine volume measurement is available for the current time or the value is indeterminate.",
+  "when_value": "Set to the measured value (in mL) if the patient's post-void residual urine volume is recorded now.",
+  "polarity": "criterion met when > 50"
+ },
+ {
+  "name": "patient_has_finding_of_ineffective_therapeutic_regimen_management_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has failure of medical therapy (ineffective therapeutic regimen management).",
+  "when_true": "Set to true if the patient currently has failure of medical therapy (ineffective therapeutic regimen management).",
+  "when_false": "Set to false if the patient currently does not have failure of medical therapy (ineffective therapeutic regimen management).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has failure of medical therapy (ineffective therapeutic regimen management).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_disorder_of_lung_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a disorder of the lung (pulmonary disease).",
+  "when_true": "Set to true if the patient currently has a disorder of the lung (pulmonary disease).",
+  "when_false": "Set to false if the patient currently does not have a disorder of the lung (pulmonary disease).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a disorder of the lung (pulmonary disease).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_disorder_of_lung_now@@severe",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current disorder of the lung (pulmonary disease) is severe.",
+  "when_true": "Set to true if the patient currently has a disorder of the lung (pulmonary disease) and the disorder is severe.",
+  "when_false": "Set to false if the patient currently has a disorder of the lung (pulmonary disease) but it is not severe.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's pulmonary disease is severe.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_heart_disease_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has heart disease.",
+  "when_true": "Set to true if the patient currently has heart disease.",
+  "when_false": "Set to false if the patient currently does not have heart disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has heart disease.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_heart_disease_now@@severe",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current heart disease is severe.",
+  "when_true": "Set to true if the patient currently has heart disease and the disease is severe.",
+  "when_false": "Set to false if the patient currently has heart disease but it is not severe.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's heart disease is severe.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_blood_coagulation_disorder_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a blood coagulation disorder (coagulopathy).",
+  "when_true": "Set to true if the patient currently has a clinical finding of blood coagulation disorder (coagulopathy).",
+  "when_false": "Set to false if the patient currently does not have a clinical finding of blood coagulation disorder (coagulopathy).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a clinical finding of blood coagulation disorder (coagulopathy).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_neurogenic_urinary_bladder_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has the clinical finding of neurogenic bladder.",
+  "when_true": "Set to true if the patient currently has the clinical finding of neurogenic bladder.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of neurogenic bladder.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of neurogenic bladder.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_urinary_bladder_stone_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a clinical finding of urinary bladder stone.",
+  "when_true": "Set to true if the patient currently has a clinical finding or diagnosis of urinary bladder stone (bladder calculus).",
+  "when_false": "Set to false if the patient currently does not have a clinical finding or diagnosis of urinary bladder stone.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a clinical finding or diagnosis of urinary bladder stone.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_malignant_neoplasm_of_urinary_bladder_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of malignant neoplasm of the urinary bladder.",
+  "when_true": "Set to true if the patient currently has a diagnosis of malignant neoplasm of the urinary bladder (bladder cancer).",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of malignant neoplasm of the urinary bladder.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of malignant neoplasm of the urinary bladder.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_malignant_neoplasm_of_prostate_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of malignant neoplasm of the prostate (prostate cancer).",
+  "when_true": "Set to true if the patient currently has a diagnosis of malignant neoplasm of the prostate (prostate cancer).",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of malignant neoplasm of the prostate (prostate cancer).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of malignant neoplasm of the prostate (prostate cancer).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_urethral_stricture_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of urethral stricture.",
+  "when_true": "Set to true if the patient currently has a diagnosis of urethral stricture.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of urethral stricture.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of urethral stricture.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_operation_on_prostate_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone a prostate surgery in their history.",
+  "when_true": "Set to true if the patient has ever undergone a prostate surgery at any time in the past.",
+  "when_false": "Set to false if the patient has never undergone a prostate surgery at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone a prostate surgery.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_operation_on_urethra_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone a urethral surgery in their history.",
+  "when_true": "Set to true if the patient has ever undergone a urethral surgery at any time in the past.",
+  "when_false": "Set to false if the patient has never undergone a urethral surgery at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone a urethral surgery.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

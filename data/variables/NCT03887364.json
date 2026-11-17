@@ -1,0 +1,134 @@
+[
+ {
+  "name": "patient_has_finding_of_mild_chronic_obstructive_pulmonary_disease_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has mild stage chronic obstructive pulmonary disease.",
+  "when_true": "Set to true if the patient currently has the clinical finding of mild stage chronic obstructive pulmonary disease.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of mild stage chronic obstructive pulmonary disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of mild stage chronic obstructive pulmonary disease.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_moderate_chronic_obstructive_pulmonary_disease_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has moderate stage chronic obstructive pulmonary disease.",
+  "when_true": "Set to true if the patient currently has the clinical finding of moderate stage chronic obstructive pulmonary disease.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of moderate stage chronic obstructive pulmonary disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of moderate stage chronic obstructive pulmonary disease.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_injury_of_face_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has any injury of the face.",
+  "when_true": "Set to true if the patient currently has any injury of the face.",
+  "when_false": "Set to false if the patient currently does not have any injury of the face.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has any injury of the face.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_surgical_procedure_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has undergone any surgical procedure at any time in the past.",
+  "when_true": "Set to true if the patient has undergone any surgical procedure at any time in the past.",
+  "when_false": "Set to false if the patient has not undergone any surgical procedure at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has undergone any surgical procedure at any time in the past.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_surgical_procedure_inthehistory@@of_face",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the surgical procedure undergone by the patient in the past was performed on the face.",
+  "when_true": "Set to true if the surgical procedure undergone by the patient in the past was performed on the face.",
+  "when_false": "Set to false if the surgical procedure undergone by the patient in the past was not performed on the face.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the surgical procedure was performed on the face.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_sinusitis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a clinical finding or diagnosis of sinusitis.",
+  "when_true": "Set to true if the patient currently has a clinical finding or diagnosis of sinusitis.",
+  "when_false": "Set to false if the patient currently does not have a clinical finding or diagnosis of sinusitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a clinical finding or diagnosis of sinusitis.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_respiratory_failure_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has respiratory failure.",
+  "when_true": "Set to true if the patient currently has the clinical finding of respiratory failure.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of respiratory failure.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of respiratory failure.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_dyspnea_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has dyspnea.",
+  "when_true": "Set to true if the patient currently has the clinical finding of dyspnea.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of dyspnea.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of dyspnea.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_dyspnea_now@@of_cardiac_origin",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current dyspnea is of cardiac origin.",
+  "when_true": "Set to true if the patient's current dyspnea is of cardiac origin.",
+  "when_false": "Set to false if the patient's current dyspnea is not of cardiac origin.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current dyspnea is of cardiac origin.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_allergic_rhinitis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of allergic rhinitis.",
+  "when_true": "Set to true if the patient currently has a diagnosis of allergic rhinitis.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of allergic rhinitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of allergic rhinitis.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_acute_bronchitis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of acute bronchitis.",
+  "when_true": "Set to true if the patient currently has a diagnosis of acute bronchitis.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of acute bronchitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of acute bronchitis.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_cystic_fibrosis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of cystic fibrosis.",
+  "when_true": "Set to true if the patient currently has a diagnosis of cystic fibrosis.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of cystic fibrosis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of cystic fibrosis.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

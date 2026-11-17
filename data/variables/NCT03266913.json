@@ -1,0 +1,79 @@
+[
+ {
+  "name": "patient_age_value_recorded_now_in_days",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in days.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's age in days is unknown or not recorded.",
+  "when_value": "Set to the patient's current age in days.",
+  "polarity": "criterion met when >= 2"
+ },
+ {
+  "name": "patient_has_finding_of_jaundice_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "gestational_age_value_recorded_now_in_weeks",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's current gestational age in weeks.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current gestational age in weeks is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the numeric value of the patient's current gestational age in weeks if known and recorded.",
+  "polarity": "criterion met when >= 35"
+ },
+ {
+  "name": "patient_gestational_age_value_recorded_now_in_weeks",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric value of the patient's gestational age in weeks, recorded at the current time.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's gestational age in weeks is unknown, not documented, or cannot be determined at the current time.",
+  "when_value": "Set to the numeric value of the patient's gestational age in weeks as recorded now.",
+  "polarity": "criterion met when < 35"
+ },
+ {
+  "name": "parents_refuse_to_cooperate",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's parents refuse to cooperate.",
+  "when_true": "Set to true if the patient's parents refuse to cooperate.",
+  "when_false": "Set to false if the patient's parents do not refuse to cooperate.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's parents refuse to cooperate.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_sepsis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has sepsis.",
+  "when_true": "Set to true if the patient currently has sepsis.",
+  "when_false": "Set to false if the patient currently does not have sepsis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has sepsis.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_co_morbid_conditions_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has other comorbid conditions.",
+  "when_true": "Set to true if the patient currently has other comorbid conditions.",
+  "when_false": "Set to false if the patient currently does not have other comorbid conditions.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has other comorbid conditions.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

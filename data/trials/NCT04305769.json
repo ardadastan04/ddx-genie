@@ -1,0 +1,17 @@
+{
+ "nct": "NCT04305769",
+ "title": "Alanyl-glutamine Supplementation for C. Difficile Treatment (ACT)",
+ "conditions": [
+  "Clostridioides Difficile Infection",
+  "Clostridium Difficile Infection",
+  "Clostridium Difficile Diarrhea",
+  "Clostridia Difficile Colitis"
+ ],
+ "phase": "Phase 2",
+ "brief_summary": "This is a randomized, double-blind, placebo-controlled trial to determine the optimal dose and safety of oral alanyl-glutamine between 4, 24, and 44 g doses administered for 10 days with standard therapy among first time incident cases of uncomplicated C. difficile infection (CDI) in hospitalized persons aged 65 or older. Our hypothesis is that alanyl-glutamine supplementation will decrease recurrence and mortality from CDI and these outcomes will be associated with improvement of inflammatory markers and restoration of intestinal microbiota function.",
+ "inclusion_criteria": "inclusion criteria: \n\n Provision of signed and dated informed consent form \n\n Stated willingness to comply with all study procedures and availability for the duration of the study \n\n Male or female, aged 18 years and older. \n\n Admitted in the hospital \n\n Presence of diarrhea* \n\n . Episode of C. difficile infection, non-severe or severe uncomplicated. \n\n . Within 96 hours of receiving standard therapy (oral vancomycin at UVA). \n\n Must be able to provide informed consent in person or electronically, or if not able to have a LAR to provide consent, in person or remotely via virtual or electronic means. \n\n ",
+ "exclusion_criteria": ": \n\n At enrollment, presence of any of the following: \n\n Hypotension or shock \n\n Megacolon or moderate to severe ileus \n\n Acute abdomen \n\n Admission to intensive care unit \n\n Inability to tolerate oral or enteral medication \n\n Presence of other known infectious etiology of diarrhea \n\n Inflammatory bowel disease (e.g. Crohn's disease, ulcerative colitis) or other etiology of non-infectious diarrhea \n\n Enrollment in another investigational drug trial \n\n Current use of alternative treatment for CDI (e.g. antibiotics other than vancomycin or fidaxomicin; IVIg; fecal transplant). \n\n On probiotics and not willing to discontinue. \n\n Cirrhosis or in participants with ALT > 3X normal \n\n End stage renal disease, on dialysis, or creatinine clearance or estimated GFR of <30mL/min even after adequate hydration \n\n Life expectancy of < 6 months.",
+ "cohorts": [
+  ""
+ ]
+}

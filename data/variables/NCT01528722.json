@@ -1,0 +1,57 @@
+[
+ {
+  "name": "patient_is_undergoing_cholecystectomy_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently undergoing a cholecystectomy procedure.",
+  "when_true": "Set to true if the patient is currently undergoing a cholecystectomy procedure.",
+  "when_false": "Set to false if the patient is not currently undergoing a cholecystectomy procedure.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently undergoing a cholecystectomy procedure.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_undergoing_cholecystectomy_now@@emergency_procedure",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the cholecystectomy is performed as an emergency procedure.",
+  "when_true": "Set to true if the cholecystectomy is performed as an emergency procedure.",
+  "when_false": "Set to false if the cholecystectomy is not performed as an emergency procedure.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the cholecystectomy is performed as an emergency procedure.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_cholecystitis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of cholecystitis.",
+  "when_true": "Set to true if the patient currently has a diagnosis of cholecystitis.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of cholecystitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of cholecystitis.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_gallstone_pancreatitis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of gallstone pancreatitis.",
+  "when_true": "Set to true if the patient currently has a diagnosis of gallstone pancreatitis.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of gallstone pancreatitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of gallstone pancreatitis.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_undergoing_cholecystectomy_now@@planned_elective_non_emergency",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the cholecystectomy the patient is currently undergoing is planned, elective, and non-emergency.",
+  "when_true": "Set to true if the cholecystectomy the patient is currently undergoing is planned, elective, and non-emergency.",
+  "when_false": "Set to false if the cholecystectomy the patient is currently undergoing is not planned, elective, or is an emergency.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the cholecystectomy is planned, elective, and non-emergency.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

@@ -1,0 +1,57 @@
+[
+ {
+  "name": "patient_is_subject_with_health",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is a subject with health.",
+  "when_true": "Set to true if the patient is a subject with health.",
+  "when_false": "Set to false if the patient is not a subject with health.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is a subject with health.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is confirmed to be pregnant at the current time.",
+  "when_false": "Set to false if the patient is confirmed not to be pregnant at the current time.",
+  "when_unknown": "Set to null if the patient's current pregnancy status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_lactating_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient is currently lactating.",
+  "when_true": "Set to true if the patient is confirmed to be lactating at the current time.",
+  "when_false": "Set to false if the patient is confirmed not to be lactating at the current time.",
+  "when_unknown": "Set to null if the patient's current lactation status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_exposed_to_nutritional_supplement_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently exposed to any nutritional supplement (dietary supplement).",
+  "when_true": "Set to true if the patient is currently exposed to any nutritional supplement (dietary supplement).",
+  "when_false": "Set to false if the patient is currently not exposed to any nutritional supplement (dietary supplement).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently exposed to any nutritional supplement (dietary supplement).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_exposed_to_nutritional_supplement_now@@other_than_study_interventions_calcium_phosphate_or_vitamin_d",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating that the nutritional supplement exposure is to a substance other than the study interventions (calcium phosphate and/or vitamin D).",
+  "when_true": "Set to true if the nutritional supplement exposure is to a substance other than the study interventions (calcium phosphate and/or vitamin D).",
+  "when_false": "Set to false if the nutritional supplement exposure is only to the study interventions (calcium phosphate and/or vitamin D).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the nutritional supplement exposure is to a substance other than the study interventions (calcium phosphate and/or vitamin D).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

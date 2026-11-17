@@ -1,0 +1,79 @@
+[
+ {
+  "name": "patient_has_finding_of_ischemic_stroke_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has ischemic stroke.",
+  "when_true": "Set to true if the patient currently has the clinical finding of ischemic stroke, regardless of type or severity.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of ischemic stroke.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of ischemic stroke.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_temporal_bone_window_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when < 18"
+ },
+ {
+  "name": "patient_has_finding_of_pregnancy_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has pregnancy as a clinical finding.",
+  "when_true": "Set to true if the patient currently has pregnancy as a clinical finding.",
+  "when_false": "Set to false if the patient currently does not have pregnancy as a clinical finding.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has pregnancy as a clinical finding.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is currently pregnant.",
+  "when_false": "Set to false if the patient is currently not pregnant.",
+  "when_unknown": "Set to null if the patient's current pregnancy status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_informed_consent_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has provided informed consent at the current time.",
+  "when_true": "Set to true if the patient has provided informed consent at the current time.",
+  "when_false": "Set to false if the patient has not provided informed consent at the current time.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has provided informed consent at the current time.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_temporal_bone_window_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a temporal bone window present.",
+  "when_true": "Set to true if the patient currently has a temporal bone window present.",
+  "when_false": "Set to false if the patient currently does not have a temporal bone window present (i.e., absence).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a temporal bone window.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

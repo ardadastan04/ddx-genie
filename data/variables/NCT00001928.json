@@ -1,0 +1,189 @@
+[
+ {
+  "name": "patient_has_finding_of_parkinsonism_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has parkinsonism.",
+  "when_true": "Set to true if the patient currently has the clinical finding of parkinsonism, regardless of etiology.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of parkinsonism.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of parkinsonism.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_parkinsonism_now@@etiology_undetermined",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's parkinsonism is of undetermined etiology.",
+  "when_true": "Set to true if the patient's parkinsonism is of undetermined etiology.",
+  "when_false": "Set to false if the patient's parkinsonism is of known etiology.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the etiology of the patient's parkinsonism is undetermined.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_sex_is_male_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean value indicating whether the patient's current sex is male.",
+  "when_true": "Set to true if the patient's current sex is documented as male.",
+  "when_false": "Set to false if the patient's current sex is documented as not male (e.g., female, other).",
+  "when_unknown": "Set to null if the patient's current sex is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_sex_is_female_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean value indicating whether the patient's current sex is female.",
+  "when_true": "Set to true if the patient's current sex is documented as female.",
+  "when_false": "Set to false if the patient's current sex is documented as not female (e.g., male, other).",
+  "when_unknown": "Set to null if the patient's current sex is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when >= 18"
+ },
+ {
+  "name": "patient_has_finding_of_disease_condition_finding_now@@can_reasonably_be_expected_to_subject_patient_to_unwarranted_risks",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current disease, condition, or clinical finding can reasonably be expected to subject the patient to unwarranted risks.",
+  "when_true": "Set to true if the patient currently has any disease, condition, or clinical finding that can reasonably be expected to subject the patient to unwarranted risks.",
+  "when_false": "Set to false if the patient currently has a disease, condition, or clinical finding but it cannot reasonably be expected to subject the patient to unwarranted risks.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's disease, condition, or clinical finding can reasonably be expected to subject the patient to unwarranted risks.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_seizure_disorder_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever had a seizure disorder (convulsive disorder) in their history.",
+  "when_true": "Set to true if the patient has ever had a seizure disorder (convulsive disorder) at any time in their history.",
+  "when_false": "Set to false if the patient has never had a seizure disorder (convulsive disorder) in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had a seizure disorder (convulsive disorder).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_disease_of_liver_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever had a liver disease (hepatic disorder) in their history.",
+  "when_true": "Set to true if the patient has ever had a liver disease (hepatic disorder) at any time in their history.",
+  "when_false": "Set to false if the patient has never had a liver disease (hepatic disorder) in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had a liver disease (hepatic disorder).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_kidney_disease_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever had a kidney disease (renal disorder) in their history.",
+  "when_true": "Set to true if the patient has ever had a kidney disease (renal disorder) at any time in their history.",
+  "when_false": "Set to false if the patient has never had a kidney disease (renal disorder) in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had a kidney disease (renal disorder).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_myocardial_infarction_now@@currently_receiving_treatment",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient with current myocardial infarction is currently receiving treatment for it.",
+  "when_true": "Set to true if the patient currently has myocardial infarction and is currently receiving treatment for it.",
+  "when_false": "Set to false if the patient currently has myocardial infarction but is not currently receiving treatment for it.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently receiving treatment for myocardial infarction.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_cardiac_arrhythmia_now@@currently_receiving_treatment",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient with current cardiac arrhythmia is currently receiving treatment for it.",
+  "when_true": "Set to true if the patient currently has cardiac arrhythmia and is currently receiving treatment for it.",
+  "when_false": "Set to false if the patient currently has cardiac arrhythmia but is not currently receiving treatment for it.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently receiving treatment for cardiac arrhythmia.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_heart_failure_now@@currently_receiving_treatment",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient with current heart failure (cardiac failure) is currently receiving treatment for it.",
+  "when_true": "Set to true if the patient currently has heart failure (cardiac failure) and is currently receiving treatment for it.",
+  "when_false": "Set to false if the patient currently has heart failure (cardiac failure) but is not currently receiving treatment for it.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently receiving treatment for heart failure (cardiac failure).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Indicates whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is currently pregnant.",
+  "when_false": "Set to false if the patient is currently not pregnant.",
+  "when_unknown": "Set to null if the patient's current pregnancy status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_myocardial_infarction_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_disease_condition_finding_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_cardiac_arrhythmia_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_heart_failure_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ }
+]

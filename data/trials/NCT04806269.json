@@ -1,0 +1,16 @@
+{
+ "nct": "NCT04806269",
+ "title": "Biosignals by Wearables in Thyroid Dysfunction",
+ "conditions": [
+  "Thyrotoxicosis",
+  "Hypothyroidism"
+ ],
+ "phase": "",
+ "brief_summary": "This study is a single center observational study to investigate the association between biosignals from wearables and thyroid dysfunction.",
+ "inclusion_criteria": "inclusion criteria: \n\n Subjects who were newly diagnosed as thyroid dysfunction (thyrotoxicosis or hypothyroidism) or undergoing treatment \n\n Subjects who are able to use wearable devices, smart phones, and mobile apps \n\n ",
+ "exclusion_criteria": ": \n\n Subjects with restrictions on normal activities due to diseases other than thyroid dysfunction \n\n Subjects who are taking medications affecting heart rate \n\n Subjects with diseases affecting heart rate (i.e. arrhythmia)",
+ "cohorts": [
+  "a",
+  "b"
+ ]
+}

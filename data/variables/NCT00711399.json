@@ -1,0 +1,123 @@
+[
+ {
+  "name": "patient_has_finding_of_cough_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_dyspnea_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_insertion_of_pleural_tube_drain_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_chest_tube_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_skin_lesion_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_skin_lesion_now@@precludes_attachment_of_sensors",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_skin_lesion_count_now",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when >= 1"
+ },
+ {
+  "name": "patient_has_finding_of_skin_lesion_now@@precludes_attachment_of_sensors@@strong_clinical_support",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_respiratory_distress_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_sex_is_female_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ }
+]

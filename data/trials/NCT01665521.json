@@ -1,0 +1,15 @@
+{
+ "nct": "NCT01665521",
+ "title": "Efficacy Evaluation of the HEART Pathway in Emergency Department Patients With Acute Chest Pain",
+ "conditions": [
+  "Acute Coronary Syndrome",
+  "Chest Pain"
+ ],
+ "phase": "",
+ "brief_summary": "Our research will examine a chest pain care strategy, called the HEART pathway, which is designed to correctly identify Emergency Department patients at high-risk for cardiovascular events, likely to benefit from further testing, and patients at very-low-risk for cardiovascular events, who may be safely discharged home. By using an individual's risk assessment to determining testing, we hope to improve the quality and efficiency of the care delivered to Emergency Department patients with chest pain. Our study will determine if the HEART pathway, which combines a clinical decision rule, the HEART score, and two serial troponin measurements, will reduce stress testing and cardiovascular imaging, decrease hospital length of stay, and reduce cost compared to usual care, while maintaining safety.",
+ "inclusion_criteria": "inclusion criteria: \n\n Age greater than or equal to 21 years \n\n Chest discomfort or other symptoms consistent with possible ACS \n\n The treating physician feels the patient could be discharged home if cardiac disease was excluded \n\n ",
+ "exclusion_criteria": ": \n\n New ST-segment elevation in contiguous leads on any electrocardiogram (>/= 1 mV) \n\n Unstable vitals signs: symptomatic hypotension at the time of enrollment (systolic < 90 mm Hg), tachycardia (HR>120), bradycardia (HR<40), and hypoxemia (<90% pulse-oximetry on room air or normal home oxygen flow rate) \n\n Terminal diagnosis with life expectancy less than 1 year \n\n A non-cardiac medical, surgical, or psychiatric illness determined by the provider to require admission, increase risk of objective cardiac testing, or prevent immediate discharge following negative testing. \n\n Prior enrollment \n\n Incapacity or unwillingness to provide consent and comply with study procedures \n\n Non-English speaking \n\n Sub-study I & II \n\n inclusion criteria: \n\n ED attending physicians \n\n ",
+ "cohorts": [
+  ""
+ ]
+}

@@ -1,0 +1,57 @@
+[
+ {
+  "name": "patient_has_undergone_collection_of_stool_specimen_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone a collection of stool specimen (fecal sample) at any time in the past.",
+  "when_true": "Set to true if the patient has ever undergone a collection of stool specimen (fecal sample) at any time in the past.",
+  "when_false": "Set to false if the patient has never undergone a collection of stool specimen (fecal sample) at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone a collection of stool specimen (fecal sample).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_undergone_collection_of_stool_specimen_inthehistory@@outcome_is_positive_for_clostridium_difficile_toxin",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating that the patient's collection of stool specimen (fecal sample) was positive for Clostridium difficile toxin.",
+  "when_true": "Set to true if the patient's collection of stool specimen (fecal sample) was positive for Clostridium difficile toxin.",
+  "when_false": "Set to false if the patient's collection of stool specimen (fecal sample) was not positive for Clostridium difficile toxin.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's collection of stool specimen (fecal sample) was positive for Clostridium difficile toxin.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_received_treatment_for_clostridium_difficile_colitis_with_oral_metronidazole_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever received treatment for Clostridium difficile colitis with oral metronidazole at any time in the past.",
+  "when_true": "Set to true if the patient has ever received treatment for Clostridium difficile colitis with oral metronidazole at any time in the past.",
+  "when_false": "Set to false if the patient has never received treatment for Clostridium difficile colitis with oral metronidazole at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever received treatment for Clostridium difficile colitis with oral metronidazole at any time in the past.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_metronidazole_containing_product_in_oral_dose_form_value_recorded_inthehistory_withunit_days",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric value representing the total number of days the patient has received oral metronidazole-containing product therapy at any time in the past.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the total number of days of oral metronidazole-containing product therapy received in the past for Clostridium difficile colitis is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the total number of days the patient has received oral metronidazole-containing product therapy at any time in the past, specifically for the treatment of Clostridium difficile colitis.",
+  "polarity": "criterion met when < 7"
+ },
+ {
+  "name": "patient_metronidazole_containing_product_in_oral_dose_form_value_recorded_inthehistory_withunit_days@@for_treatment_of_clostridium_difficile_colitis",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the recorded duration of oral metronidazole-containing product therapy was for the treatment of Clostridium difficile colitis.",
+  "when_true": "Set to true if the recorded duration of oral metronidazole-containing product therapy was specifically for the treatment of Clostridium difficile colitis.",
+  "when_false": "Set to false if the recorded duration was not for the treatment of Clostridium difficile colitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the therapy was for the treatment of Clostridium difficile colitis.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ }
+]

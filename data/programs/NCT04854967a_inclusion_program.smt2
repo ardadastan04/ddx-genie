@@ -1,0 +1,50 @@
+;; ===================== QUALIFIER LINKER =====================
+;; Rule: add (qualifier => stem) only when BOTH are Bool; remove (stem => qualifier); drop ill-typed implications.
+;; Added_aux=5 Removed_reverse=0 Removed_illtyped=0 Skipped_nonbool_pairs=1
+;; =============================================================
+
+;; Declarations/definitions (original + any auto-added Bool stems)
+(declare-const patient_age_value_recorded_now_in_years Real)
+(declare-const patient_has_diagnosis_of_chronic_obstructive_pulmonary_disease_now Bool)
+(declare-const patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_pulmonary_disease_inthepast3months@@resulted_in_hospitalization_and_patient_was_discharged Bool)
+(declare-const patient_has_finding_of_exacerbation_of_congestive_heart_failure_inthepast3months@@resulted_in_hospitalization_and_patient_was_discharged Bool)
+(declare-const patient_has_finding_of_pneumonia_inthepast3months@@resulted_in_hospitalization_and_patient_was_discharged Bool)
+(declare-const patient_is_exposed_to_oxygen_now@@active_prescription_for_supplemental_oxygen_within_48_hours_of_discharge_that_remains_active Bool)
+(declare-const patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_pulmonary_disease_inthepast30days Bool)
+(declare-const patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_pulmonary_disease_inthepast30days@@occurred_in_inpatient_setting Bool)
+(declare-const patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_pulmonary_disease_inthepast30days@@occurred_in_outpatient_setting Bool)
+(declare-const patient_smoker_value_recorded_inthehistory_withunit_pack_years Real)
+(declare-const patient_oxygen_saturation_measurement_value_recorded_now_withunit_percent Real)
+(declare-const patient_oxygen_saturation_measurement_value_recorded_now_withunit_percent@@measured_on_room_air Bool)
+(declare-const patient_has_undergone_spirometry_now Bool)
+(declare-const patient_forced_expired_volume_in_one_second_forced_vital_capacity_ratio_value_recorded_now_withunit_ratio Real)
+(declare-const patient_has_undergone_spirometry_now@@consistent_with_chronic_obstructive_pulmonary_disease Bool)
+(declare-const patient_has_finding_of_pulmonary_emphysema_now Bool)
+(declare-const patient_has_finding_of_pulmonary_emphysema_now@@evidenced_on_computed_tomography_scan Bool)
+(declare-const patient_has_finding_of_pneumonia_inthepast3months Bool)
+(declare-const patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_pulmonary_disease_inthepast3months Bool)
+(declare-const patient_has_finding_of_exacerbation_of_congestive_heart_failure_inthepast3months Bool)
+(declare-const patient_is_exposed_to_oxygen_now Bool)
+
+;; Existing auxiliary assertions
+(assert (! (=> patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_pulmonary_disease_inthepast30days@@occurred_in_inpatient_setting patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_pulmonary_disease_inthepast30days) :named REQ3_AUXILIARY0))
+(assert (! (=> patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_pulmonary_disease_inthepast30days@@occurred_in_outpatient_setting patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_pulmonary_disease_inthepast30days) :named REQ3_AUXILIARY1))
+(assert (! (= patient_has_undergone_spirometry_now@@consistent_with_chronic_obstructive_pulmonary_disease (and patient_has_undergone_spirometry_now (< patient_forced_expired_volume_in_one_second_forced_vital_capacity_ratio_value_recorded_now_withunit_ratio 0.70))) :named REQ6_AUXILIARY0))
+(assert (! (=> patient_has_finding_of_pulmonary_emphysema_now@@evidenced_on_computed_tomography_scan patient_has_finding_of_pulmonary_emphysema_now) :named REQ6_AUXILIARY1))
+
+;; AUTO auxiliary (qualifier => stem) links [Bool→Bool]
+(assert (! (=> patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_pulmonary_disease_inthepast3months@@resulted_in_hospitalization_and_patient_was_discharged patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_pulmonary_disease_inthepast3months) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_0))
+(assert (! (=> patient_has_finding_of_exacerbation_of_congestive_heart_failure_inthepast3months@@resulted_in_hospitalization_and_patient_was_discharged patient_has_finding_of_exacerbation_of_congestive_heart_failure_inthepast3months) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_1))
+(assert (! (=> patient_has_finding_of_pneumonia_inthepast3months@@resulted_in_hospitalization_and_patient_was_discharged patient_has_finding_of_pneumonia_inthepast3months) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_2))
+(assert (! (=> patient_has_undergone_spirometry_now@@consistent_with_chronic_obstructive_pulmonary_disease patient_has_undergone_spirometry_now) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_3))
+(assert (! (=> patient_is_exposed_to_oxygen_now@@active_prescription_for_supplemental_oxygen_within_48_hours_of_discharge_that_remains_active patient_is_exposed_to_oxygen_now) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_4))
+
+;; Other kept assertions
+(assert (! (>= patient_age_value_recorded_now_in_years 40.0) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! patient_has_diagnosis_of_chronic_obstructive_pulmonary_disease_now :named REQ1_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))
+(assert (! (or patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_pulmonary_disease_inthepast3months@@resulted_in_hospitalization_and_patient_was_discharged patient_has_finding_of_exacerbation_of_congestive_heart_failure_inthepast3months@@resulted_in_hospitalization_and_patient_was_discharged patient_has_finding_of_pneumonia_inthepast3months@@resulted_in_hospitalization_and_patient_was_discharged) :named REQ2_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))
+(assert (! patient_is_exposed_to_oxygen_now@@active_prescription_for_supplemental_oxygen_within_48_hours_of_discharge_that_remains_active :named REQ2_COMPONENT1_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))
+(assert (! (and (not patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_pulmonary_disease_inthepast30days@@occurred_in_inpatient_setting) (not patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_pulmonary_disease_inthepast30days@@occurred_in_outpatient_setting)) :named REQ3_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (>= patient_smoker_value_recorded_inthehistory_withunit_pack_years 10.0) :named REQ4_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (and patient_oxygen_saturation_measurement_value_recorded_now_withunit_percent@@measured_on_room_air (> patient_oxygen_saturation_measurement_value_recorded_now_withunit_percent 88.0)) :named REQ5_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (or patient_has_undergone_spirometry_now@@consistent_with_chronic_obstructive_pulmonary_disease patient_has_finding_of_pulmonary_emphysema_now@@evidenced_on_computed_tomography_scan) :named REQ6_COMPONENT0_OTHER_REQUIREMENTS))

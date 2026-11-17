@@ -1,0 +1,145 @@
+[
+ {
+  "name": "patient_has_presented_to_emergency_department_during_study_period",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when >= 1"
+ },
+ {
+  "name": "patient_has_diagnosis_of_asthma_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_asthma_inthehistory@@as_reported_by_a_parent",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_asthma_inthehistory@@physician_diagnosed_as_reported_by_a_parent",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_major_cardiac_comorbid_illness_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_major_pulmonary_comorbid_illness_now_other_than_asthma",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_family_who_is_non_english_speaking_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_family_who_is_non_english_speaking_now@@primary_caregiver",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_respiratory_distress_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_respiratory_distress_now@@severe",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_was_triaged_to_medical_trauma_bay_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_was_triaged_to_medical_trauma_bay_now@@for_severe_respiratory_distress",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

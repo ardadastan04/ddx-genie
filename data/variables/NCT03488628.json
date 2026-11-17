@@ -1,0 +1,167 @@
+[
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when > 18"
+ },
+ {
+  "name": "patient_has_diagnosis_of_chronic_obstructive_pulmonary_disease_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_accessory_respiratory_muscles_used_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently demonstrates use of accessory respiratory muscles.",
+  "when_true": "Set to true if the patient currently demonstrates use of accessory respiratory muscles.",
+  "when_false": "Set to false if the patient currently does not demonstrate use of accessory respiratory muscles.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently demonstrates use of accessory respiratory muscles.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_accessory_respiratory_muscles_used_now@@identified_on_physical_exam",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's use of accessory respiratory muscles is identified on physical examination.",
+  "when_true": "Set to true if the patient's use of accessory respiratory muscles is specifically identified on physical examination.",
+  "when_false": "Set to false if the patient's use of accessory respiratory muscles is not identified on physical examination.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's use of accessory respiratory muscles is identified on physical examination.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_increased_respiratory_rate_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has increased respiratory rate.",
+  "when_true": "Set to true if the patient currently has a respiratory rate that is considered increased by clinical standards.",
+  "when_false": "Set to false if the patient currently does not have an increased respiratory rate.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has increased respiratory rate.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_chronic_obstructive_pulmonary_disease_now@@moderate_exacerbation",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's chronic obstructive pulmonary disease is in moderate exacerbation.",
+  "when_true": "Set to true if the patient currently has a diagnosis of chronic obstructive pulmonary disease and the disease is in moderate exacerbation.",
+  "when_false": "Set to false if the patient currently has a diagnosis of chronic obstructive pulmonary disease but the disease is not in moderate exacerbation.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's chronic obstructive pulmonary disease is in moderate exacerbation.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_hydrogen_ion_concentration_value_recorded_now_withunit_ph",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's arterial blood pH measured now.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no arterial blood pH measurement is available for now or the value is indeterminate.",
+  "when_value": "Set to the measured value if the patient's arterial blood pH is recorded now.",
+  "polarity": "criterion met when >= 7.25"
+ },
+ {
+  "name": "patient_carbon_dioxide_value_recorded_now_withunit_mm_hg",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's arterial carbon dioxide partial pressure measured now, in mm Hg.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no arterial carbon dioxide partial pressure measurement is available for now or the value is indeterminate.",
+  "when_value": "Set to the measured value if the patient's arterial carbon dioxide partial pressure (PaCO2) is recorded now in mm Hg.",
+  "polarity": "criterion met when >= 45"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is currently pregnant.",
+  "when_false": "Set to false if the patient is currently not pregnant.",
+  "when_unknown": "Set to null if the patient's current pregnancy status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_sleep_apnea_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has sleep apnea syndrome.",
+  "when_true": "Set to true if the patient currently has a clinical finding or diagnosis of sleep apnea syndrome.",
+  "when_false": "Set to false if the patient currently does not have a clinical finding or diagnosis of sleep apnea syndrome.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a clinical finding or diagnosis of sleep apnea syndrome.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_receiving_noninvasive_ventilation_at_home_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently being treated with noninvasive ventilation at home.",
+  "when_true": "Set to true if the patient is currently being treated with noninvasive ventilation at home.",
+  "when_false": "Set to false if the patient is not currently being treated with noninvasive ventilation at home.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently being treated with noninvasive ventilation at home.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_affiliated_to_french_social_security_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently affiliated to French social security.",
+  "when_true": "Set to true if the patient is currently affiliated to French social security.",
+  "when_false": "Set to false if the patient is currently not affiliated to French social security.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently affiliated to French social security.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_contraindication_to_high_flow_nasal_oxygen_therapy_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a contraindication to high-flow nasal oxygen therapy.",
+  "when_true": "Set to true if the patient currently has a contraindication to high-flow nasal oxygen therapy.",
+  "when_false": "Set to false if the patient currently does not have a contraindication to high-flow nasal oxygen therapy.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a contraindication to high-flow nasal oxygen therapy.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_contraindication_to_noninvasive_ventilation_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a contraindication to noninvasive ventilation.",
+  "when_true": "Set to true if the patient currently has a contraindication to noninvasive ventilation.",
+  "when_false": "Set to false if the patient currently does not have a contraindication to noninvasive ventilation.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a contraindication to noninvasive ventilation.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_was_previously_included_in_study",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient was previously included in the study at any time prior to the current screening.",
+  "when_true": "Set to true if the patient was previously included in the study at any time prior to the current screening.",
+  "when_false": "Set to false if the patient was not previously included in the study at any time prior to the current screening.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient was previously included in the study.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

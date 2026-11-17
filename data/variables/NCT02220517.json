@@ -1,0 +1,90 @@
+[
+ {
+  "name": "patient_has_undergone_biopsy_of_prostate_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone a prostate biopsy in the past.",
+  "when_true": "Set to true if the patient has ever undergone a prostate biopsy at any time in the past.",
+  "when_false": "Set to false if the patient has never undergone a prostate biopsy at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone a prostate biopsy.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_undergone_biopsy_of_prostate_inthehistory@@outcome_is_negative",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the outcome of any past prostate biopsy was negative.",
+  "when_true": "Set to true if the patient has ever undergone a prostate biopsy in the past and the outcome was negative.",
+  "when_false": "Set to false if the patient has ever undergone a prostate biopsy in the past and the outcome was not negative.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the outcome of any past prostate biopsy was negative.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_number_of_prior_negative_prostate_biopsies_value_recorded_history_withunit_count",
+  "type": "Int",
+  "side": "inclusion",
+  "meaning": "Numeric count of prior negative prostate biopsies the patient has had in their history.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined how many prior negative prostate biopsies the patient has had.",
+  "when_value": "Set to the number of prior negative prostate biopsies the patient has had in their history, as recorded in the medical record.",
+  "polarity": "criterion met when >= 1"
+ },
+ {
+  "name": "prostate_specific_antigen_value_latest_withunit_nanograms_per_milliliter",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value for the most recent prostate-specific antigen measurement in nanograms per milliliter.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the most recent value of prostate-specific antigen in nanograms per milliliter is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the most recent measured value of the patient's prostate-specific antigen in nanograms per milliliter.",
+  "polarity": "criterion met when > 4"
+ },
+ {
+  "name": "patient_has_diagnosis_of_carcinoma_of_prostate_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of prostate cancer.",
+  "when_true": "Set to true if the patient currently has a diagnosis of prostate cancer.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of prostate cancer.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of prostate cancer.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_carcinoma_of_prostate_now@@known",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current diagnosis of prostate cancer is known (confirmed).",
+  "when_true": "Set to true if the patient currently has a diagnosis of prostate cancer and this diagnosis is known (confirmed, not suspected or unknown).",
+  "when_false": "Set to false if the patient currently has a diagnosis of prostate cancer but it is not known (e.g., only suspected or unknown).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the diagnosis of prostate cancer is known.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_can_undergo_magnetic_resonance_imaging_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient can currently undergo magnetic resonance imaging (MRI).",
+  "when_true": "Set to true if the patient can currently undergo magnetic resonance imaging (MRI), i.e., has no contraindications to MRI.",
+  "when_false": "Set to false if the patient currently cannot undergo magnetic resonance imaging (MRI) due to contraindications.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient can currently undergo magnetic resonance imaging (MRI).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_can_undergo_biopsy_of_prostate_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient can currently undergo a biopsy of the prostate (i.e., has no contraindications to prostate biopsy).",
+  "when_true": "Set to true if the patient can currently undergo a biopsy of the prostate (i.e., there are no contraindications to prostate biopsy).",
+  "when_false": "Set to false if the patient currently cannot undergo a biopsy of the prostate due to contraindications.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient can currently undergo a biopsy of the prostate.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

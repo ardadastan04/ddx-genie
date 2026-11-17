@@ -1,0 +1,222 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_chronic_obstructive_pulmonary_disease_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of chronic obstructive pulmonary disease.",
+  "when_true": "Set to true if the patient currently has a diagnosis of chronic obstructive pulmonary disease.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of chronic obstructive pulmonary disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of chronic obstructive pulmonary disease.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_needs_to_undergo_long_term_oxygen_therapy_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently needs to undergo long-term oxygen therapy.",
+  "when_true": "Set to true if the patient currently needs to undergo long-term oxygen therapy.",
+  "when_false": "Set to false if the patient currently does not need to undergo long-term oxygen therapy.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently needs to undergo long-term oxygen therapy.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_oxygen_measurement_partial_pressure_arterial_value_recorded_now_withunit_mmhg@@measured_at_rest",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value of the patient's partial pressure of oxygen in arterial blood at rest, recorded now, in mmHg.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured value if the patient's partial pressure of oxygen in arterial blood at rest is recorded now in mmHg.",
+  "polarity": "criterion met when < 55"
+ },
+ {
+  "name": "patient_oxygen_measurement_partial_pressure_arterial_value_recorded_now_withunit_mmhg@@measured_during_sleeping",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value of the patient's partial pressure of oxygen in arterial blood during sleeping, recorded now, in mmHg.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured value if the patient's partial pressure of oxygen in arterial blood during sleeping is recorded now in mmHg.",
+  "polarity": "criterion met when < 55"
+ },
+ {
+  "name": "patient_oxygen_measurement_partial_pressure_arterial_value_recorded_now_withunit_mmhg@@measured_during_exercise",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value of the patient's partial pressure of oxygen in arterial blood during exercise, recorded now, in mmHg.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured value if the patient's partial pressure of oxygen in arterial blood during exercise is recorded now in mmHg.",
+  "polarity": "criterion met when < 55"
+ },
+ {
+  "name": "patient_supplemental_oxygen_demonstrated_to_improve_exercise_associated_hypoxia_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether supplemental oxygen is demonstrated to improve exercise-associated hypoxia in the patient at the current time.",
+  "when_true": "Set to true if supplemental oxygen is demonstrated to improve exercise-associated hypoxia in the patient now.",
+  "when_false": "Set to false if supplemental oxygen is demonstrated not to improve exercise-associated hypoxia in the patient now.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether supplemental oxygen improves exercise-associated hypoxia in the patient now.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_patient_s_condition_stable_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently clinically stable.",
+  "when_true": "Set to true if the patient is currently clinically stable.",
+  "when_false": "Set to false if the patient is currently not clinically stable.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently clinically stable.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_oxygen_device_of_antadir_network_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has an oxygen device of the ANTADIR network.",
+  "when_true": "Set to true if the patient currently has an oxygen device and that device is of the ANTADIR network.",
+  "when_false": "Set to false if the patient currently does not have an oxygen device of the ANTADIR network.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has an oxygen device of the ANTADIR network.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_being_treated_with_long_term_oxygen_therapy_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently being treated with long-term oxygen therapy.",
+  "when_true": "Set to true if the patient is currently being treated with long-term oxygen therapy.",
+  "when_false": "Set to false if the patient is currently not being treated with long-term oxygen therapy.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently being treated with long-term oxygen therapy.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_partial_pressure_of_oxygen_value_recorded_now_withunit_mm_hg",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's partial pressure of oxygen (PaO2) measured in mmHg at the current time.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the value is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the value of the patient's partial pressure of oxygen (PaO2) in mmHg as measured now.",
+  "polarity": "criterion met when >= 56"
+ },
+ {
+  "name": "patient_has_finding_of_dependent_edema_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has dependent edema.",
+  "when_true": "Set to true if the patient currently has the clinical finding of dependent edema.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of dependent edema.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has dependent edema.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_pulmonary_hypertension_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has pulmonary hypertension.",
+  "when_true": "Set to true if the patient currently has the clinical finding of pulmonary hypertension.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of pulmonary hypertension.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has pulmonary hypertension.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_hematocrit_value_recorded_now_withunit_percent",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's hematocrit percentage measured at the current time.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the value is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the value of the patient's hematocrit percentage as measured now.",
+  "polarity": "criterion met when > 56"
+ },
+ {
+  "name": "patient_has_oxygen_device_from_antadir_network_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has an oxygen device from the ANTADIR network.",
+  "when_true": "Set to true if the patient currently has an oxygen device and that device is from the ANTADIR network.",
+  "when_false": "Set to false if the patient currently does not have an oxygen device from the ANTADIR network.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has an oxygen device from the ANTADIR network.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_obstructive_sleep_apnea_syndrome_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of obstructive sleep apnea syndrome.",
+  "when_true": "Set to true if the patient currently has a diagnosis of obstructive sleep apnea syndrome.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of obstructive sleep apnea syndrome.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of obstructive sleep apnea syndrome.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_overlap_syndrome_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of overlap syndrome.",
+  "when_true": "Set to true if the patient currently has a diagnosis of overlap syndrome.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of overlap syndrome.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of overlap syndrome.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_receiving_non_invasive_ventilation_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently receiving non invasive ventilation.",
+  "when_true": "Set to true if the patient is currently receiving non invasive ventilation.",
+  "when_false": "Set to false if the patient is not currently receiving non invasive ventilation.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently receiving non invasive ventilation.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_malignant_neoplastic_disease_progression_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has malignant neoplastic disease progression (evolutive cancer).",
+  "when_true": "Set to true if the patient currently has the clinical finding of malignant neoplastic disease progression (evolutive cancer).",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of malignant neoplastic disease progression (evolutive cancer).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has malignant neoplastic disease progression (evolutive cancer).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_unable_to_complete_questionnaires",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is unable to complete questionnaires.",
+  "when_true": "Set to true if the patient is unable to complete questionnaires for any reason.",
+  "when_false": "Set to false if the patient is able to complete questionnaires.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is able to complete questionnaires.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_able_to_attend_outpatient_clinic",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is able to attend an outpatient clinic.",
+  "when_true": "Set to true if the patient is able to attend an outpatient clinic.",
+  "when_false": "Set to false if the patient is unable to attend an outpatient clinic.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is able to attend an outpatient clinic.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

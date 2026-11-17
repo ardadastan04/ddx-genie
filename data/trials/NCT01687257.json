@@ -1,0 +1,17 @@
+{
+ "nct": "NCT01687257",
+ "title": "Sofosbuvir and Ribavirin in Patients With Chronic HCV With Cirrhosis and Portal Hypertension With or Without Liver Decompensation",
+ "conditions": [
+  "Hepatitis C",
+  "Cirrhosis",
+  "Portal Hypertension",
+  "With or Without Liver Decompensation"
+ ],
+ "phase": "Phase 2",
+ "brief_summary": "This study will evaluate the antiviral efficacy of combination therapy with sofosbuvir (SOF) plus ribavirin (RBV) for 48 weeks in adults with compensated and decompensated chronic hepatitis C virus (HCV) infection. Approximately 50 adults will be randomized (1:1) to receive study drug for 48 weeks or take part in an untreated observational arm for the first 24 weeks followed by study drug for another 48 weeks.",
+ "inclusion_criteria": "inclusion criteria: \n\n Chronic infection with Hepatitis C with HCV RNA > 1000 IU/mL \n\n Individuals with cirrhosis with Child-Pugh score < 10 \n\n Esophageal or gastric varices on endoscopy within 6 months prior to or at screening \n\n Hepatic Venous Pressure Gradient (HVPG) > 6 mmHg \n\n Body mass index (BMI) \u2265 18 kg/m^2 \n\n Na\u00efve to all nucleotides/nucleoside treatments for chronic HCV infection \n\n ",
+ "exclusion_criteria": ": \n\n Have any serious or active medical or psychiatric illness which, in the opinion of the investigator, would interfere with subject treatment, assessment, or compliance \n\n HIV or chronic hepatitis B virus (HBV) infection (HBsAg positive) \n\n Alpha-fetoprotein (AFP) > 50 unless negative imaging for hepatic masses within the last 6 months or during screening \n\n Refractory ascites as defined by requiring paracentesis > twice within 1 month prior to screening \n\n Active variceal bleeding within 6 months of screening \n\n Expected survival of < 1 year \n\n History of hepatorenal, or hepatopulmonary syndrome. \n\n Evidence of renal impairment (CrCl < 50 mL/min) \n\n History of major organ transplantation, including liver transplant.",
+ "cohorts": [
+  ""
+ ]
+}

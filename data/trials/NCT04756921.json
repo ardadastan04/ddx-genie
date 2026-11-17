@@ -1,0 +1,14 @@
+{
+ "nct": "NCT04756921",
+ "title": "18F-FDG Uptake Heterogeneity Predicts Pyrotinib Response",
+ "conditions": [
+  "HER2-positive Breast Cancer"
+ ],
+ "phase": "",
+ "brief_summary": "Heterogeneity of 18F-fluorodeoxyglucose (FDG) uptake is a promising marker for predicting response to treatment. This study aimed to evaluate the ability of pretreatment positron emission tomography/computed tomography (PET/CT) 18F-FDG-based heterogeneity to predict the response to pyrotinib in patients with human epidermal growth factor receptor 2 (HER2)-positive metastatic breast cancer (MBC).",
+ "inclusion_criteria": "inclusion criteria: \n\n Pathologically confirmed HER2 positive breast cancer \n\n Treated with Pyrotinib in the metastatic settings \n\n Underwent whole-body FDG PET/CT within 4 weeks before the initiation of pyrotinib and capecitabine were included in this study \n\n ",
+ "exclusion_criteria": ": \n\n Incomplete medical history \n\n Loss of follow up",
+ "cohorts": [
+  ""
+ ]
+}

@@ -1,0 +1,15 @@
+{
+ "nct": "NCT02567448",
+ "title": "Pathophysiology of the Upper Airway in Patients With COPD and Concomitant OSA",
+ "conditions": [
+  "Obstructive Sleep Apnea"
+ ],
+ "phase": "",
+ "brief_summary": "The purpose of study is to evaluate the physiologic effects of pulmonary tissue/structural changes associated with COPD and upper airway inflammation on upper airway collapsibility. Upper airway collapsibility is closely associated with development of obstructive sleep apnea (OSA), which is a common disease characterized by repetitive collapse of upper airway during sleep, leading to hypoxemia and arousal. OSA has important neurocognitive and cardiovascular consequences, especially in patients with COPD.~Participants in this research study will undergo two overnight sleep studies (PSGs), pulmonary function test, and CT scan of the upper airway and chest. The first sleep study will evaluate the sleep breathing disorder and the second sleep study will measure the upper airway collapsibility, called critical closing pressure (Pcrit). Pcrit is measured by a modified continuous positive airway pressure (CPAP) machine which can provide a wide range of pressures between 20 and -20 cmH2O in order to modify upper airway pressure.",
+ "inclusion_criteria": "inclusion criteria for COPD Subjects: \n\n Age range 40-70 years. \n\n Demonstrated moderate to severe COPD as determined by spirometry (post-bronchodilator spirometry FEV1/FVC < 0.70 for diagnosing CODP and FEV1<80% predicted for staging) \n\n Smoking history of \u2265 10 pack-years \n\n inclusion criteria for Control Subjects \n\n Age range 40-70 years \n\n Demonstrated no COPD as determined by normal spirometry (post-bronchodilator spirometry FEV1/FVC > 0.70 for diagnosing CODP and FEV1<80% predicted for staging) \n\n No smoking history as defined by less than 100 cigarettes smoked in a lifetime \n\n ",
+ "exclusion_criteria": " for both COPD and Control Subjects: \n\n Metal objects that may interfere with chest CT quantification including presence of a cardiac pacemaker, defibrillator, metal prosthetic heart valve, metal projectile or metal weapon fragment (bullet, shrapnel, shotgun shot) or metal shoulder prosthesis \n\n Subjects unable to perform spirometry due to: \n\n chest or abdominal surgery in the past three months \n\n a heart attack in the last three months \n\n detached retina or eye surgery in the past three months \n\n hospitalization for any other heart problem in the past month \n\n History of hypersensitivity to Afrin, Lidocaine or albuterol \n\n A psychiatric disorder, other than mild depression; e.g. schizophrenia, bipolar disorder, major depression, panic or anxiety disorders. \n\n More than 10 cups of beverages with caffeine (coffee, tea, soda/pop) per day \n\n Pregnancy or suspected pregnancy",
+ "cohorts": [
+  "a",
+  "b"
+ ]
+}

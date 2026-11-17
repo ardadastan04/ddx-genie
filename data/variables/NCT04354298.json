@@ -1,0 +1,101 @@
+[
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when >= 50"
+ },
+ {
+  "name": "patient_has_diagnosis_of_parkinson_s_disease_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of Parkinson's disease.",
+  "when_true": "Set to true if the patient currently has a diagnosis of Parkinson's disease.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of Parkinson's disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of Parkinson's disease.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_hoehn_and_yahr_scale_score_value_recorded_now_withunit_none",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's Hoehn and Yahr scale score as recorded now.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured Hoehn and Yahr scale score if a numeric measurement recorded now is available.",
+  "polarity": "criterion met when >= 1"
+ },
+ {
+  "name": "patient_can_independently_walk_distance_value_recorded_in_meters",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the maximum distance in meters that the patient can independently walk.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined how far the patient can independently walk.",
+  "when_value": "Set to the maximum distance in meters that the patient can independently walk, as documented or assessed.",
+  "polarity": "criterion met when >= 3"
+ },
+ {
+  "name": "patient_has_cognitive_ability_to_follow_simple_commands_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "montreal_cognitive_assessment_score_value_recorded_withunit_points",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric value representing the most recent Montreal Cognitive Assessment score for the patient, in points.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the Montreal Cognitive Assessment score is not available, not documented, or cannot be determined for the patient.",
+  "when_value": "Set to the most recent recorded value of the Montreal Cognitive Assessment score for the patient, measured in points.",
+  "polarity": "criterion met when <= 22"
+ },
+ {
+  "name": "patient_has_diagnosis_of_co_morbid_conditions_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of comorbid conditions.",
+  "when_true": "Set to true if the patient currently has a diagnosis of comorbid conditions.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of comorbid conditions.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of comorbid conditions.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_co_morbid_conditions_now@@severe",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating that the comorbid conditions diagnosed in the patient are severe.",
+  "when_true": "Set to true if the comorbid conditions diagnosed in the patient are severe.",
+  "when_false": "Set to false if the comorbid conditions diagnosed in the patient are not severe.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the comorbid conditions diagnosed in the patient are severe.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_physical_activity_barrier_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has any barrier or contraindication to physical activity.",
+  "when_true": "Set to true if the patient currently has any barrier or contraindication to physical activity.",
+  "when_false": "Set to false if the patient currently does not have any barrier or contraindication to physical activity.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has any barrier or contraindication to physical activity.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

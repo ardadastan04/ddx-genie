@@ -1,0 +1,16 @@
+{
+ "nct": "NCT00147290",
+ "title": "ADVANCE CRT - D: Antitachycardia Pacing (ATP) Delivery for Painless Implantable Cardioverter Defibrillator (ICD) Therapy",
+ "conditions": [
+  "Tachycardia",
+  "Ventricular",
+  "Ventricular Fibrillation"
+ ],
+ "phase": "Phase 4",
+ "brief_summary": "To compare the efficacy of RV and BiV ATP for the termination of ventricular arrhythmias in patients who are candidates to a cardiac resynchronisation therapy (CRT) and have a Class I or IIA indication for ICD implantation.~The hypothesis of delivering ATP from different sites (RV or BIV) has never been evaluated in a prospective, controlled and randomized study.",
+ "inclusion_criteria": "inclusion criteria: \n\n CRT + ICD indications (Class I-IIA) according to the guidelines \n\n Patients have been implanted with a Medtronic Marquis Family ICD capable of RV-ATP or BIV-ATP \n\n Patients in chronic AF who undergo a complete AV ablation and that the complete AV block is confirmed at PHD \n\n ",
+ "exclusion_criteria": ": \n\n Patient's life expectancy less than 1 year due to a non cardiac chronic disease \n\n Patient on heart transplant list which is expected in < 1 year \n\n Patient's age less than 18 years \n\n Replacements and upgrades \n\n Epicardial lead \n\n Mechanical tricuspid valve \n\n Ventricular Tachyarrhythmias associated with reversible causes \n\n Unwillingness or inability to provide written informed consent \n\n Enrollment in, or intention to participate in, another clinical study during the course of this study \n\n Inaccessibility for follow-up at the study center",
+ "cohorts": [
+  ""
+ ]
+}

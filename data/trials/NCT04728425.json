@@ -1,0 +1,15 @@
+{
+ "nct": "NCT04728425",
+ "title": "Subcutaneous Immunoglobulin for Myasthenia Gravis",
+ "conditions": [
+  "Myasthenia Gravis"
+ ],
+ "phase": "Phase 2",
+ "brief_summary": "This is a prospective open-label, randomized, parallel arm clinical trial.~The primary objective of the study is to evaluate the safety and efficacy of Cuvitru 20% subcutaneous immunoglobulin in patients with myasthenia gravis (MG). The secondary objective is to evaluate patient preferences and effects on quality of life when treating MG patients with SCIG. Exploratory objectives are to compare de novo administration starting SCIG directly with those starting with a loading dose of IVIG followed by SCIG administration.~Patients over age 18 with moderate to severe MG with MGFA Class II-IV without contraindications to immunoglobulin will be considered for the study.~All patients will be eligible to enter either arm of the study, Arm 1: 10% Gammagard IVIG followed by 20% Cuvitry SCIG and Arm 2: Cuvitru 20% SCIG alone.",
+ "inclusion_criteria": "inclusion criteria: \n\n Patients over age 18 \n\n Patients with a confirmed diagnosis of myasthenia gravis based on clinical criteria including fatiguable weakness and supported by either serological (acetylcholine receptor, muscle specific kinase or anti-low-density lipoprotein receptor- related protein 4 antibodies or electrophysiological testing (repetitive nerve stimulation of single fiber electromyography) \n\n Myasthenia Gravis Federation of America class II-IV \n\n Moderate to severe myasthenia gravis as defined by a quantitative myasthenia gravis score >10 or generalized myasthenia gravis impairment index score > 11 \n\n Patient able to give consent and is able and willing to complete all study procedures and activities \n\n ",
+ "exclusion_criteria": ": \n\n Patients who are pregnant or breastfeeding \n\n Patients not able to complete the study procedures or with an alternate diagnosis \n\n Patients with recent thymectomy in the past 6 months \n\n Patients receiving another biologic agent such as rituximab, belimubab, cyclophosphamide and eculizumab in the past 6 months prior to study entry \n\n No IVIG or subcutaneous immunoglobulin within the past month \n\n Patients on prednisone who have had alterations in prednisone dose over the past month prior to study entry \n\n Patients will previous known allergy or severe adverse reaction to intravenous or subcutaneous immunoglobulin \n\n Evidence of renal insufficiency (Cr>1.5 x elevated) or liver disease (transaminases > 2.5 x elevation) at screening.",
+ "cohorts": [
+  "a",
+  "b"
+ ]
+}

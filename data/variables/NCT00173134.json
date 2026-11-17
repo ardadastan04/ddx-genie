@@ -1,0 +1,79 @@
+[
+ {
+  "name": "patient_sex_is_male_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean value indicating whether the patient's current sex is male.",
+  "when_true": "Set to true if the patient's current sex is documented as male.",
+  "when_false": "Set to false if the patient's current sex is documented as not male (e.g., female or other).",
+  "when_unknown": "Set to null if the patient's current sex is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_diabetes_mellitus_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of diabetes mellitus.",
+  "when_true": "Set to true if the patient currently has a diagnosis of diabetes mellitus.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of diabetes mellitus.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of diabetes mellitus.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when > 20"
+ },
+ {
+  "name": "patient_is_undergoing_administration_of_medication_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently undergoing administration of medication (pharmacological treatment).",
+  "when_true": "Set to true if the patient is currently undergoing administration of medication (pharmacological treatment).",
+  "when_false": "Set to false if the patient is not currently undergoing administration of medication (pharmacological treatment).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently undergoing administration of medication (pharmacological treatment).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_undergoing_surgical_procedure_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently undergoing a surgical procedure (surgical intervention).",
+  "when_true": "Set to true if the patient is currently undergoing a surgical procedure (surgical intervention).",
+  "when_false": "Set to false if the patient is not currently undergoing a surgical procedure (surgical intervention).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently undergoing a surgical procedure (surgical intervention).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_using_mechanical_device_for_erectile_dysfunction_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently using any mechanical device for the treatment of erectile dysfunction.",
+  "when_true": "Set to true if the patient is currently using any mechanical device for the treatment of erectile dysfunction.",
+  "when_false": "Set to false if the patient is not currently using any mechanical device for the treatment of erectile dysfunction.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently using any mechanical device for the treatment of erectile dysfunction.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_using_erectile_dysfunction_treatment_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently using any form of erectile dysfunction treatment.",
+  "when_true": "Set to true if the patient is currently using any form of erectile dysfunction treatment, including pharmacological treatment, mechanical devices, or surgical interventions.",
+  "when_false": "Set to false if the patient is not currently using any form of erectile dysfunction treatment.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently using any form of erectile dysfunction treatment.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

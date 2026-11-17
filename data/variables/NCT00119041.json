@@ -1,0 +1,167 @@
+[
+ {
+  "name": "patient_is_taking_insulin_containing_product_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_taking_oral_hypoglycemic_agent_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_hemoglobin_a1c_measurement_value_recorded_now_withunit_percent",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's most recent hemoglobin A1c measurement in percent.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured value if a hemoglobin A1c measurement (in percent) is recorded for the patient now.",
+  "polarity": "criterion met when > 7"
+ },
+ {
+  "name": "patient_fasting_blood_glucose_measurement_value_recorded_now_withunit_mg_dl",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's fasting blood glucose measurement (in mg/dl) recorded now.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured value if a fasting blood glucose measurement (in mg/dl) is recorded now.",
+  "polarity": "criterion met when > 130"
+ },
+ {
+  "name": "patient_has_diagnosis_of_type_1_diabetes_mellitus_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of type 1 diabetes mellitus.",
+  "when_true": "Set to true if the patient currently has a diagnosis of type 1 diabetes mellitus.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of type 1 diabetes mellitus.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of type 1 diabetes mellitus.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_type_2_diabetes_mellitus_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of type 2 diabetes mellitus.",
+  "when_true": "Set to true if the patient currently has a diagnosis of type 2 diabetes mellitus.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of type 2 diabetes mellitus.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of type 2 diabetes mellitus.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_primary_care_provider_for_cleveland_community_based_outpatient_center",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has a primary care provider who is associated with a Cleveland Community Based Outpatient Center.",
+  "when_true": "Set to true if the patient has a primary care provider who is for a Cleveland Community Based Outpatient Center.",
+  "when_false": "Set to false if the patient does not have a primary care provider for a Cleveland Community Based Outpatient Center.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has a primary care provider for a Cleveland Community Based Outpatient Center.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "number_of_community_based_outpatient_centers_involved_in_primary_care_management_in_past_6_months",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric variable indicating the number of distinct community based outpatient centers involved in the patient's primary care management during the past 6 months.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined how many distinct community based outpatient centers were involved in the patient's primary care management during the past 6 months.",
+  "when_value": "Set to the number of distinct community based outpatient centers involved in the patient's primary care management during the past 6 months.",
+  "polarity": "criterion met when > 1"
+ },
+ {
+  "name": "patient_has_undergone_primary_care_management_inthepast6months",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has undergone primary care management at any site during the past 6 months.",
+  "when_true": "Set to true if the patient has undergone primary care management at any site during the past 6 months.",
+  "when_false": "Set to false if the patient has not undergone primary care management at any site during the past 6 months.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has undergone primary care management at any site during the past 6 months.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_primary_care_management_inthepast6months@@obtained_at_more_than_one_site",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's primary care management in the past 6 months was obtained at more than one site.",
+  "when_true": "Set to true if the patient has undergone primary care management at more than one site during the past 6 months.",
+  "when_false": "Set to false if the patient has undergone primary care management at only one site during the past 6 months.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has undergone primary care management at more than one site during the past 6 months.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_primary_care_management_inthepast6months@@evidence_of_more_than_one_community_based_outpatient_center_involved_in_care",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether more than one community based outpatient center was involved in the patient's primary care management during the past 6 months.",
+  "when_true": "Set to true if there is evidence that more than one community based outpatient center was involved in the patient's primary care management during the past 6 months.",
+  "when_false": "Set to false if there is evidence that only one or no community based outpatient center was involved in the patient's primary care management during the past 6 months.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether more than one community based outpatient center was involved in the patient's primary care management during the past 6 months.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_dementia_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of dementia.",
+  "when_true": "Set to true if the patient currently has a diagnosis of dementia.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of dementia.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of dementia.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_aphasia_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has aphasia.",
+  "when_true": "Set to true if the patient currently has the clinical finding of aphasia.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of aphasia.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of aphasia.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_aphasia_now@@documented",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current aphasia finding is documented.",
+  "when_true": "Set to true if the patient currently has aphasia and this finding is documented in the medical record.",
+  "when_false": "Set to false if the patient currently has aphasia but this finding is not documented in the medical record.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's aphasia is documented.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_psychotic_disorder_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of psychotic disorder (psychosis).",
+  "when_true": "Set to true if the patient currently has a diagnosis of psychotic disorder (psychosis).",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of psychotic disorder (psychosis).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of psychotic disorder (psychosis).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

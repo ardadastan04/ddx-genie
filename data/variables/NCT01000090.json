@@ -1,0 +1,101 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_acromegaly_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of acromegaly.",
+  "when_true": "Set to true if the patient currently has a diagnosis of acromegaly.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of acromegaly.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of acromegaly.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_been_treated_with_somatostatin_analogue_therapy_in_the_past",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever been treated with somatostatin analogue therapy in the past.",
+  "when_true": "Set to true if the patient has ever received somatostatin analogue therapy at any time in the past.",
+  "when_false": "Set to false if the patient has never received somatostatin analogue therapy at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever received somatostatin analogue therapy in the past.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_in_treatment_control_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently in treatment control.",
+  "when_true": "Set to true if the patient is currently in treatment control.",
+  "when_false": "Set to false if the patient is currently not in treatment control.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently in treatment control.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_surgical_procedure_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_undergoing_therapeutic_procedure_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_exposed_to_growth_hormone_receptor_antagonist_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently exposed to a growth hormone receptor antagonist.",
+  "when_true": "Set to true if the patient is currently being treated with (i.e., is currently exposed to) a growth hormone receptor antagonist.",
+  "when_false": "Set to false if the patient is not currently being treated with (i.e., is not currently exposed to) a growth hormone receptor antagonist.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently being treated with a growth hormone receptor antagonist.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_received_treatment_for_acromegaly_ever",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever received any treatment for acromegaly in their medical history.",
+  "when_true": "Set to true if the patient has ever received any treatment for acromegaly at any point in their medical history.",
+  "when_false": "Set to false if the patient has never received any treatment for acromegaly at any point in their medical history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever received any treatment for acromegaly.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_acromegaly_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has a history of acromegaly.",
+  "when_true": "Set to true if the patient has a documented history of acromegaly at any time in the past.",
+  "when_false": "Set to false if the patient does not have a documented history of acromegaly at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has a history of acromegaly.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_acromegaly_inthehistory@@never_received_any_treatment",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient with a history of acromegaly has never received any treatment for it at any time in the past.",
+  "when_true": "Set to true if the patient has a history of acromegaly and has never received any treatment for acromegaly at any time in the past.",
+  "when_false": "Set to false if the patient has a history of acromegaly and has received any treatment for acromegaly at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has never received any treatment for acromegaly.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

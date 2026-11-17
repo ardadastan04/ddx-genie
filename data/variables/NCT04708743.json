@@ -1,0 +1,178 @@
+[
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when > 20"
+ },
+ {
+  "name": "patient_has_finding_of_chronic_kidney_disease_stage_3_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has chronic kidney disease stage 3.",
+  "when_true": "Set to true if the patient currently has the clinical finding of chronic kidney disease stage 3.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of chronic kidney disease stage 3.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of chronic kidney disease stage 3.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_chronic_kidney_disease_stage_4_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has chronic kidney disease stage 4.",
+  "when_true": "Set to true if the patient currently has the clinical finding of chronic kidney disease stage 4.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of chronic kidney disease stage 4.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of chronic kidney disease stage 4.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_chronic_kidney_disease_stage_5_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has chronic kidney disease stage 5.",
+  "when_true": "Set to true if the patient currently has the clinical finding of chronic kidney disease stage 5.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of chronic kidney disease stage 5.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of chronic kidney disease stage 5.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_receiving_dialysis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently receiving dialysis treatment.",
+  "when_true": "Set to true if the patient is currently receiving dialysis treatment.",
+  "when_false": "Set to false if the patient is currently not receiving dialysis treatment.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently receiving dialysis treatment.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_disease_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever had a diagnosis of any disease in their medical history.",
+  "when_true": "Set to true if the patient has ever had a diagnosis of any disease at any point in their medical history.",
+  "when_false": "Set to false if the patient has never had a diagnosis of any disease at any point in their medical history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had a diagnosis of any disease.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_malignant_neoplastic_disease_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a malignant neoplastic disease (cancer).",
+  "when_true": "Set to true if the patient currently has a malignant neoplastic disease (cancer).",
+  "when_false": "Set to false if the patient currently does not have a malignant neoplastic disease (cancer).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a malignant neoplastic disease (cancer).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_acute_infectious_disease_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has an acute infectious disease.",
+  "when_true": "Set to true if the patient currently has an acute infectious disease.",
+  "when_false": "Set to false if the patient currently does not have an acute infectious disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has an acute infectious disease.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_does_protrude_tongue_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently able to protrude the tongue.",
+  "when_true": "Set to true if the patient is currently able to protrude the tongue.",
+  "when_false": "Set to false if the patient is currently unable to protrude the tongue.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently able to protrude the tongue.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_does_protrude_tongue_now@@stably",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's tongue protrusion is stable.",
+  "when_true": "Set to true if the patient is currently able to protrude the tongue and the protrusion is stable.",
+  "when_false": "Set to false if the patient is currently able to protrude the tongue but the protrusion is not stable.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the tongue protrusion is stable.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_risk_of_dislocation_of_temporomandibular_joint_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a risk of temporomandibular joint dislocation.",
+  "when_true": "Set to true if the patient currently has a risk of temporomandibular joint dislocation.",
+  "when_false": "Set to false if the patient currently does not have a risk of temporomandibular joint dislocation.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a risk of temporomandibular joint dislocation.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of malignant neoplastic disease (cancer).",
+  "when_true": "Set to true if the patient currently has a diagnosis of malignant neoplastic disease (cancer).",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of malignant neoplastic disease (cancer).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of malignant neoplastic disease (cancer).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_acute_infectious_disease_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of acute infectious disease.",
+  "when_true": "Set to true if the patient currently has a diagnosis of acute infectious disease.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of acute infectious disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of acute infectious disease.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_unable_to_protrude_tongue_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently unable to protrude the tongue stably.",
+  "when_true": "Set to true if the patient is currently unable to protrude the tongue stably.",
+  "when_false": "Set to false if the patient is currently able to protrude the tongue stably.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently unable to protrude the tongue stably.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_dislocation_of_temporomandibular_joint_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has temporomandibular joint dislocation.",
+  "when_true": "Set to true if the patient currently has the clinical finding of temporomandibular joint dislocation.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of temporomandibular joint dislocation.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has temporomandibular joint dislocation.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_dislocation_of_temporomandibular_joint_now@@risk_of",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is at risk for temporomandibular joint dislocation.",
+  "when_true": "Set to true if the patient is currently at risk for temporomandibular joint dislocation (but does not necessarily have the dislocation).",
+  "when_false": "Set to false if the patient is not currently at risk for temporomandibular joint dislocation.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is at risk for temporomandibular joint dislocation.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

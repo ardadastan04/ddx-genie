@@ -1,0 +1,123 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_parkinson_s_disease_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of idiopathic Parkinson's disease.",
+  "when_true": "Set to true if the patient currently has a diagnosis of idiopathic Parkinson's disease.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of idiopathic Parkinson's disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of idiopathic Parkinson's disease.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_abnormal_gait_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has abnormal gait.",
+  "when_true": "Set to true if the patient currently has the clinical finding of abnormal gait.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of abnormal gait.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of abnormal gait.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_abnormal_gait_now@@is_main_complaint_or_main_symptom",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's abnormal gait is the main complaint or main symptom.",
+  "when_true": "Set to true if the patient's abnormal gait is the main complaint or main symptom.",
+  "when_false": "Set to false if the patient's abnormal gait is not the main complaint or main symptom.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's abnormal gait is the main complaint or main symptom.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_impaired_mobility_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has impaired mobility.",
+  "when_true": "Set to true if the patient currently has the clinical finding of impaired mobility.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of impaired mobility.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of impaired mobility.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_impaired_mobility_now@@is_main_complaint_or_main_symptom",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's impaired mobility is the main complaint or main symptom.",
+  "when_true": "Set to true if the patient's impaired mobility is the main complaint or main symptom.",
+  "when_false": "Set to false if the patient's impaired mobility is not the main complaint or main symptom.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's impaired mobility is the main complaint or main symptom.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_hoehn_and_yahr_scale_score_value_recorded_now_withunit_none",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's Hoehn and Yahr scale score as recorded now (unitless).",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured Hoehn and Yahr scale score if a numeric measurement recorded now is available.",
+  "polarity": "criterion met when >= 2"
+ },
+ {
+  "name": "patient_has_diagnosis_of_dementia_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of dementia.",
+  "when_true": "Set to true if the patient currently has a diagnosis of dementia.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of dementia.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of dementia.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_hoehn_and_yahr_scale_score_value_recorded_now_withunit_score",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric value representing the patient's Hoehn and Yahr scale score as measured now.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured Hoehn and Yahr scale score if a numeric measurement is recorded now.",
+  "polarity": "criterion met when > 4"
+ },
+ {
+  "name": "patient_duration_of_parkinsons_disease_symptoms_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric value indicating the duration, in years, that the patient has had symptoms of Parkinson's disease up to the present time.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the duration of Parkinson's disease symptoms in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the number of years since the patient first developed symptoms of Parkinson's disease, as documented or reported, up to the present time.",
+  "polarity": "criterion met when < 5"
+ },
+ {
+  "name": "patient_has_finding_of_parkinsonian_features_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "auto-synthesized variable for parkinsonian_features (Clinical finding) with timeframe now",
+  "when_true": "Set to true if the patient currently exhibits clinical features consistent with parkinsonian symptoms.",
+  "when_false": "Set to false if the patient does not currently exhibit clinical features consistent with parkinsonian symptoms.",
+  "when_unknown": "Set to null if the presence or absence of parkinsonian features is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_general_contraindications_of_surgery_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has general contraindications of surgery.",
+  "when_true": "Set to true if the patient currently has general contraindications of surgery.",
+  "when_false": "Set to false if the patient currently does not have general contraindications of surgery.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has general contraindications of surgery.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

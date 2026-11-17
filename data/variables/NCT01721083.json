@@ -1,0 +1,46 @@
+[
+ {
+  "name": "patient_is_healthy_adult_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently a healthy adult.",
+  "when_true": "Set to true if the patient is currently considered a healthy adult.",
+  "when_false": "Set to false if the patient is currently not considered a healthy adult.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently a healthy adult.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_allergy_to_latex_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has an allergy to latex.",
+  "when_true": "Set to true if the patient currently has an allergy to latex.",
+  "when_false": "Set to false if the patient currently does not have an allergy to latex.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has an allergy to latex.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when > 18"
+ },
+ {
+  "name": "patient_has_finding_of_illness_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has any illness.",
+  "when_true": "Set to true if the patient currently has any illness.",
+  "when_false": "Set to false if the patient currently does not have any illness.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has any illness.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

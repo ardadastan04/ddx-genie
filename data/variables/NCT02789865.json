@@ -1,0 +1,233 @@
+[
+ {
+  "name": "alvarado_score_value_recorded_now_withunit_points",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric variable indicating the patient's Alvarado score, recorded at the current time, in points.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's Alvarado score is unknown, not documented, or cannot be determined at the current time.",
+  "when_value": "Set to the value of the patient's Alvarado score, in points, as recorded at the current time.",
+  "polarity": "criterion met when >= 7"
+ },
+ {
+  "name": "patient_has_diagnosis_of_acute_appendicitis_without_peritonitis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently diagnosed with uncomplicated acute appendicitis (acute appendicitis without peritonitis).",
+  "when_true": "Set to true if the patient is currently diagnosed with uncomplicated acute appendicitis (acute appendicitis without peritonitis).",
+  "when_false": "Set to false if the patient is currently not diagnosed with uncomplicated acute appendicitis (acute appendicitis without peritonitis).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently diagnosed with uncomplicated acute appendicitis (acute appendicitis without peritonitis).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_ultrasound_scan_finding_now@@suggests_uncomplicated_acute_appendicitis",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current ultrasound scan findings suggest uncomplicated acute appendicitis.",
+  "when_true": "Set to true if the patient currently has ultrasound scan findings and those findings suggest uncomplicated acute appendicitis.",
+  "when_false": "Set to false if the patient currently has ultrasound scan findings but they do not suggest uncomplicated acute appendicitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the ultrasound scan findings suggest uncomplicated acute appendicitis.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_ultrasound_scan_finding_now@@cannot_exclude_acute_appendicitis",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current ultrasound scan findings cannot exclude acute appendicitis.",
+  "when_true": "Set to true if the patient currently has ultrasound scan findings and those findings cannot exclude acute appendicitis.",
+  "when_false": "Set to false if the patient currently has ultrasound scan findings and those findings can exclude acute appendicitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the ultrasound scan findings can exclude acute appendicitis.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_computed_tomography_now@@findings_cannot_exclude_acute_appendicitis",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current computed tomography findings cannot exclude acute appendicitis.",
+  "when_true": "Set to true if the patient currently has undergone computed tomography and the findings cannot exclude acute appendicitis.",
+  "when_false": "Set to false if the patient currently has undergone computed tomography and the findings can exclude acute appendicitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the computed tomography findings can exclude acute appendicitis.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_computed_tomography_now@@findings_suggest_uncomplicated_acute_appendicitis",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current computed tomography findings suggest uncomplicated acute appendicitis.",
+  "when_true": "Set to true if the patient currently has undergone computed tomography and the findings suggest uncomplicated acute appendicitis.",
+  "when_false": "Set to false if the patient currently has undergone computed tomography and the findings do not suggest uncomplicated acute appendicitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the computed tomography findings suggest uncomplicated acute appendicitis.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_computed_tomography_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_ultrasound_scan_finding_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_appendicitis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has appendicitis.",
+  "when_true": "Set to true if the patient currently has the clinical finding of appendicitis.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of appendicitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has appendicitis.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_appendicitis_now@@perforated",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's appendicitis is perforated.",
+  "when_true": "Set to true if the patient's appendicitis is perforated.",
+  "when_false": "Set to false if the patient's appendicitis is not perforated.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's appendicitis is perforated.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_abscess_of_appendix_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a periappendiceal abscess (abscess of appendix).",
+  "when_true": "Set to true if the patient currently has a periappendiceal abscess (abscess of appendix).",
+  "when_false": "Set to false if the patient currently does not have a periappendiceal abscess (abscess of appendix).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a periappendiceal abscess (abscess of appendix).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_contraindication_for_colonoscopy_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has any contraindication for colonoscopy.",
+  "when_true": "Set to true if the patient currently has any contraindication for colonoscopy.",
+  "when_false": "Set to false if the patient currently does not have any contraindication for colonoscopy.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has any contraindication for colonoscopy.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_allergy_to_contrast_media_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever had a clinical finding of allergy to contrast media.",
+  "when_true": "Set to true if the patient has ever had a documented clinical finding of allergy to contrast media at any time in their history.",
+  "when_false": "Set to false if the patient has never had a documented clinical finding of allergy to contrast media at any time in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had a clinical finding of allergy to contrast media.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_allergy_to_iodine_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever had a clinical finding of allergy to iodine.",
+  "when_true": "Set to true if the patient has ever had a documented clinical finding of allergy to iodine at any time in their history.",
+  "when_false": "Set to false if the patient has never had a documented clinical finding of allergy to iodine at any time in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had a clinical finding of allergy to iodine.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is currently pregnant.",
+  "when_false": "Set to false if the patient is currently not pregnant.",
+  "when_unknown": "Set to null if the patient's current pregnancy status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_unable_to_cooperate",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is unable to cooperate.",
+  "when_true": "Set to true if the patient is unable to cooperate.",
+  "when_false": "Set to false if the patient is able to cooperate.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is unable to cooperate.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_unable_to_provide_informed_consent",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is unable to provide informed consent.",
+  "when_true": "Set to true if the patient is unable to provide informed consent.",
+  "when_false": "Set to false if the patient is able to provide informed consent.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is unable to provide informed consent.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_appendicitis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of appendicitis.",
+  "when_true": "Set to true if the patient currently has a diagnosis of appendicitis.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of appendicitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of appendicitis.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_appendicitis_now@@perforated",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current appendicitis diagnosis is perforated.",
+  "when_true": "Set to true if the patient currently has a diagnosis of appendicitis and the appendicitis is perforated.",
+  "when_false": "Set to false if the patient currently has a diagnosis of appendicitis and the appendicitis is not perforated.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the appendicitis is perforated.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_allergy_to_contrast_media_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has an allergy to contrast media.",
+  "when_true": "Set to true if the patient currently has an allergy to contrast media.",
+  "when_false": "Set to false if the patient currently does not have an allergy to contrast media.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has an allergy to contrast media.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_allergy_to_iodine_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has an allergy to iodine.",
+  "when_true": "Set to true if the patient currently has an allergy to iodine.",
+  "when_false": "Set to false if the patient currently does not have an allergy to iodine.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has an allergy to iodine.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

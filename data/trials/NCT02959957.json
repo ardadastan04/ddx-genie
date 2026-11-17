@@ -1,0 +1,15 @@
+{
+ "nct": "NCT02959957",
+ "title": "Disturbance of the Intestinal Microbiota by Temocillin vs Cefotaxime in Treatment of Febrile Urinary Tract Infections",
+ "conditions": [
+  "Urinary Tract Infections"
+ ],
+ "phase": "Phase 4",
+ "brief_summary": "This study will evaluate the ecological impact on the intestinal microbiota and compare the safety and efficacy of temocillin compared to cefotaxime, in empiric treatment of febrile UTI. Half of participants will receive temocillin and the other half will receive cefotaxime.",
+ "inclusion_criteria": "inclusion criteria: \n\n Males and females \u2265 18 years of age with suspected or confirmed febrile UTI, fulfilling at least one of the following signs and symptoms: \n\n Flank pain or suprapubic pain, Tenderness over the kidney on physical examination, Urinary symptoms such as dysuria, urinary frequency or urinary urgency \n\n Fever \u2265 38.0\u00b0C (highest temperature recorded at home or at the hospital) \n\n Positive urinalysis tests (U-Nitrit and/or U-LPK) \n\n Have a pre-treatment baseline urinary culture obtained \n\n Require iv antibacterial treatment of the presumed infection \n\n Fertile women: Agree to practice highly effective anti-contraceptive methods from study-start to TOC \n\n Signed informed consent \n\n ",
+ "exclusion_criteria": ": \n\n Have a documented history of hypersensitivity or allergic reaction to any beta-lactam \n\n Pregnant or nursing women \n\n Receipt of any prior potentially therapeutic antibacterial agent within 1 month before randomisation and sampling for urine and faecal cultures. Exceptions will prior treatment with pivmecillinam or nitrofurantoin. \n\n Known chronic renal insufficiency (creatinine clearance < 10 mL/min at screening as estimated by Cockcroft-Gault), or receiving intermittent haemodialysis or peritoneal dialysis \n\n Known colonization with ESBL \n\n Any condition or circumstance that, in the opinion of the investigator, would compromise the safety of the subject or the quality of study data.",
+ "cohorts": [
+  "a",
+  "b"
+ ]
+}

@@ -1,0 +1,15 @@
+{
+ "nct": "NCT04536857",
+ "title": "Detection of A-synuclein Aggregate as Biomarker in Diagnosing Parkinson's Disease at Early Stage by Using Protein Misfolding Cyclic Amplification (PMCA)",
+ "conditions": [
+  "Parkinson's Disease"
+ ],
+ "phase": "",
+ "brief_summary": "The study will investigate the biomarker of a-synuclein aggregate in CSF detected by protein misfolding cyclic amplification (PMCA) and its sensitivity and specificity in diagnosing Parkinson's disease at H-Y stage I and disease duration less than 1 year, compared with that from age-matched controls without neurodegeneration, those with Multiple System Atrophy (MSA) as a disease control with a-synucleinopathy, and those with Progressive Supranuclear Palsy (PSP) as a control with non-a-synucleinopathy neurodegeneration.",
+ "inclusion_criteria": "For early PD patients \n\n inclusion criteria: \n\n Clinical diagnosis of probable PD by two neurologists specializing in movement disorders according to the International Parkinson and Movement Disorder Society (MDS) Clinical Diagnostic Criteria for PD (2015); \n\n Age 50-75, disease duration is less than 1 year, and Hoehn & Yahr Stage I; \n\n the dopamine reuptake transporter (DAT) is significantly reduced in striatum on PET imaging; \n\n Metabolic brain network detected by fluorine-18-labelled-fluorodeoxyglucose-PET(18F-FDG PET) is consistent with Parkinson's disease-related pattern (PDRP), with FDG hypermetabolism being in basal ganglia and cerebellum; \n\n Good response to anti-PD medications; \n\n Ability of completing questionnaires; \n\n Ability of providing informed consent; \n\n Willingness of being assessed by neurologists during off-medication state defined as discontinuing anti-PD medications for at least 12 hours before assessment. \n\n ",
+ "exclusion_criteria": ": \n\n Secondary parkinsonism (ie. drug induced); \n\n Atypical parkinsonisms like MSA or PSP etc; \n\n Presence of any item in 10 red flags of the MDS Clinical Diagnostic Criteria for PD (2015) in the comprehensive assessments during follow-up; \n\n History of being diagnosed as any cancer within 5 years; \n\n Presence of any condition risking the procedure of performing lumbar puncture (LP); \n\n Pregnancy; \n\n Inability to comply with study procedures. \n\n For early MSA patients \n\n inclusion criteria: \n\n Clinical diagnosis of probable MSA by two neurologists specializing in movement disorders according to the International Parkinson and Movement Disorder Society (MDS) second consensus criteria for MSA (2019); \n\n Age 50-75, and disease duration is less than 1 year; \n\n Metabolic brain network detected by fluorine-18-labelled-fluorodeoxyglucose-PET(18F-FDG PET) is consistent with MSA related pattern; \n\n Ability of completing questionnaires; \n\n Ability of providing informed consent; \n\n Willingness of being assessed by neurologists during off-medication state defined as discontinuing anti-PD medications for at least 12 hours before assessment. \n\n ",
+ "cohorts": [
+  "a",
+  "b"
+ ]
+}

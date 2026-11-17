@@ -1,0 +1,90 @@
+[
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when >= 18"
+ },
+ {
+  "name": "patient_is_undergoing_general_anesthesia_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently undergoing a procedure with general anesthesia.",
+  "when_true": "Set to true if the patient is currently undergoing a procedure with general anesthesia.",
+  "when_false": "Set to false if the patient is not currently undergoing a procedure with general anesthesia.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently undergoing a procedure with general anesthesia.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_postoperative_admission_to_intensive_care_unit",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has had a postoperative admission to the intensive care unit.",
+  "when_true": "Set to true if the patient has had a postoperative admission to the intensive care unit.",
+  "when_false": "Set to false if the patient has not had a postoperative admission to the intensive care unit.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has had a postoperative admission to the intensive care unit.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_postoperative_fast_track_to_phase_ii",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has undergone a postoperative fast-track process to phase II.",
+  "when_true": "Set to true if the patient has undergone a postoperative fast-track process to phase II.",
+  "when_false": "Set to false if the patient has not undergone a postoperative fast-track process to phase II.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has undergone a postoperative fast-track process to phase II.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_sedated_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently sedated.",
+  "when_true": "Set to true if the patient is currently sedated.",
+  "when_false": "Set to false if the patient is currently not sedated.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently sedated.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_sedated_now@@at_end_of_procedure",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is sedated at the end of the procedure.",
+  "when_true": "Set to true if the patient is sedated at the end of the procedure.",
+  "when_false": "Set to false if the patient is not sedated at the end of the procedure.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is sedated at the end of the procedure.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_undergoing_intubation_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently undergoing intubation.",
+  "when_true": "Set to true if the patient is currently undergoing intubation.",
+  "when_false": "Set to false if the patient is currently not undergoing intubation.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently undergoing intubation.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_undergoing_intubation_now@@at_end_of_procedure",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is undergoing intubation at the end of the procedure.",
+  "when_true": "Set to true if the patient is undergoing intubation at the end of the procedure.",
+  "when_false": "Set to false if the patient is not undergoing intubation at the end of the procedure.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is undergoing intubation at the end of the procedure.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

@@ -1,0 +1,90 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_chronic_lung_disease_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of chronic lung disease.",
+  "when_true": "Set to true if the patient currently has a diagnosis of chronic lung disease.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of chronic lung disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of chronic lung disease.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_exacerbation_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently experiencing an exacerbation.",
+  "when_true": "Set to true if the patient is currently experiencing an exacerbation.",
+  "when_false": "Set to false if the patient is currently not experiencing an exacerbation.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently experiencing an exacerbation.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_in_clinical_validation_group",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is a member of the Clinical Validation group.",
+  "when_true": "Set to true if the patient is a member of the Clinical Validation group.",
+  "when_false": "Set to false if the patient is not a member of the Clinical Validation group.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is a member of the Clinical Validation group.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_in_clinical_validation_group@@in_groups_other_than_clinical_validation_group",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is in groups other than the Clinical Validation group.",
+  "when_true": "Set to true if the patient is in groups other than the Clinical Validation group.",
+  "when_false": "Set to false if the patient is not in groups other than the Clinical Validation group (i.e., is in the Clinical Validation group only).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is in groups other than the Clinical Validation group.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_undergoing_computed_tomography_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently undergoing a computed tomography (CT) scan.",
+  "when_true": "Set to true if the patient is currently undergoing a computed tomography (CT) scan.",
+  "when_false": "Set to false if the patient is currently not undergoing a computed tomography (CT) scan.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently undergoing a computed tomography (CT) scan.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_undergoing_computed_tomography_now@@at_time_of_exacerbation",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the computed tomography (CT) scan is occurring at the time of an exacerbation.",
+  "when_true": "Set to true if the patient is currently undergoing a computed tomography (CT) scan and this scan is occurring at the time of an exacerbation.",
+  "when_false": "Set to false if the patient is currently undergoing a computed tomography (CT) scan but not at the time of an exacerbation, or if the scan is not occurring.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the CT scan is occurring at the time of an exacerbation.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_undergoing_physical_examination_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently undergoing a clinical (physical) examination.",
+  "when_true": "Set to true if the patient is currently undergoing a clinical (physical) examination.",
+  "when_false": "Set to false if the patient is currently not undergoing a clinical (physical) examination.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently undergoing a clinical (physical) examination.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_undergoing_physical_examination_now@@at_time_of_exacerbation",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the clinical (physical) examination is occurring at the time of an exacerbation.",
+  "when_true": "Set to true if the patient is currently undergoing a clinical (physical) examination and this examination is occurring at the time of an exacerbation.",
+  "when_false": "Set to false if the patient is currently undergoing a clinical (physical) examination but not at the time of an exacerbation, or if the examination is not occurring.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the clinical examination is occurring at the time of an exacerbation.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

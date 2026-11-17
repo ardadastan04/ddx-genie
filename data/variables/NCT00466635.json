@@ -1,0 +1,156 @@
+[
+ {
+  "name": "patient_has_finding_of_clostridium_difficile_diarrhea_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has Clostridium difficile-associated diarrhea at the time of enrollment.",
+  "when_true": "Set to true if the patient currently has Clostridium difficile-associated diarrhea at the time of enrollment.",
+  "when_false": "Set to false if the patient currently does not have Clostridium difficile-associated diarrhea at the time of enrollment.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has Clostridium difficile-associated diarrhea at the time of enrollment.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_childbearing_potential_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has the biological potential to become pregnant.",
+  "when_true": "Set to true if the patient is currently biologically capable of becoming pregnant (i.e., is a woman of childbearing potential).",
+  "when_false": "Set to false if the patient is not currently biologically capable of becoming pregnant (e.g., postmenopausal, prepubertal, or has undergone sterilization).",
+  "when_unknown": "Set to null if the patient's childbearing potential status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is currently pregnant as determined by a positive pregnancy test or clinical assessment.",
+  "when_false": "Set to false if the patient is currently not pregnant as determined by a negative pregnancy test or clinical assessment.",
+  "when_unknown": "Set to null if the patient's current pregnancy status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "serum_pregnancy_test_result_value_recorded_now_withunit_milli_international_units_per_milliliter",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's most recent serum pregnancy test (hCG) result, recorded now, in mIU/mL.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's most recent serum pregnancy test (hCG) result, recorded now, is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the numeric value of the patient's most recent serum pregnancy test (hCG) result, recorded now, in mIU/mL.",
+  "polarity": "criterion met when >= 5"
+ },
+ {
+  "name": "patient_has_contraindication_to_oral_therapy_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has any contraindication to oral therapy.",
+  "when_true": "Set to true if the patient currently has any contraindication to oral therapy.",
+  "when_false": "Set to false if the patient currently does not have any contraindication to oral therapy.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has any contraindication to oral therapy.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_contraindication_to_enteral_therapy_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has any contraindication to enteral therapy.",
+  "when_true": "Set to true if the patient currently has any contraindication to enteral therapy.",
+  "when_false": "Set to false if the patient currently does not have any contraindication to enteral therapy.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has any contraindication to enteral therapy.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_clostridioides_difficile_infection_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has Clostridioides difficile infection.",
+  "when_true": "Set to true if the patient currently has the clinical finding of Clostridioides difficile infection.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of Clostridioides difficile infection.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has Clostridioides difficile infection.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_clostridioides_difficile_infection_now@@fulminant",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current Clostridioides difficile infection is fulminant.",
+  "when_true": "Set to true if the patient currently has Clostridioides difficile infection and the infection is fulminant.",
+  "when_false": "Set to false if the patient currently has Clostridioides difficile infection but it is not fulminant.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the Clostridioides difficile infection is fulminant.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_disease_condition_finding_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has any disease, condition, or clinical finding.",
+  "when_true": "Set to true if the patient currently has any disease, condition, or clinical finding.",
+  "when_false": "Set to false if the patient currently does not have any disease, condition, or clinical finding.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has any disease, condition, or clinical finding.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_disease_condition_finding_now@@acutely_life_threatening",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current disease, condition, or clinical finding is acutely life-threatening.",
+  "when_true": "Set to true if the patient currently has any disease, condition, or clinical finding that is acutely life-threatening.",
+  "when_false": "Set to false if the patient currently has a disease, condition, or clinical finding, but it is not acutely life-threatening.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current disease, condition, or clinical finding is acutely life-threatening.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_acute_diarrhea_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has acute diarrhea.",
+  "when_true": "Set to true if the patient currently has the clinical finding of acute diarrhea.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of acute diarrhea.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of acute diarrhea.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_acute_diarrhea_now@@cause_other_than_clostridium_difficile",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's acute diarrhea is not caused by Clostridium difficile.",
+  "when_true": "Set to true if the patient currently has acute diarrhea and the cause is not Clostridium difficile.",
+  "when_false": "Set to false if the patient currently has acute diarrhea and the cause is Clostridium difficile.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the cause of the patient's acute diarrhea is Clostridium difficile.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_chronic_diarrhea_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has chronic diarrhea.",
+  "when_true": "Set to true if the patient currently has the clinical finding of chronic diarrhea.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of chronic diarrhea.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of chronic diarrhea.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_chronic_diarrhea_now@@cause_other_than_clostridium_difficile",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's chronic diarrhea is not caused by Clostridium difficile.",
+  "when_true": "Set to true if the patient currently has chronic diarrhea and the cause is not Clostridium difficile.",
+  "when_false": "Set to false if the patient currently has chronic diarrhea and the cause is Clostridium difficile.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the cause of the patient's chronic diarrhea is Clostridium difficile.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

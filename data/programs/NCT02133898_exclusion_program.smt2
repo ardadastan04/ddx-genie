@@ -1,0 +1,52 @@
+;; ===================== QUALIFIER LINKER =====================
+;; Rule: add (qualifier => stem) only when BOTH are Bool; remove (stem => qualifier); drop ill-typed implications.
+;; Added_aux=0 Removed_reverse=0 Removed_illtyped=0 Skipped_nonbool_pairs=0
+;; =============================================================
+
+;; Declarations/definitions (original + any auto-added Bool stems)
+(declare-const patient_is_pregnant_now Bool)
+(declare-const patient_is_breastfeeding_now Bool)
+(declare-const patient_is_female_of_reproductive_age_now Bool)
+(declare-const patient_has_finding_of_uses_contraception_now Bool)
+(declare-const patient_has_diagnosis_of_psychotic_disorder_now Bool)
+(declare-const patient_has_diagnosis_of_schizophrenia_now Bool)
+(declare-const patient_has_diagnosis_of_bipolar_disorder_now Bool)
+(declare-const patient_has_diagnosis_of_cluster_b_personality_disorder_now Bool)
+(declare-const patient_has_undergone_electroconvulsive_therapy_inthehistory Bool)
+(declare-const patient_has_undergone_electroconvulsive_therapy_inthehistory@@outcome_is_negative Bool)
+(declare-const patient_is_undergoing_electroconvulsive_therapy_now Bool)
+(declare-const patient_is_undergoing_transcranial_magnetic_stimulation_now Bool)
+(declare-const patient_has_finding_of_harmful_pattern_of_substance_use_inthepast6months Bool)
+(declare-const patient_is_taking_anticonvulsant_now Bool)
+(declare-const patient_thyroid_stimulating_hormone_measurement_value_recorded_now_withunit_unit Real)
+(declare-const patient_has_finding_of_cobalamin_deficiency_now Bool)
+(declare-const patient_has_finding_of_cobalamin_deficiency_now@@untreated Bool)
+(declare-const vitamin_b12_value_recorded_now_withunit_picomole_per_liter Real)
+(declare-const mini_mental_status_examination_score_value_recorded_now_withunit_points Real)
+(declare-const patient_has_diagnosis_of_degenerative_disease_of_the_central_nervous_system_now Bool)
+(declare-const patient_has_diagnosis_of_dementia_now Bool)
+(declare-const patient_has_finding_of_suicidal_thoughts_now Bool)
+
+;; Existing auxiliary assertions
+(assert (! (=> patient_has_undergone_electroconvulsive_therapy_inthehistory@@outcome_is_negative patient_has_undergone_electroconvulsive_therapy_inthehistory) :named REQ4_AUXILIARY0))
+(assert (! (= patient_has_finding_of_cobalamin_deficiency_now@@untreated (< vitamin_b12_value_recorded_now_withunit_picomole_per_liter 400)) :named REQ9_AUXILIARY0))
+(assert (! (=> patient_has_finding_of_cobalamin_deficiency_now@@untreated patient_has_finding_of_cobalamin_deficiency_now) :named REQ9_AUXILIARY1))
+
+;; Other kept assertions
+(assert (! (not patient_is_pregnant_now) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_is_breastfeeding_now) :named REQ0_COMPONENT1_OTHER_REQUIREMENTS))
+(assert (! (not (and patient_is_female_of_reproductive_age_now (not patient_has_finding_of_uses_contraception_now))) :named REQ0_COMPONENT2_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_diagnosis_of_schizophrenia_now) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_diagnosis_of_psychotic_disorder_now) :named REQ1_COMPONENT1_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_diagnosis_of_bipolar_disorder_now) :named REQ2_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_diagnosis_of_cluster_b_personality_disorder_now) :named REQ3_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_undergone_electroconvulsive_therapy_inthehistory@@outcome_is_negative) :named REQ4_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_is_undergoing_electroconvulsive_therapy_now) :named REQ5_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_is_undergoing_transcranial_magnetic_stimulation_now) :named REQ5_COMPONENT1_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_harmful_pattern_of_substance_use_inthepast6months) :named REQ6_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_is_taking_anticonvulsant_now) :named REQ7_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not (> patient_thyroid_stimulating_hormone_measurement_value_recorded_now_withunit_unit 4)) :named REQ8_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_cobalamin_deficiency_now@@untreated) :named REQ9_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_diagnosis_of_degenerative_disease_of_the_central_nervous_system_now) :named REQ10_COMPONENT0_OTHER_REQUIREMENTS))
+(assert (! (not (and patient_has_diagnosis_of_dementia_now (<= mini_mental_status_examination_score_value_recorded_now_withunit_points 24))) :named REQ10_COMPONENT1_OTHER_REQUIREMENTS))
+(assert (! (not patient_has_finding_of_suicidal_thoughts_now) :named REQ11_COMPONENT0_OTHER_REQUIREMENTS))

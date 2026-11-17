@@ -1,0 +1,15 @@
+{
+ "nct": "NCT01000090",
+ "title": "Surgical Versus Medical Treatment of Acromegaly",
+ "conditions": [
+  "Acromegaly"
+ ],
+ "phase": "",
+ "brief_summary": "Evaluate biochemical differences in acromegalic patients treated with surgery versus somatostatin analogues (SMS) (after surgery or alone).~Hypothesis: Treatment modality exhibit different biochemical responses in acromegaly.",
+ "inclusion_criteria": "inclusion criteria: \n\n Acromegaly diagnosis \n\n treated with Somatostatin analogues or surgery \n\n in treatment control \n\n ",
+ "exclusion_criteria": ": \n\n treatment with GH-antagonist \n\n never treated \n\n not in treatment control",
+ "cohorts": [
+  "a",
+  "b"
+ ]
+}

@@ -1,0 +1,90 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_parkinson_s_disease_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of Parkinson's disease.",
+  "when_true": "Set to true if the patient currently has a diagnosis of Parkinson's disease.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of Parkinson's disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of Parkinson's disease.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_parkinson_s_disease_now@@diagnosis_meets_united_kingdom_brain_bank_criteria",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_parkinson_s_disease_now@@diagnosis_made_within_study_centres",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_parkinson_s_disease_now@@diagnosed_by_united_kingdom_brain_bank_criteria",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current diagnosis of Parkinson's disease is determined by the United Kingdom Brain Bank (UKBB) criteria.",
+  "when_true": "Set to true if the patient's current diagnosis of Parkinson's disease is determined by the United Kingdom Brain Bank (UKBB) criteria.",
+  "when_false": "Set to false if the patient's current diagnosis of Parkinson's disease is not determined by the United Kingdom Brain Bank (UKBB) criteria.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current diagnosis of Parkinson's disease is determined by the United Kingdom Brain Bank (UKBB) criteria.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_vascular_parkinsonism_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever been diagnosed with vascular Parkinsonism.",
+  "when_true": "Set to true if the patient has ever been diagnosed with vascular Parkinsonism.",
+  "when_false": "Set to false if the patient has never been diagnosed with vascular Parkinsonism.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been diagnosed with vascular Parkinsonism.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_cerebrovascular_accident_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever had a finding of cerebrovascular accident (stroke).",
+  "when_true": "Set to true if the patient has ever had a finding of cerebrovascular accident (stroke).",
+  "when_false": "Set to false if the patient has never had a finding of cerebrovascular accident (stroke).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever had a finding of cerebrovascular accident (stroke).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_parkinsonism_caused_by_drug_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of Parkinsonism caused by drug (treatment-induced Parkinsonism).",
+  "when_true": "Set to true if the patient currently has a diagnosis of Parkinsonism caused by drug (treatment-induced Parkinsonism).",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of Parkinsonism caused by drug (treatment-induced Parkinsonism).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of Parkinsonism caused by drug (treatment-induced Parkinsonism).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_history_of_exposure_to_dopaminergic_neurotoxin",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has a history of exposure to any dopaminergic neurotoxin.",
+  "when_true": "Set to true if the patient has a documented or reported history of exposure to any dopaminergic neurotoxin at any time in the past.",
+  "when_false": "Set to false if the patient does not have a documented or reported history of exposure to any dopaminergic neurotoxin at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has a history of exposure to any dopaminergic neurotoxin.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ }
+]

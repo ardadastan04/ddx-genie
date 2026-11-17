@@ -1,0 +1,145 @@
+[
+ {
+  "name": "patient_has_finding_of_gout_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has a history of gout.",
+  "when_true": "Set to true if the patient has a documented history of gout.",
+  "when_false": "Set to false if the patient does not have a documented history of gout.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has a history of gout.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_uric_acid_urolithiasis_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has a history of uric acid urolithiasis.",
+  "when_true": "Set to true if the patient has a documented history of uric acid urolithiasis.",
+  "when_false": "Set to false if the patient does not have a documented history of uric acid urolithiasis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has a history of uric acid urolithiasis.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_uric_acid_nephrolithiasis_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has a history of uric acid nephrolithiasis.",
+  "when_true": "Set to true if the patient has a documented history of uric acid nephrolithiasis.",
+  "when_false": "Set to false if the patient does not have a documented history of uric acid nephrolithiasis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has a history of uric acid nephrolithiasis.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_renal_impairment_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has a history of renal dysfunction (renal impairment).",
+  "when_true": "Set to true if the patient has a documented history of renal dysfunction (renal impairment).",
+  "when_false": "Set to false if the patient does not have a documented history of renal dysfunction (renal impairment).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has a history of renal dysfunction (renal impairment).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_gastric_ulcer_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has a history of gastric ulceration (gastric ulcer).",
+  "when_true": "Set to true if the patient has a documented history of gastric ulceration (gastric ulcer).",
+  "when_false": "Set to false if the patient does not have a documented history of gastric ulceration (gastric ulcer).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has a history of gastric ulceration (gastric ulcer).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_taking_systemic_corticosteroid_medication_concurrently",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently taking systemic corticosteroid medication as a concurrent medication.",
+  "when_true": "Set to true if the patient is currently taking systemic corticosteroid medication as a concurrent medication.",
+  "when_false": "Set to false if the patient is not currently taking systemic corticosteroid medication as a concurrent medication.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently taking systemic corticosteroid medication as a concurrent medication.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_taking_immunosuppressant_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently taking an immunosuppressant.",
+  "when_true": "Set to true if the patient is currently taking an immunosuppressant.",
+  "when_false": "Set to false if the patient is not currently taking an immunosuppressant.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently taking an immunosuppressant.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_taking_immunosuppressant_now@@concurrent_medication",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the immunosuppressant is being taken as a concurrent medication.",
+  "when_true": "Set to true if the patient is currently taking an immunosuppressant as a concurrent medication (actively part of the current medication regimen).",
+  "when_false": "Set to false if the patient is currently taking an immunosuppressant but it is not a concurrent medication (e.g., not part of the current regimen, incidental, or historical).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the immunosuppressant is being taken as a concurrent medication.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_receiving_radiotherapy_as_concurrent_treatment_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently receiving radiotherapy as a concurrent treatment.",
+  "when_true": "Set to true if the patient is currently receiving radiotherapy as a concurrent treatment.",
+  "when_false": "Set to false if the patient is currently not receiving radiotherapy as a concurrent treatment.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently receiving radiotherapy as a concurrent treatment.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_patient_status_determination_critical_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently critically ill.",
+  "when_true": "Set to true if the patient is currently critically ill.",
+  "when_false": "Set to false if the patient is currently not critically ill.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently critically ill.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_aids_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has acquired immunodeficiency syndrome (AIDS).",
+  "when_true": "Set to true if the patient currently has acquired immunodeficiency syndrome (AIDS).",
+  "when_false": "Set to false if the patient currently does not have acquired immunodeficiency syndrome (AIDS).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has acquired immunodeficiency syndrome (AIDS).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_immunological_therapy_inthepast1months",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has undergone immunological therapy (immunotherapy) within the past 1 month prior to study entry.",
+  "when_true": "Set to true if the patient has undergone immunological therapy (immunotherapy) at any time within the past 1 month prior to study entry.",
+  "when_false": "Set to false if the patient has not undergone immunological therapy (immunotherapy) at any time within the past 1 month prior to study entry.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has undergone immunological therapy (immunotherapy) within the past 1 month prior to study entry.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_persistent_generalized_lymphadenopathy_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has persistent generalized lymphadenopathy.",
+  "when_true": "Set to true if the patient currently has the clinical finding of persistent generalized lymphadenopathy.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of persistent generalized lymphadenopathy.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of persistent generalized lymphadenopathy.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

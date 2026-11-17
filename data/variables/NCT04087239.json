@@ -1,0 +1,211 @@
+[
+ {
+  "name": "patient_is_consented_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has provided informed consent at the current time.",
+  "when_true": "Set to true if the patient has provided informed consent at the current time.",
+  "when_false": "Set to false if the patient has not provided informed consent at the current time.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has provided informed consent at the current time.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is currently pregnant.",
+  "when_false": "Set to false if the patient is not currently pregnant.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently pregnant.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_sex_is_female_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's sex is female at the current time.",
+  "when_true": "Set to true if the patient's sex is female at the current time.",
+  "when_false": "Set to false if the patient's sex is not female at the current time.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's sex is female at the current time.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_of_bantu_origin",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is of Bantu origin.",
+  "when_true": "Set to true if the patient is of Bantu origin.",
+  "when_false": "Set to false if the patient is not of Bantu origin.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is of Bantu origin.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the numeric value of the patient's current age in years.",
+  "polarity": "criterion met when >= 15"
+ },
+ {
+  "name": "gestational_age_value_recorded_at_enrolment_in_weeks",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value of the patient's gestational age in weeks at the time of enrolment.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the gestational age in weeks at enrolment is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the numeric value of the patient's gestational age in weeks, as recorded at the time of enrolment.",
+  "polarity": "criterion met when >= 20"
+ },
+ {
+  "name": "patient_is_planning_to_deliver_at_kuwadzana_study_site",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is planning to deliver at Kuwadzana study site.",
+  "when_true": "Set to true if the patient is planning to deliver at Kuwadzana study site.",
+  "when_false": "Set to false if the patient is not planning to deliver at Kuwadzana study site.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is planning to deliver at Kuwadzana study site.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_planning_to_deliver_at_rujeko_study_site",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is planning to deliver at Rujeko study site.",
+  "when_true": "Set to true if the patient is planning to deliver at Rujeko study site.",
+  "when_false": "Set to false if the patient is not planning to deliver at Rujeko study site.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is planning to deliver at Rujeko study site.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_planning_to_deliver_at_glenview_study_site",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is planning to deliver at Glenview study site.",
+  "when_true": "Set to true if the patient is planning to deliver at Glenview study site.",
+  "when_false": "Set to false if the patient is not planning to deliver at Glenview study site.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is planning to deliver at Glenview study site.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_planning_to_deliver_at_budiriro_study_site",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is planning to deliver at Budiriro study site.",
+  "when_true": "Set to true if the patient is planning to deliver at Budiriro study site.",
+  "when_false": "Set to false if the patient is not planning to deliver at Budiriro study site.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is planning to deliver at Budiriro study site.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_planning_to_deliver_at_study_site",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean value indicating whether the patient is planning to deliver at one of the designated study sites.",
+  "when_true": "Set to true if the patient is documented as planning to deliver at one of the designated study sites.",
+  "when_false": "Set to false if the patient is documented as not planning to deliver at one of the designated study sites.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is planning to deliver at one of the designated study sites.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_planning_to_deliver_at_study_site@@site_is_kuwadzana_rujeko_glenview_or_budiriro",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean value indicating whether the patient is planning to deliver at Kuwadzana, Rujeko, Glenview, or Budiriro.",
+  "when_true": "Set to true if the patient is planning to deliver at Kuwadzana, Rujeko, Glenview, or Budiriro.",
+  "when_false": "Set to false if the patient is planning to deliver at a site other than Kuwadzana, Rujeko, Glenview, or Budiriro.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is planning to deliver at Kuwadzana, Rujeko, Glenview, or Budiriro.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_willing_to_provide_biological_specimens_in_follow_up_visits_for_two_years",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is willing to provide biological specimens in follow-up visits for two years.",
+  "when_true": "Set to true if the patient is willing to provide biological specimens in follow-up visits for two years.",
+  "when_false": "Set to false if the patient is not willing to provide biological specimens in follow-up visits for two years.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is willing to provide biological specimens in follow-up visits for two years.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_exposed_to_biological_substance_now@@provided_in_follow_up_visits_for_two_years",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient provides biological specimens in follow-up visits for two years.",
+  "when_true": "Set to true if the patient provides biological specimens in follow-up visits for two years.",
+  "when_false": "Set to false if the patient does not provide biological specimens in follow-up visits for two years.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient provides biological specimens in follow-up visits for two years.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_exposed_to_biological_substance_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_mental_disorder_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a mental disorder.",
+  "when_true": "Set to true if the patient currently has a mental disorder.",
+  "when_false": "Set to false if the patient currently does not have a mental disorder.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a mental disorder.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_mental_disorder_now@@maternal",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current mental disorder is maternal.",
+  "when_true": "Set to true if the patient's current mental disorder is maternal.",
+  "when_false": "Set to false if the patient's current mental disorder is not maternal.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current mental disorder is maternal.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_mental_disorder_now@@severe",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current mental disorder is severe.",
+  "when_true": "Set to true if the patient's current mental disorder is severe.",
+  "when_false": "Set to false if the patient's current mental disorder is not severe.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current mental disorder is severe.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_mental_disorder_now@@maternal@@severe",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a mental disorder that is both maternal and severe.",
+  "when_true": "Set to true if the patient currently has a mental disorder that is both maternal and severe.",
+  "when_false": "Set to false if the patient currently does not have a mental disorder that is both maternal and severe.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a mental disorder that is both maternal and severe.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

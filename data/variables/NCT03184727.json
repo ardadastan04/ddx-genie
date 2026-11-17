@@ -1,0 +1,189 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_chronic_obstructive_pulmonary_disease_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of chronic obstructive pulmonary disease (COPD), regardless of stability.",
+  "when_true": "Set to true if the patient currently has a diagnosis of chronic obstructive pulmonary disease (COPD), regardless of whether it is stable or unstable.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of chronic obstructive pulmonary disease (COPD).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of chronic obstructive pulmonary disease (COPD).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_chronic_obstructive_pulmonary_disease_now@@stable",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_disorder_of_respiratory_system_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of a disorder of the respiratory system.",
+  "when_true": "Set to true if the patient currently has a diagnosis of a disorder of the respiratory system.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of a disorder of the respiratory system.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of a disorder of the respiratory system.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_pulmonary_hypertension_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of pulmonary hypertension.",
+  "when_true": "Set to true if the patient currently has a diagnosis of pulmonary hypertension.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of pulmonary hypertension.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of pulmonary hypertension.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_pulmonary_hypertension_now@@group_3",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current pulmonary hypertension diagnosis is group 3.",
+  "when_true": "Set to true if the patient currently has a diagnosis of pulmonary hypertension and it is classified as group 3 pulmonary hypertension.",
+  "when_false": "Set to false if the patient currently has a diagnosis of pulmonary hypertension and it is not classified as group 3, or if the group classification is known to be not group 3.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's pulmonary hypertension is group 3.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_psychopathic_personality_trait_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a finding or diagnosis of psychopathic personality trait.",
+  "when_true": "Set to true if the patient currently has a finding or diagnosis of psychopathic personality trait.",
+  "when_false": "Set to false if the patient currently does not have a finding or diagnosis of psychopathic personality trait.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a finding or diagnosis of psychopathic personality trait.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_addiction_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a finding or diagnosis of addiction.",
+  "when_true": "Set to true if the patient currently has a finding or diagnosis of addiction.",
+  "when_false": "Set to false if the patient currently does not have a finding or diagnosis of addiction.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a finding or diagnosis of addiction.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_able_to_coordinate_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently able to coordinate.",
+  "when_true": "Set to true if the patient is currently able to coordinate.",
+  "when_false": "Set to false if the patient is currently not able to coordinate.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently able to coordinate.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is currently pregnant.",
+  "when_false": "Set to false if the patient is currently known not to be pregnant.",
+  "when_unknown": "Set to null if the patient's current pregnancy status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_breastfeeding_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient is currently breastfeeding.",
+  "when_true": "Set to true if the patient is currently breastfeeding.",
+  "when_false": "Set to false if the patient is currently known not to be breastfeeding.",
+  "when_unknown": "Set to null if the patient's current breastfeeding status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_breastfed_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently breastfeeding.",
+  "when_true": "Set to true if the patient is currently breastfeeding.",
+  "when_false": "Set to false if the patient is currently not breastfeeding.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently breastfeeding.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_limited_life_expectancy_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has limited life expectancy.",
+  "when_true": "Set to true if the patient currently has limited life expectancy.",
+  "when_false": "Set to false if the patient currently does not have limited life expectancy.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has limited life expectancy.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_contraindication_for_magnetic_resonance_imaging_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a contraindication for magnetic resonance imaging.",
+  "when_true": "Set to true if the patient currently has a contraindication for magnetic resonance imaging.",
+  "when_false": "Set to false if the patient currently does not have a contraindication for magnetic resonance imaging.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a contraindication for magnetic resonance imaging.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_contraindication_for_positron_emission_tomography_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a contraindication for positron emission tomography.",
+  "when_true": "Set to true if the patient currently has a contraindication for positron emission tomography.",
+  "when_false": "Set to false if the patient currently does not have a contraindication for positron emission tomography.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a contraindication for positron emission tomography.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "months_since_most_recent_cerebrovascular_event_value_recorded_in_months",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric value representing the number of months since the patient's most recent cerebrovascular event, in months.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the number of months since the most recent cerebrovascular event is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the number of months since the patient's most recent cerebrovascular event, if known and documented.",
+  "polarity": "criterion met when < 3"
+ },
+ {
+  "name": "patient_has_history_of_cerebrovascular_event_in_past_3_months",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has had any cerebrovascular event in the past 3 months.",
+  "when_true": "Set to true if the patient has had any cerebrovascular event that occurred within the past 3 months.",
+  "when_false": "Set to false if the patient has not had any cerebrovascular event within the past 3 months.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has had any cerebrovascular event in the past 3 months.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_chronic_obstructive_pulmonary_disease_now@@unstable",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current COPD diagnosis is unstable.",
+  "when_true": "Set to true if the patient currently has a diagnosis of chronic obstructive pulmonary disease (COPD) and the COPD is unstable.",
+  "when_false": "Set to false if the patient currently has a diagnosis of COPD but it is not unstable.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the COPD is unstable.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

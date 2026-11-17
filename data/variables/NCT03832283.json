@@ -1,0 +1,68 @@
+[
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when >= 18"
+ },
+ {
+  "name": "patient_receives_care_from_participating_primary_care_provider",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient receives care from a primary care provider who is participating.",
+  "when_true": "Set to true if the patient receives care from a primary care provider who is participating.",
+  "when_false": "Set to false if the patient does not receive care from a primary care provider who is participating.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient receives care from a participating primary care provider.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_needs_to_undergo_depression_screening_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently needs to undergo depression screening.",
+  "when_true": "Set to true if the patient is currently due for depression screening (i.e., needs to undergo depression screening now).",
+  "when_false": "Set to false if the patient is not currently due for depression screening (i.e., does not need to undergo depression screening now).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently due for depression screening.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_needs_to_undergo_depression_screening_now@@for_screening_arms",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the need for depression screening is specific to screening arms.",
+  "when_true": "Set to true if the need for depression screening applies specifically to patients in screening arms.",
+  "when_false": "Set to false if the need for depression screening does not apply specifically to patients in screening arms.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the need for depression screening applies specifically to patients in screening arms.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_depressive_disorder_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_bipolar_disorder_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of bipolar disorder.",
+  "when_true": "Set to true if the patient currently has a diagnosis of bipolar disorder.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of bipolar disorder.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of bipolar disorder.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

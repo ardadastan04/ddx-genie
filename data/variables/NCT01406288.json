@@ -1,0 +1,46 @@
+[
+ {
+  "name": "patient_has_finding_of_hemolytic_uremic_syndrome_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has hemolytic uremic syndrome.",
+  "when_true": "Set to true if the patient currently has the clinical finding of hemolytic uremic syndrome.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of hemolytic uremic syndrome.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of hemolytic uremic syndrome.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_hemolytic_uremic_syndrome_now@@concomitant_to_outbreak_linked_to_escherichia_coli_o104_h4",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current hemolytic uremic syndrome is concomitant to the outbreak linked to Escherichia coli O104:H4.",
+  "when_true": "Set to true if the patient's current hemolytic uremic syndrome is concomitant to the outbreak linked to Escherichia coli O104:H4.",
+  "when_false": "Set to false if the patient's current hemolytic uremic syndrome is not concomitant to the outbreak linked to Escherichia coli O104:H4.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current hemolytic uremic syndrome is concomitant to the outbreak linked to Escherichia coli O104:H4.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_willing_to_participate",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is willing to participate in the study.",
+  "when_true": "Set to true if the patient is willing to participate in the study.",
+  "when_false": "Set to false if the patient is not willing to participate in the study.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is willing to participate in the study.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_willing_to_sign_informed_consent",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is willing to sign informed consent.",
+  "when_true": "Set to true if the patient is willing to sign informed consent.",
+  "when_false": "Set to false if the patient is not willing to sign informed consent.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is willing to sign informed consent.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ }
+]

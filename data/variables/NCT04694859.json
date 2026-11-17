@@ -1,0 +1,200 @@
+[
+ {
+  "name": "patient_has_finding_of_severe_aortic_valve_stenosis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has severe aortic valve stenosis.",
+  "when_true": "Set to true if the patient currently has the clinical finding of severe aortic valve stenosis.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of severe aortic valve stenosis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has severe aortic valve stenosis.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_symptomatic_aortic_valve_stenosis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has symptomatic aortic valve stenosis.",
+  "when_true": "Set to true if the patient currently has symptomatic aortic valve stenosis.",
+  "when_false": "Set to false if the patient currently does not have symptomatic aortic valve stenosis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has symptomatic aortic valve stenosis.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_finding_of_increased_risk_level_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has the clinical finding of increased risk level (high risk).",
+  "when_true": "Set to true if the patient is currently considered to have an increased risk level (high risk).",
+  "when_false": "Set to false if the patient is currently not considered to have an increased risk level (high risk).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently at high risk.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_undergoing_transcatheter_aortic_valve_implantation_now@@deemed_amenable_by_multidisciplinary_team",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently undergoing transcatheter aortic valve implantation and is deemed amenable for the procedure by a multidisciplinary team.",
+  "when_true": "Set to true if the patient is currently undergoing transcatheter aortic valve implantation and is deemed amenable for the procedure by a multidisciplinary team.",
+  "when_false": "Set to false if the patient is currently undergoing transcatheter aortic valve implantation but is not deemed amenable by a multidisciplinary team.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is deemed amenable for transcatheter aortic valve implantation by a multidisciplinary team.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_undergoing_transcatheter_aortic_valve_implantation_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "annulus_size_value_recorded_now_in_millimeters",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric value representing the patient's annulus size measured in millimeters at the current time.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's annulus size is unknown, not documented, or cannot be determined at the current time.",
+  "when_value": "Set to the numeric value of the patient's annulus size in millimeters as measured currently.",
+  "polarity": "criterion met when < 18"
+ },
+ {
+  "name": "patient_has_finding_of_left_ventricular_thrombus_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a left ventricular thrombus.",
+  "when_true": "Set to true if the patient currently has a left ventricular thrombus.",
+  "when_false": "Set to false if the patient currently does not have a left ventricular thrombus.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a left ventricular thrombus.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_endocarditis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has endocarditis.",
+  "when_true": "Set to true if the patient currently has the clinical finding of endocarditis.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of endocarditis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of endocarditis.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_endocarditis_now@@active",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current endocarditis is active.",
+  "when_true": "Set to true if the patient currently has endocarditis and the endocarditis is active.",
+  "when_false": "Set to false if the patient currently has endocarditis but it is not active.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current endocarditis is active.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_high_risk_of_coronary_ostium_obstruction_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a high risk of coronary ostium obstruction.",
+  "when_true": "Set to true if the patient currently has a high risk of coronary ostium obstruction.",
+  "when_false": "Set to false if the patient currently does not have a high risk of coronary ostium obstruction.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a high risk of coronary ostium obstruction.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_plaques_with_mobile_thrombi_in_ascending_aorta_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has plaques with mobile thrombi in the ascending aorta.",
+  "when_true": "Set to true if the patient currently has plaques with mobile thrombi in the ascending aorta.",
+  "when_false": "Set to false if the patient currently does not have plaques with mobile thrombi in the ascending aorta.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has plaques with mobile thrombi in the ascending aorta.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_plaques_with_mobile_thrombi_in_arch_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has plaques with mobile thrombi in the arch.",
+  "when_true": "Set to true if the patient currently has plaques with mobile thrombi in the arch.",
+  "when_false": "Set to false if the patient currently does not have plaques with mobile thrombi in the arch.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has plaques with mobile thrombi in the arch.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_hemodynamic_instability_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has hemodynamic instability.",
+  "when_true": "Set to true if the patient currently has the clinical finding of hemodynamic instability.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of hemodynamic instability.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of hemodynamic instability.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_life_expectancy_value_estimated_in_years",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric value indicating the patient's estimated life expectancy in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's estimated life expectancy in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's estimated life expectancy in years if it is known or can be reasonably estimated.",
+  "polarity": "criterion met when < 1"
+ },
+ {
+  "name": "patient_has_finding_of_co_morbid_conditions_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has any comorbid condition.",
+  "when_true": "Set to true if the patient currently has any comorbid condition.",
+  "when_false": "Set to false if the patient currently does not have any comorbid condition.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has any comorbid condition.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_co_morbid_conditions_now@@suggests_lack_of_improvement_of_quality_of_life",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current comorbid condition suggests a lack of improvement in quality of life.",
+  "when_true": "Set to true if the patient's current comorbid condition suggests a lack of improvement in quality of life.",
+  "when_false": "Set to false if the patient's current comorbid condition does not suggest a lack of improvement in quality of life.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current comorbid condition suggests a lack of improvement in quality of life.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_in_other_situations_adjudicated_by_local_heartteam_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently in other situations adjudicated by the local HeartTeam.",
+  "when_true": "Set to true if the patient is currently in other situations adjudicated by the local HeartTeam.",
+  "when_false": "Set to false if the patient is currently not in other situations adjudicated by the local HeartTeam.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently in other situations adjudicated by the local HeartTeam.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_can_undergo_transcatheter_aortic_valve_implantation_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient can currently undergo transcatheter aortic valve implantation (TAVI).",
+  "when_true": "Set to true if the patient is currently deemed amenable for transcatheter aortic valve implantation (TAVI) by a multidisciplinary team.",
+  "when_false": "Set to false if the patient is currently not deemed amenable for transcatheter aortic valve implantation (TAVI) by a multidisciplinary team.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently deemed amenable for TAVI.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ }
+]

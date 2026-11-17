@@ -1,0 +1,35 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_parkinson_s_disease_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a clinical diagnosis of Parkinson's disease.",
+  "when_true": "Set to true if the patient currently has a clinical diagnosis of Parkinson's disease.",
+  "when_false": "Set to false if the patient currently does not have a clinical diagnosis of Parkinson's disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a clinical diagnosis of Parkinson's disease.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_decreased_range_of_shoulder_movement_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a limitation (decreased range) in shoulder movement.",
+  "when_true": "Set to true if the patient currently has a clinical finding of decreased range of shoulder movement (limitation in shoulder range of motion).",
+  "when_false": "Set to false if the patient currently does not have a clinical finding of decreased range of shoulder movement.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a limitation in shoulder range of motion.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_decreased_range_of_shoulder_movement_now@@necessary_to_perform_pointing_movements",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the limitation in shoulder range of motion specifically affects the range necessary to perform pointing movements.",
+  "when_true": "Set to true if the patient's limitation in shoulder range of motion specifically affects the range necessary to perform pointing movements.",
+  "when_false": "Set to false if the patient's limitation in shoulder range of motion does not affect the range necessary to perform pointing movements.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the limitation affects the range necessary to perform pointing movements.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

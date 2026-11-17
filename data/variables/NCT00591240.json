@@ -1,0 +1,68 @@
+[
+ {
+  "name": "patient_has_suspicion_of_urinary_tract_infectious_disease_now@@complicated",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the suspicion of urinary tract infectious disease is for complicated cases.",
+  "when_true": "Set to true if the suspicion of urinary tract infectious disease is specifically for complicated urinary tract infections.",
+  "when_false": "Set to false if the suspicion is not specifically for complicated urinary tract infections.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the suspicion is for complicated urinary tract infections.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_urinary_tract_infectious_disease_now@@at_risk",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the finding of urinary tract infectious disease refers to the patient being at risk for complicated cases.",
+  "when_true": "Set to true if the finding of urinary tract infectious disease refers to the patient being at risk for complicated urinary tract infections.",
+  "when_false": "Set to false if the finding does not refer to the patient being at risk for complicated urinary tract infections.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the finding refers to the patient being at risk for complicated urinary tract infections.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_suspicion_of_urinary_tract_infectious_disease_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_urinary_tract_infectious_disease_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_specimen_contaminated_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has contamination of urine samples.",
+  "when_true": "Set to true if the patient currently has contamination of urine samples.",
+  "when_false": "Set to false if the patient currently does not have contamination of urine samples.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has contamination of urine samples.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_specimen_contaminated_now@@at_time_of_collection",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the contamination of urine samples occurred at the time of collection.",
+  "when_true": "Set to true if the contamination of urine samples occurred at the time of collection.",
+  "when_false": "Set to false if the contamination of urine samples did not occur at the time of collection.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the contamination occurred at the time of collection.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

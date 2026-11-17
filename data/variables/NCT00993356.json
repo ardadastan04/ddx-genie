@@ -1,0 +1,200 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_acromegaly_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of acromegaly.",
+  "when_true": "Set to true if the patient currently has a diagnosis of acromegaly.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of acromegaly.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of acromegaly.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_acromegaly_now@@newly_diagnosed",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's diagnosis of acromegaly is newly established (recent onset).",
+  "when_true": "Set to true if the patient's diagnosis of acromegaly is newly established (recent onset as per protocol definition).",
+  "when_false": "Set to false if the patient's diagnosis of acromegaly is not newly established (not recent).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the diagnosis of acromegaly is newly established.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_somatotroph_adenoma_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of somatotroph adenoma (growth hormone-secreting macroadenoma).",
+  "when_true": "Set to true if the patient currently has a diagnosis of somatotroph adenoma (growth hormone-secreting macroadenoma).",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of somatotroph adenoma (growth hormone-secreting macroadenoma).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of somatotroph adenoma (growth hormone-secreting macroadenoma).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_previously_untreated",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is previously untreated for the relevant condition.",
+  "when_true": "Set to true if the patient has not received any prior treatment for the relevant condition.",
+  "when_false": "Set to false if the patient has received any prior treatment for the relevant condition.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has received any prior treatment for the relevant condition.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "growth_hormone_nadir_value_recorded_during_standard_75g_2hr_ogtt_withunit_micrograms_per_liter",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's growth hormone nadir in micrograms per liter, as measured during a standard 75-gram, 2-hour OGTT.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the value is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the measured value of the patient's growth hormone nadir in micrograms per liter, as recorded during a standard 75-gram, 2-hour oral glucose tolerance test (OGTT).",
+  "polarity": "criterion met when > 2.5"
+ },
+ {
+  "name": "patient_has_undergone_glucose_tolerance_test_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has undergone an oral glucose tolerance test (OGTT) now.",
+  "when_true": "Set to true if the patient has undergone an oral glucose tolerance test (OGTT) now.",
+  "when_false": "Set to false if the patient has not undergone an oral glucose tolerance test (OGTT) now.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has undergone an oral glucose tolerance test (OGTT) now.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_pituitary_macroadenoma_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a pituitary macroadenoma.",
+  "when_true": "Set to true if the patient currently has a pituitary macroadenoma, regardless of size or imaging verification.",
+  "when_false": "Set to false if the patient currently does not have a pituitary macroadenoma.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a pituitary macroadenoma.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_pituitary_macroadenoma_now@@verified_by_pituitary_magnetic_resonance_imaging_scan",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's pituitary macroadenoma is verified by a pituitary magnetic resonance imaging scan.",
+  "when_true": "Set to true if the patient's pituitary macroadenoma is verified by a pituitary magnetic resonance imaging scan.",
+  "when_false": "Set to false if the patient's pituitary macroadenoma is not verified by a pituitary magnetic resonance imaging scan.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the pituitary macroadenoma is verified by a pituitary magnetic resonance imaging scan.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_pituitary_macroadenoma_value_recorded_now_withunit_centimeter",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the maximum diameter (in centimeters) of the patient's pituitary macroadenoma measured now.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured maximum diameter in centimeters if a measurement is available now for the patient's pituitary macroadenoma.",
+  "polarity": "criterion met when > 1"
+ },
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when >= 18"
+ },
+ {
+  "name": "patient_needs_to_undergo_surgical_procedure_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently needs to undergo a surgical procedure.",
+  "when_true": "Set to true if the patient currently needs to undergo a surgical procedure.",
+  "when_false": "Set to false if the patient currently does not need to undergo a surgical procedure.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently needs to undergo a surgical procedure.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_needs_to_undergo_surgical_procedure_now@@immediate",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the surgical procedure needed by the patient is immediate.",
+  "when_true": "Set to true if the surgical procedure needed by the patient is immediate.",
+  "when_false": "Set to false if the surgical procedure needed by the patient is not immediate.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the surgical procedure needed by the patient is immediate.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_needs_to_undergo_surgical_procedure_now@@indicated_by_clinical_criteria",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the surgical procedure needed by the patient is indicated by clinical criteria.",
+  "when_true": "Set to true if the surgical procedure needed by the patient is indicated by clinical criteria.",
+  "when_false": "Set to false if the surgical procedure needed by the patient is not indicated by clinical criteria.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the surgical procedure needed by the patient is indicated by clinical criteria.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is currently pregnant.",
+  "when_false": "Set to false if the patient is currently not pregnant.",
+  "when_unknown": "Set to null if the patient's current pregnancy status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_contraindication_to_magnetic_resonance_imaging_scan",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has any contraindications to undergoing a magnetic resonance imaging (MRI) scan.",
+  "when_true": "Set to true if the patient has any contraindications to undergoing a magnetic resonance imaging (MRI) scan.",
+  "when_false": "Set to false if the patient does not have any contraindications to undergoing a magnetic resonance imaging (MRI) scan.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has any contraindications to undergoing a magnetic resonance imaging (MRI) scan.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_judged_not_suitable_to_participate_in_study_for_other_reasons",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is judged not suitable to participate in the study for reasons other than those explicitly listed (such as personality disorders or alcohol abuse).",
+  "when_true": "Set to true if the patient is judged not suitable to participate in the study for reasons other than those explicitly listed (such as personality disorders or alcohol abuse).",
+  "when_false": "Set to false if the patient is not judged unsuitable for participation in the study for other reasons.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is judged not suitable to participate in the study for other reasons.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_personality_disorder_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of personality disorder.",
+  "when_true": "Set to true if the patient currently has a diagnosis of personality disorder.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of personality disorder.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of personality disorder.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_harmful_pattern_of_use_of_alcohol_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of harmful pattern of use of alcohol (alcohol abuse).",
+  "when_true": "Set to true if the patient currently has a diagnosis of harmful pattern of use of alcohol (alcohol abuse).",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of harmful pattern of use of alcohol (alcohol abuse).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of harmful pattern of use of alcohol (alcohol abuse).",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

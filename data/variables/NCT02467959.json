@@ -1,0 +1,189 @@
+[
+ {
+  "name": "patient_has_finding_of_abdominal_pain_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_abdominal_pain_now@@location_right_lower_abdomen",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_presented_with_complaint_of_abdominal_pain",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_presented_with_complaint_of_abdominal_pain@@location_right_lower_abdomen",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_suspicion_of_acute_appendicitis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently suspected to have acute appendicitis.",
+  "when_true": "Set to true if the patient is currently suspected to have acute appendicitis.",
+  "when_false": "Set to false if the patient is currently not suspected to have acute appendicitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently suspected to have acute appendicitis.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_flank_pain_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has flank pain.",
+  "when_true": "Set to true if the patient currently has the clinical finding of flank pain.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of flank pain.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of flank pain.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_flank_pain_now@@isolated",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_flank_pain_now@@occurs_without_right_lower_abdominal_pain",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_flank_pain_now@@isolated_without_right_lower_abdominal_pain",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_appendectomy_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone an appendectomy at any time in the past.",
+  "when_true": "Set to true if the patient has ever undergone an appendectomy at any time in the past (i.e., a previous appendectomy).",
+  "when_false": "Set to false if the patient has never undergone an appendectomy at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone an appendectomy.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_pregnant_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean value indicating whether the patient is currently pregnant.",
+  "when_true": "Set to true if the patient is currently pregnant.",
+  "when_false": "Set to false if the patient is currently known not to be pregnant.",
+  "when_unknown": "Set to null if the patient's current pregnancy status is unknown, not documented, or cannot be determined.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_pregnant_now@@suspected_or_strong_clinical_support",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_unstable_vital_signs_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has unstable vital signs.",
+  "when_true": "Set to true if the patient currently has unstable vital signs.",
+  "when_false": "Set to false if the patient currently does not have unstable vital signs.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has unstable vital signs.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_peritonitis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has peritonitis.",
+  "when_true": "Set to true if the patient currently has the clinical finding of peritonitis.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of peritonitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has peritonitis.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_peritonitis_now@@frank",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current peritonitis is frank.",
+  "when_true": "Set to true if the patient's current peritonitis is frank (overt, severe, or clinically obvious).",
+  "when_false": "Set to false if the patient's current peritonitis is not frank (i.e., not overt, severe, or clinically obvious).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current peritonitis is frank.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_ultrasonography_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone ultrasonography at any time in the past.",
+  "when_true": "Set to true if the patient has ever undergone ultrasonography at any time in the past, regardless of timing relative to other events.",
+  "when_false": "Set to false if the patient has never undergone ultrasonography at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone ultrasonography in the past.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_ultrasonography_inthehistory@@performed_before_emergency_physician_examination",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's ultrasonography was performed before the emergency physician's examination.",
+  "when_true": "Set to true if the patient has ever undergone ultrasonography at any time in the past and the procedure was performed before the emergency physician's examination.",
+  "when_false": "Set to false if the patient has ever undergone ultrasonography in the past but it was not performed before the emergency physician's examination.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the ultrasonography was performed before the emergency physician's examination.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

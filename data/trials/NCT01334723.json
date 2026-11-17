@@ -1,0 +1,15 @@
+{
+ "nct": "NCT01334723",
+ "title": "Demonstrating the Clinical and Economic Benefit of 5 Alpha Reductase Inhibitor Adherence in Benign Prostatic Hyperplasia",
+ "conditions": [
+  "Prostatic Hyperplasia"
+ ],
+ "phase": "",
+ "brief_summary": "This retrospective study aims to quantify the relationship between 5-alpha-reductase inhibitor (5ARI) adherence / length of therapy and the likelihood of acute urinary retention (AUR) or prostate surgery in patients with benign prostatic hyperplasia (BPH) as well as the economic impact associated with these medical encounters. The Integrated Health Care Information Solutions (IHCIS) database will be utilized for this study (2000-2006).",
+ "inclusion_criteria": "inclusion criteria: \n\n Male \n\n aged 50 years or older \n\n a diagnostic claim of BPH \n\n prescription claim for a 5ARI for at least 60 days during the observation period. \n\n continuously eligible for 6 months prior to and at least 6 months after index date. \n\n ",
+ "exclusion_criteria": ": \n\n prostate cancer \n\n any prostate-related surgical procedure prior to index date",
+ "cohorts": [
+  "a",
+  "b"
+ ]
+}

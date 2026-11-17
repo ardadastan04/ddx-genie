@@ -1,0 +1,145 @@
+[
+ {
+  "name": "patient_has_finding_of_short_stature_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has short stature.",
+  "when_true": "Set to true if the patient currently has the clinical finding of short stature.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of short stature.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of short stature.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_short_stature_now@@due_to_growth_hormone_deficiency",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current short stature is due to growth hormone deficiency.",
+  "when_true": "Set to true if the patient's current short stature is due to growth hormone deficiency.",
+  "when_false": "Set to false if the patient's current short stature is not due to growth hormone deficiency.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current short stature is due to growth hormone deficiency.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_body_height_value_recorded_inthepast6months_withunit_cm",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's height (in centimeters) as officially recorded at least 6 months prior to screening.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such official height record exists or the value is indeterminate.",
+  "when_value": "Set to the measured value (in centimeters) if an official height record exists for the patient from at least 6 months prior to screening.",
+  "polarity": "criterion met when = 0"
+ },
+ {
+  "name": "patient_body_height_value_recorded_inthepast6months_withunit_cm@@is_official_record",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the height record is an official record.",
+  "when_true": "Set to true if the height record is an official record.",
+  "when_false": "Set to false if the height record is not an official record.",
+  "when_unknown": "Set to null if it is unknown or cannot be determined whether the height record is official.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_short_stature_now@@due_to_idiopathic_short_stature",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current short stature is due to idiopathic short stature.",
+  "when_true": "Set to true if the patient's current short stature is due to idiopathic short stature.",
+  "when_false": "Set to false if the patient's current short stature is not due to idiopathic short stature.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current short stature is due to idiopathic short stature.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_short_stature_now@@caused_by_turner_syndrome",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_undergone_measuring_height_of_patient_inthepast6months",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has undergone a height measurement procedure at least 6 months prior to inclusion.",
+  "when_true": "Set to true if the patient has an official record of a height measurement procedure performed at least 6 months prior to inclusion.",
+  "when_false": "Set to false if the patient does not have an official record of a height measurement procedure performed at least 6 months prior to inclusion.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has an official height measurement procedure from at least 6 months prior to inclusion.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_short_stature_by_small_for_gestational_age_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has short stature by the criterion of being small for gestational age.",
+  "when_true": "Set to true if the patient currently has short stature and this is determined by the patient being small for gestational age.",
+  "when_false": "Set to false if the patient currently does not have short stature by the criterion of being small for gestational age.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has short stature by the criterion of being small for gestational age.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_body_height_measure_value_recorded_inthehistory_withunit_cm",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's height (in centimeters) as recorded at any time in the patient's history.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured value (in centimeters) if an official height measurement is recorded at any time in the patient's history.",
+  "polarity": "numeric criterion"
+ },
+ {
+  "name": "patient_body_height_measure_value_recorded_inthehistory_withunit_cm@@official_record",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the height measurement is from an official record.",
+  "when_true": "Set to true if the height measurement is from an official record.",
+  "when_false": "Set to false if the height measurement is not from an official record.",
+  "when_unknown": "Set to null if it is unknown or cannot be determined whether the height measurement is from an official record.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_body_height_measure_value_recorded_inthehistory_withunit_cm@@temporalcontext_at_least_6_months_prior_to_screening",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the height measurement was recorded at least six months prior to the screening date.",
+  "when_true": "Set to true if the height measurement was recorded at least six months prior to the screening date.",
+  "when_false": "Set to false if the height measurement was recorded less than six months prior to the screening date.",
+  "when_unknown": "Set to null if it is unknown or cannot be determined whether the height measurement was recorded at least six months prior to screening.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_official_height_record_at_least_6_months_prior_to_screening",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has an official height record dated at least six months prior to screening.",
+  "when_true": "Set to true if the patient has an official height record dated at least six months prior to screening.",
+  "when_false": "Set to false if the patient does not have such a record.",
+  "when_unknown": "Set to null if it is unknown or cannot be determined whether the patient has such a record.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_epiphyseal_closure_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has epiphyseal closure.",
+  "when_true": "Set to true if the patient currently has the clinical finding of epiphyseal closure.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of epiphyseal closure.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of epiphyseal closure.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

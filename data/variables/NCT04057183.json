@@ -1,0 +1,211 @@
+[
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when >= 65"
+ },
+ {
+  "name": "patient_will_undergo_duplex_ultrasonography_of_carotid_artery_inthefuture",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is scheduled to undergo a carotid artery duplex ultrasonography procedure in the future.",
+  "when_true": "Set to true if the patient is scheduled to undergo a carotid artery duplex ultrasonography procedure in the future.",
+  "when_false": "Set to false if the patient is not scheduled to undergo a carotid artery duplex ultrasonography procedure in the future.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is scheduled to undergo a carotid artery duplex ultrasonography procedure in the future.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_will_undergo_duplex_ultrasonography_of_carotid_artery_inthefuture@@diagnostic_intent",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the scheduled carotid artery duplex ultrasonography procedure is for diagnostic purposes.",
+  "when_true": "Set to true if the scheduled carotid artery duplex ultrasonography procedure is for diagnostic purposes.",
+  "when_false": "Set to false if the scheduled carotid artery duplex ultrasonography procedure is not for diagnostic purposes.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the scheduled carotid artery duplex ultrasonography procedure is for diagnostic purposes.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_hypertensive_disorder_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of hypertensive disorder (hypertension).",
+  "when_true": "Set to true if the patient currently has a diagnosis of hypertensive disorder (hypertension).",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of hypertensive disorder (hypertension).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of hypertensive disorder (hypertension).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_disorder_of_lipid_metabolism_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a finding or diagnosis of a disorder of lipid metabolism (hyperlipidemia).",
+  "when_true": "Set to true if the patient currently has a finding or diagnosis of a disorder of lipid metabolism (hyperlipidemia).",
+  "when_false": "Set to false if the patient currently does not have a finding or diagnosis of a disorder of lipid metabolism (hyperlipidemia).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a finding or diagnosis of a disorder of lipid metabolism (hyperlipidemia).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_diabetes_mellitus_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a finding or diagnosis of diabetes mellitus.",
+  "when_true": "Set to true if the patient currently has a finding or diagnosis of diabetes mellitus.",
+  "when_false": "Set to false if the patient currently does not have a finding or diagnosis of diabetes mellitus.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a finding or diagnosis of diabetes mellitus.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_tobacco_user_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is or was a tobacco user (current or past).",
+  "when_true": "Set to true if the patient is currently or was in the past a tobacco user.",
+  "when_false": "Set to false if the patient has never been a tobacco user.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is or was a tobacco user.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_coronary_arteriosclerosis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of coronary arteriosclerosis (coronary artery disease).",
+  "when_true": "Set to true if the patient currently has a diagnosis of coronary arteriosclerosis (coronary artery disease).",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of coronary arteriosclerosis (coronary artery disease).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of coronary arteriosclerosis (coronary artery disease).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_peripheral_arterial_disease_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of peripheral arterial disease.",
+  "when_true": "Set to true if the patient currently has a diagnosis of peripheral arterial disease.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of peripheral arterial disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of peripheral arterial disease.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_atherosclerosis_of_artery_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a finding of atherosclerosis of artery.",
+  "when_true": "Set to true if the patient currently has a finding of atherosclerosis of artery.",
+  "when_false": "Set to false if the patient currently does not have a finding of atherosclerosis of artery.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a finding of atherosclerosis of artery.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_atherosclerosis_of_artery_now@@family_history",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether there is a family history of atherosclerosis of artery.",
+  "when_true": "Set to true if the finding of atherosclerosis of artery is present in a family member (family history).",
+  "when_false": "Set to false if the finding of atherosclerosis of artery is not present in a family member (no family history).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether there is a family history of atherosclerosis of artery.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_atherosclerosis_of_artery_now@@early_onset",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the atherosclerosis of artery was of early onset.",
+  "when_true": "Set to true if the atherosclerosis of artery occurred at an early age (as defined by study criteria).",
+  "when_false": "Set to false if the atherosclerosis of artery did not occur at an early age.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the atherosclerosis of artery was of early onset.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_unable_to_provide_informed_consent_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently unable to provide informed consent.",
+  "when_true": "Set to true if the patient is currently unable to provide informed consent.",
+  "when_false": "Set to false if the patient is currently able to provide informed consent.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently unable to provide informed consent.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_unwilling_to_provide_informed_consent_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently unwilling to provide informed consent.",
+  "when_true": "Set to true if the patient is currently unwilling to provide informed consent.",
+  "when_false": "Set to false if the patient is currently willing to provide informed consent.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently unwilling to provide informed consent.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_carotid_endarterectomy_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone a carotid endarterectomy at any time in the past.",
+  "when_true": "Set to true if the patient has ever undergone a carotid endarterectomy at any time prior to the current evaluation.",
+  "when_false": "Set to false if the patient has never undergone a carotid endarterectomy prior to the current evaluation.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone a carotid endarterectomy prior to the current evaluation.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_undergone_insertion_of_carotid_artery_stent_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone insertion of a carotid artery stent at any time in the past.",
+  "when_true": "Set to true if the patient has ever undergone insertion of a carotid artery stent at any time prior to the current evaluation.",
+  "when_false": "Set to false if the patient has never undergone insertion of a carotid artery stent prior to the current evaluation.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone insertion of a carotid artery stent prior to the current evaluation.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_aortic_valve_stenosis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has aortic valve stenosis.",
+  "when_true": "Set to true if the patient currently has the clinical finding of aortic valve stenosis.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of aortic valve stenosis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of aortic valve stenosis.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_congestive_heart_failure_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has congestive heart failure.",
+  "when_true": "Set to true if the patient currently has the clinical finding of congestive heart failure.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of congestive heart failure.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of congestive heart failure.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_finding_of_body_mass_index_value_recorded_now_withunit_kg_per_m2",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric value representing the patient's current body mass index (BMI) in kg/m^2.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no BMI measurement is available for the patient at the current time or if the value is indeterminate.",
+  "when_value": "Set to the measured or recorded BMI value in kg/m^2 if available for the patient at the current time.",
+  "polarity": "criterion met when > 35"
+ }
+]

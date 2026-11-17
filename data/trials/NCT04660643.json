@@ -1,0 +1,16 @@
+{
+ "nct": "NCT04660643",
+ "title": "A Study of Tirzepatide (LY3298176) in Participants With Obesity or Overweight for the Maintenance of Weight Loss",
+ "conditions": [
+  "Obesity",
+  "Overweight"
+ ],
+ "phase": "Phase 3",
+ "brief_summary": "This is a study of tirzepatide in participants with obesity or overweight. The main purpose is to learn more about how tirzepatide maintains body weight loss. The study has two phases: a lead-in phase in which all participants take tirzepatide and a treatment phase in which participants will either continue tirzepatide or switch to placebo. The study will last about 2 years (25 visits).",
+ "inclusion_criteria": "inclusion criteria: \n\n Body Mass Index (BMI) \u226530 kilograms per square meter (kg/m\u00b2), or \u226527 kg/m\u00b2 and previous diagnosis with at least one of the following comorbidities: hypertension, dyslipidemia, obstructive sleep apnea, cardiovascular disease \n\n History of at least one unsuccessful dietary effort to lose body weight \n\n ",
+ "exclusion_criteria": ": \n\n Diabetes mellitus \n\n Change in body weight greater than 5 kg within 3 months prior to starting study \n\n Obesity induced by other endocrinologic disorders or monogenetic or syndromic forms of obesity \n\n History of pancreatitis \n\n Family or personal history of medullary thyroid carcinoma (MTC) or multiple endocrine neoplasia syndrome type 2 (MEN-2) \n\n History of significant active or unstable major depressive disorder (MDD) or other severe psychiatric disorder within the last 2 years \n\n Any lifetime history of a suicide attempt",
+ "cohorts": [
+  "a",
+  "b"
+ ]
+}

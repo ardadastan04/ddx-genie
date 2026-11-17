@@ -1,0 +1,15 @@
+{
+ "nct": "NCT04694859",
+ "title": "Romanian National Registry of Outcomes After Transcatheter Aortic Valve Implantation in Patients With Severe Aortic Stenosis - RO-TAVI",
+ "conditions": [
+  "Aortic Stenosis Symptomatic",
+  "Aortic Valve Stenosis"
+ ],
+ "phase": "",
+ "brief_summary": "RO-TAVI is a national prospective, observational, multi-center registry registry of patients with aortic valve stenosis undergoing transcatheter aortic valve implantation (TAVI) to assess patient care and outcomes.",
+ "inclusion_criteria": "inclusion criteria: \n\n severe symptomatic aortic valve stenosis \n\n high risk or patients deemed amenable for TAVI by a multidisciplinary team \n\n signed informed consent to participate in the study \n\n ",
+ "exclusion_criteria": ": \n\n inadequate annulus size (<18 mm, >29 mm) \n\n left ventricle thrombus \n\n active endocarditis \n\n high risk of coronary ostium obstruction \n\n plaques with mobile thrombi in the ascending aorta, or arch \n\n hemodynamic instability \n\n estimated life expectancy <1 year \n\n comorbidity suggesting lack of improvement of quality of life \n\n other situations adjudicated by the local HeartTeam",
+ "cohorts": [
+  ""
+ ]
+}

@@ -1,0 +1,145 @@
+[
+ {
+  "name": "patient_is_treated_at_royal_infirmary_edinburgh_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently being treated at Royal Infirmary Edinburgh.",
+  "when_true": "Set to true if the patient is currently being treated at Royal Infirmary Edinburgh.",
+  "when_false": "Set to false if the patient is currently not being treated at Royal Infirmary Edinburgh.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently being treated at Royal Infirmary Edinburgh.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_acute_pancreatitis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a clinical diagnosis of acute pancreatitis.",
+  "when_true": "Set to true if the patient currently has a clinical diagnosis of acute pancreatitis.",
+  "when_false": "Set to false if the patient currently does not have a clinical diagnosis of acute pancreatitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a clinical diagnosis of acute pancreatitis.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_radiological_diagnosis_of_acute_pancreatitis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a radiological diagnosis of acute pancreatitis.",
+  "when_true": "Set to true if the patient currently has a radiological diagnosis of acute pancreatitis.",
+  "when_false": "Set to false if the patient currently does not have a radiological diagnosis of acute pancreatitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a radiological diagnosis of acute pancreatitis.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_suspicion_of_acute_pancreatitis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a potential clinical diagnosis (suspicion) of acute pancreatitis.",
+  "when_true": "Set to true if the patient currently has a potential clinical diagnosis (suspicion) of acute pancreatitis.",
+  "when_false": "Set to false if the patient currently does not have a potential clinical diagnosis (suspicion) of acute pancreatitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a potential clinical diagnosis (suspicion) of acute pancreatitis.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_appropriate_clinical_history_for_acute_pancreatitis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has an appropriate clinical history for acute pancreatitis based on compatible clinical features.",
+  "when_true": "Set to true if the patient currently has an appropriate clinical history for acute pancreatitis based on compatible clinical features.",
+  "when_false": "Set to false if the patient currently does not have an appropriate clinical history for acute pancreatitis based on compatible clinical features.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has an appropriate clinical history for acute pancreatitis.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_abdominal_pain_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has abdominal pain.",
+  "when_true": "Set to true if the patient currently has abdominal pain.",
+  "when_false": "Set to false if the patient currently does not have abdominal pain.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has abdominal pain.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_nausea_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has nausea.",
+  "when_true": "Set to true if the patient currently has nausea.",
+  "when_false": "Set to false if the patient currently does not have nausea.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has nausea.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_vomiting_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has vomiting.",
+  "when_true": "Set to true if the patient currently has vomiting.",
+  "when_false": "Set to false if the patient currently does not have vomiting.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has vomiting.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_serum_amylase_raised_value_recorded_now_withunit_units_per_liter",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's current serum amylase level in units per liter.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured value if a numeric measurement of the patient's current serum amylase (in units per liter) is available.",
+  "polarity": "numeric criterion"
+ },
+ {
+  "name": "reference_range_upper_limit_for_serum_amylase_now_withunit_units_per_liter",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the current upper limit of the reference range for serum amylase in units per liter for the laboratory.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the value is not available, not documented, or cannot be determined.",
+  "when_value": "Set to the numeric value if the current upper limit of the reference range for serum amylase (in units per liter) for the laboratory is available.",
+  "polarity": "numeric criterion"
+ },
+ {
+  "name": "patient_has_elevated_serum_amylase_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has elevated serum amylase (>3x upper limit of reference range for the laboratory).",
+  "when_true": "Set to true if the patient's current serum amylase is greater than 3 times the upper limit of the reference range for the laboratory.",
+  "when_false": "Set to false if the patient's current serum amylase is not greater than 3 times the upper limit of the reference range for the laboratory.",
+  "when_unknown": "Set to null if either the serum amylase value or the reference range upper limit is not available or indeterminate.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_computerized_axial_tomography_now_outcome_is_positive",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has currently undergone a CT scan with a positive result (evidence of disease).",
+  "when_true": "Set to true if the patient has currently undergone a computerized axial tomography (CT) scan and the result is positive (shows evidence of disease).",
+  "when_false": "Set to false if the patient has currently undergone a CT scan and the result is negative (shows no evidence of disease).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has currently undergone a CT scan with a positive result.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_ultrasonography_now_outcome_is_positive",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has currently undergone an ultrasonography with a positive result (evidence of disease).",
+  "when_true": "Set to true if the patient has currently undergone an ultrasonography (ultrasound scan) and the result is positive (shows evidence of disease).",
+  "when_false": "Set to false if the patient has currently undergone an ultrasonography and the result is negative (shows no evidence of disease).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has currently undergone an ultrasonography with a positive result.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ }
+]

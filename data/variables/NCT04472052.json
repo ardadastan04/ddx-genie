@@ -1,0 +1,68 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_acute_appendicitis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of acute appendicitis.",
+  "when_true": "Set to true if the patient currently has a diagnosis of acute appendicitis.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of acute appendicitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of acute appendicitis.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when > 16"
+ },
+ {
+  "name": "patient_has_undergone_appendectomy_inthehistory",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone an appendectomy at any time in their history.",
+  "when_true": "Set to true if the patient has ever undergone an appendectomy at any time in their history, regardless of when the procedure was performed.",
+  "when_false": "Set to false if the patient has never undergone an appendectomy at any time in their history.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone an appendectomy.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_undergone_appendectomy_inthehistory@@occurred_in_16_march_to_30_may_2018_or_2019_or_2020",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's appendectomy occurred within 16 March to 30 May in 2018, 2019, or 2020.",
+  "when_true": "Set to true if the patient's appendectomy occurred within 16 March to 30 May in 2018, 2019, or 2020.",
+  "when_false": "Set to false if the patient's appendectomy did not occur within any of these periods.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the appendectomy occurred within these periods.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_acute_appendicitis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has acute appendicitis.",
+  "when_true": "Set to true if the patient currently has the clinical finding of acute appendicitis.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of acute appendicitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of acute appendicitis.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "appendectomy_performed_date_value_recorded_in_history_withunit_date",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Date value indicating the date on which the patient underwent an appendectomy, if any, recorded in the patient's history. The unit is date (YYYY-MM-DD).",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether or when the patient underwent an appendectomy.",
+  "when_value": "Set to the date (in YYYY-MM-DD format) on which the patient underwent an appendectomy, if such a procedure is recorded in the patient's history.",
+  "polarity": "criterion met when >= 2.01803e+07"
+ }
+]

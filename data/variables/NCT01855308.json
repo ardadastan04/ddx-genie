@@ -1,0 +1,68 @@
+[
+ {
+  "name": "patient_has_finding_of_gallstone_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has gallstone disease.",
+  "when_true": "Set to true if the patient currently has the clinical finding of gallstone disease.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of gallstone disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of gallstone disease.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_gallstone_now@@symptomatic",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's current gallstone disease is symptomatic.",
+  "when_true": "Set to true if the patient currently has gallstone disease and the disease is symptomatic (i.e., the patient is experiencing symptoms attributable to gallstones).",
+  "when_false": "Set to false if the patient currently has gallstone disease but it is not symptomatic (i.e., the patient is not experiencing symptoms attributable to gallstones).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the gallstone disease is symptomatic.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_undergone_operation_on_abdominal_region_inthehistory",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone any abdominal surgery in their history.",
+  "when_true": "Set to true if the patient has ever undergone any abdominal surgery at any time in the past.",
+  "when_false": "Set to false if the patient has never undergone any abdominal surgery at any time in the past.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone any abdominal surgery.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_operation_on_abdominal_region_inthehistory@@open",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the abdominal surgery undergone by the patient was open.",
+  "when_true": "Set to true if the abdominal surgery undergone by the patient was performed using an open approach.",
+  "when_false": "Set to false if the abdominal surgery was not performed using an open approach.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the abdominal surgery was open.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_operation_on_abdominal_region_inthehistory@@significant",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the abdominal surgery undergone by the patient was significant.",
+  "when_true": "Set to true if the abdominal surgery undergone by the patient was significant (not minor or trivial).",
+  "when_false": "Set to false if the abdominal surgery was not significant (i.e., was minor or trivial).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the abdominal surgery was significant.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_undergone_operation_on_abdominal_region_inthehistory@@open@@significant",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient has ever undergone any open and significant abdominal surgery in their history.",
+  "when_true": "Set to true if the patient has ever undergone any abdominal surgery at any time in the past, and the surgery was performed using an open approach and was significant (not minor or trivial).",
+  "when_false": "Set to false if the patient has never undergone any abdominal surgery at any time in the past, or if any such surgery was not performed using an open approach, or was not significant (i.e., was minor or trivial).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone any open and significant abdominal surgery in the past.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

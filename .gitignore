@@ -2,17 +2,14 @@
 .env
 .env.local
 
-# raw dataset downloads, never commit
-data/raw/
-data/raw/**
-
 # run outputs: keep only the aggregate summaries
 runs/**
 !runs/**/
 !runs/**/summary.json
 
-# genie writes this on import (loguru)
-prompts.log
+# episode logs from our own runs; the CA's reference baseline logs are kept
+logs/*
+!logs/reference/
 
 # llm response cache
 .cache/
@@ -29,5 +26,3 @@ __pycache__/
 
 # os
 .DS_Store
-dump.rdb
-logs/

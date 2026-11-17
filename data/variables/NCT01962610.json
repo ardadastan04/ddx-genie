@@ -1,0 +1,134 @@
+[
+ {
+  "name": "patient_is_resident_physician_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently a resident physician.",
+  "when_true": "Set to true if the patient is currently a resident physician.",
+  "when_false": "Set to false if the patient is currently not a resident physician.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently a resident physician.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_provides_care_to_adult_patients_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently provides care to adult patients.",
+  "when_true": "Set to true if the patient currently provides care to adult patients.",
+  "when_false": "Set to false if the patient currently does not provide care to adult patients.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently provides care to adult patients.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_provides_care_in_emergency_department_of_icahn_school_of_medicine_at_mount_sinai_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently provides care in the emergency department of the Icahn School of Medicine at Mount Sinai.",
+  "when_true": "Set to true if the patient currently provides care in the emergency department of the Icahn School of Medicine at Mount Sinai.",
+  "when_false": "Set to false if the patient currently does not provide care in the emergency department of the Icahn School of Medicine at Mount Sinai.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently provides care in the emergency department of the Icahn School of Medicine at Mount Sinai.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when >= 20"
+ },
+ {
+  "name": "patient_seen_in_emergency_department_at_icahn_school_of_medicine_at_mount_sinai_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently being seen in the Emergency Department at the Icahn School of Medicine at Mount Sinai.",
+  "when_true": "Set to true if the patient is currently being seen in the Emergency Department at the Icahn School of Medicine at Mount Sinai.",
+  "when_false": "Set to false if the patient is not currently being seen in the Emergency Department at the Icahn School of Medicine at Mount Sinai.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently being seen in the Emergency Department at the Icahn School of Medicine at Mount Sinai.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_severe_pain_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_pain_score_value_recorded_now_withunit_none",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when >= 10"
+ },
+ {
+  "name": "patient_pain_score_value_recorded_now_withunit_none@@measured_on_verbal_pain_scale_0_to_10",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_verbal_rating_scale_pain_intensity_score_value_recorded_now_withunit_none",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when >= 10"
+ },
+ {
+  "name": "patient_verbal_rating_scale_pain_intensity_score_value_recorded_now_withunit_none@@scale_range_0_to_10",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_abdominal_pain_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has abdominal pain.",
+  "when_true": "Set to true if the patient currently has the clinical finding of abdominal pain.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of abdominal pain.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of abdominal pain.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_abdominal_pain_now@@is_chief_complaint",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's abdominal pain is present as a chief complaint.",
+  "when_true": "Set to true if the patient's abdominal pain is documented as a chief complaint.",
+  "when_false": "Set to false if the patient's abdominal pain is not documented as a chief complaint.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether abdominal pain is present as a chief complaint.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ }
+]

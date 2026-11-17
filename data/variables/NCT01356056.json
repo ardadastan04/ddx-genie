@@ -1,0 +1,90 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_parkinson_s_disease_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a clinical diagnosis of Parkinson's disease.",
+  "when_true": "Set to true if the patient currently has a clinical diagnosis of Parkinson's disease.",
+  "when_false": "Set to false if the patient currently does not have a clinical diagnosis of Parkinson's disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a clinical diagnosis of Parkinson's disease.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_difficulty_following_instructions_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has difficulty following instructions.",
+  "when_true": "Set to true if the patient is currently unable to follow the required clinical instruction (i.e., has difficulty following instructions).",
+  "when_false": "Set to false if the patient is currently able to follow the required clinical instruction (i.e., does not have difficulty following instructions).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently unable to follow the required clinical instruction.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_impaired_cognition_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has impaired cognition.",
+  "when_true": "Set to true if the patient currently has impaired cognition.",
+  "when_false": "Set to false if the patient currently does not have impaired cognition.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has impaired cognition.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_impaired_cognition_now@@prohibits_proper_use_of_kinesia_homeview_system",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's impaired cognition prohibits proper use of the Kinesia HomeView system.",
+  "when_true": "Set to true if the patient currently has impaired cognition and this impairment prohibits the patient from properly using the Kinesia HomeView system.",
+  "when_false": "Set to false if the patient currently has impaired cognition but this impairment does not prohibit proper use of the Kinesia HomeView system.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's impaired cognition prohibits proper use of the Kinesia HomeView system.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_lacks_cognitive_ability_to_respond_to_researchers_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently lacks the cognitive ability to respond to researchers.",
+  "when_true": "Set to true if the patient currently lacks the cognitive ability to respond to researchers.",
+  "when_false": "Set to false if the patient currently has the cognitive ability to respond to researchers.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently lacks the cognitive ability to respond to researchers.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_lacks_cognitive_ability_to_notify_researchers_of_uncomfortable_study_parameters_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently lacks the cognitive ability to let researchers know when any parameter of the study becomes uncomfortable.",
+  "when_true": "Set to true if the patient currently lacks the cognitive ability to let researchers know when any parameter of the study becomes uncomfortable.",
+  "when_false": "Set to false if the patient currently has the cognitive ability to let researchers know when any parameter of the study becomes uncomfortable.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently lacks the cognitive ability to let researchers know when any parameter of the study becomes uncomfortable.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_impairment_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has any physical impairment (limitation).",
+  "when_true": "Set to true if the patient is currently found on examination by clinicians to have any physical impairment (limitation).",
+  "when_false": "Set to false if the patient is currently found on examination by clinicians to have no physical impairment (limitation).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has any physical impairment (limitation).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_impairment_now@@counterproductive_to_participation_in_this_study",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current physical impairment is counterproductive to participation in this study.",
+  "when_true": "Set to true if the patient's current physical impairment is counterproductive to participation in this study.",
+  "when_false": "Set to false if the patient's current physical impairment is not counterproductive to participation in this study.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient's current physical impairment is counterproductive to participation in this study.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ }
+]

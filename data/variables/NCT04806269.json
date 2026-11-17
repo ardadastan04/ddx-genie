@@ -1,0 +1,211 @@
+[
+ {
+  "name": "patient_has_diagnosis_of_thyrotoxicosis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of thyrotoxicosis.",
+  "when_true": "Set to true if the patient currently has a diagnosis of thyrotoxicosis.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of thyrotoxicosis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of thyrotoxicosis.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_thyrotoxicosis_now@@newly_diagnosed",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the diagnosis of thyrotoxicosis is newly made.",
+  "when_true": "Set to true if the patient currently has a diagnosis of thyrotoxicosis and this diagnosis is newly made.",
+  "when_false": "Set to false if the patient currently has a diagnosis of thyrotoxicosis but it is not newly made.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the diagnosis of thyrotoxicosis is newly made.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_hypothyroidism_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of hypothyroidism.",
+  "when_true": "Set to true if the patient currently has a diagnosis of hypothyroidism.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of hypothyroidism.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of hypothyroidism.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_hypothyroidism_now@@newly_diagnosed",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the diagnosis of hypothyroidism is newly made.",
+  "when_true": "Set to true if the patient currently has a diagnosis of hypothyroidism and this diagnosis is newly made.",
+  "when_false": "Set to false if the patient currently has a diagnosis of hypothyroidism but it is not newly made.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the diagnosis of hypothyroidism is newly made.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_able_to_use_wearable_devices",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is able to use wearable devices.",
+  "when_true": "Set to true if the patient is able to use wearable devices.",
+  "when_false": "Set to false if the patient is not able to use wearable devices.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is able to use wearable devices.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_able_to_use_smart_phones",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is able to use smart phones.",
+  "when_true": "Set to true if the patient is able to use smart phones.",
+  "when_false": "Set to false if the patient is not able to use smart phones.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is able to use smart phones.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_is_able_to_use_mobile_apps",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is able to use mobile apps.",
+  "when_true": "Set to true if the patient is able to use mobile apps.",
+  "when_false": "Set to false if the patient is not able to use mobile apps.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is able to use mobile apps.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_thyroid_dysfunction_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has the clinical finding of thyroid dysfunction.",
+  "when_true": "Set to true if the patient currently has the clinical finding of thyroid dysfunction.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of thyroid dysfunction.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of thyroid dysfunction.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_thyroid_dysfunction_now@@undergoing_treatment",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient with thyroid dysfunction is undergoing treatment for it.",
+  "when_true": "Set to true if the patient currently has thyroid dysfunction and is undergoing treatment for it.",
+  "when_false": "Set to false if the patient currently has thyroid dysfunction but is not undergoing treatment for it.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient with thyroid dysfunction is undergoing treatment.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_disability_affecting_daily_living_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has restrictions on normal activities (disability affecting daily living).",
+  "when_true": "Set to true if the patient currently has restrictions on normal activities (disability affecting daily living), regardless of cause.",
+  "when_false": "Set to false if the patient currently does not have restrictions on normal activities (disability affecting daily living).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has restrictions on normal activities (disability affecting daily living).",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_disability_affecting_daily_living_now@@caused_by_diseases_other_than_thyroid_dysfunction",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's current restrictions on normal activities (disability affecting daily living) are caused by diseases other than thyroid dysfunction.",
+  "when_true": "Set to true if the patient's current restrictions on normal activities (disability affecting daily living) are caused by diseases other than thyroid dysfunction.",
+  "when_false": "Set to false if the patient's current restrictions on normal activities (disability affecting daily living) are not caused by diseases other than thyroid dysfunction (i.e., caused by thyroid dysfunction or other non-disease causes).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the cause of the patient's current restrictions on normal activities (disability affecting daily living) is diseases other than thyroid dysfunction.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_taking_drug_or_medicament_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently taking any drug or medicament.",
+  "when_true": "Set to true if the patient is currently taking any drug or medicament.",
+  "when_false": "Set to false if the patient is currently not taking any drug or medicament.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently taking any drug or medicament.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_is_taking_drug_or_medicament_now@@affecting_heart_rate",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the drug or medicament currently being taken by the patient affects heart rate.",
+  "when_true": "Set to true if the drug or medicament currently being taken by the patient affects heart rate.",
+  "when_false": "Set to false if the drug or medicament currently being taken by the patient does not affect heart rate.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the drug or medicament currently being taken by the patient affects heart rate.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_disease_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has any disease.",
+  "when_true": "Set to true if the patient currently has any disease diagnosed.",
+  "when_false": "Set to false if the patient currently does not have any disease diagnosed.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has any disease diagnosed.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_disease_now@@affects_heart_rate",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the disease currently diagnosed in the patient affects heart rate.",
+  "when_true": "Set to true if the disease currently diagnosed in the patient affects heart rate.",
+  "when_false": "Set to false if the disease currently diagnosed in the patient does not affect heart rate.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the disease currently diagnosed in the patient affects heart rate.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_disease_now@@other_than_thyroid_dysfunction",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the disease currently diagnosed in the patient is not thyroid dysfunction.",
+  "when_true": "Set to true if the disease currently diagnosed in the patient is not thyroid dysfunction.",
+  "when_false": "Set to false if the disease currently diagnosed in the patient is thyroid dysfunction.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the disease currently diagnosed in the patient is thyroid dysfunction.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_arrhythmia_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of arrhythmia.",
+  "when_true": "Set to true if the patient currently has a diagnosis of arrhythmia.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of arrhythmia.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of arrhythmia.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_diagnosis_of_disease_now@@affects_heart_rate@@is_thyroid_dysfunction",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of thyroid dysfunction that affects heart rate.",
+  "when_true": "Set to true if the patient currently has a diagnosis of thyroid dysfunction that affects heart rate.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of thyroid dysfunction that affects heart rate, or has no such disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of thyroid dysfunction that affects heart rate.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_diagnosis_of_disease_now@@is_arrhythmia",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of arrhythmia.",
+  "when_true": "Set to true if the patient currently has a diagnosis of arrhythmia.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of arrhythmia, or has no disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of arrhythmia.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ }
+]

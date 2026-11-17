@@ -1,0 +1,46 @@
+[
+ {
+  "name": "patient_has_finding_of_uncontrolled_asthma_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when < 12"
+ },
+ {
+  "name": "patient_has_adequate_command_of_english_language_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has adequate command of the English language.",
+  "when_true": "Set to true if the patient currently has adequate command of the English language.",
+  "when_false": "Set to false if the patient currently does not have adequate command of the English language.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has adequate command of the English language.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_possesses_mobile_phone_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently possesses a mobile phone.",
+  "when_true": "Set to true if the patient currently possesses a mobile phone.",
+  "when_false": "Set to false if the patient currently does not possess a mobile phone.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently possesses a mobile phone.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ }
+]

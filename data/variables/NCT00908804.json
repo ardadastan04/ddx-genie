@@ -1,0 +1,90 @@
+[
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when > 15"
+ },
+ {
+  "name": "patient_has_suspicion_of_acute_appendicitis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently suspected to have acute appendicitis.",
+  "when_true": "Set to true if the patient is currently suspected to have acute appendicitis.",
+  "when_false": "Set to false if the patient is currently not suspected to have acute appendicitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently suspected to have acute appendicitis.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_can_undergo_laparoscopy_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently suitable for and able to undergo laparoscopy.",
+  "when_true": "Set to true if the patient is currently suitable for and able to undergo laparoscopy.",
+  "when_false": "Set to false if the patient is currently not suitable for or cannot undergo laparoscopy.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is suitable for laparoscopy at this time.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_age_value_recorded_now_in_years_is_known",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_suspicion_of_acute_appendicitis_now_is_known",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_can_undergo_laparoscopy_now_is_known",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_refuses_to_participate_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_access_to_laparoscopic_surgeon_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether there is currently a laparoscopic surgeon available for the patient.",
+  "when_true": "Set to true if there is currently a laparoscopic surgeon available for the patient.",
+  "when_false": "Set to false if there is currently no laparoscopic surgeon available for the patient.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether there is currently a laparoscopic surgeon available for the patient.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ }
+]

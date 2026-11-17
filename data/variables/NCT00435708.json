@@ -1,0 +1,134 @@
+[
+ {
+  "name": "patient_has_finding_of_moderate_chronic_obstructive_pulmonary_disease_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has moderate chronic obstructive pulmonary disease.",
+  "when_true": "Set to true if the patient currently has moderate chronic obstructive pulmonary disease.",
+  "when_false": "Set to false if the patient currently does not have moderate chronic obstructive pulmonary disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has moderate chronic obstructive pulmonary disease.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_severe_chronic_obstructive_pulmonary_disease_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has severe chronic obstructive pulmonary disease.",
+  "when_true": "Set to true if the patient currently has severe chronic obstructive pulmonary disease.",
+  "when_false": "Set to false if the patient currently does not have severe chronic obstructive pulmonary disease.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has severe chronic obstructive pulmonary disease.",
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_finding_of_oxygen_saturation_value_recorded_now_withunit_percent",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's current oxygen saturation percentage.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured value if a numeric measurement of the patient's current oxygen saturation (in percent) is available.",
+  "polarity": "criterion met when >= 92"
+ },
+ {
+  "name": "patient_has_finding_of_patient_s_condition_stable_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient is currently symptomatically stable.",
+  "when_true": "Set to true if the patient is currently symptomatically stable.",
+  "when_false": "Set to false if the patient is currently not symptomatically stable.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently symptomatically stable.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_fruit_value_recorded_now_withunit_portions_per_day",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's habitual daily intake of fruit in portions per day.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's habitual daily fruit intake is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's average daily intake of fruit in portions per day, reflecting their habitual (usual) diet.",
+  "polarity": "criterion met when <= 2"
+ },
+ {
+  "name": "patient_vegetable_value_recorded_now_withunit_portions_per_day",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value representing the patient's habitual daily intake of vegetables in portions per day.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's habitual daily vegetable intake is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's average daily intake of vegetables in portions per day, reflecting their habitual (usual) diet.",
+  "polarity": "criterion met when <= 2"
+ },
+ {
+  "name": "patient_has_finding_of_dyspnea_on_exertion_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has dyspnea on exertion (exercise limitation due to shortness of breath).",
+  "when_true": "Set to true if the patient currently has exercise limitation due to shortness of breath (dyspnea on exertion).",
+  "when_false": "Set to false if the patient currently does not have exercise limitation due to shortness of breath (dyspnea on exertion).",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has exercise limitation due to shortness of breath (dyspnea on exertion).",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_dyspnea_on_exertion_now@@exercise_limitation_due_to_dyspnea_and_not_other_causes",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient's exercise limitation is due to dyspnea (shortness of breath) and not due to other causes such as angina or arthritis.",
+  "when_true": "Set to true if the patient's exercise limitation is due to dyspnea (shortness of breath) and not due to other causes such as angina or arthritis.",
+  "when_false": "Set to false if the patient's exercise limitation is not due to dyspnea or is due to other causes such as angina or arthritis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the exercise limitation is due to dyspnea and not other causes.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_diagnosis_of_diabetes_mellitus_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has a diagnosis of diabetes mellitus.",
+  "when_true": "Set to true if the patient currently has a diagnosis of diabetes mellitus.",
+  "when_false": "Set to false if the patient currently does not have a diagnosis of diabetes mellitus.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of diabetes mellitus.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_currently_taking_antioxidant_drugs",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently taking antioxidant drugs.",
+  "when_true": "Set to true if the patient is currently taking antioxidant drugs.",
+  "when_false": "Set to false if the patient is currently not taking antioxidant drugs.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently taking antioxidant drugs.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_is_currently_taking_antioxidant_supplements",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient is currently taking antioxidant supplements.",
+  "when_true": "Set to true if the patient is currently taking antioxidant supplements.",
+  "when_false": "Set to false if the patient is currently not taking antioxidant supplements.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently taking antioxidant supplements.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_finding_of_oxygen_saturation_value_recorded_now_withunit_kilopascal",
+  "type": "Real",
+  "side": "exclusion",
+  "meaning": "Numeric value representing the patient's current oxygen saturation in kilopascals.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if no such measurement is available or the value is indeterminate.",
+  "when_value": "Set to the measured value if the patient's current oxygen saturation in kilopascals is available.",
+  "polarity": "criterion met when < 8"
+ }
+]

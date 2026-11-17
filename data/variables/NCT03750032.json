@@ -1,0 +1,79 @@
+[
+ {
+  "name": "patient_age_value_recorded_now_in_years",
+  "type": "Real",
+  "side": "inclusion",
+  "meaning": "Numeric value indicating the patient's current age in years.",
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": "Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.",
+  "when_value": "Set to the patient's current age in years if it is known and documented.",
+  "polarity": "criterion met when >= 18"
+ },
+ {
+  "name": "patient_has_finding_of_acute_appendicitis_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient currently has acute appendicitis.",
+  "when_true": "Set to true if the patient currently has the clinical finding of acute appendicitis.",
+  "when_false": "Set to false if the patient currently does not have the clinical finding of acute appendicitis.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of acute appendicitis.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_undergone_laparoscopy_now",
+  "type": "Bool",
+  "side": "inclusion",
+  "meaning": "Boolean indicating whether the patient has undergone laparoscopy at any time up to and including now.",
+  "when_true": "Set to true if the patient has undergone laparoscopy at any time up to and including now.",
+  "when_false": "Set to false if the patient has not undergone laparoscopy at any time up to and including now.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient has undergone laparoscopy at any time up to and including now.",
+  "when_value": null,
+  "polarity": "criterion met when true"
+ },
+ {
+  "name": "patient_has_finding_of_tissue_necrosis_now@@located_in_area_of_appendicular_stump",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient's tissue necrosis is located in the area of the appendicular stump.",
+  "when_true": "Set to true if the patient's tissue necrosis is located in the area of the appendicular stump.",
+  "when_false": "Set to false if the patient's tissue necrosis is not located in the area of the appendicular stump.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the tissue necrosis is located in the area of the appendicular stump.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_advanced_inflammatory_changes_now@@located_in_area_of_appendicular_stump@@at_time_of_laparoscopic_appendectomy",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": "Boolean indicating whether the patient currently has advanced inflammatory changes located in the area of the appendicular stump at the time of laparoscopic appendectomy.",
+  "when_true": "Set to true if the patient currently has advanced inflammatory changes located in the area of the appendicular stump at the time of laparoscopic appendectomy.",
+  "when_false": "Set to false if the patient currently does not have advanced inflammatory changes located in the area of the appendicular stump at the time of laparoscopic appendectomy.",
+  "when_unknown": "Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has advanced inflammatory changes located in the area of the appendicular stump at the time of laparoscopic appendectomy.",
+  "when_value": null,
+  "polarity": "criterion met when false"
+ },
+ {
+  "name": "patient_has_finding_of_tissue_necrosis_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ },
+ {
+  "name": "patient_has_finding_of_advanced_inflammatory_changes_now",
+  "type": "Bool",
+  "side": "exclusion",
+  "meaning": null,
+  "when_true": null,
+  "when_false": null,
+  "when_unknown": null,
+  "when_value": null,
+  "polarity": "part of a compound criterion"
+ }
+]
