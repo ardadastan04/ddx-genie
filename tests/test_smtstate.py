@@ -12,7 +12,7 @@ from smtstate.sim import AnswerKeySimulator
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "baselines"))
-from policies import greedy_smt  # noqa: E402
+from policies import greedy_smt
 
 
 def _reference(name: str) -> dict[str, dict]:
@@ -30,7 +30,7 @@ def test_empty_state_is_undetermined_and_has_questions() -> None:
 
 def test_greedy_smt_reproduces_reference_log() -> None:
     ref = _reference("greedy_smt")
-    qid = sorted(ref)[0]
+    qid = min(ref)
     ep = run_patient(qid, ref[qid]["trials"], greedy_smt, AnswerKeySimulator(), budget=30)
     assert [(t["nct"], t["var"]) for t in ep["turns"]] == [
         (t["nct"], t["var"]) for t in ref[qid]["turns"]]
