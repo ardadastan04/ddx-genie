@@ -103,7 +103,9 @@ The Vertex route below is supported by `llm.py` but unverified against the edu-c
 - Only ~9% of MedQA items ask for the diagnosis; the rest are treatment / mechanism / next test.
   `src/ddx_genie/mediq.py` filters to 109 pure diagnosis stems (drops "next step in diagnosis",
   "associated with the diagnosis", "risk factor for", stems carrying lab tables) and samples 50 with
-  seed 0 -> `data/processed/mediq/subset.jsonl`. 3 records (ids 224, 298, 779) have empty facts and
+  seed 0 -> `data/processed/mediq/subset.jsonl` (the held-out TEST set). The other 59 eligible cases
+  are the design split, `data/processed/mediq/dev.jsonl`: design and debug worksheet fields, prompts
+  and policies on these only (added 2026-11-17). 3 records (ids 224, 298, 779) have empty facts and
   are skipped. Some facts are truncated mid-sentence in the source (e.g. id 7's last fact).
 - Partial views (`src/ddx_genie/reveal.py` -> `data/processed/mediq/views.jsonl`, 500 views): anchor
   (`n_initial`, MediQ's `context[0]` = demographics + complaint, 1-4 facts) always shown, plus a fraction
