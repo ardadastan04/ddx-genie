@@ -2,6 +2,6 @@
 
 
 def test_imports() -> None:
-    import ddx_genie
+    import smt_trial_matching
 
-    assert ddx_genie.__all__ == []
+    assert smt_trial_matching.__all__ == []

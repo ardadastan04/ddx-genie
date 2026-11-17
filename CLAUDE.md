@@ -13,7 +13,7 @@ Main research angle: "informative" questions (ones that could change a trial's s
 
 ## Repo layout
 ```
-ddx-genie/
+smt-trial-matching/
   CLAUDE.md, README.md, pyproject.toml
   .env                      # secrets, gitignored
   smtstate/                 # CA's state library (state.py), answer-key simulator (sim.py), runner (runner.py)
@@ -22,7 +22,7 @@ ddx-genie/
   data/                     # pairs, patients, trials, programs (SMT-LIB), variables, answer_keys, splits.json
   docs/                     # NL simulator + LLM-only baseline prompts; archive/ for retired results
   logs/reference/           # CA's reference baseline episode logs (our own logs/ output is gitignored)
-  src/ddx_genie/llm.py      # the one LLM client (cache, cost log, budget guard)
+  src/smt_trial_matching/llm.py      # the one LLM client (cache, cost log, budget guard)
   scripts/smoke_llm.py, tests/
 ```
 
@@ -38,7 +38,7 @@ ddx-genie/
 - Choose methods on `dev`; run `test` once per final system, and only after I confirm.
 - Do not edit the CA's files in `smtstate/`, `baselines/`, `eval/`, `data/` unless I ask; add our code alongside.
 - Never commit `.env` or our own `logs/` / `runs/` output. Follow the TREC terms when sharing the data.
-- Every LLM call goes through `src/ddx_genie/llm.py`, which logs model, tokens and USD cost to
+- Every LLM call goes through `src/smt_trial_matching/llm.py`, which logs model, tokens and USD cost to
   `runs/<run_id>/cost.jsonl`, caches responses on disk, and enforces `MAX_RUN_USD`. Print the running total per patient.
 - Runs are resumable. Random seed is 0 everywhere.
 - Default to the cheapest configured model. Never switch to a more expensive model unless I ask.

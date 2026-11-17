@@ -13,7 +13,7 @@ uv run python eval/evaluate.py logs/greedy_smt.jsonl --split dev
 ```
 
 The CA's reference episode logs live in `logs/reference/` (the README below says `logs/`). For LLM work, copy
-`.env.example` to `.env` and fill in the key; every call goes through `src/ddx_genie/llm.py`.
+`.env.example` to `.env` and fill in the key; every call goes through `src/smt_trial_matching/llm.py`.
 
 ---
 

@@ -6,7 +6,7 @@ import json
 
 import pytest
 
-from ddx_genie.llm import (
+from smt_trial_matching.llm import (
     BudgetExceeded,
     BudgetGuard,
     CostEntry,
