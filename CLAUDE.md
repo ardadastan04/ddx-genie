@@ -24,6 +24,7 @@ smt-trial-matching/
   logs/reference/           # CA's reference baseline episode logs (our own logs/ output is gitignored)
   src/smt_trial_matching/llm.py      # the one LLM client (cache, cost log, budget guard)
   src/smt_trial_matching/experiment.py  # harness: policies x split -> curves, paired tests, plots
+  src/smt_trial_matching/policies.py    # our policies (oracle_answerable_greedy = upper bound)
   scripts/smoke_llm.py, tests/
 ```
 
