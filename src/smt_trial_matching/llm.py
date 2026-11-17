@@ -90,7 +90,7 @@ _env_loaded = False
 
 
 def load_env(*, override: bool = False) -> None:
-    """Load ``ddx-genie/.env`` once."""
+    """Load ``smt-trial-matching/.env`` once."""
     global _env_loaded
     if _env_loaded and not override:
         return

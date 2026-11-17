@@ -11,7 +11,7 @@ from __future__ import annotations
 import argparse
 import sys
 
-from ddx_genie.llm import (
+from smt_trial_matching.llm import (
     BudgetExceeded,
     ConfigError,
     DiskCache,
