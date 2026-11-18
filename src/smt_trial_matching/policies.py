@@ -66,14 +66,18 @@ class AnswerableConfig:
     """Weights for the value of a possible answer. Frozen as policy-v1 after dev tuning."""
 
     w_ineligible: float = 1.0  # the answer would make the trial ineligible (the only verdict flip)
-    w_cohort: float = 0.5  # per share of the trial's open cohorts the answer would rule out
+    # Per share of the trial's open cohorts the answer would rule out. 1.0 (was 0.5, Nov 18): ruling out
+    # every open cohort is then worth as much as making the trial ineligible, which it is. Chosen on
+    # principle: the dev sweep (scripts/sweep_cohort_credit.py; 0.5/0.7/0.9/1.0) moved acc@30 by one pair.
+    w_cohort: float = 1.0
     w_eligible: float = 0.2  # the answer would make the trial certainly eligible (ends its questions)
-    w_numeric: float = 0.3  # a needed number: its value is unknown in advance, so a flat value
+    w_numeric: float = 0.3  # fallback for a number with no value distribution (see _numeric_value)
 
 
-def _bool_value(state: Any, var: str, val: bool, open_cohorts: list[str],
-                cfg: AnswerableConfig) -> float:
-    """Value of learning ``var = val`` for one trial, from its cohort statuses after the answer."""
+def _answer_value(state: Any, var: str, val: bool | float, open_cohorts: list[str],
+                  cfg: AnswerableConfig) -> float:
+    """Value of learning ``var = val`` (a Bool or a number) for one trial, from its cohort
+    statuses after the answer."""
     after = state.cohort_status({**state.answers, var: val})
     if all(s == "ineligible" for s in after.values()):
         return cfg.w_ineligible
@@ -81,6 +85,24 @@ def _bool_value(state: Any, var: str, val: bool, open_cohorts: list[str],
         return cfg.w_eligible
     knocked = sum(after[c] == "ineligible" for c in open_cohorts)
     return cfg.w_cohort * knocked / len(open_cohorts)
+
+
+def _numeric_value(state: Any, var: str, open_cohorts: list[str], model: Any,
+                   cfg: AnswerableConfig) -> float:
+    """Expected value of asking a number, e.g. age.
+
+    AGE SCORING (Nov 18): a number used to get the flat ``w_numeric``, so age (almost always
+    answerable) outranked every Bool question even when no plausible age could change the trial
+    (e.g. 18-65 for a typical adult). Now, when the model has a value distribution for the name
+    (values from at least MIN_VALUE_PATIENTS training patients; cross-fitted like P(answered), so a
+    dev patient's own age is never in it), we run each observed value through the solver exactly as
+    a Bool answer and average: an 18-65 range scores only the share of patients outside it.
+    Numbers without a distribution (everything but age today) keep the flat ``w_numeric``.
+    """
+    dist = model.value_distribution(var)
+    if dist is None:
+        return cfg.w_numeric
+    return sum(p * _answer_value(state, var, v, open_cohorts, cfg) for v, p in dist)
 
 
 def candidate_questions(state: Any) -> list[str]:
@@ -99,9 +121,10 @@ def score_question(state: Any, var: str, model: Any, cfg: AnswerableConfig) -> f
     vtype = state.types[var]
     p_ans, p_true = model.predict(var, vtype)
     if vtype != "Bool":
-        return p_ans * cfg.w_numeric
-    value = (p_true * _bool_value(state, var, True, open_c, cfg)
-             + (1 - p_true) * _bool_value(state, var, False, open_c, cfg))
+        # Age scoring: expected value over observed values, not a flat weight (see _numeric_value).
+        return p_ans * _numeric_value(state, var, open_c, model, cfg)
+    value = (p_true * _answer_value(state, var, True, open_c, cfg)
+             + (1 - p_true) * _answer_value(state, var, False, open_c, cfg))
     return p_ans * value
 
 

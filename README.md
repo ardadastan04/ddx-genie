@@ -60,9 +60,11 @@ uv run python -m smt_trial_matching.experiment \
 ### Answerable-informative policy (`smt_trial_matching.policies:answerable_informative`)
 
 Each turn, scores every unanswered variable of every open cohort of every undetermined trial as
-P(answered) × expected value of the answer (1 if it would make the trial ineligible, 0.5 × share of open
-cohorts it would rule out, 0.2 if it would make the trial certainly eligible, a flat 0.3 for needed numbers;
-weights in `AnswerableConfig`). P(answered) and P(true) come from `answerability.py`, a logistic regression on
+P(answered) × expected value of the answer (1 if it would make the trial ineligible, 1.0 × share of open
+cohorts it would rule out, 0.2 if it would make the trial certainly eligible; weights in `AnswerableConfig`).
+A number with values from at least 5 training patients (only age today) is scored the same way, averaged over
+those observed values, so an 18–65 range is worth only the share of patients outside it. Other numbers get a
+flat 0.3. P(answered) and P(true) come from `answerability.py`, a logistic regression on
 variable-name features fit on the dev answer key only. Dev patients get a model fit on the other 4 of 5
 patient folds, so dev numbers are not in-sample. Uses the full budget; stops only when no question has value.
 
