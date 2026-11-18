@@ -1,0 +1,3 @@
+# Eligibility programs are compiled data (SMT-LIB), not source code: keep them out of
+# GitHub's language bar and collapse them in diffs.
+*.smt2 linguist-generated=true linguist-detectable=false
