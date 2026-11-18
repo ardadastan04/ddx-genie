@@ -12,7 +12,7 @@ scripts/sweep_cohort_credit.py:cohort_1_0
 
 from smt_trial_matching.policies import AnswerableConfig, AnswerableInformative
 
-cohort_0_5 = AnswerableInformative(AnswerableConfig(w_cohort=0.5))  # current default
+cohort_0_5 = AnswerableInformative(AnswerableConfig(w_cohort=0.5))  # policy-v1 default
 cohort_0_7 = AnswerableInformative(AnswerableConfig(w_cohort=0.7))
 cohort_0_9 = AnswerableInformative(AnswerableConfig(w_cohort=0.9))
-cohort_1_0 = AnswerableInformative(AnswerableConfig(w_cohort=1.0))
+cohort_1_0 = AnswerableInformative(AnswerableConfig(w_cohort=1.0))  # default since Nov 18

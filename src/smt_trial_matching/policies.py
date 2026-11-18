@@ -66,7 +66,10 @@ class AnswerableConfig:
     """Weights for the value of a possible answer. Frozen as policy-v1 after dev tuning."""
 
     w_ineligible: float = 1.0  # the answer would make the trial ineligible (the only verdict flip)
-    w_cohort: float = 0.5  # per share of the trial's open cohorts the answer would rule out
+    # Per share of the trial's open cohorts the answer would rule out. 1.0 (was 0.5, Nov 18): ruling out
+    # every open cohort is then worth as much as making the trial ineligible, which it is. Chosen on
+    # principle: the dev sweep (scripts/sweep_cohort_credit.py; 0.5/0.7/0.9/1.0) moved acc@30 by one pair.
+    w_cohort: float = 1.0
     w_eligible: float = 0.2  # the answer would make the trial certainly eligible (ends its questions)
     w_numeric: float = 0.3  # fallback for a number with no value distribution (see _numeric_value)
 
