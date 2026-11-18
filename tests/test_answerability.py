@@ -80,3 +80,30 @@ def test_policy_fixes_the_demo_patient_and_never_repeats() -> None:
     asked = [(t["nct"], t["var"]) for t in ep["turns"]]
     assert len(asked) == len(set(asked)) == 30
     assert ep["final_verdicts"][SLEEP_TRIAL] == "ineligible"
+
+
+AGE = "patient_age_value_recorded_now_in_years"
+
+
+def test_age_distribution_is_cross_fitted_and_other_numbers_have_none() -> None:
+    dist = A.fit_default("gpt5_oracle").value_distribution(AGE)
+    assert dist is not None and abs(sum(p for _, p in dist) - 1.0) < 1e-9
+    assert A.fit_default("gpt5_oracle").value_distribution(
+        "patient_apnea_hypopnea_index_value_recorded_now_withunit_per_hour") is None
+    # a dev patient's fold model is built from the other folds' patients only
+    fold = A.dev_fold(DEMO_QID)
+    others = [q for q in A.load_split("dev") if A.dev_fold(q) != fold]
+    assert DEMO_QID not in others
+    assert A._fold_model(fold, "gpt5_oracle").value_distribution(AGE) == \
+        A._value_distributions(A.load_examples(others)).get(AGE)
+
+
+def test_age_scores_by_share_outside_the_range_not_flat() -> None:
+    s = TrialState(SLEEP_TRIAL)  # every cohort needs 18 <= age <= 65
+    m = A.fit_default("gpt5_oracle")
+    cfg = AnswerableConfig()
+    outside = sum(p for v, p in m.value_distribution(AGE) if v < 18 or v > 65)
+    expected = m.p_answered(AGE, "Real") * cfg.w_ineligible * outside
+    assert abs(score_question(s, AGE, m, cfg) - expected) < 1e-9
+    assert score_question(s, AGE, m, cfg) < score_question(
+        s, "patient_is_included_in_obesity_surgery_program_now", m, cfg)

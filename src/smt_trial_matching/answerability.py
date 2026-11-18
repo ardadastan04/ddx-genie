@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import json
 import re
+from collections import Counter
 from collections.abc import Iterable
 from dataclasses import dataclass
 from functools import cache
@@ -37,6 +38,7 @@ DATA = ROOT / "data"
 SEED = 0
 C_DEFAULT = 0.3  # best patient-held-out AUC on dev among 0.1, 0.3, 1, 3
 FOLDS = 5
+MIN_VALUE_PATIENTS = 5  # a numeric name needs answers from this many patients to get a value distribution
 
 _KINDS = (
     ("value", "value_recorded"),
@@ -134,6 +136,7 @@ class AnswerabilityModel:
         self._answered = LogisticRegression(C=c, max_iter=2000, random_state=SEED)
         self._true = LogisticRegression(C=c, max_iter=2000, random_state=SEED)
         self._cache: dict[tuple[str, str], tuple[float, float]] = {}
+        self._values: dict[str, list[tuple[float, float]]] = {}
 
     def fit(self, examples: list[Example]) -> AnswerabilityModel:
         X = self._vec.fit_transform([features(e.name, e.vtype) for e in examples])
@@ -142,6 +145,7 @@ class AnswerabilityModel:
         bools = [i for i, e in enumerate(examples) if isinstance(e.value, bool)]
         self._true.fit(X[bools], np.array([examples[i].value for i in bools]))
         self._cache.clear()
+        self._values = _value_distributions(examples)
         return self
 
     def predict(self, name: str, vtype: str) -> tuple[float, float]:
@@ -158,6 +162,27 @@ class AnswerabilityModel:
 
     def p_true(self, name: str, vtype: str) -> float:
         return self.predict(name, vtype)[1]
+
+    def value_distribution(self, name: str) -> list[tuple[float, float]] | None:
+        """Observed values of a numeric variable in the training patients, as (value, probability),
+        or None when fewer than MIN_VALUE_PATIENTS answered it (in practice only age qualifies)."""
+        return self._values.get(name)
+
+
+def _value_distributions(examples: list[Example]) -> dict[str, list[tuple[float, float]]]:
+    """Empirical distribution of each numeric name over the training patients, one value per patient
+    (the first answer, so a patient asked in several trials counts once). Exact name match only:
+    names carry units, so pooling e.g. two BMI spellings would need unit handling first."""
+    per_patient: dict[str, dict[str, float]] = {}
+    for e in examples:
+        if e.vtype != "Bool" and isinstance(e.value, (int, float)) and not isinstance(e.value, bool):
+            per_patient.setdefault(e.name, {}).setdefault(e.qid, float(e.value))
+    out = {}
+    for name, by_qid in per_patient.items():
+        if len(by_qid) >= MIN_VALUE_PATIENTS:
+            counts = Counter(by_qid.values())
+            out[name] = [(v, c / len(by_qid)) for v, c in sorted(counts.items())]
+    return out
 
 
 @cache
