@@ -12,6 +12,7 @@ dependencies = [
     "python-dotenv>=1.0.1",
     "tenacity>=9.0.0",
     "matplotlib>=3.11.2",
+    "scikit-learn>=1.9.1",
 ]
 
 [build-system]

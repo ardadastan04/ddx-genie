@@ -11,6 +11,7 @@ patient to build the policy actually used, and labels it an oracle. Nothing else
 from __future__ import annotations
 
 from collections.abc import Callable
+from dataclasses import dataclass
 from functools import partial
 from typing import Any
 
@@ -54,3 +55,87 @@ def _bind_oracle(qid: str, sim: Any) -> Callable:
 
 
 oracle_answerable_greedy.for_patient = _bind_oracle  # type: ignore[attr-defined]
+
+
+# --------------------------------------------------------------------------------------------------
+# Answerable-informative policy (Person A, Nov 18): informativeness weighted by predicted answerability
+
+
+@dataclass(frozen=True)
+class AnswerableConfig:
+    """Weights for the value of a possible answer. Frozen as policy-v1 after dev tuning."""
+
+    w_ineligible: float = 1.0  # the answer would make the trial ineligible (the only verdict flip)
+    w_cohort: float = 0.5  # per share of the trial's open cohorts the answer would rule out
+    w_eligible: float = 0.2  # the answer would make the trial certainly eligible (ends its questions)
+    w_numeric: float = 0.3  # a needed number: its value is unknown in advance, so a flat value
+
+
+def _bool_value(state: Any, var: str, val: bool, open_cohorts: list[str],
+                cfg: AnswerableConfig) -> float:
+    """Value of learning ``var = val`` for one trial, from its cohort statuses after the answer."""
+    after = state.cohort_status({**state.answers, var: val})
+    if all(s == "ineligible" for s in after.values()):
+        return cfg.w_ineligible
+    if any(s == "eligible" for s in after.values()):
+        return cfg.w_eligible
+    knocked = sum(after[c] == "ineligible" for c in open_cohorts)
+    return cfg.w_cohort * knocked / len(open_cohorts)
+
+
+def candidate_questions(state: Any) -> list[str]:
+    """Unanswered variables of the trial's open cohorts (wider than informative(): it keeps
+    questions that rule out one cohort of a multi-cohort trial without changing the trial status)."""
+    open_c = [c for c, s in state.cohort_status().items() if s == "open"]
+    names = {v for c in open_c for prog in state.cohorts[c] for v in prog.types}
+    return sorted(v for v in names if state.answers.get(v) is None)
+
+
+def score_question(state: Any, var: str, model: Any, cfg: AnswerableConfig) -> float:
+    """P(answered) x expected value of the answer, for one (trial, variable)."""
+    open_c = [c for c, s in state.cohort_status().items() if s == "open"]
+    if not open_c:
+        return 0.0
+    vtype = state.types[var]
+    p_ans, p_true = model.predict(var, vtype)
+    if vtype != "Bool":
+        return p_ans * cfg.w_numeric
+    value = (p_true * _bool_value(state, var, True, open_c, cfg)
+             + (1 - p_true) * _bool_value(state, var, False, open_c, cfg))
+    return p_ans * value
+
+
+class AnswerableInformative:
+    """Ask the question with the highest P(answered) x value across all undetermined trials.
+
+    Signature as the CA's policies: ``policy(states, asked, rng) -> (nct, var) | None``. It never
+    reads the answer key; P(answered) comes from ``answerability.model_for`` (dev-fit, cross-fitted
+    for dev patients). It stops only when no question has any value (as greedy_smt does); otherwise
+    it uses the whole budget. Ties go to the higher P(answered), then trial and variable name.
+    """
+
+    def __init__(self, cfg: AnswerableConfig | None = None) -> None:
+        self.cfg = cfg or AnswerableConfig()
+
+    def __call__(self, states: dict, asked: set, rng: Any) -> tuple[str, str] | None:
+        from smt_trial_matching.answerability import model_for
+
+        model = model_for(states)
+        best, best_key = None, (0.0, 0.0, "", "")
+        for n in _undetermined(states):
+            for v in candidate_questions(states[n]):
+                if (n, v) in asked:
+                    continue
+                score = score_question(states[n], v, model, self.cfg)
+                key = (score, model.p_answered(v, states[n].types[v]), _neg(n), _neg(v))
+                if score > 0 and (best is None or key > best_key):
+                    best, best_key = (n, v), key
+        return best
+
+
+def _neg(s: str) -> str:
+    """Sort key that makes smaller strings win a max() tie-break."""
+    return "".join(chr(0x10FFFF - ord(ch)) for ch in s)
+
+
+answerable_informative = AnswerableInformative()
