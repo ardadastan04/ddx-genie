@@ -35,3 +35,5 @@ testpaths = ["tests"]
 [tool.ruff]
 line-length = 100
 target-version = "py311"
+# The CA's code is imported, never edited (CLAUDE.md hard rules), so it is not linted.
+extend-exclude = ["smtstate", "baselines", "eval", "data"]
