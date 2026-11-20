@@ -40,11 +40,15 @@ def _oracle_answerable_greedy(states: dict, asked: set, rng: Any, *,
 
 
 def oracle_answerable_greedy(states: dict, asked: set, rng: Any) -> tuple[str, str] | None:
-    """ORACLE (reads the answer key): greedy_smt restricted to questions the key can answer.
+    """ORACLE (reads the answer key): the answerable-greedy oracle reference.
 
-    The upper bound for any "prefer answerable questions" policy: same choice and tie-breaking as
+    greedy_smt restricted to questions the key can answer: same choice and tie-breaking as
     greedy_smt, but questions whose answer would be unknown are skipped (an unknown answer never
     changes a trial's status). Stops when no answerable informative question is left.
+
+    Not a ceiling for other policies: it keeps greedy_smt's scoring, and answerable_informative
+    (a different scoring, no key) already beats it on dev AUC (0.700 vs 0.686). The matching
+    reference for answerable_informative is ``answerable_informative_oracle``.
     """
     raise RuntimeError("oracle_answerable_greedy needs the answer key; run it through the harness")
 
@@ -72,6 +76,9 @@ class AnswerableConfig:
     w_cohort: float = 1.0
     w_eligible: float = 0.2  # the answer would make the trial certainly eligible (ends its questions)
     w_numeric: float = 0.3  # fallback for a number with no value distribution (see _numeric_value)
+    # Ablation switches (Nov 19, Person B; defaults = the policy as tuned):
+    use_answerability: bool = True  # False: P(answered) = 1 for every variable (informativeness x value)
+    use_value: bool = True  # False: value = 1 if some answer could decide something, else 0 (answerability only)
 
 
 def _answer_value(state: Any, var: str, val: bool | float, open_cohorts: list[str],
@@ -113,13 +120,36 @@ def candidate_questions(state: Any) -> list[str]:
     return sorted(v for v in names if state.answers.get(v) is None)
 
 
-def score_question(state: Any, var: str, model: Any, cfg: AnswerableConfig) -> float:
-    """P(answered) x expected value of the answer, for one (trial, variable)."""
+def _could_decide(state: Any, var: str, open_cohorts: list[str], model: Any,
+                  cfg: AnswerableConfig) -> float:
+    """1.0 if some possible answer has value (rules out a cohort, the trial, or makes it eligible),
+    else 0.0. The ``use_value=False`` ablation. Numbers without a value distribution count as 1."""
+    if state.types[var] == "Bool":
+        answers: list = [True, False]
+    else:
+        dist = model.value_distribution(var)
+        if dist is None:
+            return 1.0
+        answers = [v for v, _ in dist]
+    return float(any(_answer_value(state, var, a, open_cohorts, cfg) > 0 for a in answers))
+
+
+def score_question(state: Any, var: str, model: Any, cfg: AnswerableConfig,
+                   p_ans: float | None = None) -> float:
+    """P(answered) x expected value of the answer, for one (trial, variable).
+
+    ``p_ans`` overrides the model's P(answered) (the ablation passes 1, the oracle 0 or 1)."""
     open_c = [c for c, s in state.cohort_status().items() if s == "open"]
     if not open_c:
         return 0.0
     vtype = state.types[var]
-    p_ans, p_true = model.predict(var, vtype)
+    p_pred, p_true = model.predict(var, vtype)
+    if p_ans is None:
+        p_ans = p_pred if cfg.use_answerability else 1.0
+    if p_ans == 0:
+        return 0.0
+    if not cfg.use_value:
+        return p_ans * _could_decide(state, var, open_c, model, cfg)
     if vtype != "Bool":
         # Age scoring: expected value over observed values, not a flat weight (see _numeric_value).
         return p_ans * _numeric_value(state, var, open_c, model, cfg)
@@ -135,10 +165,22 @@ class AnswerableInformative:
     reads the answer key; P(answered) comes from ``answerability.model_for`` (dev-fit, cross-fitted
     for dev patients). It stops only when no question has any value (as greedy_smt does); otherwise
     it uses the whole budget. Ties go to the higher P(answered), then trial and variable name.
+
+    ``answered`` (oracle only, see ``answerable_informative_oracle``) replaces the predicted
+    P(answered) with the answer key's truth (1 answered, 0 unknown). ``last_score`` holds the score
+    of the last question chosen (the harness records it in replays).
     """
 
-    def __init__(self, cfg: AnswerableConfig | None = None) -> None:
+    def __init__(self, cfg: AnswerableConfig | None = None,
+                 answered: Callable[[str, str], bool] | None = None) -> None:
         self.cfg = cfg or AnswerableConfig()
+        self.answered = answered
+        self.last_score: float | None = None
+
+    def _p_answered(self, model: Any, nct: str, var: str, vtype: str) -> float:
+        if self.answered is not None:
+            return float(self.answered(nct, var))
+        return model.p_answered(var, vtype) if self.cfg.use_answerability else 1.0
 
     def __call__(self, states: dict, asked: set, rng: Any) -> tuple[str, str] | None:
         from smt_trial_matching.answerability import model_for
@@ -149,10 +191,14 @@ class AnswerableInformative:
             for v in candidate_questions(states[n]):
                 if (n, v) in asked:
                     continue
-                score = score_question(states[n], v, model, self.cfg)
-                key = (score, model.p_answered(v, states[n].types[v]), _neg(n), _neg(v))
+                # The tie-break uses the same P(answered) as the score, so the no-answerability
+                # ablation cannot get answerability back through ties.
+                p = self._p_answered(model, n, v, states[n].types[v])
+                score = score_question(states[n], v, model, self.cfg, p_ans=p)
+                key = (score, p, _neg(n), _neg(v))
                 if score > 0 and (best is None or key > best_key):
                     best, best_key = (n, v), key
+        self.last_score = best_key[0] if best else None
         return best
 
 
@@ -162,3 +208,26 @@ def _neg(s: str) -> str:
 
 
 answerable_informative = AnswerableInformative()
+
+
+# Ablations (Nov 19): the same policy with one factor switched off.
+answerable_informative_no_answerability = AnswerableInformative(AnswerableConfig(use_answerability=False))
+answerable_informative_no_value = AnswerableInformative(AnswerableConfig(use_value=False))
+
+
+def answerable_informative_oracle(states: dict, asked: set, rng: Any) -> tuple[str, str] | None:
+    """ORACLE (reads the answer key): answerable_informative with perfect answerability.
+
+    The same scoring, value weights and tie-breaking, but P(answered) is the key's truth (1 if the
+    answer is known, 0 if unknown) instead of the name model's prediction. P(true) and the age
+    distribution still come from the model. The reference for how much better answerability
+    prediction could make answerable_informative.
+    """
+    raise RuntimeError("answerable_informative_oracle needs the answer key; run it through the harness")
+
+
+def _bind_informative_oracle(qid: str, sim: Any) -> AnswerableInformative:
+    return AnswerableInformative(answered=lambda nct, var: sim.answer(qid, nct, var) is not None)
+
+
+answerable_informative_oracle.for_patient = _bind_informative_oracle  # type: ignore[attr-defined]

@@ -29,15 +29,20 @@ reference policy:
 uv run python -m smt_trial_matching.experiment \
   --policies no_questions,random_stop,greedy_smt --reference greedy_smt \
   --split dev --budget 30 --run-id harness_demo_dev
+uv run python -m smt_trial_matching.experiment --config configs/main_dev.yaml      # same, from a config file
 ```
 
+- **Configs** (`configs/*.yaml`): policies, reference, split, budget, keys, run_id; command-line flags override
+  the file. `main_dev` / `ablations_dev` are the dev runs; `main_test` / `ablations_test` are the same on test
+  and still need `--confirmed` on the command line (only after the project lead's OK).
 - **Policies:** CA names from `baselines/policies.py`, or `module.path:function`, or `path/to/file.py:function`
-  (e.g. `src/smt_trial_matching/policies.py:answerable_greedy`), all with the signature `(states, asked, rng)`.
+  (e.g. `src/smt_trial_matching/policies.py:answerable_informative`), all with the signature `(states, asked, rng)`.
   New policies go in our own code; `baselines/` stays untouched.
 - **Answer keys:** `--keys gpt5_oracle,gpt5mini` runs every policy against both simulators (default
   `gpt5_oracle`). `gpt5mini` is a noisier reading of the same notes. Tests compare within a key.
 - **Output** in `runs/<run_id>/` (not committed): `config.json`; per key `<key>/<policy>.jsonl` (CA log format,
-  reused on rerun unless `--force`), `<key>/accuracy_vs_budget.png`, `<key>/answered_vs_budget.png`; and
+  plus each turn's policy score; reused on rerun unless `--force`), `<key>/replays/<policy>/<qid>.json` (one
+  patient's conversation turn by turn, see below), `<key>/accuracy_vs_budget.png`, `<key>/answered_vs_budget.png`; and
   `curves.csv` (per key, policy and k: accuracy, F1, informative rate, answered rate, set F1, questions and
   answered questions per patient, waste shares, each with a CI; plus `accuracy_auc`), `tests.csv`,
   `questions.csv` (every question with the variable's meaning, the answer and its label),
@@ -50,10 +55,16 @@ uv run python -m smt_trial_matching.experiment \
 - **Tests vs the reference** at k = 5, 10, 20, 30, final and on the AUC: paired bootstrap over patients on the
   accuracy (and set-F1) difference (primary, since pairs within a patient are not independent) and exact McNemar
   on pairs (secondary).
-- **Oracle upper bound:** `smt_trial_matching.policies:oracle_answerable_greedy` is `greedy_smt` restricted to
-  questions the answer key can answer. It reads the key, so it is a ceiling for any "prefer answerable
-  questions" policy, not a method. Ordinary policies never receive the key; a policy only gets it by declaring
-  a `for_patient(qid, sim)` hook (see `src/smt_trial_matching/policies.py`), which marks it as an oracle.
+- **Oracle references** (read the answer key; references, not methods, and not ceilings):
+  - `oracle_answerable_greedy`, the *answerable-greedy oracle*: `greedy_smt` restricted to questions the key can
+    answer. It keeps greedy's scoring, so it does not bound other policies: `answerable_informative` (no key)
+    already beats it on dev AUC (0.700 vs 0.686).
+  - `answerable_informative_oracle`: `answerable_informative` with P(answered) replaced by the key's truth (1 or
+    0); P(true) and the age distribution still come from the model. Shows how much better answerability
+    prediction could make our policy.
+
+  Ordinary policies never receive the key; a policy only gets it by declaring a `for_patient(qid, sim)` hook
+  (see `src/smt_trial_matching/policies.py`), which marks it as an oracle.
 - Accuracy at k = 0, 5, 10, 20, 30 matches `eval/evaluate.py` exactly (`tests/test_experiment.py`).
 - `--split test` is refused without `--confirmed`. Other flags: `--key`, `--budget`, `--limit N`, `--workers`.
 
@@ -74,6 +85,32 @@ uv run python -m smt_trial_matching.experiment --policies no_questions,greedy_sm
 smt_trial_matching.policies:answerable_informative,smt_trial_matching.policies:oracle_answerable_greedy \
   --reference greedy_smt --split dev --run-id answerable_dev
 ```
+
+**Ablations** (`AnswerableConfig` switches; defaults reproduce the policy exactly, `tests/test_ablations.py`):
+
+| policy | switch | what is left |
+|---|---|---|
+| `answerable_informative_no_answerability` | `use_answerability=False` | P(answered) = 1: informativeness × value only |
+| `answerable_informative_no_value` | `use_value=False` | value = 1 if some answer could decide something, else 0: answerability only |
+
+Tie-breaks use the same P(answered) as the score, so the first ablation cannot get answerability back through
+ties. Run both with `--config configs/ablations_dev.yaml` (reference: `answerable_informative`).
+
+### Replays, demo and failure sample
+
+```bash
+# one patient's conversation, live or from a harness replay
+uv run python scripts/demo_conversation.py --qid trec-202112 --policy smt_trial_matching.policies:answerable_informative
+uv run python scripts/demo_conversation.py --replay runs/main_dev/gpt5_oracle/replays/answerable_informative/trec-202112.json
+# failure-analysis sample (seed 0) -> runs/main_dev/failure_sample.md
+uv run python scripts/failure_sample.py main_dev
+```
+
+A replay (`src/smt_trial_matching/replay.py`) holds the patient note, each trial's title and gold label, and per
+turn the question (variable and meaning), the policy's score, the answer, the waste label, and every trial's
+status and verdict after the turn. `failure_sample.md` lists 15 random useful-but-unanswered questions each for
+`greedy_smt` and `answerable_informative`, and every pair where exactly one of the two is right at k = 30, with the
+trial's criteria line that mentions the variable (keyword match) and a blank `Category:` line per item.
 
 ---
 

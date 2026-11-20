@@ -1,0 +1,14 @@
+# Ablations of answerable_informative on the test split (solver only, no LLM). Run ONCE per final system, only after the project lead's OK:
+#   uv run python -m smt_trial_matching.experiment --config configs/ablations_test.yaml --confirmed
+#   no_answerability: P(answered) = 1 for every question (informativeness x value only)
+#   no_value:         value = 1 if some answer could decide something, else 0 (answerability only)
+run_id: ablations_test
+split: test
+budget: 30
+keys: [gpt5_oracle, gpt5mini]
+reference: smt_trial_matching.policies:answerable_informative
+policies:
+  - greedy_smt
+  - smt_trial_matching.policies:answerable_informative
+  - smt_trial_matching.policies:answerable_informative_no_answerability
+  - smt_trial_matching.policies:answerable_informative_no_value

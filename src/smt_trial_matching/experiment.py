@@ -14,14 +14,19 @@ Answer keys: ``--keys gpt5_oracle,gpt5mini`` runs every policy against each key 
 Every question is labelled ``useful_answered`` (informative, answered), ``useful_unanswered``
 (informative, answer unknown) or ``not_useful`` (could not change any trial's status).
 
-Outputs in ``runs/<run_id>/``: ``config.json``; per key ``<key>/<policy>.jsonl`` (CA log format;
-reused unless ``--force``), ``<key>/accuracy_vs_budget.png`` and ``<key>/answered_vs_budget.png``;
-and across keys ``curves.csv``, ``tests.csv``, ``questions.csv``, ``waste_breakdown.png`` and
-``summary.md``. Every CSV has a ``key`` column.
+Outputs in ``runs/<run_id>/``: ``config.json``; per key ``<key>/<policy>.jsonl`` (CA log format
+plus a ``scores`` list; reused unless ``--force``), ``<key>/replays/<policy>/<qid>.json`` (see
+``replay.py``), ``<key>/accuracy_vs_budget.png`` and ``<key>/answered_vs_budget.png``; and across keys
+``curves.csv``, ``tests.csv``, ``questions.csv``, ``waste_breakdown.png`` and ``summary.md``. Every
+CSV has a ``key`` column.
 
   uv run python -m smt_trial_matching.experiment \\
     --policies no_questions,random_stop,greedy_smt --reference greedy_smt \\
     --split dev --budget 30 --run-id harness_demo_dev
+  uv run python -m smt_trial_matching.experiment --config configs/main_dev.yaml
+
+A ``--config`` YAML file sets any of policies, reference, split, budget, keys, run_id (and limit,
+workers); flags given on the command line override it. ``--confirmed`` is never read from a file.
 """
 
 from __future__ import annotations
@@ -31,6 +36,7 @@ import collections
 import csv
 import json
 import math
+import os
 import subprocess
 from dataclasses import dataclass
 from datetime import UTC, datetime
@@ -38,9 +44,12 @@ from functools import cache
 from multiprocessing import Pool
 from pathlib import Path
 
+import yaml
+
 from . import metrics as M
 from .plots import accuracy_plot, answered_plot, waste_plot
 from .policy_loading import ROOT, load_policy, policy_label
+from .replay import build_replay
 
 RUNS_DIR = ROOT / "runs"
 SUMMARY_KS = (0, 5, 10, 20, 30)
@@ -63,7 +72,33 @@ def _episode(args: tuple[str, list[str], str, str, int]) -> dict:
     qid, ncts, spec, key, budget = args
     policy, sim = load_policy(spec), _simulator(key)
     bind = getattr(policy, "for_patient", None)  # oracle policies only (see policies.py)
-    return run_patient(qid, ncts, bind(qid, sim) if bind else policy, sim, budget=budget)
+    chosen = bind(qid, sim) if bind else policy
+    scores: list[float | None] = []
+
+    def recording(states: dict, asked: set, rng) -> tuple[str, str] | None:
+        q = chosen(states, asked, rng)
+        if q is not None:  # policies that report a score expose it as .last_score
+            scores.append(getattr(chosen, "last_score", None))
+        return q
+
+    ep = run_patient(qid, ncts, recording, sim, budget=budget)
+    return {**ep, "scores": scores}
+
+
+def _replay(args: tuple[dict, str, str, dict]) -> dict:
+    ep, name, key, gold = args
+    return build_replay(ep, name, key, gold)
+
+
+def write_replays(kdir: Path, name: str, key: str, episodes: list[dict], gold: dict,
+                  workers: int) -> None:
+    """``<key>/replays/<policy>/<qid>.json``, one per patient."""
+    rdir = kdir / "replays" / name
+    rdir.mkdir(parents=True, exist_ok=True)
+    pairs = {(e["qid"], n): gold[(e["qid"], n)] for e in episodes for n in e["trials"]}
+    with Pool(workers) as pool:
+        for rp in pool.imap(_replay, [(e, name, key, pairs) for e in episodes]):
+            (rdir / f"{rp['qid']}.json").write_text(json.dumps(rp, indent=1) + "\n")
 
 
 def _read_note(args: tuple[str, list[str], str]) -> list[tuple[str, str, str]]:
@@ -88,10 +123,18 @@ def run_policy(spec: str, pts: list[tuple[str, list[str]]], key: str, budget: in
                out: Path, workers: int) -> None:
     load_policy(spec)  # fail fast in the parent on a bad spec
     tmp = out.with_suffix(".jsonl.tmp")
-    with Pool(workers) as pool, tmp.open("w") as f:
-        for ep in pool.imap(_episode, [(q, n, spec, key, budget) for q, n in pts]):
-            f.write(json.dumps(ep) + "\n")
-    tmp.replace(out)
+    with Pool(workers) as pool:
+        lines = [json.dumps(ep) + "\n"
+                 for ep in pool.imap(_episode, [(q, n, spec, key, budget) for q, n in pts])]
+    for _attempt in range(2):  # a synced folder (e.g. iCloud ~/Documents) can clobber a fresh file
+        with tmp.open("w") as f:
+            f.writelines(lines)
+            f.flush()
+            os.fsync(f.fileno())
+        tmp.replace(out)
+        if len(M.load_log(out)) == len(pts):
+            return
+    raise SystemExit(f"{out}: wrote {len(pts)} episodes but read back {len(M.load_log(out))}")
 
 
 def ceiling_accuracy(pts: list[tuple[str, list[str]]], key: str, gold: dict, workers: int) -> float:
@@ -260,7 +303,7 @@ def summary_md(cfg: dict, results: list[KeyResult], ks: list) -> str:
         "",
     ]
     if oracles:
-        lines += [(f"**Oracle policies (read the answer key; upper bounds, not methods):** "
+        lines += [(f"**Oracle policies (read the answer key; references, not methods):** "
                    f"{', '.join(f'`{n}`' for n in oracles)}."), ""]
     for r in results:
         lines += _key_section(cfg, r, ks)
@@ -272,9 +315,26 @@ def summary_md(cfg: dict, results: list[KeyResult], ks: list) -> str:
 # ------------------------------------------------------------------ CLI
 
 
+CONFIG_FIELDS = ("policies", "reference", "split", "budget", "keys", "run_id", "limit", "workers")
+
+
+def load_config(path: str) -> dict:
+    """Read a run config (YAML). Lists become the comma-separated strings the flags take."""
+    p = Path(path) if Path(path).is_absolute() else ROOT / path
+    cfg = yaml.safe_load(p.read_text()) or {}
+    unknown = set(cfg) - set(CONFIG_FIELDS)
+    if unknown:
+        raise SystemExit(f"{path}: unknown fields {sorted(unknown)}; allowed: {CONFIG_FIELDS}")
+    for k in ("policies", "keys"):
+        if isinstance(cfg.get(k), list):
+            cfg[k] = ",".join(map(str, cfg[k]))
+    return cfg
+
+
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    ap.add_argument("--policies", required=True,
+    ap.add_argument("--config", help="YAML file with run settings (configs/*.yaml); flags override it")
+    ap.add_argument("--policies",
                     help="comma-separated CA names or module.path:function / file.py:function")
     ap.add_argument("--reference", default="greedy_smt", help="policy the paired tests compare against")
     ap.add_argument("--split", choices=("dev", "test"), default="dev")
@@ -282,11 +342,17 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     ap.add_argument("--budget", type=int, default=30)
     ap.add_argument("--keys", "--key", dest="keys", default="gpt5_oracle",
                     help="comma-separated answer keys in data/answer_keys/, e.g. gpt5_oracle,gpt5mini")
-    ap.add_argument("--run-id", required=True)
+    ap.add_argument("--run-id")
     ap.add_argument("--limit", type=int, default=0, help="first N patients of the split (quick checks)")
     ap.add_argument("--force", action="store_true", help="re-run policies whose log already exists")
     ap.add_argument("--workers", type=int, default=8)
+    first, _ = ap.parse_known_args(argv)
+    if first.config:
+        ap.set_defaults(**load_config(first.config))
     a = ap.parse_args(argv)
+    for flag in ("policies", "run_id"):
+        if not getattr(a, flag):
+            ap.error(f"--{flag.replace('_', '-')} is required (on the command line or in --config)")
     if a.split == "test" and not a.confirmed:
         ap.error("--split test needs --confirmed (run the test split once per final system, "
                  "after the project lead's OK)")
@@ -317,6 +383,7 @@ def run_key(key: str, names: list[str], specs: list[str], ref_name: str,
             raise SystemExit(f"{log} lacks {len(missing)} patients of this selection; use --force")
         episodes[name] = [by_qid[q] for q in qids]
         tables[name] = M.build_table(episodes[name], gold, a.budget)
+        write_replays(kdir, name, key, episodes[name], gold, a.workers)
 
     idx = M.boot_indices(len(qids))
     result = KeyResult(
