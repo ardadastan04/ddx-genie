@@ -49,7 +49,7 @@ import yaml
 from . import metrics as M
 from .plots import accuracy_plot, answered_plot, waste_plot
 from .policy_loading import ROOT, load_policy, policy_label
-from .replay import build_replay
+from .replay import build_replay, cohort_useful_flags
 
 RUNS_DIR = ROOT / "runs"
 SUMMARY_KS = (0, 5, 10, 20, 30)
@@ -85,19 +85,26 @@ def _episode(args: tuple[str, list[str], str, str, int]) -> dict:
     return {**ep, "scores": scores}
 
 
-def _replay(args: tuple[dict, str, str, dict]) -> dict:
+def _annotate(args: tuple[dict, str, str, dict]) -> tuple[list[bool], dict]:
     ep, name, key, gold = args
-    return build_replay(ep, name, key, gold)
+    flags = cohort_useful_flags(ep)
+    for t, f in zip(ep["turns"], flags):
+        t["useful_cohort"] = f
+    return flags, build_replay(ep, name, key, gold)
 
 
-def write_replays(kdir: Path, name: str, key: str, episodes: list[dict], gold: dict,
-                  workers: int) -> None:
-    """``<key>/replays/<policy>/<qid>.json``, one per patient."""
+def annotate_and_replay(kdir: Path, name: str, key: str, episodes: list[dict], gold: dict,
+                        workers: int) -> None:
+    """Set each turn's ``useful_cohort`` flag (our usefulness rule, see ``replay.cohort_useful``)
+    and write ``<key>/replays/<policy>/<qid>.json``, one per patient."""
     rdir = kdir / "replays" / name
     rdir.mkdir(parents=True, exist_ok=True)
     pairs = {(e["qid"], n): gold[(e["qid"], n)] for e in episodes for n in e["trials"]}
     with Pool(workers) as pool:
-        for rp in pool.imap(_replay, [(e, name, key, pairs) for e in episodes]):
+        results = pool.imap(_annotate, [(e, name, key, pairs) for e in episodes])
+        for ep, (flags, rp) in zip(episodes, results):
+            for t, f in zip(ep["turns"], flags):
+                t["useful_cohort"] = f
             (rdir / f"{rp['qid']}.json").write_text(json.dumps(rp, indent=1) + "\n")
 
 
@@ -214,17 +221,20 @@ def _meanings(nct: str) -> dict[str, str]:
 
 
 def write_questions(path: Path, results: list[KeyResult]) -> None:
-    """One row per question asked: policy, key, qid, turn, nct, var, meaning, answer, label."""
+    """One row per question asked: policy, key, qid, turn, nct, var, meaning, answer, label (the
+    CA's trial-level usefulness) and label_cohort (ours, cohort-level)."""
     with path.open("w", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["policy", "key", "qid", "turn", "nct", "var", "meaning", "answer", "label"])
+        w.writerow(["policy", "key", "qid", "turn", "nct", "var", "meaning", "answer", "label",
+                    "label_cohort"])
         for r in results:
             for name, eps in r.episodes.items():
                 for ep in eps:
                     for i, t in enumerate(ep["turns"], 1):
                         ans = "unknown" if t["answer"] is None else json.dumps(t["answer"])
                         w.writerow([name, r.key, ep["qid"], i, t["nct"], t["var"],
-                                    _meanings(t["nct"]).get(t["var"], ""), ans, M.label(t)])
+                                    _meanings(t["nct"]).get(t["var"], ""), ans, M.label(t),
+                                    M.label(t, cohort=True)])
 
 
 def _key_section(cfg: dict, r: KeyResult, ks: list) -> list[str]:
@@ -251,15 +261,18 @@ def _key_section(cfg: dict, r: KeyResult, ks: list) -> list[str]:
         "",
         "### Where the questions go (all questions asked, final)",
         "",
-        ("useful = could change some trial's status when asked; answered = the answer was not "
-         "unknown. An unknown answer never changes a status, so only *useful, answered* questions "
-         "can move a verdict."),
+        ("answered = the answer was not unknown; an unknown answer never changes a status. Two "
+         "usefulness rules: **CA** = the answer could change the *trial's* status (the CA's "
+         "`informative()`); **cohort** (ours, a superset) = it could change the status of any *open "
+         "cohort* of an undetermined trial, so ruling out one cohort of a multi-cohort trial counts."),
         "",
-        "| policy | questions / patient | useful, answered | useful, unanswered | not useful | F1 (eligible +) | patient set F1 |",
-        "|---|---|---|---|---|---|---|",
+        ("| policy | questions / patient | CA: useful, answered | CA: useful, unanswered | CA: not useful "
+         "| cohort: useful, answered | cohort: useful, unanswered | cohort: not useful "
+         "| F1 (eligible +) | patient set F1 |"),
+        "|---|---|---|---|---|---|---|---|---|---|",
     ]
     for name, cur in r.curves.items():
-        sh = [_fmt(cur[f"share_{lab}"][-1][0]) for lab in M.LABELS]
+        sh = [_fmt(cur[f"share_{lab}"][-1][0]) for lab in (*M.LABELS, *M.COHORT_LABELS)]
         lines.append(f"| {name} | {cur['questions_per_patient'][-1][0]:.1f} | " + " | ".join(sh)
                      + f" | {_fmt(cur['f1'][-1][0])} | {_fmt(cur['set_f1'][-1][0])} |")
     if r.tests:
@@ -308,6 +321,7 @@ def summary_md(cfg: dict, results: list[KeyResult], ks: list) -> str:
     for r in results:
         lines += _key_section(cfg, r, ks)
     lines += [("Files: `curves.csv`, `tests.csv`, `questions.csv`, `waste_breakdown.png`, "
+               "`waste_breakdown_cohort.png`, "
                "`<key>/accuracy_vs_budget.png`, `<key>/answered_vs_budget.png`."), ""]
     return "\n".join(lines)
 
@@ -382,8 +396,8 @@ def run_key(key: str, names: list[str], specs: list[str], ref_name: str,
         if missing:
             raise SystemExit(f"{log} lacks {len(missing)} patients of this selection; use --force")
         episodes[name] = [by_qid[q] for q in qids]
+        annotate_and_replay(kdir, name, key, episodes[name], gold, a.workers)
         tables[name] = M.build_table(episodes[name], gold, a.budget)
-        write_replays(kdir, name, key, episodes[name], gold, a.workers)
 
     idx = M.boot_indices(len(qids))
     result = KeyResult(
@@ -439,7 +453,14 @@ def main(argv: list[str] | None = None) -> int:
                         for n, c in r.curves.items()} for r in results},
                {r.key: {n: c["questions_per_patient"][-1][0] for n, c in r.curves.items()}
                 for r in results},
-               M.LABELS, f"{a.split} ({len(pts)} patients)", out / "waste_breakdown.png")
+               M.LABELS, f"{a.split} ({len(pts)} patients), CA usefulness rule",
+               out / "waste_breakdown.png")
+    waste_plot({r.key: {n: [c[f"share_{lab}"][-1][0] for lab in M.COHORT_LABELS]
+                        for n, c in r.curves.items()} for r in results},
+               {r.key: {n: c["questions_per_patient"][-1][0] for n, c in r.curves.items()}
+                for r in results},
+               M.LABELS, f"{a.split} ({len(pts)} patients), cohort usefulness rule",
+               out / "waste_breakdown_cohort.png")
     text = summary_md(cfg, results, ks)
     (out / "summary.md").write_text(text)
     print(text)

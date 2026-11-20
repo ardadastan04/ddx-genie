@@ -25,14 +25,16 @@ TEST_KS = (5, 10, 20, 30)
 FINAL = "final"
 
 #: Per-patient additive counts, one column per k (plus "final" as the last column).
-COUNTS = ("pairs", "correct", "tp", "fp", "fn", "asked", "informative", "answered", "set_f1",
-          "useful_answered", "useful_unanswered", "not_useful")
 #: Question labels (waste breakdown), in stacking order.
 LABELS = ("useful_answered", "useful_unanswered", "not_useful")
+#: The same labels under our cohort-level usefulness rule (``replay.cohort_useful``).
+COHORT_LABELS = tuple(f"cohort_{lab}" for lab in LABELS)
+COUNTS = ("pairs", "correct", "tp", "fp", "fn", "asked", "informative", "answered", "set_f1",
+          *LABELS, *COHORT_LABELS)
 #: Reported metrics, each computed from the counts of a set of patients.
 METRICS = ("accuracy", "f1", "informative_rate", "answered_rate", "set_f1",
            "questions_per_patient", "answered_per_patient",
-           *(f"share_{lab}" for lab in LABELS))
+           *(f"share_{lab}" for lab in (*LABELS, *COHORT_LABELS)))
 AUC = "auc"
 
 
@@ -49,9 +51,13 @@ def load_log(path: Path) -> list[dict]:
     return [json.loads(line) for line in path.open() if line.strip()]
 
 
-def label(turn: dict) -> str:
-    """Waste label of one question: could it change a trial's status, and did it get an answer?"""
-    if not turn.get("informative"):
+def label(turn: dict, cohort: bool = False) -> str:
+    """Waste label of one question: could it change a trial's status, and did it get an answer?
+
+    ``cohort=False`` uses the CA's ``informative`` flag (the trial's status could change);
+    ``cohort=True`` uses our ``useful_cohort`` flag (some open cohort's status could change; set by
+    the harness, see ``replay.cohort_useful``). Missing ``useful_cohort`` counts as not useful."""
+    if not turn.get("useful_cohort" if cohort else "informative"):
         return "not_useful"
     return "useful_unanswered" if turn["answer"] is None else "useful_answered"
 
@@ -104,8 +110,10 @@ def build_table(episodes: list[dict], gold: dict[tuple[str, str], bool], budget:
             c["informative"][i, j] = sum(bool(t.get("informative")) for t in seen)
             c["answered"][i, j] = sum(t["answer"] is not None for t in seen)
             labels = [label(t) for t in seen]
-            for lab in LABELS:
+            cohort_labels = [label(t, cohort=True) for t in seen]
+            for lab, clab in zip(LABELS, COHORT_LABELS):
                 c[lab][i, j] = labels.count(lab)
+                c[clab][i, j] = cohort_labels.count(lab)
             c["set_f1"][i, j] = _set_f1({n for n, p in zip(ep["trials"], pred) if p},
                                         {n for n, g in zip(ep["trials"], truth) if g})
             row.append([p == g for p, g in zip(pred, truth)])
@@ -127,7 +135,7 @@ def _metrics(s: dict[str, np.ndarray], n_patients: int | np.ndarray) -> dict[str
             "questions_per_patient": s["asked"] / n_patients,
             "answered_per_patient": s["answered"] / n_patients,
             **{f"share_{lab}": np.where(s["asked"] > 0, s[lab] / s["asked"], np.nan)
-               for lab in LABELS},
+               for lab in (*LABELS, *COHORT_LABELS)},
         }
 
 
