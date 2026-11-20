@@ -26,7 +26,8 @@ smt-trial-matching/
   src/smt_trial_matching/experiment.py  # harness: policies x split -> curves, paired tests, plots
   src/smt_trial_matching/policies.py    # our policies: answerable_informative = P(answered) x value (Person A),
                                         #   its two ablations, and two oracle references (read the key; not ceilings)
-  src/smt_trial_matching/replay.py      # turn-by-turn replays (demo, failure analysis)
+  src/smt_trial_matching/replay.py      # turn-by-turn replays (demo, failure analysis); cohort-level usefulness
+  src/smt_trial_matching/diagnostics.py # why predicted answerability helps little (calibration, decision impact)
   configs/                  # run configs for the harness (main / ablations, dev / test)
   scripts/demo_conversation.py, scripts/failure_sample.py
   src/smt_trial_matching/answerability.py  # P(answered), P(true) from variable names; fit on dev only,

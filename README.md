@@ -49,7 +49,11 @@ uv run python -m smt_trial_matching.experiment --config configs/main_dev.yaml   
   `waste_breakdown.png`, `summary.md`.
 - **Waste breakdown:** each question is `useful_answered` (could change a trial's status and got an answer),
   `useful_unanswered` (could, but the answer was unknown) or `not_useful` (could not change any status). An
-  unknown answer never changes a status, so only the first kind can move a verdict.
+  unknown answer never changes a status, so only the first kind can move a verdict. Two usefulness rules are
+  reported side by side: the CA's (`informative()`: the *trial's* status could change) and ours, a superset
+  (`replay.cohort_useful`: the status of any *open cohort* of an undetermined trial could change), which also
+  counts questions that rule out one cohort of a multi-cohort trial, as `answerable_informative` asks on purpose.
+  `questions.csv` has both (`label`, `label_cohort`); plots `waste_breakdown.png` and `waste_breakdown_cohort.png`.
 - **AUC:** area under accuracy vs k over k = 0..budget divided by the budget, i.e. average accuracy across
   budgets (0–1). One number per policy, with a CI and a paired test.
 - **Tests vs the reference** at k = 5, 10, 20, 30, final and on the AUC: paired bootstrap over patients on the
@@ -95,6 +99,18 @@ smt_trial_matching.policies:answerable_informative,smt_trial_matching.policies:o
 
 Tie-breaks use the same P(answered) as the score, so the first ablation cannot get answerability back through
 ties. Run both with `--config configs/ablations_dev.yaml` (reference: `answerable_informative`).
+
+### Answerability diagnostics (`src/smt_trial_matching/diagnostics.py`)
+
+Why the no-answerability ablation costs so little. Along `answerable_informative`'s conversations (and along
+each variant's own), every turn's candidates are scored three ways: predicted P(answered), P = 1, and the key's
+truth. Reports AUC and calibration of P(answered) on all key variables, on the candidates the policy weighs, on
+the questions it asks and within a turn; how often each weighting's choice is answered and its realized value;
+and answer rates by question type. Dev only.
+
+```bash
+uv run python -m smt_trial_matching.diagnostics --run-id answerability_diag_dev   # ~5 min, both keys
+```
 
 ### Replays, demo and failure sample
 

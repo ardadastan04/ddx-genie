@@ -43,6 +43,41 @@ def patient_note(qid: str) -> str:
     return _notes().get(qid, "")
 
 
+def cohort_useful(state: Any, var: str) -> bool:
+    """Could some answer to ``var`` change the status of one of the trial's open cohorts?
+
+    Our usefulness rule, a superset of the CA's ``informative()`` (which needs the whole trial's
+    status to change): a question that rules out one cohort of a multi-cohort trial counts too.
+    As in ``informative()``: nothing is useful once the trial is decided, and a number is useful
+    whenever it occurs in an open cohort (its values cannot be enumerated).
+    """
+    before = state.cohort_status()
+    open_c = [c for c, s in before.items() if s == "open"]
+    if state.status() != "undetermined" or not open_c:
+        return False
+    if var not in {v for c in open_c for prog in state.cohorts[c] for v in prog.types}:
+        return False
+    if state.types[var] != "Bool":
+        return True
+    for val in (True, False):
+        after = state.cohort_status({**state.answers, var: val})
+        if any(after[c] != before[c] for c in open_c):
+            return True
+    return False
+
+
+def cohort_useful_flags(ep: dict) -> list[bool]:
+    """``cohort_useful`` for each turn of an episode, judged in the state just before the question."""
+    from smtstate.state import TrialState
+
+    states = {n: TrialState(n, {}) for n in ep["trials"]}
+    out = []
+    for t in ep["turns"]:
+        out.append(cohort_useful(states[t["nct"]], t["var"]))
+        states[t["nct"]].answers[t["var"]] = t["answer"]
+    return out
+
+
 def _statuses(ep: dict) -> tuple[dict[str, str], list[dict[str, str]]]:
     """Trial statuses before the first turn and after each turn."""
     from smtstate.state import TrialState
@@ -74,6 +109,7 @@ def build_replay(ep: dict, policy: str, key: str, gold: dict[tuple[str, str], bo
             "meaning": meanings(t["nct"]).get(t["var"], ""),
             "score": scores[i] if i < len(scores) else None,
             "answer": t["answer"], "label": M.label(t),
+            "label_cohort": M.label(t, cohort=True) if "useful_cohort" in t else None,
             "trials": trials_at(st, t["verdicts"]),
         })
     final_status = after[-1] if after else initial
