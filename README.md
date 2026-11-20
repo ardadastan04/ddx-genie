@@ -100,6 +100,24 @@ smt_trial_matching.policies:answerable_informative,smt_trial_matching.policies:o
 Tie-breaks use the same P(answered) as the score, so the first ablation cannot get answerability back through
 ties. Run both with `--config configs/ablations_dev.yaml` (reference: `answerable_informative`).
 
+### Current dev results (pre-freeze, Nov 19)
+
+Dev split only (28 patients, 188 pairs), `gpt5_oracle` key, budget 30; dev patients get the cross-fitted
+answerability model. Test has not been run for our policy. Numbers will be replaced when `policy-v1` is frozen.
+
+| Policy | k=5 | k=10 | k=20 | k=30 | Useful, answered |
+|---|---|---|---|---|---|
+| no_questions | 0.532 | 0.532 | 0.532 | 0.532 | – |
+| greedy_smt | 0.564 | 0.564 | 0.612 | 0.691 | 46% |
+| **answerable_informative** | **0.622** | **0.670** | **0.745** | **0.793** | **51%** |
+| oracle_answerable_greedy (reads the key) | 0.580 | 0.649 | 0.750 | 0.803 | 100% |
+| ask_all (full information, no budget) | – | – | – | 0.96 | – |
+
+AUC vs greedy: +0.10 (95% CI +0.03 to +0.18, patient bootstrap). Weight sweeps (`scripts/sweep_cohort_credit.py`,
+`scripts/sweep_eligible_credit.py`): `w_cohort` 0.5–1.0 and `w_eligible` 0–0.2 change dev accuracy by at most
+one pair at any k. Reproduce with the `answerable_dev` command above (or `--run-id sweep_eligible_dev` from the
+sweep script's docstring).
+
 ### Answerability diagnostics (`src/smt_trial_matching/diagnostics.py`)
 
 Why the no-answerability ablation costs so little. Along `answerable_informative`'s conversations (and along
