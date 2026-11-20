@@ -1,0 +1,13 @@
+# Main comparison on the dev split (solver only, no LLM). uv run python -m smt_trial_matching.experiment --config configs/main_dev.yaml
+run_id: main_dev
+split: dev
+budget: 30
+keys: [gpt5_oracle, gpt5mini]
+reference: greedy_smt
+policies:
+  - no_questions
+  - random_stop
+  - greedy_smt
+  - smt_trial_matching.policies:answerable_informative
+  - smt_trial_matching.policies:oracle_answerable_greedy      # oracle: reads the key (greedy scoring)
+  - smt_trial_matching.policies:answerable_informative_oracle # oracle: reads the key (our scoring)

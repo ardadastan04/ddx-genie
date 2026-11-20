@@ -24,8 +24,11 @@ smt-trial-matching/
   logs/reference/           # CA's reference baseline episode logs (our own logs/ output is gitignored)
   src/smt_trial_matching/llm.py      # the one LLM client (cache, cost log, budget guard)
   src/smt_trial_matching/experiment.py  # harness: policies x split -> curves, paired tests, plots
-  src/smt_trial_matching/policies.py    # our policies (oracle_answerable_greedy = upper bound;
-                                        #   answerable_informative = P(answered) x value, Person A)
+  src/smt_trial_matching/policies.py    # our policies: answerable_informative = P(answered) x value (Person A),
+                                        #   its two ablations, and two oracle references (read the key; not ceilings)
+  src/smt_trial_matching/replay.py      # turn-by-turn replays (demo, failure analysis)
+  configs/                  # run configs for the harness (main / ablations, dev / test)
+  scripts/demo_conversation.py, scripts/failure_sample.py
   src/smt_trial_matching/answerability.py  # P(answered), P(true) from variable names; fit on dev only,
                                         #   5-fold cross-fit by patient for dev patients
   scripts/smoke_llm.py, tests/
