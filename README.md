@@ -112,6 +112,20 @@ and answer rates by question type. Dev only.
 uv run python -m smt_trial_matching.diagnostics --run-id answerability_diag_dev   # ~5 min, both keys
 ```
 
+Dev results (28 patients, key `gpt5_oracle`; `gpt5mini` in brackets):
+
+- **Calibration is good, ranking is moderate.** On the questions the policy actually asks, mean predicted
+  P(answered) is 0.58 vs 52% observed (ECE 0.10; on all weighed candidates 0.044). AUC 0.68 on asked questions,
+  0.71 within a single turn's candidates. With `gpt5mini` the model (fit on `gpt5_oracle`) under-predicts:
+  0.42 vs 62% on all key variables, AUC 0.71.
+- **How often each weighting's choice gets answered**, on the same state along the policy's conversations:
+  predicted P(answered) 52% [70%], P = 1 26% [40%], true answerability 98% [98%]. Predicted P changes the choice
+  on 91% of turns.
+- **Why the no-answerability ablation still keeps up:** driving its own conversation it gets 11.6 answers per
+  patient vs 13.9 for the policy (4.0 vs 6.2 in turns 1–10, then 3.3 vs 2.9 in turns 21–30), and realized value
+  6.35 vs 6.82 (−7%). True answerability gets 20.2 answers and 9.16 value: the headroom is ranking, which a
+  name-only model lacks.
+
 ### Replays, demo and failure sample
 
 ```bash
